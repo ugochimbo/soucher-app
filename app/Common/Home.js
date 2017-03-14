@@ -1,5 +1,5 @@
 import React from 'react';
-import BuySoucherContainer from './BuySoucherContainer';
+import BuySoucherContainer from '../BuySoucher/BuySoucherContainer';
 
 let Home = React.createClass({
     render: function() {

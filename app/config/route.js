@@ -1,12 +1,12 @@
 import React from 'react';
 import {Router, Route, hashHistory, IndexRoute} from 'react-router';
-import Main from '../component/Main.js';
-import BuySoucherContainer from '../component/BuySoucherContainer.js';
-import SwapSoucherContainer from '../component/SwapSoucherContainer.js';
-import CustomizeSoucherContainer from '../component/CustomizeSoucherContainer.js';
-import SoucherCodeContainer from '../component/SoucherCodeContainer.js';
-import Catalog from '../component/Catalog.js';
-import PhoneAuth from '../component/PhoneAuth.js';
+import Main from '../Common/Main.js';
+import BuySoucherContainer from '../BuySoucher/BuySoucherContainer.js';
+import SwapSoucherContainer from '../SwapSoucher/SwapSoucherContainer.js';
+import CustomizeSoucherContainer from '../BuySoucher/CustomizeSoucherContainer.js';
+import SoucherCodeContainer from '../SwapSoucher/SoucherCodeContainer.js';
+import Catalog from '../Catalog/Catalog.js';
+import PhoneAuth from '../SwapSoucher/PhoneAuth.js';
 
 let routes = (
     <Router history={hashHistory}>
