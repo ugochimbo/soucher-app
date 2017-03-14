@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 let NavBar = React.createClass({
     render: function() {
@@ -7,24 +8,18 @@ let NavBar = React.createClass({
                 <div className="col-md-12" style={{"marginBottom": "20px"}}>
                     <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
                         <div className="navbar-header">
-                            <button type="button" className="navbar-toggle"
-                                    data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                <span className="sr-only">Toggle navigation</span>
-                                <span className="icon-bar">Buy</span>
-                                <span className="icon-bar">Swap</span>
-                                <span className="icon-bar">Catalog</span>
-                            </button> <a className="navbar-brand" href="#">Soucher</a>
+                            <Link to="/" className="navbar-brand" >Soucher</Link>
                         </div>
                         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul className="nav navbar-nav">
                                 <li className="active">
-                                    <a href="#">Buy</a>
+                                    <Link to="/buy" activeStyle={{color: 'red'}}>Buy</Link>
                                 </li>
                                 <li>
-                                    <a href="#">Swap</a>
+                                    <Link to="/swap" activeStyle={{color: 'red'}}>Swap</Link>
                                 </li>
                                 <li>
-                                    <a href="#">Catalog</a>
+                                    <Link to="/catalog" activeStyle={{color: 'red'}}>Catalog</Link>
                                 </li>
                             </ul>
                         </div>
