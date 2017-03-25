@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 let RecipientForm = React.createClass({
     render: function() {
@@ -20,6 +21,7 @@ let RecipientForm = React.createClass({
                     </div>
                     <button type="submit" className="btn btn-success">Submit</button>
                 </form>
+                <Link to="/customize" activeStyle={{color: 'red'}}> ... Customize. </Link>
             </div>
         )
     }

@@ -14,7 +14,6 @@ let BuyerForm = React.createClass({
                         <label htmlFor="buyer-email"> Email: </label>
                     </div>
                     <input type="email" className="form-control" id="buyer-email"/>
-                    <button type="submit" className="btn btn-success">Submit</button>
                 </form>
             </div>
         )

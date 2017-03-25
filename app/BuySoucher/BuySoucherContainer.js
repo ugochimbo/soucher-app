@@ -1,17 +1,19 @@
 import React from 'react';
 import BuyerForm from './BuyerForm';
 import RecipientForm from './RecipientForm';
+import ProgressSteps from 'react-progress-steps';
 
 let BuySoucherContainer = React.createClass({
     render: function() {
         return (
-            <div className="row" style={{"marginTop": "40px"}}>
-                <div className="col-md-12">
-                    <div className="progress active progress-striped">
-                        <div className="progress-bar progress-success">
-                        </div>
+            <div className="row">
+                <div className="row">
+                    <div className="col-md-12">
+                        <ProgressSteps steps={2} current={1} />
                     </div>
-                    <div className="row">
+                </div>
+                <div className="row">
+                    <div className="col-md-12">
                         <BuyerForm />
                         <RecipientForm />
                     </div>

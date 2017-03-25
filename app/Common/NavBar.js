@@ -4,28 +4,22 @@ import {Link} from 'react-router';
 let NavBar = React.createClass({
     render: function() {
         return (
-            <div className="row">
-                <div className="col-md-12" style={{"marginBottom": "20px"}}>
-                    <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
-                        <div className="navbar-header">
-                            <Link to="/" className="navbar-brand" >Soucher</Link>
-                        </div>
-                        <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul className="nav navbar-nav">
-                                <li className="active">
-                                    <Link to="/buy" activeStyle={{color: 'red'}}>Buy</Link>
-                                </li>
-                                <li>
-                                    <Link to="/swap" activeStyle={{color: 'red'}}>Swap</Link>
-                                </li>
-                                <li>
-                                    <Link to="/catalog" activeStyle={{color: 'red'}}>Catalog</Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+            <header id="header">
+                <h1><a href="index.html">SOUCHER <span>Inc.</span></a></h1>
+                <nav>
+                    <ul className="actions">
+                        <li>
+                            <Link to="/buy" style={{"color": "#6a707c !important;"}} className="button">
+                                Buy A Soucher
+                            </Link>
+                        </li>
+                        <li><Link to="/swap" style={{"color": "#6a707c !important;"}} className="button">Swap A Soucher</Link></li>
+                        <li><Link to="/catalog" style={{"color": "#6a707c !important;"}} className="button">Voucher Catalog</Link></li>
+                        <li><Link to="/about" style={{"color": "#6a707c !important;"}} className="button">About Us</Link></li>
+                        <li><Link to="/contact" style={{"color": "#6a707c !important;"}} className="button">Contact Us</Link></li>
+                    </ul>
+                </nav>
+            </header>
         )
     }
 });

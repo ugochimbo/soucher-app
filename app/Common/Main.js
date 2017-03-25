@@ -1,12 +1,16 @@
 import React from 'react';
 import NavBar from './NavBar';
+import Footer from './Footer';
 
 let Main = React.createClass({
     render: function() {
         return (
-            <div className="container-fluid">
+            <div id="page-wrapper">
                 <NavBar />
-                {this.props.children}
+                <div>
+                    {this.props.children}
+                </div>
+                <Footer />
             </div>
         )
     }

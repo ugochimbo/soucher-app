@@ -7,11 +7,12 @@ import CustomizeSoucherContainer from '../BuySoucher/CustomizeSoucherContainer.j
 import SoucherCodeContainer from '../SwapSoucher/SoucherCodeContainer.js';
 import Catalog from '../Catalog/Catalog.js';
 import PhoneAuth from '../SwapSoucher/PhoneAuth.js';
+import Home from '../Common/Home.js';
 
 let routes = (
     <Router history={hashHistory}>
         <Route path='/' component={Main}>
-            <IndexRoute component={BuySoucherContainer} />
+            <IndexRoute component={Home} />
             <Route path='buy' header='Buy Soucher' component={BuySoucherContainer} />
             <Route path='swap' header='Swap Soucher' component={SwapSoucherContainer} />
             <Route path='customize' header='Customize' component={CustomizeSoucherContainer} />

@@ -3,5 +3,5 @@ import routes from "./config/route";
 
 ReactDOM.render(
     routes,
-    document.getElementById('app')
+    document.getElementById('page-wrapper')
 );
