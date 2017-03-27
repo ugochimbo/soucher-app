@@ -2,83 +2,99 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="796c65f2-4ea7-4fb3-afca-537d482c3caa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/css/images/overlay.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/image/4.5-stars.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/image/5-stars.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/image/banner.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/image/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/image/customer_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/image/customer_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/image/customer_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/image/customer_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/image/pic01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/image/pic02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/image/pic03.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/image/pic04.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Common/Footer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Common/Page.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Common/ProgressBar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/SwapSoucher/PriceSummary.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/css/ie8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/css/ie9.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/css/images/close.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/css/images/header-bg.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/css/images/menu-bg.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/js/ie/PIE.htc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/js/ie/backgroundsize.min.htc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/js/ie/html5shiv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/js/ie/respond.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/js/skel.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/js/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/base/_page.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/base/_typography.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/components/_box.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/components/_button.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/components/_form.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/components/_icon.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/components/_image.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/components/_list.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/components/_section.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/components/_table.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/ie8.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/ie9.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/layout/_banner.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/layout/_footer.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/layout/_header.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/layout/_main.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/layout/_menu.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/libs/_functions.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/libs/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/libs/_skel.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/libs/_vars.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/asset/sass/main.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset/image/catalog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset/image/giftcard_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset/image/giftcard_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset/image/giftcard_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset/image/giftcard_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset/image/giftcard_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset/image/overlay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset/image/sample_header_12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset/image/swap.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/BuySoucher/Component/ContactDetailsForm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/BuySoucher/Container/ContactFormContainer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/BuySoucher/Container/RecipientFormContainer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/SwapSoucher/Component/ValidateSoucherForm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/SwapSoucher/Container/SwapSoucherContainer.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/BuySoucher/BuySoucherContainer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/BuySoucher/BuyerForm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/BuySoucher/RecipientForm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/SwapSoucher/SwapSoucherContainer.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/BuySoucher/CustomizeSoucherContainer.js" afterPath="$PROJECT_DIR$/app/BuySoucher/Container/CustomizeFormContainer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/BuySoucher/Payment.js" afterPath="$PROJECT_DIR$/app/BuySoucher/Component/Payment.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/BuySoucher/Soucher.js" afterPath="$PROJECT_DIR$/app/BuySoucher/Component/Soucher.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/BuySoucher/SoucherCustomizationForm.js" afterPath="$PROJECT_DIR$/app/BuySoucher/Component/CustomizationForm.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/SwapSoucher/PhoneAuth.js" afterPath="$PROJECT_DIR$/app/SwapSoucher/Component/PhoneAuth.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/SwapSoucher/PhoneAuthContainer.js" afterPath="$PROJECT_DIR$/app/SwapSoucher/Container/PhoneAuthContainer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/SwapSoucher/PriceSummary.js" afterPath="$PROJECT_DIR$/app/SwapSoucher/Component/PriceSummary.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/SwapSoucher/ReadOnlyBasket.js" afterPath="$PROJECT_DIR$/app/SwapSoucher/Component/ReadOnlyBasket.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/SwapSoucher/SoucherCodeContainer.js" afterPath="$PROJECT_DIR$/app/SwapSoucher/Container/SoucherCodeContainer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/asset/css/font-awesome.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/css/ie8.css" afterPath="$PROJECT_DIR$/asset/css/ie8.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/css/ie9.css" afterPath="$PROJECT_DIR$/asset/css/ie9.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/css/images/close.svg" afterPath="$PROJECT_DIR$/asset/css/images/close.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/css/images/header-bg.svg" afterPath="$PROJECT_DIR$/asset/css/images/header-bg.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/css/images/menu-bg.svg" afterPath="$PROJECT_DIR$/asset/css/images/menu-bg.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/css/images/overlay.png" afterPath="$PROJECT_DIR$/asset/css/images/overlay.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/css/main.css" afterPath="$PROJECT_DIR$/asset/css/main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/asset/fonts/FontAwesome.otf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/asset/fonts/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/asset/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/asset/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/asset/fonts/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/asset/fonts/fontawesome-webfont.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/js/ie/PIE.htc" afterPath="$PROJECT_DIR$/asset/js/ie/PIE.htc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/js/ie/backgroundsize.min.htc" afterPath="$PROJECT_DIR$/asset/js/ie/backgroundsize.min.htc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/js/ie/html5shiv.js" afterPath="$PROJECT_DIR$/asset/js/ie/html5shiv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/js/ie/respond.min.js" afterPath="$PROJECT_DIR$/asset/js/ie/respond.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/js/jquery.min.js" afterPath="$PROJECT_DIR$/asset/js/jquery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/js/main.js" afterPath="$PROJECT_DIR$/asset/js/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/js/skel.min.js" afterPath="$PROJECT_DIR$/asset/js/skel.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/js/util.js" afterPath="$PROJECT_DIR$/asset/js/util.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/base/_page.scss" afterPath="$PROJECT_DIR$/asset/sass/base/_page.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/base/_typography.scss" afterPath="$PROJECT_DIR$/asset/sass/base/_typography.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/components/_box.scss" afterPath="$PROJECT_DIR$/asset/sass/components/_box.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/components/_button.scss" afterPath="$PROJECT_DIR$/asset/sass/components/_button.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/components/_form.scss" afterPath="$PROJECT_DIR$/asset/sass/components/_form.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/components/_icon.scss" afterPath="$PROJECT_DIR$/asset/sass/components/_icon.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/components/_image.scss" afterPath="$PROJECT_DIR$/asset/sass/components/_image.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/components/_list.scss" afterPath="$PROJECT_DIR$/asset/sass/components/_list.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/components/_section.scss" afterPath="$PROJECT_DIR$/asset/sass/components/_section.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/components/_table.scss" afterPath="$PROJECT_DIR$/asset/sass/components/_table.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/ie8.scss" afterPath="$PROJECT_DIR$/asset/sass/ie8.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/ie9.scss" afterPath="$PROJECT_DIR$/asset/sass/ie9.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/layout/_banner.scss" afterPath="$PROJECT_DIR$/asset/sass/layout/_banner.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/layout/_footer.scss" afterPath="$PROJECT_DIR$/asset/sass/layout/_footer.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/layout/_header.scss" afterPath="$PROJECT_DIR$/asset/sass/layout/_header.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/layout/_main.scss" afterPath="$PROJECT_DIR$/asset/sass/layout/_main.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/layout/_menu.scss" afterPath="$PROJECT_DIR$/asset/sass/layout/_menu.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/libs/_functions.scss" afterPath="$PROJECT_DIR$/asset/sass/libs/_functions.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/libs/_mixins.scss" afterPath="$PROJECT_DIR$/asset/sass/libs/_mixins.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/libs/_skel.scss" afterPath="$PROJECT_DIR$/asset/sass/libs/_skel.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/libs/_vars.scss" afterPath="$PROJECT_DIR$/asset/sass/libs/_vars.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/asset/sass/main.scss" afterPath="$PROJECT_DIR$/asset/sass/main.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/4.5-stars.png" afterPath="$PROJECT_DIR$/asset/image/4.5-stars.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/5-stars.png" afterPath="$PROJECT_DIR$/asset/image/5-stars.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/banner.jpg" afterPath="$PROJECT_DIR$/asset/image/banner.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/bg.jpg" afterPath="$PROJECT_DIR$/asset/image/bg.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/customer_1.png" afterPath="$PROJECT_DIR$/asset/image/customer_1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/customer_2.jpg" afterPath="$PROJECT_DIR$/asset/image/customer_2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/customer_3.png" afterPath="$PROJECT_DIR$/asset/image/customer_3.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/customer_4.jpg" afterPath="$PROJECT_DIR$/asset/image/customer_4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/pic01.jpg" afterPath="$PROJECT_DIR$/asset/image/pic01.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/pic02.jpg" afterPath="$PROJECT_DIR$/asset/image/pic02.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/pic03.jpg" afterPath="$PROJECT_DIR$/asset/image/pic03.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/pic04.jpg" afterPath="$PROJECT_DIR$/asset/image/pic04.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/soucher_0.png" afterPath="$PROJECT_DIR$/asset/image/soucher_0.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/soucher_10.png" afterPath="$PROJECT_DIR$/asset/image/soucher_10.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/soucher_50.png" afterPath="$PROJECT_DIR$/asset/image/soucher_50.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/image/soucher_code.png" afterPath="$PROJECT_DIR$/asset/image/soucher_code.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/BuySoucher/BuySoucherContainer.js" afterPath="$PROJECT_DIR$/app/BuySoucher/BuySoucherContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/BuySoucher/BuyerForm.js" afterPath="$PROJECT_DIR$/app/BuySoucher/BuyerForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/BuySoucher/CustomizeSoucherContainer.js" afterPath="$PROJECT_DIR$/app/BuySoucher/CustomizeSoucherContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/BuySoucher/RecipientForm.js" afterPath="$PROJECT_DIR$/app/BuySoucher/RecipientForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Catalog/Catalog.js" afterPath="$PROJECT_DIR$/app/Catalog/Catalog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Catalog/Voucher.js" afterPath="$PROJECT_DIR$/app/Catalog/Voucher.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Common/Home.js" afterPath="$PROJECT_DIR$/app/Common/Home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Common/Main.js" afterPath="$PROJECT_DIR$/app/Common/Main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Common/NavBar.js" afterPath="$PROJECT_DIR$/app/Common/NavBar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/SwapSoucher/PhoneAuth.js" afterPath="$PROJECT_DIR$/app/SwapSoucher/PhoneAuth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/SwapSoucher/SoucherCodeContainer.js" afterPath="$PROJECT_DIR$/app/SwapSoucher/SoucherCodeContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/SwapSoucher/SwapSoucherContainer.js" afterPath="$PROJECT_DIR$/app/SwapSoucher/SwapSoucherContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Common/ProgressBar.js" afterPath="$PROJECT_DIR$/app/Common/ProgressBar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/route.js" afterPath="$PROJECT_DIR$/app/config/route.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.js" afterPath="$PROJECT_DIR$/app/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -99,36 +115,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Common/Home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="92" column="70" lean-forward="false" selection-start-line="92" selection-start-column="70" selection-end-line="92" selection-end-column="70" />
-              <folding>
-                <element signature="e#145#585#0" expanded="false" />
-                <element signature="e#602#2337#0" expanded="false" />
-                <element signature="e#2354#2680#0" expanded="false" />
-                <element signature="e#2697#4740#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Common/Main.js">
+      <file leaf-file-name="route.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/route.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <caret line="19" column="96" lean-forward="false" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="96" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -136,11 +127,104 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NavBar.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ContactFormContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/BuySoucher/Container/ContactFormContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="18" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="8" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContactDetailsForm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/BuySoucher/Component/ContactDetailsForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SwapSoucherContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/SwapSoucher/Container/SwapSoucherContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SoucherCodeContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/SwapSoucher/Container/SoucherCodeContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidateSoucherForm.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/SwapSoucher/Component/ValidateSoucherForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_main.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asset/sass/layout/_main.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="201" column="76" lean-forward="false" selection-start-line="201" selection-start-column="76" selection-end-line="201" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomizationForm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/BuySoucher/Component/CustomizationForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Common/Home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="84" column="61" lean-forward="false" selection-start-line="84" selection-start-column="61" selection-end-line="84" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#1097#2893#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NavBar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Common/NavBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="101" lean-forward="false" selection-start-line="17" selection-start-column="101" selection-end-line="17" selection-end-column="101" />
+            <state relative-caret-position="45">
+              <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -170,6 +254,11 @@
       <find>&lt;!</find>
       <find>class</find>
       <find>style</find>
+      <find>app</find>
+      <find>nav-button</find>
+      <find>accent</find>
+      <find>overlay</find>
+      <find>major</find>
     </findStrings>
     <replaceStrings>
       <replace>recipient</replace>
@@ -177,6 +266,7 @@
       <replace>htmlFor</replace>
       <replace>Add Voucher</replace>
       <replace>className</replace>
+      <replace>asset</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -185,46 +275,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/.babelrc" />
-        <option value="$PROJECT_DIR$/app/component/Home.js" />
-        <option value="$PROJECT_DIR$/app/component/BuyerForm.js" />
-        <option value="$PROJECT_DIR$/app/component/RecipientForm.js" />
-        <option value="$PROJECT_DIR$/app/component/BuySoucherContainer.js" />
-        <option value="$PROJECT_DIR$/app/component/Main.js" />
-        <option value="$PROJECT_DIR$/app/component/NavBar.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$USER_HOME$/Downloads/ddd-distilled/1489065032.layoutit.html" />
-        <option value="$PROJECT_DIR$/app/something.html" />
-        <option value="$PROJECT_DIR$/app/component/Soucher.js" />
-        <option value="$PROJECT_DIR$/app/component/SoucherCustomizationForm.js" />
-        <option value="$PROJECT_DIR$/app/component/Payment.js" />
-        <option value="$PROJECT_DIR$/app/component/CustomizeSoucherContainer.js" />
-        <option value="$PROJECT_DIR$/app/component/SwapSoucherContainer.js" />
-        <option value="$PROJECT_DIR$/app/component/Voucher.js" />
-        <option value="$PROJECT_DIR$/app/component/SoucherCodeContainer.js" />
-        <option value="$PROJECT_DIR$/app/component/Catalog.js" />
-        <option value="$PROJECT_DIR$/app/component/ReadOnlyBasket.js" />
-        <option value="$PROJECT_DIR$/app/component/PhoneAuth.js" />
-        <option value="$PROJECT_DIR$/app/component/PhoneAuthContainer.js" />
-        <option value="$PROJECT_DIR$/app/Common/Page.js" />
-        <option value="$PROJECT_DIR$/app/SwapSoucher/SoucherCodeContainer.js" />
-        <option value="$PROJECT_DIR$/app/SwapSoucher/PriceSummary.js" />
-        <option value="$PROJECT_DIR$/app/Catalog/Voucher.js" />
-        <option value="$PROJECT_DIR$/app/Catalog/Catalog.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app/BuySoucher/BuyerForm.js" />
-        <option value="$PROJECT_DIR$/app/BuySoucher/RecipientForm.js" />
-        <option value="$PROJECT_DIR$/app/SwapSoucher/PhoneAuth.js" />
-        <option value="$PROJECT_DIR$/app/BuySoucher/CustomizeSoucherContainer.js" />
-        <option value="$PROJECT_DIR$/app/Common/ProgressBar.js" />
-        <option value="$PROJECT_DIR$/app/SwapSoucher/SwapSoucherContainer.js" />
-        <option value="$PROJECT_DIR$/app/BuySoucher/BuySoucherContainer.js" />
         <option value="$PROJECT_DIR$/app/orange/index.html" />
         <option value="$PROJECT_DIR$/app/Common/Footer.js" />
         <option value="$PROJECT_DIR$/app/index.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/config/route.js" />
         <option value="$PROJECT_DIR$/app/asset/js/main.js" />
         <option value="$PROJECT_DIR$/app/asset/css/main.css" />
         <option value="$PROJECT_DIR$/app/asset/sass/main.scss" />
@@ -234,8 +288,44 @@
         <option value="$PROJECT_DIR$/app/asset/sass/layout/_header.scss" />
         <option value="$PROJECT_DIR$/app/asset/sass/layout/_main.scss" />
         <option value="$PROJECT_DIR$/app/Common/Main.js" />
-        <option value="$PROJECT_DIR$/app/Common/Home.js" />
+        <option value="$PROJECT_DIR$/app/SwapSoucher/SwapSoucherContainer.js" />
+        <option value="$PROJECT_DIR$/app/BuySoucher/RecipientForm.js" />
+        <option value="$PROJECT_DIR$/app/Common/ProgressBar.js" />
+        <option value="$PROJECT_DIR$/app/BuySoucher/BuyerForm.js" />
+        <option value="$PROJECT_DIR$/app/BuySoucher/BuySoucherContainer.js" />
+        <option value="$PROJECT_DIR$/app/BuySoucher/BuyerFormContainer.js" />
+        <option value="$PROJECT_DIR$/app/BuySoucher/RecipientFormContainer.js" />
+        <option value="$PROJECT_DIR$/app/BuySoucher/Container/BuySoucherContainer.js" />
+        <option value="$PROJECT_DIR$/app/BuySoucher/Container/RecipientFormContainer.js" />
+        <option value="$PROJECT_DIR$/asset/sass/layout/_custom.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/main.scss" />
+        <option value="$PROJECT_DIR$/asset/css/main.css" />
+        <option value="$PROJECT_DIR$/asset/sass/layout/_header.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/components/_button.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/base/_page.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/layout/_banner.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/base/_typography.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/components/_box.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/components/_form.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/components/_icon.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/components/_image.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/components/_list.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/components/_table.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/layout/_menu.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/layout/_footer.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/libs/_vars.scss" />
+        <option value="$PROJECT_DIR$/asset/sass/components/_section.scss" />
+        <option value="$PROJECT_DIR$/app/BuySoucher/Component/BuyerForm.js" />
+        <option value="$PROJECT_DIR$/app/BuySoucher/Container/BuyerFormContainer.js" />
         <option value="$PROJECT_DIR$/app/Common/NavBar.js" />
+        <option value="$PROJECT_DIR$/app/config/route.js" />
+        <option value="$PROJECT_DIR$/app/BuySoucher/Container/ContactFormContainer.js" />
+        <option value="$PROJECT_DIR$/app/BuySoucher/Container/CustomizeFormContainer.js" />
+        <option value="$PROJECT_DIR$/app/BuySoucher/Component/ContactDetailsForm.js" />
+        <option value="$PROJECT_DIR$/app/Common/Home.js" />
+        <option value="$PROJECT_DIR$/app/BuySoucher/Component/CustomizationForm.js" />
+        <option value="$PROJECT_DIR$/app/SwapSoucher/Container/SoucherCodeContainer.js" />
+        <option value="$PROJECT_DIR$/app/SwapSoucher/Component/ValidateSoucherForm.js" />
       </list>
     </option>
   </component>
@@ -295,6 +385,184 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="asset" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sass" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asset" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sass" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asset" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sass" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asset" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sass" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asset" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sass" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asset" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asset" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="image" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asset" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asset" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -313,7 +581,51 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="asset" />
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SwapSoucher" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Container" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soucher-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SwapSoucher" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Component" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -335,13 +647,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/image" />
-      <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/app/BuySoucher" />
-      <recent name="$PROJECT_DIR$/app/Catalog" />
-      <recent name="$PROJECT_DIR$/app/SwapSoucher" />
+      <recent name="$PROJECT_DIR$/asset/image" />
+      <recent name="$PROJECT_DIR$/app/SwapSoucher/Component" />
+      <recent name="$PROJECT_DIR$/app/SwapSoucher/Container" />
+      <recent name="$PROJECT_DIR$/app/BuySoucher/Component" />
+      <recent name="$PROJECT_DIR$/app/BuySoucher/Container" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/asset/image" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/soucher/swap" />
       <recent name="$PROJECT_DIR$/app/soucher/buy" />
@@ -435,12 +748,12 @@
       <workItem from="1489567261416" duration="8201000" />
       <workItem from="1489725840384" duration="9306000" />
       <workItem from="1490113155082" duration="2409000" />
-      <workItem from="1490396386882" duration="4795000" />
+      <workItem from="1490396386882" duration="32815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70857000" />
+    <option name="totallyTimeSpent" value="98877000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -452,17 +765,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21640626" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16334662" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20717132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -490,259 +803,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dist/index_bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-router/es/hashHistory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-router/es/IndexRoute.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/babel-preset-stage-0/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/babel-preset-stage-1/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/babel-preset-stage-2/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/babel-preset-stage-3/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/ddd-distilled/1489065032.layoutit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/something.html" />
-    <entry file="file://$PROJECT_DIR$/app/SwapSoucher/PhoneAuthContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react/lib/React.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react/react.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="35" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/BuySoucher/Payment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/BuySoucher/Soucher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Common/Page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/SwapSoucher/PriceSummary.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/SwapSoucher/ReadOnlyBasket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Catalog/Voucher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="54" lean-forward="false" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Catalog/Catalog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/BuySoucher/BuyerForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/BuySoucher/SoucherCustomizationForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/BuySoucher/RecipientForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/SwapSoucher/SoucherCodeContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="55" lean-forward="false" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/SwapSoucher/PhoneAuth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-progress-steps/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-345">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-progress-steps/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/BuySoucher/CustomizeSoucherContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Common/ProgressBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/SwapSoucher/SwapSoucherContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/asset/js/ie/PIE.htc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/orange/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="155" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Common/Footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -767,98 +832,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/BuySoucher/BuySoucherContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/asset/js/main.js">
+    <entry file="file://$PROJECT_DIR$/asset/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/asset/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="3520" column="9" lean-forward="true" selection-start-line="3520" selection-start-column="9" selection-end-line="3520" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/asset/sass/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/asset/sass/layout/_banner.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1747">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/asset/sass/layout/_footer.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/asset/sass/layout/_header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/asset/sass/layout/_main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/asset/sass/layout/_menu.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Common/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -871,23 +850,372 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Common/Home.js">
+    <entry file="file://$PROJECT_DIR$/app/Common/ProgressBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="92" column="70" lean-forward="false" selection-start-line="92" selection-start-column="70" selection-end-line="92" selection-end-column="70" />
+        <state relative-caret-position="30">
+          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/BuySoucher/Container/BuySoucherContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/BuySoucher/Container/RecipientFormContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#145#585#0" expanded="false" />
-            <element signature="e#602#2337#0" expanded="false" />
-            <element signature="e#2354#2680#0" expanded="false" />
-            <element signature="e#2697#4740#0" expanded="false" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/image/catalog.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/image/sample_header_12.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/image/sample_header_11.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/image/sample_header_9.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/image/sample_header_8.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/libs/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/layout/_custom.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/css/main.css.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3600">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="2551" column="0" lean-forward="false" selection-start-line="2551" selection-start-column="0" selection-end-line="2551" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/libs/_skel.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-990">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/base/_page.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="41" column="15" lean-forward="false" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/base/_typography.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/components/_box.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/components/_button.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/components/_form.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/components/_icon.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/components/_image.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/components/_list.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/css/images/header-bg.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/components/_table.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/layout/_header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="68" column="27" lean-forward="true" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/layout/_menu.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1897">
+          <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/layout/_footer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/libs/_vars.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Common/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/layout/_banner.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="37" column="22" lean-forward="false" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/components/_section.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="42" column="47" lean-forward="false" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/BuySoucher/Component/RecipientForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="38" column="38" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="38" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Common/NavBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="101" lean-forward="false" selection-start-line="17" selection-start-column="101" selection-end-line="17" selection-end-column="101" />
+        <state relative-caret-position="45">
+          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/BuySoucher/Container/CustomizeFormContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/sass/layout/_main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="201" column="76" lean-forward="false" selection-start-line="201" selection-start-column="76" selection-end-line="201" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Common/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="84" column="61" lean-forward="false" selection-start-line="84" selection-start-column="61" selection-end-line="84" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#1097#2893#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/SwapSoucher/Component/PhoneAuth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/BuySoucher/Component/Payment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/BuySoucher/Component/ContactDetailsForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/BuySoucher/Component/CustomizationForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/image/soucher_code.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="96" lean-forward="false" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="96" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/SwapSoucher/Container/SwapSoucherContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/BuySoucher/Container/ContactFormContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/SwapSoucher/Container/SoucherCodeContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/SwapSoucher/Component/ValidateSoucherForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
