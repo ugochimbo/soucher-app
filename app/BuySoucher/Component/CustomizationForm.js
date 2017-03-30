@@ -11,7 +11,7 @@ let CustomizationForm = React.createClass({
                         Customize the soucher with a message and theme.
                     </p>
                 </header>
-                <div className="content">
+                <div className="light-content">
                     <form method="post" action="#">
                         <div className="row uniform">
                             <div className="6u 12u$(small)">

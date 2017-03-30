@@ -11,7 +11,7 @@ let ContactDetailsForm = React.createClass({
                         Please provide contact details for you and your loved one.
                     </p>
                 </header>
-                <div className="content">
+                <div className="light-content">
                     <form method="post" action="#">
                         <div className="row uniform">
                             <div className="6u 12u$(small)">
@@ -42,7 +42,7 @@ let ContactDetailsForm = React.createClass({
                                     <li>
                                         <Link to="buy/card-details" className="button big special">
                                             <span className="icon fa-gift"/>
-                                            <span> Gift Card Details </span>
+                                            <span> Soucher Details </span>
                                             <span  style={{'marginLeft' : '10px'}} className="icon fa-arrow-circle-o-right"/>
                                         </Link>
                                     </li>

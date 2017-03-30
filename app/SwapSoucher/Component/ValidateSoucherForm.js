@@ -11,7 +11,7 @@ let ValidateSoucherForm = React.createClass({
                         You will need your phone for final verification of the swap.
                     </p>
                 </header>
-                <div className="content">
+                <div className="light-content">
                     <form method="post" action="#">
                         <div className="row uniform">
                             <div className="6u 12u$(small) align-center">

@@ -19,6 +19,12 @@
 			.content {
 				@include padding(4em, 4em);
 			}
+
+			.light-content {
+				background-color: _palette(fg);
+				@include padding(4em, 4em);
+				box-shadow: inset 0 0 0.6px _palette(bg);
+			}
 		}
 
 		.features {
