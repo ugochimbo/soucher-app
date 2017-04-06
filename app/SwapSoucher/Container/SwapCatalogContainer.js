@@ -4,7 +4,7 @@ import SwapCatalog from '../Component/SwapCatalog'
 let SwapSoucherContainer = React.createClass({
     render: function() {
         return (
-            <div id="main">
+            <div id="main-full" className="full">
                 <SwapCatalog />
             </div>
         )

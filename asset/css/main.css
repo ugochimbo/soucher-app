@@ -2207,7 +2207,7 @@ body.is-menu-visible #menu {
 /* Banner */
 #banner {
   position: relative;
-  background-image: url("../image/sample_header_4.jpg");
+  background-image: url("../image/sample_header_12.jpg");
   /* background-position: center; */
   background-repeat: no-repeat;
   background-size: cover;
@@ -2353,23 +2353,26 @@ body.is-menu-visible #menu {
       padding: 6.5em 3em 6em 3em; } }
 
 /* Main */
-#main {
+#main, #main-full {
   width: 76em;
   margin: 0 auto;
-  padding-top: 6em; }
-  #main > * {
-    margin-bottom: 6em; }
-  #main .default {
+  padding-top: 4em; }
+  #main > *, #main-full > * {
+    margin-bottom: 3em; }
+  #main .default, #main-full .default {
     background-color: #011A27; }
-    #main .default .content {
-      padding: 4em 4em 2em 4em ; }
-    #main .default .light-content {
+    #main .default .content, #main-full .default .content {
+      padding: 3em 3em 1em 3em ; }
+    #main .default .light-content, #main-full .default .light-content {
       background-color: #BCC3C9;
-      padding: 4em 4em 2em 4em ;
-      box-shadow: inset 0 0 0.6px #011A27; }
-  #main .features {
+      padding: 3em 3em 1em 3em ;
+      box-shadow: inset 0 0 0.6px #011A27;
+      color: #011A27; }
+      #main .default .light-content h1, #main-full .default .light-content h1, #main .default .light-content h2, #main-full .default .light-content h2, #main .default .light-content h3, #main-full .default .light-content h3, #main .default .light-content h4, #main-full .default .light-content h4, #main .default .light-content h5, #main-full .default .light-content h5, #main .default .light-content h6, #main-full .default .light-content h6 {
+        color: #011A27; }
+  #main .features, #main-full .features {
     background-color: #011A27; }
-    #main .features .content {
+    #main .features .content, #main-full .features .content {
       display: -moz-flex;
       display: -webkit-flex;
       display: -ms-flex;
@@ -2378,18 +2381,18 @@ body.is-menu-visible #menu {
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-      #main .features .content .feature {
-        padding: 4em 3em 2em 3em ;
+      #main .features .content .feature, #main-full .features .content .feature {
+        padding: 3em 2em 1em 2em ;
         width: 33.333333333%;
         border-style: solid;
         border-color: #434b55;
         border-left-width: 1px;
         border-top-width: 1px; }
-        #main .features .content .feature:nth-child(-n + 3) {
+        #main .features .content .feature:nth-child(-n + 3), #main-full .features .content .feature:nth-child(-n + 3) {
           border-top-width: 0; }
-        #main .features .content .feature:nth-child(3n - 2) {
+        #main .features .content .feature:nth-child(3n - 2), #main-full .features .content .feature:nth-child(3n - 2) {
           border-left-width: 0; }
-  #main .spotlight {
+  #main .spotlight, #main-full .spotlight {
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
@@ -2399,85 +2402,95 @@ body.is-menu-visible #menu {
     -ms-align-items: center;
     align-items: center;
     background-color: #011A27; }
-    #main .spotlight .image {
+    #main .spotlight .image, #main-full .spotlight .image {
       width: 33.333333333%; }
-      #main .spotlight .image img {
+      #main .spotlight .image img, #main-full .spotlight .image img {
         width: 100%; }
-    #main .spotlight .content {
-      padding: 4em 4em 2em 4em ;
+    #main .spotlight .content, #main-full .spotlight .content {
+      padding: 3em 3em 1em 3em ;
       width: 66.666666666%; }
-    #main .spotlight.alt {
+    #main .spotlight.alt, #main-full .spotlight.alt {
       -moz-flex-direction: row-reverse;
       -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
       flex-direction: row-reverse; }
-  #main .cta {
+  #main .cta, #main-full .cta {
     text-align: center; }
-    #main .cta h2:after {
+    #main .cta h2:after, #main-full .cta h2:after {
       margin-left: auto;
       margin-right: auto; }
-    #main .cta p {
+    #main .cta p, #main-full .cta p {
       margin-top: 0; }
   @media screen and (max-width: 1680px) {
-    #main {
-      padding-top: 4.5em; }
-      #main > * {
+    #main, #main-full {
+      padding-top: 3.5em; }
+      #main > *, #main-full > * {
         margin-bottom: 4.5em; } }
   @media screen and (max-width: 1280px) {
-    #main {
-      width: calc(100% - 6em);
-      padding-top: 3em; }
-      #main > * {
-        margin-bottom: 3em; }
-      #main .default .content {
-        padding: 3em 3em 1em 3em ; }
-      #main .features .content .feature {
-        padding: 3em 2em 1em 2em ; }
-      #main .spotlight .content {
-        padding: 3em 3em 1em 3em ; }
-      #main .cta {
+    #main, #main-full {
+      width: calc(100% - 5em);
+      padding-top: 2em; }
+      #main > *, #main-full > * {
+        margin-bottom: 2em; }
+      #main .default .content, #main-full .default .content {
+        padding: 2em 2em 0.1em 2em ; }
+      #main .features .content .feature, #main-full .features .content .feature {
+        padding: 2em 1em 0.1em 1em ; }
+      #main .spotlight .content, #main-full .spotlight .content {
+        padding: 2em 2em 0.1em 2em ; }
+      #main .cta, #main-full .cta {
         padding: 1em 0 0.1em 0 ; } }
   @media screen and (max-width: 980px) {
-    #main .features .content {
+    #main .features .content, #main-full .features .content {
       display: block; }
-      #main .features .content .feature {
+      #main .features .content .feature, #main-full .features .content .feature {
         width: 100%;
         border-left: 0;
         border-top: solid 1px #434b55 !important; }
-        #main .features .content .feature:first-child {
+        #main .features .content .feature:first-child, #main-full .features .content .feature:first-child {
           border-top: 0 !important; }
-    #main .spotlight {
+    #main .spotlight, #main-full .spotlight {
       display: block; }
-      #main .spotlight .image {
+      #main .spotlight .image, #main-full .spotlight .image {
         width: 100%;
         overflow: hidden; }
-        #main .spotlight .image img {
-          margin-top: -8em; }
-      #main .spotlight .content {
+        #main .spotlight .image img, #main-full .spotlight .image img {
+          margin-top: -7em; }
+      #main .spotlight .content, #main-full .spotlight .content {
         width: 100%; } }
   @media screen and (max-width: 736px) {
-    #main {
+    #main, #main-full {
       width: 100%;
       padding-top: 0; }
-      #main > * {
+      #main > *, #main-full > * {
         margin-bottom: 0; }
-      #main .default .content {
-        padding: 3em 1.5em 1em 1.5em ; }
-      #main .features .content .feature {
-        padding: 3em 1.5em 1em 1.5em ; }
-      #main .spotlight .content {
-        padding: 3em 1.5em 1em 1.5em ; }
-        #main .spotlight .content h2:after {
+      #main .default .content, #main-full .default .content {
+        padding: 2em 1em 0.1em 1em ; }
+      #main .features .content .feature, #main-full .features .content .feature {
+        padding: 2em 1em 0.1em 1em ; }
+      #main .spotlight .content, #main-full .spotlight .content {
+        padding: 2em 1em 0.1em 1em ; }
+        #main .spotlight .content h2:after, #main-full .spotlight .content h2:after {
           margin-left: 0;
           margin-right: 0; }
-      #main .cta {
-        padding: 4em 1.5em 2em 1.5em ;
+      #main .cta, #main-full .cta {
+        padding: 3em 1.2em 1em 1.2em ;
         background-color: #011A27;
         background-image: url("images/overlay.png"), url("images/bg.jpg");
         background-size: 100px 100px,				cover;
         background-repeat: repeat,						no-repeat;
         background-attachment: scroll,						scroll;
         background-position: top left,					center bottom; } }
+
+#main-full {
+  width: 100% !important; }
+
+#basket {
+  box-shadow: 0 0 10em 0 rgba(0, 0, 0, 0.2);
+  padding: 3em;
+  right: 1em;
+  position: fixed;
+  z-index: 10000; }
 
 /* Footer */
 #footer {

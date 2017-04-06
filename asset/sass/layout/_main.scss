@@ -7,23 +7,28 @@
 	#main {
 		width: _size(inner);
 		margin: 0 auto;
-		padding-top: 6em;
+		padding-top: 4em;
 
 		> * {
-			margin-bottom: 6em;
+			margin-bottom: 3em;
 		}
 
 		.default {
 			background-color: _palette(bg);
 
 			.content {
-				@include padding(4em, 4em);
+				@include padding(3em, 3em);
 			}
 
 			.light-content {
 				background-color: _palette(fg);
-				@include padding(4em, 4em);
+				@include padding(3em, 3em);
 				box-shadow: inset 0 0 0.6px _palette(bg);
+				color: _palette(bg);
+
+				h1, h2, h3, h4, h5, h6 {
+					color: _palette(bg);
+				}
 			}
 		}
 
@@ -35,7 +40,7 @@
 				@include vendor('flex-wrap', 'wrap');
 
 				.feature {
-					@include padding(4em, 3em);
+					@include padding(3em, 2em);
 					width: 33.333333333%;
 					border-style: solid;
 					border-color: _palette(border);
@@ -67,7 +72,7 @@
 			}
 
 			.content {
-				@include padding(4em, 4em);
+				@include padding(3em, 3em);
 				width: 66.666666666%;
 			}
 
@@ -92,7 +97,7 @@
 		}
 
 		@include breakpoint(xlarge) {
-			padding-top: 4.5em;
+			padding-top: 3.5em;
 
 			> * {
 				margin-bottom: 4.5em;
@@ -100,30 +105,30 @@
 		}
 
 		@include breakpoint(large) {
-			width: calc(100% - 6em);
-			padding-top: 3em;
+			width: calc(100% - 5em);
+			padding-top: 2em;
 
 			> * {
-				margin-bottom: 3em;
+				margin-bottom: 2em;
 			}
 
 			.default {
 				.content {
-					@include padding(3em, 3em);
+					@include padding(2em, 2em);
 				}
 			}
 
 			.features {
 				.content {
 					.feature {
-						@include padding(3em, 2em);
+						@include padding(2em, 1em);
 					}
 				}
 			}
 
 			.spotlight {
 				.content {
-					@include padding(3em, 3em);
+					@include padding(2em, 2em);
 				}
 			}
 
@@ -157,7 +162,7 @@
 					overflow: hidden;
 
 					img {
-						margin-top: -8em;
+						margin-top: -7em;
 					}
 				}
 
@@ -177,21 +182,21 @@
 
 			.default {
 				.content {
-					@include padding(3em, 1.5em);
+					@include padding(2em, 1em);
 				}
 			}
 
 			.features {
 				.content {
 					.feature {
-						@include padding(3em, 1.5em);
+						@include padding(2em, 1em);
 					}
 				}
 			}
 
 			.spotlight {
 				.content {
-					@include padding(3em, 1.5em);
+					@include padding(2em, 1em);
 
 					h2 {
 						&:after {
@@ -203,7 +208,7 @@
 			}
 
 			.cta {
-				@include padding(4em, 1.5em);
+				@include padding(3em, 1.2em);
 				background-color:		_palette(bg-alt);
 				background-image:		url('images/overlay.png'),	url('images/bg.jpg');
 				background-size:		100px 100px,				cover;
@@ -212,4 +217,17 @@
 				background-position:	top left,					center bottom;
 			}
 		}
+	}
+
+	#main-full {
+		@extend #main;
+		width: 100% !important;
+	}
+
+	#basket{
+		box-shadow: 0 0 10em 0 rgba(0, 0, 0, 0.2);
+		padding: 3em;
+		right: 1em;
+		position: fixed;
+		z-index: 10000;
 	}
