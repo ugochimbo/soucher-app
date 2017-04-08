@@ -6,7 +6,7 @@ import SwapCatalogContainer from '../SwapSoucher/Container/SwapCatalogContainer.
 import CustomizeSoucherContainer from '../BuySoucher/Container/CustomizeFormContainer.js';
 import SoucherCodeContainer from '../SwapSoucher/Container/SoucherCodeContainer.js';
 import Catalog from '../Catalog/Catalog.js';
-import PhoneAuth from '../SwapSoucher/Component/PhoneAuth.js';
+import PhoneAuthContainer from '../SwapSoucher/Container/PhoneAuthContainer.js';
 import Home from '../Common/Home.js';
 
 let routes = (
@@ -19,7 +19,7 @@ let routes = (
 
             <Route path='swap/verify-code' header='Swap Soucher' component={SoucherCodeContainer} />
             <Route path='swap/catalog' header='Swap Soucher' component={SwapCatalogContainer} />
-            <Route path='swap/phone-auth' header='Phone Auth' component={PhoneAuth} />
+            <Route path='swap/phone-auth' header='Phone Auth' component={PhoneAuthContainer} />
 
             <Route path='voucher/catalog' header='Catalog' component={Catalog} />
             <Route path='about-us' header='Catalog' component={Catalog} />

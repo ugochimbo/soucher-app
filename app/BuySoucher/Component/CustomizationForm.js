@@ -34,7 +34,7 @@ let CustomizationForm = React.createClass({
                             <div className="12u$">
                                 <ul className="actions align-center">
                                     <li>
-                                        <Link to="buy/card-details" className="button big special">
+                                        <Link to="swap/verify-code" className="button big special">
                                             <span  style={{'marginLeft' : '5px'}} className="icon fa-credit-card "/>
                                             <span> Pay Now </span>
                                             <span  style={{'marginLeft' : '10px'}} className="icon fa-arrow-circle-o-right"/>
