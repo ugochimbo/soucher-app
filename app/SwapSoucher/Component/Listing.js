@@ -6,7 +6,7 @@ let Listing = React.createClass({
     render: function () {
         return (
             <div className="8u 12u$(small)">
-                <div>
+                <div id="swap-catalog">
                     <SwapItem />
                     <SwapItem />
                     <SwapItem />

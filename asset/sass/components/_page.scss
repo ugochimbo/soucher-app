@@ -1,0 +1,45 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
+/* Custom page style */
+
+  #swap-catalog {
+      .item {
+        margin: 1px 1px 20px 1px;
+        float: left;
+        width: 260px;
+        height: 300px;
+        box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.1);
+        padding: 0.5em 0.2em 1em 0.2em;
+        background-color: _palette(swap-item);
+        text-align: center;
+
+        .img {
+          background-color: _palette(header);
+          height: 200px;
+          padding: -0.5em -0.2em 1em -0.2em;
+        }
+
+        .amount {
+          height: 80px;
+
+            .fixed > div{
+                margin: 5px 5px 0 5px;
+                border-radius: 100%;
+                border: solid 1px;
+                width: 50px;
+                height: 50px;
+                float: left;
+                background-color: _palette(header);
+                padding: 10px 2px 0 2px;
+            }
+        }
+
+        img {
+          width: 240px;
+          height: 200px;
+        }
+
+      }
+  }
