@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
-let Main = React.createClass({
-    render: function() {
+export default class Main extends Component{
+    render() {
         return (
             <div id="page-wrapper">
                 <NavBar />
@@ -14,6 +14,4 @@ let Main = React.createClass({
             </div>
         )
     }
-});
-
-export default Main;
+}

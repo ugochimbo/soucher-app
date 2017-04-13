@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-let SwapItem = React.createClass({
-    render: function() {
+export default class SwapItem extends Component {
+     render() {
         return (
             <div className="item">
                 <div className="img">
@@ -21,6 +21,4 @@ let SwapItem = React.createClass({
             </div>
         )
     }
-});
-
-export default SwapItem;
+}

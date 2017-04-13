@@ -1,8 +1,8 @@
-import React from 'react';
-import {Link} from 'react-router';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
-let Basket = React.createClass({
-    render: function() {
+export default class Basket extends Component {
+     render() {
         return (
             <div className="2u 12u$(small)">
                 <div id="basket">
@@ -20,7 +20,7 @@ let Basket = React.createClass({
 
                     </section>
                     <section>
-                        <Link to="swap/phone-auth" className="button big special">
+                        <Link to="/swap/phone-auth" className="button big special">
                             <span>Swap</span>
                             <span style={{'marginLeft': '10px'}} className="icon fa-arrow-circle-o-right"/>
                         </Link>
@@ -29,6 +29,4 @@ let Basket = React.createClass({
             </div>
         )
     }
-});
-
-export default Basket;
+}

@@ -1,15 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ValidateSoucherForm from '../Component/ValidateSoucherForm';
 
-
-let SoucherCodeContainer = React.createClass({
-    render: function() {
+export default class SoucherCodeContainer extends Component {
+     render() {
         return (
             <div id="main">
                 <ValidateSoucherForm />
             </div>
         )
     }
-});
-
-export default SoucherCodeContainer;
+}

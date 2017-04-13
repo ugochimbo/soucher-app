@@ -1,5 +1,5 @@
 
-export const Add_Contact_Details = 'addBuyerDetails';
+export const Add_Contact_Details = 'addContactDetails';
 export const Add_Soucher_Details = 'addSoucherDetails';
 export const Add_Payment_Details = 'addPaymentDetails';
 

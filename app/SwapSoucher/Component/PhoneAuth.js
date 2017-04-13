@@ -1,8 +1,8 @@
-import React from 'react';
-import {Link} from 'react-router';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
-let PhoneAuth = React.createClass({
-    render: function() {
+export default class PhoneAuth extends Component {
+     render() {
         return (
             <section id="content" className="default">
                 <header className="major">
@@ -40,6 +40,4 @@ let PhoneAuth = React.createClass({
             </section>
         )
     }
-});
-
-export default PhoneAuth;
+}

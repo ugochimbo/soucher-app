@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-let PhoneAuth = React.createClass({
-    render: function () {
+export default class PhoneAuth extends Component {
+     render () {
         return (
             <div className="2u 12u$(small)">
                 <div id="sidebar">
@@ -21,6 +21,4 @@ let PhoneAuth = React.createClass({
             </div>
         )
     }
-});
-
-export default PhoneAuth;
+}

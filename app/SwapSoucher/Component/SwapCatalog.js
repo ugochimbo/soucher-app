@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Filter from '../Component/Filter';
 import Listing from '../Component/Listing';
 import Basket from '../Component/Basket';
 
-let SwapCatalog = React.createClass({
-    render: function() {
+export default class SwapCatalog extends Component {
+     render() {
         return (
             <section id="content" className="default">
                 <header className="major">
@@ -25,6 +25,4 @@ let SwapCatalog = React.createClass({
             </section>
         )
     }
-});
-
-export default SwapCatalog;
+}

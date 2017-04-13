@@ -1,8 +1,8 @@
-import React from 'react';
-import {Link} from 'react-router';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
-let CustomizationForm = React.createClass({
-    render: function() {
+export default class CustomizationForm extends Component{
+     render() {
         return (
             <section id="content" className="default">
                 <header className="major">
@@ -34,7 +34,7 @@ let CustomizationForm = React.createClass({
                             <div className="12u$">
                                 <ul className="actions align-center">
                                     <li>
-                                        <Link to="swap/verify-code" className="button big special">
+                                        <Link to="/swap/verify-code" className="button big special">
                                             <span  style={{'marginLeft' : '5px'}} className="icon fa-credit-card "/>
                                             <span> Pay Now </span>
                                             <span  style={{'marginLeft' : '10px'}} className="icon fa-arrow-circle-o-right"/>
@@ -49,6 +49,4 @@ let CustomizationForm = React.createClass({
             </section>
         )
     }
-});
-
-export default CustomizationForm;
+}

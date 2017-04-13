@@ -1,8 +1,8 @@
-import React from 'react';
-import {Link} from 'react-router';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
-let ContactDetailsForm = React.createClass({
-    render: function() {
+export default class ContactDetailsForm extends Component{
+     render() {
         return (
             <section id="content" className="default">
                 <header className="major">
@@ -40,7 +40,7 @@ let ContactDetailsForm = React.createClass({
                             <div className="12u$">
                                 <ul className="actions align-center">
                                     <li>
-                                        <Link to="buy/card-details" className="button big special">
+                                        <Link to="/buy/card-details" className="button big special">
                                             <span className="icon fa-gift"/>
                                             <span> Soucher Details </span>
                                             <span  style={{'marginLeft' : '10px'}} className="icon fa-arrow-circle-o-right"/>
@@ -55,6 +55,4 @@ let ContactDetailsForm = React.createClass({
             </section>
         )
     }
-});
-
-export default ContactDetailsForm;
+}

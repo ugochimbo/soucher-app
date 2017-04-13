@@ -6,12 +6,15 @@ let HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 module.exports = {
+    devServer: {
+        historyApiFallback: true
+    },
     entry: [
         './app/index.js'
     ],
     output: {
         path: __dirname + '/dist',
-        filename: "index_bundle.js"
+        filename: "/index_bundle.js"
     },
     module: {
         loaders: [

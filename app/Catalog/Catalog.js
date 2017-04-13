@@ -1,9 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Voucher from './Voucher';
 
-
-let Catalog = React.createClass({
-    render: function() {
+export default class Catalog extends Component{
+     render() {
         return (
             <div className="row" style={{'marginTop' : '40px'}}>
                 <div className="col-md-12" style={{'marginBottom' : '40px'}}>
@@ -83,6 +82,4 @@ let Catalog = React.createClass({
             </div>
         )
     }
-});
-
-export default Catalog;
+}

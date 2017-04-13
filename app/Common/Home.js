@@ -1,8 +1,8 @@
-import React from 'react';
-import {Link} from 'react-router';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
-let Home = React.createClass({
-    render: function() {
+export default class Home extends Component{
+      render() {
         return (
             <div id="main">
                 <section id="banner">
@@ -118,6 +118,4 @@ let Home = React.createClass({
             </div>
         )
     }
-});
-
-export default Home;
+}

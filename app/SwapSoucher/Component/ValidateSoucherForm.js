@@ -1,8 +1,8 @@
-import React from 'react';
-import {Link} from 'react-router';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
-let ValidateSoucherForm = React.createClass({
-    render: function() {
+export default class ValidateSoucherForm extends Component {
+     render() {
         return (
             <section id="content" className="default">
                 <header className="major">
@@ -28,7 +28,7 @@ let ValidateSoucherForm = React.createClass({
                                 <div className="12u$">
                                     <ul className="actions">
                                         <li>
-                                            <Link to="swap/catalog" className="button big special">
+                                            <Link to="/swap/catalog" className="button big special">
                                                 <span> Start my swap </span>
                                                 <span  style={{'marginLeft' : '5px'}} className="icon fa-arrow-circle-o-right"/>
                                             </Link>
@@ -43,6 +43,4 @@ let ValidateSoucherForm = React.createClass({
             </section>
         )
     }
-});
-
-export default ValidateSoucherForm;
+}

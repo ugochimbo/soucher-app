@@ -1,14 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ContactDetailsForm from '../Component/ContactDetailsForm';
 
-let ContactFormContainer = React.createClass({
-    render: function() {
+export default class ContactFormContainer extends Component{
+     render() {
         return (
             <div id="main">
                 <ContactDetailsForm />
             </div>
         )
     }
-});
-
-export default ContactFormContainer;
+}

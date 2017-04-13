@@ -1,14 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 import CustomizationForm from '../Component/CustomizationForm';
 
-let CustomizeFormContainer = React.createClass({
-    render: function() {
+export default class CustomizeFormContainer extends Component{
+     render() {
         return (
             <div id="main">
                 <CustomizationForm />
             </div>
         )
     }
-});
-
-export default CustomizeFormContainer;
+}

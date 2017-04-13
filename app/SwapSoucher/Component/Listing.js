@@ -1,9 +1,9 @@
-import React from 'react';
-import {Link} from 'react-router';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import SwapItem from '../Component/SwapItem'
 
-let Listing = React.createClass({
-    render: function () {
+export default class Listing extends Component {
+     render() {
         return (
             <div className="8u 12u$(small)">
                 <div id="swap-catalog">
@@ -23,7 +23,7 @@ let Listing = React.createClass({
                     <div className="12u$">
                         <ul className="actions align-center">
                             <li>
-                                <Link to="buy/card-details" className="button big special">
+                                <Link to="/buy/card-details" className="button big special">
                                     <span> Page 1 of 1 </span>
                                     <span style={{'marginLeft': '10px'}} className="icon fa-arrow-circle-o-right"/>
                                 </Link>
@@ -34,6 +34,4 @@ let Listing = React.createClass({
             </div>
         )
     }
-});
-
-export default Listing;
+}

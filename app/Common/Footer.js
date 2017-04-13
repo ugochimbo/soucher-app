@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-let Footer = React.createClass({
-    render: function() {
+export default class Footer extends Component{
+     render() {
         return (
             <section id="footer">
                 <div className="inner">
@@ -35,6 +35,4 @@ let Footer = React.createClass({
             </section>
         )
     }
-});
-
-export default Footer;
+}

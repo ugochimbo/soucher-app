@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-let Voucher = React.createClass({
-    render: function() {
+export default class Voucher extends Component {
+     render() {
         return (
             <span style={{'marginRight' : '50px'}}>
                 <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" /> <br />
@@ -9,6 +9,4 @@ let Voucher = React.createClass({
             </span>
         )
     }
-});
-
-export default Voucher;
+}
