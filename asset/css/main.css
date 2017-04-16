@@ -1968,27 +1968,41 @@ table {
   margin: 1px 1px 20px 1px;
   float: left;
   width: 260px;
-  height: 300px;
+  height: 332px;
   box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.1);
-  padding: 0.5em 0.2em 1em 0.2em;
-  background-color: #969da7;
-  text-align: center; }
+  padding: 0.5em 0.2em 0 0.2em;
+  text-align: center;
+  background-color: #BCC3C9; }
   #swap-catalog .item .img {
-    height: 200px; }
+    background-color: #BCC3C9;
+    height: 200px;
+    padding: 0.1em 0.1em 1em 0.1em; }
   #swap-catalog .item .amount {
-    height: 80px; }
+    height: 80px;
+    background-color: #ffffff;
+    margin: 5px -3px 0 -3px; }
     #swap-catalog .item .amount .fixed > div {
-      margin: 5px 5px 0 5px;
+      margin: 10px 5px 8px 8px;
       border-radius: 100%;
       border: solid 1px;
       width: 50px;
       height: 50px;
       float: left;
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 10px 2px 0 2px; }
+      padding: 10px 2px 0 2px;
+      font-size: large; }
+    #swap-catalog .item .amount .custom {
+      height: 40px;
+      margin: 10px 0; }
+    #swap-catalog .item .amount .custom > input {
+      background-color: #BCC3C9 !important; }
   #swap-catalog .item img {
     width: 240px;
     height: 200px; }
+
+#sidebar .inner > ul.links {
+  list-style: none; }
+#sidebar .inner > ul.links > li > a {
+  color: #011A27; }
 
 /* Header */
 body {
@@ -2390,13 +2404,15 @@ body.is-menu-visible #menu {
     background-color: #011A27; }
     #main .default .content, #main-full .default .content {
       padding: 3em 3em 1em 3em ; }
-    #main .default .light-content, #main-full .default .light-content {
+    #main .default .light-content, #main-full .default .light-content, #main .default .white-light-content, #main-full .default .white-light-content {
       background-color: #BCC3C9;
       padding: 3em 3em 1em 3em ;
       box-shadow: inset 0 0 0.6px #011A27;
       color: #011A27; }
-      #main .default .light-content h1, #main-full .default .light-content h1, #main .default .light-content h2, #main-full .default .light-content h2, #main .default .light-content h3, #main-full .default .light-content h3, #main .default .light-content h4, #main-full .default .light-content h4, #main .default .light-content h5, #main-full .default .light-content h5, #main .default .light-content h6, #main-full .default .light-content h6 {
+      #main .default .light-content h1, #main-full .default .light-content h1, #main .default .white-light-content h1, #main-full .default .white-light-content h1, #main .default .light-content h2, #main-full .default .light-content h2, #main .default .white-light-content h2, #main-full .default .white-light-content h2, #main .default .light-content h3, #main-full .default .light-content h3, #main .default .white-light-content h3, #main-full .default .white-light-content h3, #main .default .light-content h4, #main-full .default .light-content h4, #main .default .white-light-content h4, #main-full .default .white-light-content h4, #main .default .light-content h5, #main-full .default .light-content h5, #main .default .white-light-content h5, #main-full .default .white-light-content h5, #main .default .light-content h6, #main-full .default .light-content h6, #main .default .white-light-content h6, #main-full .default .white-light-content h6 {
         color: #011A27; }
+    #main .default .white-light-content, #main-full .default .white-light-content {
+      background-color: #ffffff; }
   #main .features, #main-full .features {
     background-color: #011A27; }
     #main .features .content, #main-full .features .content {

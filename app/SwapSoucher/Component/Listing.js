@@ -18,6 +18,7 @@ export default class Listing extends Component {
                     <SwapItem />
                     <SwapItem />
                     <SwapItem />
+                    <SwapItem />
                 </div>
                 <div className="row uniform" style={{'marginTop': '20px'}}>
                     <div className="12u$">

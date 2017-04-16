@@ -13,7 +13,7 @@ export default class SwapCatalog extends Component {
                         Please select one or more vouchers
                     </p>
                 </header>
-                <div className="light-content">
+                <div className="white-light-content">
                     <form method="post" action="#">
                         <div className="row uniform">
                             <Filter />
