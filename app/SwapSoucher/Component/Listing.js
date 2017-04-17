@@ -5,8 +5,11 @@ import SwapItem from '../Component/SwapItem'
 export default class Listing extends Component {
      render() {
         return (
-            <div className="8u 12u$(small)">
+            <div className="11u 12u$(small)">
                 <div id="swap-catalog">
+                    <SwapItem />
+                    <SwapItem />
+                    <SwapItem />
                     <SwapItem />
                     <SwapItem />
                     <SwapItem />

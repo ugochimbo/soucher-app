@@ -1999,10 +1999,38 @@ table {
     width: 240px;
     height: 200px; }
 
-#sidebar .inner > ul.links {
-  list-style: none; }
-#sidebar .inner > ul.links > li > a {
-  color: #011A27; }
+#filter {
+  background-color: #ffffff;
+  padding: 1em 1em 0.1em 1em ;
+  color: #0f0f0f;
+  text-align: center;
+  box-shadow: 0 0 10em 0 rgba(0, 0, 0, 0.2);
+  margin-top: 2px;
+  margin-bottom: 2px; }
+  #filter #category div {
+    float: left;
+    margin-left: 5px; }
+    #filter #category div a {
+      color: #011A27 !important;
+      text-decoration: none;
+      margin-left: 15px;
+      padding: 2px; }
+    #filter #category div a.selected {
+      text-decoration: underline; }
+  #filter #search {
+    float: right;
+    margin-right: 1px; }
+    #filter #search input {
+      height: 40px;
+      margin-top: -38px;
+      background-color: #BCC3C9; }
+
+#basket {
+  box-shadow: 0 0 10em 0 rgba(0, 0, 0, 0.2);
+  padding: 2em 2em 0.1em 2em ;
+  right: 0.3em;
+  position: fixed;
+  z-index: 10000; }
 
 /* Header */
 body {
@@ -2412,7 +2440,8 @@ body.is-menu-visible #menu {
       #main .default .light-content h1, #main-full .default .light-content h1, #main .default .white-light-content h1, #main-full .default .white-light-content h1, #main .default .light-content h2, #main-full .default .light-content h2, #main .default .white-light-content h2, #main-full .default .white-light-content h2, #main .default .light-content h3, #main-full .default .light-content h3, #main .default .white-light-content h3, #main-full .default .white-light-content h3, #main .default .light-content h4, #main-full .default .light-content h4, #main .default .white-light-content h4, #main-full .default .white-light-content h4, #main .default .light-content h5, #main-full .default .light-content h5, #main .default .white-light-content h5, #main-full .default .white-light-content h5, #main .default .light-content h6, #main-full .default .light-content h6, #main .default .white-light-content h6, #main-full .default .white-light-content h6 {
         color: #011A27; }
     #main .default .white-light-content, #main-full .default .white-light-content {
-      background-color: #ffffff; }
+      background-color: #ffffff;
+      padding: 3em 1em 1em 1em ; }
   #main .features, #main-full .features {
     background-color: #011A27; }
     #main .features .content, #main-full .features .content {
@@ -2527,13 +2556,6 @@ body.is-menu-visible #menu {
 
 #main-full {
   width: 100% !important; }
-
-#basket {
-  box-shadow: 0 0 10em 0 rgba(0, 0, 0, 0.2);
-  padding: 3em;
-  right: 1em;
-  position: fixed;
-  z-index: 10000; }
 
 /* Footer */
 #footer {

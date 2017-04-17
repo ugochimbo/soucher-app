@@ -2,6 +2,11 @@
   "name": "Soucher",
   "version": "0.0.1",
   "description": "Soucher frontend app",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ugochimbo/soucher-app.git"
+  },
+  "private": true,
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js --hot --inline --progress --display-error-details --devtool eval",
@@ -22,6 +27,7 @@
     "react-router": "^4.1.0",
     "react-router-dom": "^4.1.0",
     "redux": "^3.6.0",
+    "redux-api-middleware": "^1.0.2",
     "webpack-dev-server": "^1.16.3"
   },
   "devDependencies": {

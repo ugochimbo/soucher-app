@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 export default class Basket extends Component {
      render() {
         return (
-            <div className="2u 12u$(small)">
+            <div className="1u 12u$(small)">
                 <div id="basket">
                     <section>
                         <header>Basket</header>

@@ -34,6 +34,7 @@
 			.white-light-content {
 				@extend .light-content;
 				background-color: _palette(fg-light);
+				@include padding(3em, 1em);
 			}
 		}
 
@@ -229,10 +230,3 @@
 		width: 100% !important;
 	}
 
-	#basket{
-		box-shadow: 0 0 10em 0 rgba(0, 0, 0, 0.2);
-		padding: 3em;
-		right: 1em;
-		position: fixed;
-		z-index: 10000;
-	}
