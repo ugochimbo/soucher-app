@@ -37,6 +37,11 @@
                 font-size: large;
             }
 
+            .fixed > div:hover {
+                background-color: _palette(bg);
+                color: _palette(fg-light);
+            }
+
             .custom {
                 height: 40px;
                 margin: 10px 0;

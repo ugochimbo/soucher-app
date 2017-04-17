@@ -1990,6 +1990,9 @@ table {
       float: left;
       padding: 10px 2px 0 2px;
       font-size: large; }
+    #swap-catalog .item .amount .fixed > div:hover {
+      background-color: #011A27;
+      color: #ffffff; }
     #swap-catalog .item .amount .custom {
       height: 40px;
       margin: 10px 0; }
