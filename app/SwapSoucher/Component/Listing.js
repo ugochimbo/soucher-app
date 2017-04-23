@@ -23,8 +23,8 @@ export default class Listing extends Component {
                     <SwapItem />
                     <SwapItem />
                 </div>
-                <div className="row uniform" style={{'marginTop': '20px'}}>
-                    <div className="1u$">
+                <div className="row uniform" style={{'marginTop': '20px', 'marginBottom': '20px'}}>
+                    <div className="12u$">
                         <ul className="actions align-center">
                             <li>
                                 <Link to="/buy/card-details" className="button big special">

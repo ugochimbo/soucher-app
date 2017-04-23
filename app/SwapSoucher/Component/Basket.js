@@ -20,10 +20,12 @@ export default class Basket extends Component {
 
                     </section>
                     <section>
-                        <Link to="/swap/phone-auth" className="button big special">
-                            <span>Swap</span>
-                            <span style={{'marginLeft': '10px'}} className="icon fa-arrow-circle-o-right"/>
-                        </Link>
+                        <div>
+                            <Link to="/swap/phone-auth" className="button big special">
+                                <span>Swap</span>
+                                <span style={{'marginLeft': '10px'}} className="icon fa-arrow-circle-o-right"/>
+                            </Link>
+                        </div>
                     </section>
                 </div>
             </div>

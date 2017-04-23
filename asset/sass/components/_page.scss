@@ -9,7 +9,7 @@
         margin: 1px 0 20px 10px;
         float: left;
         width: 250px;
-        height: 320px;
+        height: 330px;
         box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.1);
         text-align: center;
         background-color: _palette(fg);
@@ -20,7 +20,7 @@
         }
 
         .amount {
-          height: 80px;
+          height: 105px;
           background-color: _palette(fg-light);
 
             .fixed > div{
@@ -39,13 +39,10 @@
                 color: _palette(fg-light);
             }
 
-            .custom {
-                height: 40px;
+            .custom > input {
+                height: 60px;
+                color: _palette(fg-light);
             }
-
-            /*.custom > input {
-                background-color: _palette(fg) !important;
-            }*/
 
         }
 
@@ -91,7 +88,7 @@
         input {
           height: 40px;
           margin-top: -38px;
-          background-color: _palette(fg);
+          color: _palette(fg-light);
         }
       }
 
@@ -103,4 +100,6 @@
     right: 0.3em;
     position: fixed;
     z-index: 10000;
+    background-color: _palette(fg-light);
+    color: _palette(bg);
   }

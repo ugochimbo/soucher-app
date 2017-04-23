@@ -1968,7 +1968,7 @@ table {
   margin: 1px 0 20px 10px;
   float: left;
   width: 250px;
-  height: 320px;
+  height: 330px;
   box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.1);
   text-align: center;
   background-color: #BCC3C9; }
@@ -1976,11 +1976,8 @@ table {
     background-color: #BCC3C9;
     height: 205px; }
   #swap-catalog .item .amount {
-    height: 80px;
-    background-color: #ffffff;
-    /*.custom > input {
-        background-color: _palette(fg) !important;
-    }*/ }
+    height: 105px;
+    background-color: #ffffff; }
     #swap-catalog .item .amount .fixed > div {
       margin: 10px 3px 8px 8px;
       border-radius: 100%;
@@ -1993,8 +1990,9 @@ table {
     #swap-catalog .item .amount .fixed > div:hover {
       background-color: #011A27;
       color: #ffffff; }
-    #swap-catalog .item .amount .custom {
-      height: 40px; }
+    #swap-catalog .item .amount .custom > input {
+      height: 60px;
+      color: #ffffff; }
   #swap-catalog .item img {
     width: 250px;
     height: 205px; }
@@ -2023,14 +2021,16 @@ table {
     #filter #search input {
       height: 40px;
       margin-top: -38px;
-      background-color: #BCC3C9; }
+      color: #ffffff; }
 
 #basket {
   box-shadow: 0 0 10em 0 rgba(0, 0, 0, 0.2);
   padding: 2em 2em 0.1em 2em ;
   right: 0.3em;
   position: fixed;
-  z-index: 10000; }
+  z-index: 10000;
+  background-color: #ffffff;
+  color: #011A27; }
 
 /* Header */
 body {
@@ -2432,18 +2432,16 @@ body.is-menu-visible #menu {
     background-color: #011A27; }
     #main .default .content, #main-full .default .content {
       padding: 3em 3em 1em 3em ; }
-    #main .default .light-content, #main-full .default .light-content, #main .default .catalog-light-content, #main-full .default .catalog-light-content, #main .default .white-light-content, #main-full .default .white-light-content {
+    #main .default .light-content, #main-full .default .light-content, #main .default .catalog-light-content, #main-full .default .catalog-light-content {
       background-color: #BCC3C9;
       padding: 3em 3em 1em 3em ;
       box-shadow: inset 0 0 0.6px #011A27;
       color: #011A27; }
-      #main .default .light-content h1, #main-full .default .light-content h1, #main .default .catalog-light-content h1, #main-full .default .catalog-light-content h1, #main .default .white-light-content h1, #main-full .default .white-light-content h1, #main .default .light-content h2, #main-full .default .light-content h2, #main .default .catalog-light-content h2, #main-full .default .catalog-light-content h2, #main .default .white-light-content h2, #main-full .default .white-light-content h2, #main .default .light-content h3, #main-full .default .light-content h3, #main .default .catalog-light-content h3, #main-full .default .catalog-light-content h3, #main .default .white-light-content h3, #main-full .default .white-light-content h3, #main .default .light-content h4, #main-full .default .light-content h4, #main .default .catalog-light-content h4, #main-full .default .catalog-light-content h4, #main .default .white-light-content h4, #main-full .default .white-light-content h4, #main .default .light-content h5, #main-full .default .light-content h5, #main .default .catalog-light-content h5, #main-full .default .catalog-light-content h5, #main .default .white-light-content h5, #main-full .default .white-light-content h5, #main .default .light-content h6, #main-full .default .light-content h6, #main .default .catalog-light-content h6, #main-full .default .catalog-light-content h6, #main .default .white-light-content h6, #main-full .default .white-light-content h6 {
+      #main .default .light-content h1, #main-full .default .light-content h1, #main .default .catalog-light-content h1, #main-full .default .catalog-light-content h1, #main .default .light-content h2, #main-full .default .light-content h2, #main .default .catalog-light-content h2, #main-full .default .catalog-light-content h2, #main .default .light-content h3, #main-full .default .light-content h3, #main .default .catalog-light-content h3, #main-full .default .catalog-light-content h3, #main .default .light-content h4, #main-full .default .light-content h4, #main .default .catalog-light-content h4, #main-full .default .catalog-light-content h4, #main .default .light-content h5, #main-full .default .light-content h5, #main .default .catalog-light-content h5, #main-full .default .catalog-light-content h5, #main .default .light-content h6, #main-full .default .light-content h6, #main .default .catalog-light-content h6, #main-full .default .catalog-light-content h6 {
         color: #011A27; }
     #main .default .catalog-light-content, #main-full .default .catalog-light-content {
-      padding: 2em 0.2em 1em 0.2em; }
-    #main .default .white-light-content, #main-full .default .white-light-content {
-      background-color: #ffffff;
-      padding: 3em 1em 1em 1em ; }
+      padding: 2em 0.2em 0 0.2em;
+      margin-bottom: -3em; }
   #main .features, #main-full .features {
     background-color: #011A27; }
     #main .features .content, #main-full .features .content {
