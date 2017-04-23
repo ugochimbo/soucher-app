@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import ContactDetailsForm from '../Component/ContactDetailsForm';
 
-export default class ContactFormContainer extends Component{
+class ContactFormContainer extends Component{
      render() {
         return (
             <div id="main">
@@ -10,3 +11,9 @@ export default class ContactFormContainer extends Component{
         )
     }
 }
+
+function mapStateToProps(state) {
+    return {};
+}
+
+export default connect(mapStateToProps)(ContactFormContainer);

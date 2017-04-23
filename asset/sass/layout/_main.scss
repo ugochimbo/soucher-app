@@ -31,6 +31,11 @@
 				}
 			}
 
+			.catalog-light-content {
+				@extend .light-content;
+				padding: 2em 0.2em 1em 0.2em;
+			}
+
 			.white-light-content {
 				@extend .light-content;
 				background-color: _palette(fg-light);
@@ -228,5 +233,6 @@
 	#main-full {
 		@extend #main;
 		width: 100% !important;
+		@include padding(0, 0);
 	}
 

@@ -6,28 +6,25 @@
 
   #swap-catalog {
       .item {
-        margin: 1px 1px 20px 1px;
+        margin: 1px 0 20px 10px;
         float: left;
-        width: 260px;
-        height: 332px;
+        width: 250px;
+        height: 320px;
         box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.1);
-        padding: 0.5em 0.2em 0 0.2em;
         text-align: center;
         background-color: _palette(fg);
 
         .img {
           background-color: _palette(fg);
-          height: 200px;
-          padding: 0.1em 0.1em 1em 0.1em;
+          height: 205px;
         }
 
         .amount {
           height: 80px;
           background-color: _palette(fg-light);
-          margin: 5px -3px 0 -3px;
 
             .fixed > div{
-                margin: 10px 5px 8px 8px;
+                margin: 10px 3px 8px 8px;
                 border-radius: 100%;
                 border: solid 1px;
                 width: 50px;
@@ -44,18 +41,17 @@
 
             .custom {
                 height: 40px;
-                margin: 10px 0;
             }
 
-            .custom > input {
+            /*.custom > input {
                 background-color: _palette(fg) !important;
-            }
+            }*/
 
         }
 
         img {
-          width: 240px;
-          height: 200px;
+          width: 250px;
+          height: 205px;
         }
 
       }

@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import ValidateSoucherForm from '../Component/ValidateSoucherForm';
+import {connect} from 'react-redux';
 
-export default class SoucherCodeContainer extends Component {
+class SoucherCodeContainer extends Component {
      render() {
         return (
             <div id="main">
@@ -10,3 +11,9 @@ export default class SoucherCodeContainer extends Component {
         )
     }
 }
+
+function mapStateToProps(state) {
+    return {};
+}
+
+export default connect(mapStateToProps)(SoucherCodeContainer);

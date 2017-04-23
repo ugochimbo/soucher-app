@@ -14,7 +14,7 @@ export default class SwapCatalog extends Component {
                     </p>
                 </header>
                 <Filter/>
-                <div className="white-light-content">
+                <div className="catalog-light-content">
                     <form method="post" action="#">
                         <div className="row uniform">
                             <Listing />

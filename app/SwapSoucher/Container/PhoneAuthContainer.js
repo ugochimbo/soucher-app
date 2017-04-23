@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import PhoneAuth from '../Component/PhoneAuth';
+import {connect} from 'react-redux';
 
-export default class PhoneAuthContainer extends Component {
+class PhoneAuthContainer extends Component {
      render() {
         return (
             <div id="main">
@@ -10,3 +11,9 @@ export default class PhoneAuthContainer extends Component {
         )
     }
 }
+
+function mapStateToProps(state) {
+    return {};
+}
+
+export default connect(mapStateToProps)(PhoneAuthContainer);

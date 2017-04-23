@@ -1965,24 +1965,24 @@ table {
 
 /* Custom page style */
 #swap-catalog .item {
-  margin: 1px 1px 20px 1px;
+  margin: 1px 0 20px 10px;
   float: left;
-  width: 260px;
-  height: 332px;
+  width: 250px;
+  height: 320px;
   box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.1);
-  padding: 0.5em 0.2em 0 0.2em;
   text-align: center;
   background-color: #BCC3C9; }
   #swap-catalog .item .img {
     background-color: #BCC3C9;
-    height: 200px;
-    padding: 0.1em 0.1em 1em 0.1em; }
+    height: 205px; }
   #swap-catalog .item .amount {
     height: 80px;
     background-color: #ffffff;
-    margin: 5px -3px 0 -3px; }
+    /*.custom > input {
+        background-color: _palette(fg) !important;
+    }*/ }
     #swap-catalog .item .amount .fixed > div {
-      margin: 10px 5px 8px 8px;
+      margin: 10px 3px 8px 8px;
       border-radius: 100%;
       border: solid 1px;
       width: 50px;
@@ -1994,13 +1994,10 @@ table {
       background-color: #011A27;
       color: #ffffff; }
     #swap-catalog .item .amount .custom {
-      height: 40px;
-      margin: 10px 0; }
-    #swap-catalog .item .amount .custom > input {
-      background-color: #BCC3C9 !important; }
+      height: 40px; }
   #swap-catalog .item img {
-    width: 240px;
-    height: 200px; }
+    width: 250px;
+    height: 205px; }
 
 #filter {
   background-color: #ffffff;
@@ -2435,13 +2432,15 @@ body.is-menu-visible #menu {
     background-color: #011A27; }
     #main .default .content, #main-full .default .content {
       padding: 3em 3em 1em 3em ; }
-    #main .default .light-content, #main-full .default .light-content, #main .default .white-light-content, #main-full .default .white-light-content {
+    #main .default .light-content, #main-full .default .light-content, #main .default .catalog-light-content, #main-full .default .catalog-light-content, #main .default .white-light-content, #main-full .default .white-light-content {
       background-color: #BCC3C9;
       padding: 3em 3em 1em 3em ;
       box-shadow: inset 0 0 0.6px #011A27;
       color: #011A27; }
-      #main .default .light-content h1, #main-full .default .light-content h1, #main .default .white-light-content h1, #main-full .default .white-light-content h1, #main .default .light-content h2, #main-full .default .light-content h2, #main .default .white-light-content h2, #main-full .default .white-light-content h2, #main .default .light-content h3, #main-full .default .light-content h3, #main .default .white-light-content h3, #main-full .default .white-light-content h3, #main .default .light-content h4, #main-full .default .light-content h4, #main .default .white-light-content h4, #main-full .default .white-light-content h4, #main .default .light-content h5, #main-full .default .light-content h5, #main .default .white-light-content h5, #main-full .default .white-light-content h5, #main .default .light-content h6, #main-full .default .light-content h6, #main .default .white-light-content h6, #main-full .default .white-light-content h6 {
+      #main .default .light-content h1, #main-full .default .light-content h1, #main .default .catalog-light-content h1, #main-full .default .catalog-light-content h1, #main .default .white-light-content h1, #main-full .default .white-light-content h1, #main .default .light-content h2, #main-full .default .light-content h2, #main .default .catalog-light-content h2, #main-full .default .catalog-light-content h2, #main .default .white-light-content h2, #main-full .default .white-light-content h2, #main .default .light-content h3, #main-full .default .light-content h3, #main .default .catalog-light-content h3, #main-full .default .catalog-light-content h3, #main .default .white-light-content h3, #main-full .default .white-light-content h3, #main .default .light-content h4, #main-full .default .light-content h4, #main .default .catalog-light-content h4, #main-full .default .catalog-light-content h4, #main .default .white-light-content h4, #main-full .default .white-light-content h4, #main .default .light-content h5, #main-full .default .light-content h5, #main .default .catalog-light-content h5, #main-full .default .catalog-light-content h5, #main .default .white-light-content h5, #main-full .default .white-light-content h5, #main .default .light-content h6, #main-full .default .light-content h6, #main .default .catalog-light-content h6, #main-full .default .catalog-light-content h6, #main .default .white-light-content h6, #main-full .default .white-light-content h6 {
         color: #011A27; }
+    #main .default .catalog-light-content, #main-full .default .catalog-light-content {
+      padding: 2em 0.2em 1em 0.2em; }
     #main .default .white-light-content, #main-full .default .white-light-content {
       background-color: #ffffff;
       padding: 3em 1em 1em 1em ; }
@@ -2558,7 +2557,8 @@ body.is-menu-visible #menu {
         background-position: top left,					center bottom; } }
 
 #main-full {
-  width: 100% !important; }
+  width: 100% !important;
+  padding: 0 0 0.1em 0 ; }
 
 /* Footer */
 #footer {

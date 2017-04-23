@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import CustomizationForm from '../Component/CustomizationForm';
 
-export default class CustomizeFormContainer extends Component{
+class CustomizeFormContainer extends Component{
      render() {
         return (
             <div id="main">
@@ -10,3 +11,9 @@ export default class CustomizeFormContainer extends Component{
         )
     }
 }
+
+function mapStateToProps(state) {
+    return {};
+}
+
+export default connect(mapStateToProps)(CustomizeFormContainer);

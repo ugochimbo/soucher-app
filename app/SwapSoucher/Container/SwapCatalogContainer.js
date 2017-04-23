@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import SwapCatalog from '../Component/SwapCatalog'
+import SwapCatalog from '../Component/SwapCatalog';
+import {connect} from 'react-redux';
 
-export default class SwapSoucherContainer extends Component{
+class SwapSoucherContainer extends Component{
      render() {
         return (
             <div id="main-full" className="full">
@@ -10,3 +11,9 @@ export default class SwapSoucherContainer extends Component{
         )
     }
 }
+
+function mapStateToProps(state) {
+    return {};
+}
+
+export default connect(mapStateToProps)(SwapSoucherContainer);
