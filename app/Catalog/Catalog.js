@@ -1,84 +1,64 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import Voucher from './Voucher';
+import Filter from '../Common/Filter';
 
 export default class Catalog extends Component{
      render() {
         return (
-            <div className="row" style={{'marginTop' : '40px'}}>
-                <div className="col-md-12" style={{'marginBottom' : '40px'}}>
-                    <span style={{'float' : 'left' }}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                </div>
+            <div id="main-full" className="full">
+                <section id="content" className="default">
+                <header className="major">
+                    <h2>Voucher Catalog</h2>
+                    <p>
+                        Our catalog is updated regularly.
+                    </p>
+                </header>
+                <Filter/>
+                <div className="catalog-light-content">
+                    <div className="row uniform">
+                        <div className="11u 12u$(small)">
+                            <div id="swap-catalog">
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                                <Voucher />
+                            </div>
+                            <div className="row uniform" style={{'marginTop': '20px', 'marginBottom': '20px'}}>
+                                <div className="12u$">
+                                    <ul className="actions align-center">
+                                        <li>
+                                            <Link to="/buy/card-details" className="button big special">
+                                                <span> Page 1 of 1 </span>
+                                                <span style={{'marginLeft': '10px'}} className="icon fa-arrow-circle-o-right"/>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="1u 12u$(small)">
 
-                <div className="col-md-12" style={{'marginBottom' : '40px'}}>
-                    <span style={{'float' : 'left' }}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
+                        </div>
+                    </div>
                 </div>
-
-                <div className="col-md-12" style={{'marginBottom' : '40px'}}>
-                    <span style={{'float' : 'left' }}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                </div>
-
-                <div className="col-md-12" style={{'marginBottom' : '40px'}}>
-                    <span style={{'float' : 'left' }}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                </div>
-
-                <div className="col-md-12" style={{'marginBottom' : '40px'}}>
-                    <span style={{'float' : 'left' }}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                    <span style={{'float' : 'left'}}>
-                        <Voucher />
-                    </span>
-                </div>
+            </section>
             </div>
         )
     }

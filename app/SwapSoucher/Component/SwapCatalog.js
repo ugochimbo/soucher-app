@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Filter from '../Component/Filter';
+import Filter from '../../Common/Filter';
 import Listing from '../Component/Listing';
 import Basket from '../Component/Basket';
 
