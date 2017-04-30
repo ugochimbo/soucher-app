@@ -15,7 +15,7 @@ export default class CustomizationForm extends Component{
                     <form method="post" action="#">
                         <div className="row uniform">
                             <div className="6u 12u$(small)">
-                                <img src="/asset/image/soucher_0.png" width="550px" />
+                                <img src="/asset/image/soucher_12_1.jpg" width="550px" style={{'marginTop': '60px'}} />
                             </div>
                             <div className="6u 12u$(small)">
                                 <h3 className="align-center">Soucher Details</h3>

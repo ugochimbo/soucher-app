@@ -15,7 +15,7 @@ export default class ValidateSoucherForm extends Component {
                     <form method="post" action="#">
                         <div className="row uniform">
                             <div className="6u 12u$(small) align-center">
-                                <img src="/asset/image/soucher_code.png" width="350px" />
+                                <img src="/asset/image/soucher_12_1.jpg" width="550px" style={{'marginTop': '20px'}} />
                             </div>
                             <div className="6u 12u$(small)">
                                 <h3>Enter Soucher Code</h3>
@@ -23,7 +23,7 @@ export default class ValidateSoucherForm extends Component {
                                     <input type="text" name="soucher-code" id="soucher-code" />
                                 </div>
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
-                                    <p>Your code can be found in the bottom right corner as seen in the sample image</p>
+                                    <p>Your code can be found in the bottom center as seen in the sample image</p>
                                 </div>
                                 <div className="12u$">
                                     <ul className="actions">

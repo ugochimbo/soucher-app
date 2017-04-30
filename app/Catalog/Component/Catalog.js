@@ -17,7 +17,7 @@ export default class Catalog extends Component{
                 <Filter/>
                 <div className="catalog-light-content">
                     <div className="row uniform">
-                        <div className="11u 12u$(small)">
+                        <div className="12u$">
                             <div id="swap-catalog">
                                 <Voucher />
                                 <Voucher />
@@ -40,21 +40,16 @@ export default class Catalog extends Component{
                                 <Voucher />
                                 <Voucher />
                             </div>
-                            <div className="row uniform" style={{'marginTop': '20px', 'marginBottom': '20px'}}>
-                                <div className="12u$">
-                                    <ul className="actions align-center">
-                                        <li>
-                                            <Link to="/buy/card-details" className="button big special">
-                                                <span> Page 1 of 1 </span>
-                                                <span style={{'marginLeft': '10px'}} className="icon fa-arrow-circle-o-right"/>
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
-                        <div className="1u 12u$(small)">
-
+                        <div className="12u$" style={{'marginTop': '20px', 'marginBottom': '20px'}}>
+                            <ul className="actions align-center">
+                                <li>
+                                    <Link to="/buy/card-details" className="button big special">
+                                        <span> Page 1 of 1 </span>
+                                        <span style={{'marginLeft': '10px'}} className="icon fa-arrow-circle-o-right"/>
+                                    </Link>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
