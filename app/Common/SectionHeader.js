@@ -1,5 +1,20 @@
 import React, {Component} from 'react';
 
+export const ContactDetailsHeader = {
+    title: 'Contact Details',
+    message: 'Please provide contact details for you and your loved one.',
+};
+
+export const SoucherDetailsHeader = {
+    title: 'Soucher Details',
+    message: 'Customize the soucher with a message and theme.',
+};
+
+export const PaymentsPageHeader = {
+    title: 'Payments Details',
+    message: 'Complete Transaction',
+};
+
 export default class SectionHeader extends Component{
     render() {
         return (
