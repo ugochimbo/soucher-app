@@ -2,7 +2,7 @@ import React from 'react';
 import SectionHeader, {PaymentsPageHeader as header} from '../../Common/SectionHeader';
 import { Field, reduxForm } from 'redux-form';
 import {validator as validate} from '../Validator';
-import {InputField} from '../../Common/FormElement';
+import {Input} from '../../Common/FormField';
 
 const  { DOM: { input } } = React;
 
@@ -22,7 +22,7 @@ const PaymentPage = (props) => {
                                 <h3 className="align-center">Choose Payment Type</h3>
                                 <div>Payment bla bla</div>
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
-                                    <Field name="paymentType" type = 'text' component = {InputField} label="Payment Type" />
+                                    <Field name="paymentType" type = 'text' component = {Input} label="Payment Type" />
                                 </div>
                             </div>
                         </div>

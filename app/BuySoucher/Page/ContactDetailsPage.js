@@ -2,7 +2,7 @@ import React from 'react';
 import SectionHeader, {ContactDetailsHeader as header} from '../../Common/SectionHeader';
 import { Field, reduxForm } from 'redux-form';
 import {validator as validate} from '../Validator';
-import {InputField} from '../../Common/FormElement';
+import {Input} from '../../Common/FormField';
 
 const  { DOM: { input } } = React;
 
@@ -21,27 +21,27 @@ const ContactDetailsPage = (props) => {
 
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
                                     <label>
-                                    <Field name="buyerName" id="buyerName" type="text" component = {InputField} label = 'Name' />
+                                    <Field name="buyerName" id="buyerName" type="text" component = {Input} label = 'Name' />
                                     </label>
                                 </div>
 
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
-                                    <Field name="buyerEmail" id="buyerEmail" type="text" component = {InputField} label = 'Email'/>
+                                    <Field name="buyerEmail" id="buyerEmail" type="text" component = {Input} label = 'Email'/>
                                 </div>
                             </div>
                             <div className="6u 12u$(small)">
                                 <h3 className="major">Recipient's Details</h3>
 
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
-                                    <Field name="recipientName" id="recipientName" type="text" component = {InputField} label = 'Name'/>
+                                    <Field name="recipientName" id="recipientName" type="text" component = {Input} label = 'Name'/>
                                 </div>
 
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
-                                    <Field name="recipientEmail" id="recipientEmail" type="text" component = {InputField} label = 'Email'/>
+                                    <Field name="recipientEmail" id="recipientEmail" type="text" component = {Input} label = 'Email'/>
                                 </div>
 
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
-                                    <Field name="recipientPhone"  id="recipientPhone" type="text" component = {InputField} label = 'Phone' />
+                                    <Field name="recipientPhone" id="recipientPhone" type="tel" component = {Input} label = 'Phone' />
                                 </div>
                             </div>
                         </div>

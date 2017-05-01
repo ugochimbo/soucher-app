@@ -2,7 +2,7 @@ import React from 'react';
 import SectionHeader, {SoucherDetailsHeader as header} from '../../Common/SectionHeader';
 import { Field, reduxForm } from 'redux-form';
 import {validator as validate} from '../Validator';
-import {InputField} from '../../Common/FormElement';
+import * as FormField from '../../Common/FormField';
 
 const  { DOM: { input } } = React;
 
@@ -21,16 +21,17 @@ const SoucherDetailsPage = (props) => {
                             <div className="6u 12u$(small)">
                                 <h3 className="align-center">Soucher Details</h3>
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
-                                    <Field name="recipientName" type = 'text' component = {InputField} label = 'Name'/>
+                                    <Field name="nameOnCard" type = 'text' component = {FormField.Input} label = 'Name on card (optional)'/>
                                 </div>
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
-                                    <Field name="recipientEmail" type = 'text' component = {InputField} label = 'Email' />
+                                    <Field name="soucherValue" type = 'number' component = {FormField.Input} label = 'Amount' min="0" step = "10" />
                                 </div>
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
-                                    <Field name="recipientPhone" type = 'text' component = {InputField} label = 'Phone' />
+                                    <Field name="soucherMessage" component = {FormField.TextArea} label = 'Message' rows = '5'/>
                                 </div>
                             </div>
                         </div>
+
                         <div className="row uniform" style={{'marginTop': '20px'}}>
                             <div className="12u$ actions align-center">
                                 <button type="button" className="button big special" onClick={previousPage}>

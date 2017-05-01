@@ -3,6 +3,7 @@ const errors = {};
 const FIELD_REQUIRED = 'Required';
 const INVALID_EMAIL = 'Invalid Email Address';
 const INVALID_PHONE_NUMBER = 'Invalid Phone Number';
+const MINIMUM_SOUCHER_VALUE_ERROR = 'Amount must be greater than 0';
 
 function emailValidator(email) {
     let emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
@@ -65,9 +66,20 @@ function validateContactDetails(values) {
     validateRecipientDetails(values);
 }
 
+function validateSoucherDetails(values) {
+
+    let soucherValue = parseFloat(values.soucherValue);
+    if (!soucherValue > 0) {
+        errors.soucherValue = MINIMUM_SOUCHER_VALUE_ERROR;
+    } else {
+        delete errors.soucherValue;
+    }
+}
+
 export const validator = values => {
     console.log(values);
-    validateContactDetails(values);
+   // validateContactDetails(values);
+    validateSoucherDetails(values);
     console.log(errors);
     return errors;
 };

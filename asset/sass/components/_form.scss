@@ -17,6 +17,7 @@
 	}
 
 	input[type="text"],
+	input[type="number"],
 	input[type="password"],
 	input[type="email"],
 	input[type="tel"],
@@ -26,7 +27,7 @@
 		background: _palette(border-bg);
 		border: none;
 		border-radius: 0;
-		color: inherit;
+		color: _palette(fg-light);
 		display: block;
 		outline: 0;
 		padding: 0 1.25em;
@@ -67,8 +68,10 @@
 	}
 
 	input[type="text"],
+	input[type="number"],
 	input[type="password"],
 	input[type="email"],
+	input[type="tel"],
 	select {
 		height: _size(element-height);
 	}
@@ -164,4 +167,22 @@
 	.formerize-placeholder {
 		color: _palette(fg-light) !important;
 		opacity: 1.0;
+	}
+
+	.form-error {
+		@include icon;
+		color: _palette(error);
+		border: none;
+		font-weight: 700;
+
+		&:before {
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			content: '\F06A';
+			margin-right: 5px;
+		}
 	}
