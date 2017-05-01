@@ -13,7 +13,7 @@ import Wizard from '../BuySoucher/Wizard';
 export const routes =
         <Main>
             <Route exact={true} path='/' header='Buy Soucher - Contact Details' component={Home} />
-            <Route path='/buy' header='Buy Soucher' component={Wizard} />
+            <Route path='/gift-soucher' header='Buy Soucher' component={Wizard} />
 
             <Route path='/swap/verify-code' header='Swap Soucher' component={SoucherCodeContainer} />
             <Route path='/swap/catalog' header='Swap Soucher' component={SwapCatalogContainer} />

@@ -1618,10 +1618,13 @@ textarea {
   .select-wrapper select::-ms-expand {
     display: none; }
 
+input[type="number"] {
+  width: 8em; }
+
 input[type="text"],
-input[type="number"],
 input[type="password"],
 input[type="email"],
+input[type="number"],
 input[type="tel"],
 select {
   height: 3.25em; }
