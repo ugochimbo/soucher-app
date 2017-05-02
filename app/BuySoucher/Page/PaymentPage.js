@@ -7,13 +7,20 @@ import {Input} from '../../Common/FormField';
 const  { DOM: { input } } = React;
 
 const PaymentPage = (props) => {
-    const { handleSubmit, pristine, previousPage, submitting } = props;
+
+    const { handleSubmit, pristine, previousPage, submitting, history } = props;
+
+    function handleFormSubmit(formProps) {
+        console.log(formProps);
+        history.push('/');
+    }
+
     return (
         <div id="main">
             <section id="content" className="default">
                 <SectionHeader title={header.title} message={header.message} />
                 <div className="light-content">
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit(handleFormSubmit.bind(this))}>
                         <div className="row uniform">
                             <div className="6u 12u$(small)">
                                 <img src="/asset/image/soucher_12_1.jpg" width="550px" style={{'marginTop': '60px'}} />

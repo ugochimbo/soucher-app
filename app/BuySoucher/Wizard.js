@@ -10,8 +10,8 @@ class Wizard extends Component {
         this.nextPage = this.nextPage.bind(this);
         this.previousPage = this.previousPage.bind(this);
         this.state = {
-            page: 1
-        }
+            page: 1,
+        };
     }
 
     nextPage() {
@@ -25,12 +25,12 @@ class Wizard extends Component {
     render() {
         const { onSubmit } = this.props;
         const { page } = this.state;
-        console.log(this.state);
+        const history = this.context.router.history;
         return (
             <div>
                 {page === 1 && <ContactDetailsPage onSubmit={this.nextPage}/>}
                 {page === 2 && <SoucherDetailsPage previousPage={this.previousPage} onSubmit={this.nextPage}/>}
-                {page === 3 && <PaymentPage previousPage={this.previousPage} onSubmit={onSubmit}/>}
+                {page === 3 && <PaymentPage previousPage={this.previousPage} onSubmit={onSubmit} history = {history} />}
             </div>
         )
     }
@@ -38,6 +38,10 @@ class Wizard extends Component {
 
 Wizard.propTypes = {
     onSubmit: PropTypes.func
+};
+
+Wizard.contextTypes = {
+    router: PropTypes.object.isRequired
 };
 
 export default Wizard;

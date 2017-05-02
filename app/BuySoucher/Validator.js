@@ -21,10 +21,8 @@ function unsetFieldError(field) {
 
 function emailValidator(email) {
     let emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-    let isValid = emailRegex.test(email);
-
     return {
-        'isValid' : isValid,
+        'isValid' : emailRegex.test(email),
         'message' : ERROR_INVALID_EMAIL
     };
 }
@@ -90,9 +88,7 @@ function validateSoucherDetails(values) {
 }
 
 export const validator = values => {
-    console.log(values);
     validateContactDetails(values);
     validateSoucherDetails(values);
-    console.log(errors);
     return errors;
 };
