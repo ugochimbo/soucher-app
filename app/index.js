@@ -11,5 +11,5 @@ render(
             {routes}
         </BrowserRouter>
     </Provider>,
-    document.getElementById('page-wrapper')
+    document.getElementById('app')
 );

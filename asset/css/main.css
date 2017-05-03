@@ -2078,7 +2078,7 @@ body {
   z-index: 10000; }
   #header h1 {
     position: absolute;
-    top: 1;
+    top: 0;
     left: 1.5em;
     height: inherit;
     color: inherit;
@@ -2306,7 +2306,7 @@ body.is-menu-visible #menu {
 /* Banner */
 #banner {
   position: relative;
-  background-image: url("../image/sample_header_3.jpg");
+  background-image: url("../image/header.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
