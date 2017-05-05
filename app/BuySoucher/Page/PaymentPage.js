@@ -3,6 +3,7 @@ import SectionHeader, {PaymentsPageHeader as header} from '../../Common/SectionH
 import { Field, reduxForm } from 'redux-form';
 import {validator as validate} from '../Validator';
 import {Input} from '../../Common/FormField';
+import * as LINK_TO from '../../config/constant';
 
 const  { DOM: { input } } = React;
 
@@ -12,7 +13,7 @@ const PaymentPage = (props) => {
 
     function handleFormSubmit(formProps) {
         console.log(formProps);
-        history.push('/');
+        history.push(LINK_TO.GIFT_SOUCHER_SUCCESS_ROUTE);
     }
 
     return (

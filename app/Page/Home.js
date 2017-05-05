@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import  * as LINK_TO from '../config/constant';
 
 export default class Home extends Component{
       render() {
@@ -12,7 +13,7 @@ export default class Home extends Component{
                     </header>
                     <footer>
                         <ul className="actions fit">
-                            <li><Link to="/buy/buyer-details" className="button big">
+                            <li><Link to = {LINK_TO.GIFT_SOUCHER_ROUTE}  className="button big">
                                 <span className="icon fa-gift"/>
                                 <span style={{'marginLeft' : '5px'}}>Gift a Soucher</span>
                             </Link></li>
@@ -58,10 +59,10 @@ export default class Home extends Component{
                     </header>
                     <ul className="actions">
                         <li>
-                            <a href="#" className="button big special">
+                            <Link to = {LINK_TO.VOUCHER_CATALOG_ROUTE} className="button big special">
                                 <span style={{'marginRight' : '5px'}}>View Voucher Catalog</span>
                                 <span className="icon fa-book"/>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </section>
@@ -108,7 +109,7 @@ export default class Home extends Component{
                         <h2>What are you waiting for ?</h2>
                     </header>
                     <ul className="actions">
-                        <li><Link to="/buy/buyer-details" className="button big special">
+                        <li><Link to = {LINK_TO.VOUCHER_CATALOG_ROUTE} className="button big special">
                             <span className="icon fa-gift"/>
                             <span style={{'margin' : '0 10px 0 10px'}}>Gift a loved one a Soucher</span>
                             <span className="icon fa-gift"/>

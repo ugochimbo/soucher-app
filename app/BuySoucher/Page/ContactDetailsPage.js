@@ -40,12 +40,12 @@ const ContactDetailsPage = (props) => {
                                     <Field name="recipientEmail" id="recipientEmail" type="text" component = {Input} label = 'Email'/>
                                 </div>
 
-                                <div className="12u$" style={{'marginBottom': '10px'}}>
+                                <div className="12u$">
                                     <Field name="recipientPhone" id="recipientPhone" type="tel" component = {Input} label = 'Phone' />
                                 </div>
                             </div>
                         </div>
-                        <div className="row uniform" style={{'marginTop': '20px'}}>
+                        <div className="row uniform" style={{'marginBottom': '10px'}}>
                             <div className="12u$ actions align-center">
                                 <button type="submit" className="button big special">
                                     <span className="icon fa-gift"/>

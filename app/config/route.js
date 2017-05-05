@@ -9,17 +9,21 @@ import PhoneAuthContainer from '../SwapSoucher/Container/PhoneAuthContainer.js';
 import AboutUs from '../Page/AboutUs';
 import ContactUs from '../Page/ContactUs';
 import Wizard from '../BuySoucher/Wizard';
+import SuccessPage from '../BuySoucher/Page/SuccessPage';
+
+import  * as PATH_TO from './constant';
 
 export const routes =
         <Main>
-            <Route exact={true} path='/' header='Buy Soucher - Contact Details' component={Home} />
-            <Route path='/gift-soucher' header='Buy Soucher' component={Wizard} />
+            <Route exact = {true} path = {PATH_TO.HOME} header = 'Soucher - Home' component = {Home} />
+            <Route exact = {true} path = {PATH_TO.GIFT_SOUCHER_ROUTE} header='Gift Soucher' component={Wizard} />
+            <Route exact = {true} path = {PATH_TO.GIFT_SOUCHER_SUCCESS_ROUTE} header='Gift Soucher - Success' component={SuccessPage} />
 
-            <Route path='/swap/verify-code' header='Swap Soucher' component={SoucherCodeContainer} />
-            <Route path='/swap/catalog' header='Swap Soucher' component={SwapCatalogContainer} />
-            <Route path='/swap/phone-auth' header='Phone Auth' component={PhoneAuthContainer} />
+            <Route exact = {true} path = {PATH_TO.SOUCHER_CODE_VERIFICATION_ROUTE} header='Swap Soucher' component={SoucherCodeContainer} />
+            <Route exact = {true} path = {PATH_TO.SWAP_CATALOG_ROUTE} header='Swap Soucher' component={SwapCatalogContainer} />
+            <Route exact = {true} path = {PATH_TO.SWAP_PHONE_AUTHENTICATION_ROUTE} header='Phone Auth' component={PhoneAuthContainer} />
 
-            <Route path='/voucher/catalog' header='Catalog' component={VoucherCatalogContainer} />
-            <Route path='/about-us' header='Catalog' component={AboutUs} />
-            <Route path='/contact-us' header='Catalog' component={ContactUs} />
+            <Route exact = {true} path = {PATH_TO.VOUCHER_CATALOG_ROUTE} header='Catalog' component={VoucherCatalogContainer} />
+            <Route exact = {true} path = {PATH_TO.ABOUT_US_ROUTE} header='Catalog' component={AboutUs} />
+            <Route exact = {true} path = {PATH_TO.CONTACT_US_ROUTE} header='Catalog' component={ContactUs} />
         </Main>;

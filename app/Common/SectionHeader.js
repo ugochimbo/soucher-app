@@ -15,6 +15,11 @@ export const PaymentsPageHeader = {
     message: 'Complete Transaction',
 };
 
+export const SuccessPageHeader = {
+    title: 'Payment Successful',
+    message: 'Your gift has been sent.',
+};
+
 export default class SectionHeader extends Component{
     render() {
         return (
