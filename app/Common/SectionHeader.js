@@ -15,9 +15,25 @@ export const PaymentsPageHeader = {
     message: 'Complete Transaction',
 };
 
-export const SuccessPageHeader = {
+export const GiftSoucherSuccessPageHeader = {
     title: 'Payment Successful',
     message: 'Your gift has been sent.',
+    thanks: 'On behalf of your loved one, THANK YOU for the gift.',
+};
+
+export const SoucherCodeVerificationPageHeader = {
+    title: 'Please enter your soucher code',
+    message: 'You will need your phone for final verification of the swap.',
+};
+
+export const SwapCatalogPageHeader = {
+    title: 'Select Voucher(s)',
+    message: 'Please select one or more vouchers.',
+};
+
+export const PhoneAuthenticationPageHeader = {
+    title: 'Authenticate Request',
+    message: 'Enter authentication code.',
 };
 
 export default class SectionHeader extends Component{

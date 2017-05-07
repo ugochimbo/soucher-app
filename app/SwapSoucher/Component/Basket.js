@@ -7,25 +7,43 @@ export default class Basket extends Component {
             <div className="1u 12u$(small)">
                 <div id="basket">
                     <section>
-                        <header>Basket</header>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Soucher Value: </td>
+                                    <td> 50 &euro; </td>
+                                </tr>
+                                <tr>
+                                    <td>In Use: </td>
+                                    <td> 40 &euro; </td>
+                                </tr>
+                                <tr>
+                                    <td>Balance: </td>
+                                    <td> 10 &euro; </td>
+                                </tr>
+                                <tr className='header'>
+                                    <td colSpan={2}> Selected Vouchers </td>
+                                </tr>
+                                <tr>
+                                    <td> Amazon </td>
+                                    <td> 10 &euro; </td>
+                                </tr>
+                                <tr>
+                                    <td> H&M 20 </td>
+                                    <td> 40 &euro; </td>
+                                </tr>
+                                <tr>
+                                    <td> Ebay </td>
+                                    <td> 10 &euro; </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </section>
                     <section>
-                        Soucher Value: 50 &euro; <br/>
-                        In Use: 40 &euro; <br/>
-                        Balance: 10 &euro; <br/>
-                        -------------------- <br />
-                        Amazon 10 &euro; <br />
-                        H&M 20 &euro; <br />
-                        Ebay 10 &euro; <br /><br />
-
-                    </section>
-                    <section>
-                        <div>
-                            <Link to="/swap/phone-auth" className="button big special">
-                                <span>Swap</span>
-                                <span style={{'marginLeft': '10px'}} className="icon fa-arrow-circle-o-right"/>
-                            </Link>
-                        </div>
+                        <button type="submit" className="button big special">
+                            <span> Swap </span>
+                            <span  style={{'marginLeft' : '10px'}} className="icon fa-arrow-circle-o-right"/>
+                        </button>
                     </section>
                 </div>
             </div>

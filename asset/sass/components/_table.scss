@@ -15,18 +15,21 @@
 
 		tbody {
 			tr {
+				border: none;
+				border-left: 0;
+				border-right: 0;
+			}
+			tr.header {
+				margin-top: 10px;
+				margin-bottom: 10px;
 				border: solid 1px _palette(border);
 				border-left: 0;
 				border-right: 0;
-
-				&:nth-child(2n + 1) {
-					background-color: _palette(border-bg);
-				}
 			}
 		}
 
 		td {
-			padding: 0.75em 0.75em;
+			padding: 0.25em 0.25em;
 		}
 
 		th {
@@ -46,37 +49,5 @@
 
 		tfoot {
 			border-top: solid 1px _palette(border);
-		}
-
-		&.alt {
-			border-collapse: separate;
-
-			tbody {
-				tr {
-					td {
-						border: solid 1px _palette(border);
-						border-left-width: 0;
-						border-top-width: 0;
-
-						&:first-child {
-							border-left-width: 1px;
-						}
-					}
-
-					&:first-child {
-						td {
-							border-top-width: 1px;
-						}
-					}
-				}
-			}
-
-			thead {
-				border-bottom: 0;
-			}
-
-			tfoot {
-				border-top: 0;
-			}
 		}
 	}
