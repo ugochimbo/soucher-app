@@ -6,9 +6,9 @@
 
 	#banner {
 		position: relative;
-		background-image: url('../image/header.jpg');
-		background-position: center;
-		background-repeat: no-repeat;
+		background: url('../image/header.jpg'), url("/asset/image/overlay_2.png") no-repeat center;
+		text-shadow : 0 1px 0 rgba(0, 0, 0, 0.75);
+		background-color : rgba(0, 0, 0, 0.65);
 		background-size: cover;
 		text-align: center;
 

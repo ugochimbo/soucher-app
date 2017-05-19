@@ -12,14 +12,23 @@ export default class SuccessPage extends Component {
                 </section>
 
                 <section id="banner" style={{
-                    'backgroundImage' : 'url("/asset/image/sample_header_7.jpg")',
-                    'backgroundPosition' : 'initial'
+                    'backgroundImage' : 'url("/asset/image/thank-you.jpg"), url("/asset/image/overlay_2.png")',
+                    'textShadow' : '0 1px 0 rgba(0, 0, 0, 0.75)',
+                    'backgroundPosition' : 'initial',
+                    'backgroundColor' : 'rgba(0, 0, 0, 0.65)'
                 }}>
+                    <header>
+                        <h2 style={{
+                            'backgroundImage' : 'url("/asset/image/overlay_2.png")',
+                            'textShadow' : '0 1px 0 rgba(0, 0, 0, 0.75)',
+                            'backgroundPosition' : 'initial',
+                            'backgroundColor' : 'rgba(0, 0, 0, 0.65)',
+                            'padding' : '10px'
+                        }}>On behalf of your loved one, <br />
+                            THANK YOU for the gift.</h2>
+                        <p> Soucher Inc </p>
+                    </header>
                     <footer>
-                        <header>
-                            <h2>On behalf of your loved one, THANK YOU for the gift.</h2>
-                            <p>SOUCHER INC.</p>
-                        </header>
                         <ul className="actions fit">
                             <li><Link to = {LINK_TO.GIFT_SOUCHER_ROUTE}  className="button big">
                                 <span className="icon fa-gift"/>

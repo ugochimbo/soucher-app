@@ -3,13 +3,15 @@ import { reduxForm, Field } from 'redux-form';
 import SectionHeader, {PhoneAuthenticationPageHeader as header} from '../../Common/SectionHeader';
 import {validator as validate} from '../Validator';
 import * as FormField from '../../Common/FormField';
+import {buySoucher} from '../../action';
 import * as LINK_TO from '../../config/constant';
 
 const PhoneAuthenticationPage = (props) => {
     const { handleSubmit, previousPage, history } = props;
 
-    function handleFormSubmit(formProps) {
+    function handleFormSubmit(formProps, dispatch) {
         console.log(formProps);
+        dispatch(buySoucher(formProps));
         history.push(LINK_TO.SWAP_SOUCHER_SUCCESS_ROUTE);
     }
 
