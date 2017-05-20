@@ -1,4 +1,5 @@
 export const Buy_Soucher_Action = 'BuySoucher';
+export const Swap_Soucher_Action = 'SwapSoucher';
 
 export const buySoucher = (soucherDetails) => {
     return {
@@ -9,7 +10,7 @@ export const buySoucher = (soucherDetails) => {
 
 export const swapSoucher = (soucherDetails) => {
     return {
-        'type': Buy_Soucher_Action,
+        'type': Swap_Soucher_Action,
         'payload': soucherDetails
     }
 };
