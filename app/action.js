@@ -10,7 +10,7 @@ export const buySoucher = (soucherDetails, history) => {
         'type': [Buy_Soucher_Action],
         'payload': {
             request: {
-                url:'soucher/buy',
+                url:'soucher/gift',
                 method: 'POST',
                 data: soucherDetails,
             },

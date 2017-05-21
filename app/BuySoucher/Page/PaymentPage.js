@@ -11,9 +11,9 @@ const PaymentPage = (props) => {
 
     const { handleSubmit, pristine, previousPage, submitting, history } = props;
 
-    function handleFormSubmit(formProps, dispatch) {
+    let handleFormSubmit = (formProps, dispatch) => {
         dispatch(buySoucher(formProps, history));
-    }
+    };
 
     return (
         <div id="main">

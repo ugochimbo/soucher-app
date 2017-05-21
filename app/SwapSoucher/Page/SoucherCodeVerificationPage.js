@@ -7,7 +7,7 @@ import * as FormField from '../../Common/FormField';
 const  { DOM: { input } } = React;
 
 const SoucherCodeVerificationPage = (props) => {
-    const { handleSubmit } = props;
+    const { handleSubmit, dispatch } = props;
 
     return (
         <div id="main">
