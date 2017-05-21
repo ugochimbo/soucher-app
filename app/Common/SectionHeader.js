@@ -21,6 +21,11 @@ export const GiftSoucherSuccessPageHeader = {
     thanks: 'On behalf of your loved one, THANK YOU for the gift.',
 };
 
+export const TransactionErrorPageHeader = {
+    title: 'Transaction Unsuccessful',
+    message: "Let's fix it.",
+};
+
 export const SoucherCodeVerificationPageHeader = {
     title: 'Please enter your soucher code',
     message: 'You will need your phone for final verification of the swap.',

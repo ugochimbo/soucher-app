@@ -8,6 +8,7 @@ import ContactUs from '../Page/ContactUs';
 import BuySoucherWizard from '../BuySoucher/Wizard';
 import SwapSoucherWizard from '../SwapSoucher/Wizard';
 import SuccessPage from '../BuySoucher/Page/SuccessPage';
+import TransactionError from '../Page/TransactionError';
 
 import  * as PATH_TO from './constant';
 
@@ -20,6 +21,8 @@ export const routes =
 
             <Route exact = {true} path = {PATH_TO.SWAP_SOUCHER_ROUTE} header='Swap Soucher' component={SwapSoucherWizard} />
             <Route exact = {true} path = {PATH_TO.SWAP_SOUCHER_SUCCESS_ROUTE} header='Swap Soucher Success' component={SuccessPage} />
+
+            <Route exact = {true} path = {PATH_TO.TRANSACTION_ERROR_ROUTE} header='Transaction Error' component={TransactionError} />
 
             <Route exact = {true} path = {PATH_TO.VOUCHER_CATALOG_ROUTE} header='Catalog' component={VoucherCatalogContainer} />
             <Route exact = {true} path = {PATH_TO.ABOUT_US_ROUTE} header='Catalog' component={AboutUs} />

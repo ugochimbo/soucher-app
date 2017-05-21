@@ -11,4 +11,4 @@ export const ABOUT_US_ROUTE = '/about-us';
 export const CONTACT_US_ROUTE = '/contact-us';
 export const VOUCHER_CATALOG_ROUTE = '/voucher/catalog';
 
-
+export const TRANSACTION_ERROR_ROUTE = '/transaction/error';
