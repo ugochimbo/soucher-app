@@ -1,5 +1,5 @@
 const errors = {};
-const SOUCHER_CODE_LENGTH = 8;
+const SOUCHER_CODE_LENGTH = 9;
 const PHONE_AUTH_CODE_LENGTH = 5;
 
 const FIELD_SOUCHER_CODE = 'soucherCode';
@@ -31,15 +31,20 @@ function validateSelectedVouchers(values) {
 }
 
 function validateSoucherCode(values) {
-    if (values[FIELD_SOUCHER_CODE].length !== SOUCHER_CODE_LENGTH) {
+    if (values[FIELD_SOUCHER_CODE] === undefined || values[FIELD_SOUCHER_CODE].length !== SOUCHER_CODE_LENGTH) {
         errors[FIELD_SOUCHER_CODE] = ERROR_INVALID_CODE;
     } else {
-        unsetFieldError(FIELD_SOUCHER_VALUE);
+        unsetFieldError(FIELD_SOUCHER_CODE);
     }
 }
 
+export function setValidationMessage(field, message = ERROR_INVALID_CODE) {
+    console.log(field);
+    errors[field] = message;
+}
+
 export const validator = values => {
-   // validateSoucherCode(values);
+    validateSoucherCode(values);
    // validateSelectedVouchers(values);
    // validatePhoneAuthenticationCode(values);
 

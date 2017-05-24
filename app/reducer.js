@@ -3,14 +3,18 @@ import { reducer as formReducer } from 'redux-form';
 import * as Action from './action';
 import {List, Map} from 'immutable';
 
-let reducer = (state = List(), action) => {
+const reducer = (state = List(), action) => {
     switch(action.type) {
         case Action.Buy_Soucher_Action:
-            console.log(action);
+            //console.log(action);
             return state;
         case Action.Swap_Soucher_Action:
+            //console.log(action);
+            return state;
+        case Action.Start_Swap_Action:
             console.log(action);
             return state;
+
         default:
             return state;
     }

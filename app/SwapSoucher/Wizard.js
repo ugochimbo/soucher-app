@@ -12,7 +12,21 @@ class Wizard extends Component {
         this.state = {
             page: 1,
         };
-    }
+    };
+
+   /* handleNextWithValidate = values => new Promise((resolve, reject) => {
+        submit(values).then(() => {
+            this.nextPage();
+            resolve();
+        });
+    });
+
+    handleSubmitWithValidate = values => new Promise((resolve, reject) => {
+        submitValidate(values).then(() => {
+            this.props.onSubmit(values);
+            resolve();
+        });
+    });*/
 
     nextPage() {
         this.setState({ page: this.state.page + 1 });

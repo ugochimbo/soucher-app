@@ -17,8 +17,8 @@ export default class TransactionError extends Component {
                 }}>
                     <header>
                         <h2>
-                            Something went wrong with this transaction. <br />
-                            Please call or email us.
+                            Something unusual went wrong. <br />
+                            We will contact you shortly.
                         </h2>
 
                         <p> <span  style={{

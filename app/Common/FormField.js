@@ -3,7 +3,7 @@ import React from 'react';
 export const Input = ({ input, id, label, type, min, step, meta: { touched, error } }) => (
     <div>
         <input {...input} id={id} placeholder={label} type={type} min={min} step={step} />
-        {touched && error && <span className="form-error">{error}</span>}
+        {touched && error && <span style={{'marginLeft' : '5px'}} className="form-error">{error}</span>}
     </div>
 );
 

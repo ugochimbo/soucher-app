@@ -3,11 +3,24 @@ import SectionHeader, {SoucherCodeVerificationPageHeader as header} from '../../
 import { Field, reduxForm } from 'redux-form';
 import {validator as validate} from '../Validator';
 import * as FormField from '../../Common/FormField';
+import * as Action from '../../action';
 
 const  { DOM: { input } } = React;
 
 const SoucherCodeVerificationPage = (props) => {
     const { handleSubmit, dispatch } = props;
+
+    let submit = (values) => {
+        dispatch(Action.fetchSoucher(values))
+            .then((response) => {
+                if(response.status === 200) {
+                    dispatch(Action.startSwap(response));
+                    handleSubmit();
+                } else {
+                    console.log(response.message);
+                }
+            });
+    };
 
     return (
         <div id="main">
@@ -15,7 +28,7 @@ const SoucherCodeVerificationPage = (props) => {
                 <SectionHeader title = {header.title} message = {header.message}/>
 
                 <div className="light-content">
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit(submit)}>
                         <div className="row uniform">
                             <div className="6u 12u$(small) align-center">
                                 <img src="/asset/image/soucher_12_1.jpg" width="550px" style={{'marginTop': '20px'}} />
