@@ -39,13 +39,6 @@ export const swapSoucher = (soucherDetails) => {
     }
 };
 
-export const startSwap = (soucher) => {
-    return {
-        'type': [Start_Swap_Action],
-        'payload': soucher
-    }
-};
-
 export const fetchSoucher = (values) => {
     return {
         'type': [Fetch_Soucher_Action],
@@ -56,7 +49,25 @@ export const fetchSoucher = (values) => {
             },
             options: {
                 onSuccess: function (data) {
-                    return data.response.data;
+                    let status = data.response.data.status;
+                    let soucher = {};
+
+                    if (status === SUCCESS_RESPONSE_CODE) {
+                        let value = JSON.parse(data.response.data.value);
+                        soucher = {
+                            id: data.response.data._id,
+                            code: data.response.data.code,
+                            amount: value.amount,
+                            currency: value.currency,
+                        };
+                    } else {
+                        return data.response.data
+                    }
+
+                    return {
+                        soucher,
+                        status
+                    }
                 },
                 onError: function () {
                     return false;

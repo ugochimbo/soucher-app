@@ -14,7 +14,7 @@ const SoucherCodeVerificationPage = (props) => {
         dispatch(Action.fetchSoucher(values))
             .then((response) => {
                 if(response.status === 200) {
-                    dispatch(Action.startSwap(response));
+                    values.soucher = response.soucher;
                     handleSubmit();
                 } else {
                     console.log(response.message);

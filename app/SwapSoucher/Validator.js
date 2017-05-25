@@ -45,6 +45,7 @@ export function setValidationMessage(field, message = ERROR_INVALID_CODE) {
 
 export const validator = values => {
     validateSoucherCode(values);
+    console.log(values);
    // validateSelectedVouchers(values);
    // validatePhoneAuthenticationCode(values);
 
