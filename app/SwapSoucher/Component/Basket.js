@@ -1,8 +1,15 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import * as Currency from '../../Util/Currency';
 
 export default class Basket extends Component {
      render() {
+
+         const {soucher, dispatch} = this.props;
+
+         function endTransaction() {
+
+         }
+
         return (
             <div className="1u 12u$(small)">
                 <div id="basket">
@@ -10,8 +17,8 @@ export default class Basket extends Component {
                         <table>
                             <tbody>
                                 <tr>
-                                    <td>Soucher Value: </td>
-                                    <td> 50 &euro; </td>
+                                    <td>Soucher: </td>
+                                    <td> {soucher.amount} {Currency.htmlEntityFor(soucher.currency)} </td>
                                 </tr>
                                 <tr>
                                     <td>In Use: </td>
@@ -39,10 +46,14 @@ export default class Basket extends Component {
                             </tbody>
                         </table>
                     </section>
-                    <section>
+                    <section className="basket-buttons">
                         <button type="submit" className="button big special">
                             <span> Swap </span>
-                            <span  style={{'marginLeft' : '10px'}} className="icon fa-arrow-circle-o-right"/>
+                            <span  style={{'marginLeft' : '1px'}} className="icon fa-arrow-circle-o-right"/>
+                        </button>
+                        <button id="sign-out" type="button" className="button big special" onClick={this.endTransaction}>
+                            <span  style={{'marginRight' : '1px'}} className="icon fa-arrow-circle-o-left"/>
+                            <span> Cancel </span>
                         </button>
                     </section>
                 </div>

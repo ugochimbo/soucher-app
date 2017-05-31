@@ -1,4 +1,8 @@
 const errors = {};
+let state = {
+
+};
+
 const SOUCHER_CODE_LENGTH = 9;
 const PHONE_AUTH_CODE_LENGTH = 5;
 
@@ -38,16 +42,24 @@ function validateSoucherCode(values) {
     }
 }
 
-export function setValidationMessage(field, message = ERROR_INVALID_CODE) {
-    console.log(field);
-    errors[field] = message;
+export function setState(values) {
+     state = values;
+}
+
+export function getState() {
+    return state;
 }
 
 export const validator = values => {
     validateSoucherCode(values);
-    console.log(values);
+
+    if (!errors.length) {
+        setState(values);
+    }
+
    // validateSelectedVouchers(values);
    // validatePhoneAuthenticationCode(values);
 
     return errors;
 };
+

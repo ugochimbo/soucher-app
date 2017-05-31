@@ -2050,7 +2050,17 @@ table {
   position: fixed;
   z-index: 10000;
   background-color: #ffffff;
-  color: #011A27; }
+  color: #011A27;
+  width: 220px; }
+  #basket .basket-buttons {
+    margin-left: -2em;
+    margin-right: -2em;
+    padding: 0.5em 0.2em 0.1em 0.2em ;
+    background-color: #011A27;
+    color: #BCC3C9; }
+    #basket .basket-buttons button {
+      width: 100%;
+      margin-bottom: 10px; }
 
 /* Header */
 body {
@@ -2445,9 +2455,9 @@ body.is-menu-visible #menu {
 #main, #main-full {
   width: 76em;
   margin: 0 auto;
-  padding-top: 4em; }
+  padding-top: 1.5em; }
   #main > *, #main-full > * {
-    margin-bottom: 3em; }
+    margin-bottom: 2em; }
   #main .default, #main-full .default {
     background-color: #011A27; }
     #main .default .content, #main-full .default .content {

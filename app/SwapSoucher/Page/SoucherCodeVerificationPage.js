@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionHeader, {SoucherCodeVerificationPageHeader as header} from '../../Common/SectionHeader';
 import { Field, reduxForm } from 'redux-form';
-import {validator as validate} from '../Validator';
+import {validator as validate, setState} from '../Validator';
 import * as FormField from '../../Common/FormField';
 import * as Action from '../../action';
 
@@ -15,6 +15,7 @@ const SoucherCodeVerificationPage = (props) => {
             .then((response) => {
                 if(response.status === 200) {
                     values.soucher = response.soucher;
+                    setState(values);
                     handleSubmit();
                 } else {
                     console.log(response.message);

@@ -102,4 +102,18 @@
     z-index: 10000;
     background-color: _palette(fg-light);
     color: _palette(bg);
+    width: 220px;
+
+      .basket-buttons {
+        margin-left: -2em;
+        margin-right: -2em;
+        @include padding(0.5em, 0.2em);
+        background-color: _palette(bg);
+        color: _palette(fg);
+
+          button {
+            width: 100%;
+            margin-bottom: 10px;
+          }
+      }
   }

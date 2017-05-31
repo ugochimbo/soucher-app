@@ -8,6 +8,9 @@ export const Start_Swap_Action = 'START_SWAP';
 const SUCCESS_RESPONSE_CODE = 200;
 
 export const buySoucher = (soucherDetails, history) => {
+
+    console.log(soucherDetails);
+
     return {
         'type': [Buy_Soucher_Action],
         'payload': {

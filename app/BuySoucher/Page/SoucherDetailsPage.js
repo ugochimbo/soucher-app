@@ -24,7 +24,13 @@ const SoucherDetailsPage = (props) => {
                                     <Field name="nameOnCard" type = 'text' component = {FormField.Input} label = 'Name on card (optional)'/>
                                 </div>
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
-                                    <Field name="soucherValue" type = 'number' component = {FormField.Input} label = 'Amount' min="0" step = "10" />
+                                    <div className="6u 12u$(small)">
+                                        <Field name="soucherAmount" type = 'number' component = {FormField.Input} label = 'Amount' min="0" step = "10" />
+                                    </div>
+
+                                    <div className="6u 12u$(small)">
+                                        <Field name="soucherCurrency" type = 'string' component = {FormField.Input} label = 'Currency' />
+                                    </div>
                                 </div>
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
                                     <Field name="soucherMessage" component = {FormField.TextArea} label = 'Message' rows = '5'/>

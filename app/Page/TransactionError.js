@@ -13,7 +13,8 @@ export default class TransactionError extends Component {
                     'backgroundImage' : 'url("/asset/image/transaction_error.jpg"), url("/asset/image/overlay_2.png")',
                     'textShadow' : '0 1px 0 rgba(0, 0, 0, 0.75)',
                     'backgroundPosition' : 'initial',
-                    'backgroundColor' : 'rgba(0, 0, 0, 0.65)'
+                    'backgroundColor' : 'rgba(0, 0, 0, 0.65)',
+                    'height' : '449px',
                 }}>
                     <header>
                         <h2>

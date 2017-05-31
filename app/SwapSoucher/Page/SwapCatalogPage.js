@@ -1,7 +1,7 @@
 import React from 'react';
 import { reduxForm } from 'redux-form';
 import SectionHeader, {SwapCatalogPageHeader as header} from '../../Common/SectionHeader';
-import {validator as validate} from '../Validator';
+import {validator as validate, getState} from '../Validator';
 import Filter from '../../Common/Filter';
 import Listing from '../Component/Listing';
 import Basket from '../Component/Basket';
@@ -9,7 +9,7 @@ import Basket from '../Component/Basket';
 const  { DOM: { input } } = React;
 
 const SwapCatalogPage = (props) => {
-    const { handleSubmit } = props;
+    const { handleSubmit, dispatch } = props;
 
     return (
         <div id="main-full" className="full">
@@ -19,8 +19,8 @@ const SwapCatalogPage = (props) => {
                 <div className="catalog-light-content">
                     <form onSubmit = {handleSubmit}>
                         <div className="row uniform">
-                            <Listing />
-                            <Basket />
+                            <Listing soucher = {getState()} />
+                            <Basket soucher = {getState().soucher} dispatch = {dispatch} />
                         </div>
                     </form>
                 </div>

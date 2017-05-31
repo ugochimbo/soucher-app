@@ -6,7 +6,7 @@ const FIELD_BUYER_EMAIL = 'buyerEmail';
 const FIELD_RECIPIENT_NAME = 'recipientName';
 const FIELD_RECIPIENT_EMAIL = 'recipientEmail';
 const FIELD_RECIPIENT_PHONE = 'recipientPhone';
-const FIELD_SOUCHER_VALUE = 'soucherValue';
+const FIELD_SOUCHER_VALUE = 'soucherAmount';
 
 const ERROR_FIELD_REQUIRED = 'Required';
 const ERROR_INVALID_EMAIL = 'Invalid Email Address';
@@ -79,8 +79,8 @@ function validateContactDetails(values) {
 
 function validateSoucherDetails(values) {
 
-    let soucherValue = parseFloat(values[FIELD_SOUCHER_VALUE]);
-    if (!soucherValue > 0) {
+    let soucherAmount = parseFloat(values[FIELD_SOUCHER_VALUE]);
+    if (!soucherAmount > 0) {
         errors[FIELD_SOUCHER_VALUE] = ERROR_MINIMUM_SOUCHER_VALUE;
     } else {
         unsetFieldError(FIELD_SOUCHER_VALUE);
