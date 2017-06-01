@@ -44,7 +44,7 @@ class Wizard extends Component {
         return (
             <div>
                 {page === 1 && <SoucherCodeVerificationPage onSubmit={this.nextPage}/>}
-                {page === 2 && <SwapCatalogPage previousPage={this.previousPage} onSubmit={this.nextPage} />}
+                {page === 2 && <SwapCatalogPage previousPage={this.previousPage} onSubmit={this.nextPage} history = {history} />}
                 {page === 3 && <PhoneAuthenticationPage previousPage={this.previousPage} onSubmit={onSubmit} history = {history} />}
             </div>
         )

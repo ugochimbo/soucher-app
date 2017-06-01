@@ -9,7 +9,7 @@ import Basket from '../Component/Basket';
 const  { DOM: { input } } = React;
 
 const SwapCatalogPage = (props) => {
-    const { handleSubmit, dispatch } = props;
+    const { handleSubmit, dispatch, history } = props;
 
     return (
         <div id="main-full" className="full">
@@ -19,8 +19,8 @@ const SwapCatalogPage = (props) => {
                 <div className="catalog-light-content">
                     <form onSubmit = {handleSubmit}>
                         <div className="row uniform">
-                            <Listing soucher = {getState()} />
-                            <Basket soucher = {getState().soucher} dispatch = {dispatch} />
+                            <Listing catalog = {getState().catalog} dispatch = {dispatch} />
+                            <Basket soucher = {getState().soucher} dispatch = {dispatch} history = {history} />
                         </div>
                     </form>
                 </div>

@@ -3,14 +3,12 @@ import * as LINK_TO from './config/constant';
 export const Buy_Soucher_Action = 'BUY_SOUCHER';
 export const Swap_Soucher_Action = 'SWAP_SOUCHER';
 export const Fetch_Soucher_Action = 'VALIDATE_SOUCHER_CODE';
+export const Fetch_Catalog_Action = 'FETCH_CATALOG';
 export const Start_Swap_Action = 'START_SWAP';
 
 const SUCCESS_RESPONSE_CODE = 200;
 
 export const buySoucher = (soucherDetails, history) => {
-
-    console.log(soucherDetails);
-
     return {
         'type': [Buy_Soucher_Action],
         'payload': {
@@ -33,6 +31,10 @@ export const buySoucher = (soucherDetails, history) => {
             }
         }
     }
+};
+
+export const endTransaction = (history) => {
+    history.push(LINK_TO.HOME);
 };
 
 export const swapSoucher = (soucherDetails) => {
@@ -71,6 +73,26 @@ export const fetchSoucher = (values) => {
                         soucher,
                         status
                     }
+                },
+                onError: function () {
+                    return false;
+                }
+            }
+        }
+    }
+};
+
+export const getCatalog = () => {
+    return {
+        'type': [Fetch_Catalog_Action],
+        'payload': {
+            request: {
+                url: '/voucher',
+                method: 'GET',
+            },
+            options: {
+                onSuccess: function (data) {
+                    return data.response.data;
                 },
                 onError: function () {
                     return false;

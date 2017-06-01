@@ -3,7 +3,7 @@ import SectionHeader, {PaymentsPageHeader as header} from '../../Common/SectionH
 import { Field, reduxForm } from 'redux-form';
 import {validator as validate} from '../Validator';
 import {Input} from '../../Common/FormField';
-import {buySoucher} from '../../action';
+import * as Action from '../../action';
 
 const  { DOM: { input } } = React;
 
@@ -12,7 +12,7 @@ const PaymentPage = (props) => {
     const { handleSubmit, pristine, previousPage, submitting, history } = props;
 
     let handleFormSubmit = (formProps, dispatch) => {
-        dispatch(buySoucher(formProps, history));
+        dispatch(Action.buySoucher(formProps, history));
     };
 
     return (

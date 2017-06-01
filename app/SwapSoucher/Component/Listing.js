@@ -4,6 +4,9 @@ import SwapItem from '../Component/SwapItem'
 
 export default class Listing extends Component {
      render() {
+
+        const {catalog, dispatch} = this.props;
+
         return (
             <div className="11u 12u$(small)">
                 <div id="swap-catalog">

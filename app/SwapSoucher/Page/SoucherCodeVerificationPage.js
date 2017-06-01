@@ -15,8 +15,19 @@ const SoucherCodeVerificationPage = (props) => {
             .then((response) => {
                 if(response.status === 200) {
                     values.soucher = response.soucher;
-                    setState(values);
-                    handleSubmit();
+                    dispatch(Action.getCatalog())
+                        .then((response) => {
+                            if(response.status === 200) {
+                                values.catalog = {
+                                    vouchers: response.vouchers,
+                                    pagination: response.pagination,
+                                };
+                                setState(values);
+                                handleSubmit();
+                            } else {
+                                console.log(response.message);
+                            }
+                        });
                 } else {
                     console.log(response.message);
                 }
