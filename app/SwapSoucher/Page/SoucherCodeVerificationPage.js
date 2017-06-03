@@ -25,11 +25,11 @@ const SoucherCodeVerificationPage = (props) => {
                                 setState(values);
                                 handleSubmit();
                             } else {
-                                console.log(response.message);
+                                console.log(response);
                             }
                         });
                 } else {
-                    console.log(response.message);
+                    console.log(response);
                 }
             });
     };
