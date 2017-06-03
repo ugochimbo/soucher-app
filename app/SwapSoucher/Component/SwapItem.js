@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import * as Currency from '../../Util/Currency';
 
 export default class SwapItem extends Component {
      render() {
@@ -9,7 +10,7 @@ export default class SwapItem extends Component {
              return voucher.denomination.map((denomination) => {
                  return <div key={voucher.id + '_' + denomination} onClick={()=> {
                      console.log('Voucher Id: ' + voucher.id + ' => Amount ' + denomination);
-                 }}> {denomination} </div>;
+                 }}> {Currency.htmlEntityFor(voucher.currency) + '' + denomination} </div>;
              })
          };
 

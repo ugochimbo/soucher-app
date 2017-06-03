@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import SwapItem from '../Component/SwapItem'
+import SwapItem from '../Component/SwapItem';
 
 export default class Listing extends Component {
 
@@ -7,12 +7,9 @@ export default class Listing extends Component {
 
          const {catalog, dispatch} = this.props;
 
-         let vouchers = [];
-
          let swapItemList = () => {
-
              return catalog.vouchers.map(function (voucher) {
-                 return <SwapItem key = {voucher.id} voucher = {voucher}/>;
+                 return <SwapItem key = {voucher.id} voucher = {voucher} />;
              })
          };
 
