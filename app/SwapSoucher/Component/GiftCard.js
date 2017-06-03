@@ -1,22 +1,25 @@
 import React, {Component} from 'react';
-import * as Currency from '../../Util/Currency';
 
-export default class SwapItem extends Component {
+export default class GiftCard extends Component {
      render() {
 
-         const {voucher} = this.props;
+         const {gift_card, currency} = this.props;
+
+         let amountSelected = () => {
+             console.log(this);
+         };
 
          let denomination = () => {
-             return voucher.denomination.map((denomination) => {
-                 return <div key={voucher.id + '_' + denomination} onClick={()=> {
-                     console.log('Voucher Id: ' + voucher.id + ' => Amount ' + denomination);
-                 }}> {Currency.htmlEntityFor(voucher.currency) + '' + denomination} </div>;
+             return gift_card.denomination.map((denomination) => {
+                 return <div key={gift_card.id + '_' + denomination} onClick={amountSelected.bind(this)}>
+                            {currency}{denomination}
+                     </div>;
              })
          };
 
          let voucherImage = () => {
              return  (<div className="img">
-                        <img src = {`/asset/image/voucher/${voucher.img_name}`}  />
+                        <img src = {`/asset/image/voucher/${gift_card.img_name}`}  />
                     </div>);
          };
 

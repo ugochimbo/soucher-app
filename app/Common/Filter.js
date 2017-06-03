@@ -6,8 +6,7 @@ export default class Filter extends Component {
                 <div id="filter" className="row">
                     <div id="category" className="8u 12u$(small)">
                         <div>By Category:</div>
-                        <div><a href="" className="selected">All</a></div>
-                        <div><a href="">Most Popular</a></div>
+                        <div><a href="" className="selected">Most Popular</a></div>
                         <div><a href="">Charity</a></div>
                         <div><a href="">Food & Drink</a></div>
                         <div><a href="">Electronics</a></div>

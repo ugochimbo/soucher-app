@@ -17,9 +17,10 @@ const SoucherCodeVerificationPage = (props) => {
                     values.soucher = response.soucher;
                     dispatch(Action.getCatalog())
                         .then((response) => {
+                        console.log(response);
                             if(response.status === 200) {
                                 values.catalog = {
-                                    vouchers: response.vouchers,
+                                    gift_cards: response.gift_cards,
                                     pagination: response.pagination,
                                 };
                                 setState(values);

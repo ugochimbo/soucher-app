@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
-import SwapItem from '../Component/SwapItem';
+import GiftCard from './GiftCard';
 
 export default class Listing extends Component {
 
      render() {
 
-         const {catalog, dispatch} = this.props;
+         const {catalog, currency, dispatch} = this.props;
 
          let swapItemList = () => {
-             return catalog.vouchers.map(function (voucher) {
-                 return <SwapItem key = {voucher.id} voucher = {voucher} />;
+             return catalog.gift_cards.map(function (gift_card) {
+                 return <GiftCard key = {gift_card.id} gift_card = {gift_card} currency = {currency} />;
              })
          };
 
