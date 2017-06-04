@@ -4,7 +4,7 @@ import { reduxForm, Field } from 'redux-form';
 import SectionHeader, {PhoneAuthenticationPageHeader as header} from '../../Common/SectionHeader';
 import {validator as validate} from '../Validator';
 import * as FormField from '../../Common/FormField';
-import {swapSoucher} from '../../action';
+import * as Action from '../../state/action';
 import * as LINK_TO from '../../config/constant';
 
 const PhoneAuthenticationPage = (props) => {

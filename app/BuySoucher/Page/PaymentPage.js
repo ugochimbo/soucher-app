@@ -3,7 +3,7 @@ import SectionHeader, {PaymentsPageHeader as header} from '../../Common/SectionH
 import { Field, reduxForm } from 'redux-form';
 import {validator as validate} from '../Validator';
 import {Input} from '../../Common/FormField';
-import * as Action from '../../action';
+import * as Action from '../../state/action';
 
 const  { DOM: { input } } = React;
 

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {reset} from 'redux-form';
-import * as Action from '../../action';
+import * as Action from '../../state/action';
 import BasketGiftItem from './BasketGiftItem';
 
 export default class Basket extends Component {

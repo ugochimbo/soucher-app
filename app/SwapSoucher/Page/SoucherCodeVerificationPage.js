@@ -4,45 +4,18 @@ import SectionHeader, {SoucherCodeVerificationPageHeader as header} from '../../
 import { Field, reduxForm } from 'redux-form';
 import {validator as validate, setState} from '../Validator';
 import * as FormField from '../../Common/FormField';
-import * as Action from '../../action';
+import * as Action from '../action';
 
 const  { DOM: { input } } = React;
 
 const SoucherCodeVerificationPage = (props) => {
-    const { handleSubmit, dispatch } = props;
-
-    let submit = (values) => {
-        dispatch(Action.fetchSoucher(values))
-            .then((response) => {
-                if(response.status === 200) {
-                    values.soucher = response.soucher;
-                    dispatch(Action.getCatalog())
-                        .then((response) => {
-                        console.log(response);
-                            if(response.status === 200) {
-                                values.catalog = {
-                                    gift_cards: response.gift_cards,
-                                    pagination: response.pagination,
-                                };
-                                setState(values);
-                                handleSubmit();
-                            } else {
-                                console.log(response);
-                            }
-                        });
-                } else {
-                    console.log(response);
-                }
-            });
-    };
-
     return (
         <div id="main">
             <section id="content" className="default">
                 <SectionHeader title = {header.title} message = {header.message}/>
 
                 <div className="light-content">
-                    <form onSubmit={handleSubmit(submit)}>
+                    <form>
                         <div className="row uniform">
                             <div className="6u 12u$(small) align-center">
                                 <img src="/asset/image/soucher_12_1.jpg" width="550px" style={{'marginTop': '20px'}} />
@@ -103,7 +76,32 @@ const mapStateToProps = (state) => {
     }
 };
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = () => ({
+    onSubmit: (values) => {
+        this.dispatch(Action.fetchSoucher(values))
+            .then((response) => {
+                if(response.status === 200) {
+                    values.soucher = response.soucher;
+                    this.dispatch(Action.getCatalog())
+                        .then((response) => {
+                            console.log(response);
+                            if(response.status === 200) {
+                                values.catalog = {
+                                    gift_cards: response.gift_cards,
+                                    pagination: response.pagination,
+                                };
+                                dispatch(Action.startSwap(values));
+                                this.handleSubmit();
+                            } else {
+                                console.log(response);
+                            }
+                        });
+                } else {
+                    console.log(response);
+                }
+            });
+    }
+});
 
 export default connect(
     mapStateToProps,
