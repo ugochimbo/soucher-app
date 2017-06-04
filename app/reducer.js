@@ -12,7 +12,7 @@ const reducer = (state = List(), action) => {
             //console.log(action);
             return state;
         case Action.Start_Swap_Action:
-            console.log(action);
+            console.log("na lie");
             return state;
 
         default:

@@ -102,3 +102,10 @@ export const getCatalog = () => {
     }
 };
 
+export const demoRedux = (data) => {
+    return {
+        'type': Start_Swap_Action,
+        'data': data
+    }
+};
+

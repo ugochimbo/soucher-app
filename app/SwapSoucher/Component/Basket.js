@@ -5,10 +5,9 @@ import BasketGiftItem from './BasketGiftItem';
 
 export default class Basket extends Component {
      render() {
-
          const {basket, currency, dispatch, history} = this.props;
 
-         let endTransaction = () => {
+         let cancelSwap = () => {
              reset('swap-soucher-wizard');
              dispatch(Action.endTransaction(history));
          };
@@ -47,7 +46,7 @@ export default class Basket extends Component {
                             <span> Swap </span>
                             <span  style={{'marginLeft' : '1px'}} className="icon fa-arrow-circle-o-right"/>
                         </button>
-                        <button id="sign-out" type="button" className="button big special" onClick={endTransaction}>
+                        <button id="sign-out" type="button" className="button big special" onClick={() => cancelSwap()}>
                             <span  style={{'marginRight' : '1px'}} className="icon fa-arrow-circle-o-left"/>
                             <span> Cancel </span>
                         </button>

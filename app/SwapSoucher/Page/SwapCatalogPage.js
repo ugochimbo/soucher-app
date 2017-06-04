@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import { reduxForm } from 'redux-form';
 import SectionHeader, {SwapCatalogPageHeader as header} from '../../Common/SectionHeader';
 import {validator as validate, getState} from '../Validator';
@@ -6,6 +7,7 @@ import Filter from '../../Common/Filter';
 import Listing from '../Component/Listing';
 import Basket from '../Component/Basket';
 import * as Currency from '../../Util/Currency';
+import * as Action from '../../action';
 
 const  { DOM: { input } } = React;
 
@@ -36,7 +38,7 @@ const SwapCatalogPage = (props) => {
         <div id="main-full" className="full">
             <section id="content" className="default">
                 <SectionHeader title = {header.title} message = {header.message}/>
-                <Filter/>
+                <Filter />
                 <div className="catalog-light-content">
                     <form onSubmit = {handleSubmit}>
                         <div className="row uniform">
@@ -50,9 +52,35 @@ const SwapCatalogPage = (props) => {
     )
 };
 
-export default reduxForm({
+const SwapCatalog = reduxForm({
     form: 'swap-soucher-wizard',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
     validate
 })(SwapCatalogPage);
+
+const mapStateToProps = (state) => {
+    return {
+        filter : {
+            category: '',
+            search: '',
+        },
+        catalog : state.catalog,
+        basket: {
+            summary: {
+                amount: {
+                    total: 10,
+                    in_use: 0,
+                }
+            },
+            item_list: [],
+        }
+    };
+};
+
+const mapDispatchToProps = dispatch => ({});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(SwapCatalog);

@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
 import SectionHeader, {PhoneAuthenticationPageHeader as header} from '../../Common/SectionHeader';
 import {validator as validate} from '../Validator';
@@ -54,9 +55,35 @@ const PhoneAuthenticationPage = (props) => {
     )
 };
 
-export default reduxForm({
+const PhoneAuthentication = reduxForm({
     form: 'swap-soucher-wizard',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
     validate
 })(PhoneAuthenticationPage);
+
+const mapStateToProps = (state) => {
+    return {
+        filter : {
+            category: '',
+            search: '',
+        },
+        catalog : state.catalog,
+        basket: {
+            summary: {
+                amount: {
+                    total: 10,
+                    in_use: 0,
+                }
+            },
+            item_list: [],
+        }
+    }
+};
+
+const mapDispatchToProps = dispatch => ({});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(PhoneAuthentication);

@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import SectionHeader, {SoucherCodeVerificationPageHeader as header} from '../../Common/SectionHeader';
 import { Field, reduxForm } from 'redux-form';
 import {validator as validate, setState} from '../Validator';
@@ -76,9 +77,35 @@ const SoucherCodeVerificationPage = (props) => {
     )
 };
 
-export default reduxForm({
+const SoucherCodeVerification = reduxForm({
     form: 'swap-soucher-wizard',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
     validate
 })(SoucherCodeVerificationPage);
+
+const mapStateToProps = (state) => {
+    return {
+        filter : {
+            category: '',
+            search: '',
+        },
+        catalog : state.catalog,
+        basket: {
+            summary: {
+                amount: {
+                    total: 10,
+                    in_use: 0,
+                }
+            },
+            item_list: [],
+        }
+    }
+};
+
+const mapDispatchToProps = dispatch => ({});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(SoucherCodeVerification);
