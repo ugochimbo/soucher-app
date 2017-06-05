@@ -12,6 +12,12 @@ export default class Basket extends Component {
              dispatch(Action.endTransaction(history));
          };
 
+         let basketGiftItems = () => {
+             return basket.items.map(function (item) {
+                 return <BasketGiftItem key = {item.name + '_' + item.value} name = {item.name} value = {item.value}/>;
+             })
+         };
+
         return (
             <div className="1u 12u$(small)">
                 <div id="basket">
@@ -20,23 +26,21 @@ export default class Basket extends Component {
                             <tbody>
                                 <tr>
                                     <td>Soucher: </td>
-                                    <td> {basket.summary.amount.total} {currency} </td>
+                                    <td> {basket.value} {currency} </td>
                                 </tr>
                                 <tr>
                                     <td>In Use: </td>
-                                    <td> {basket.summary.amount.in_use} {currency} </td>
+                                    <td> {basket.in_use} {currency} </td>
                                 </tr>
                                 <tr>
                                     <td>Balance: </td>
-                                    <td> {basket.summary.amount.total - basket.summary.amount.in_use} {currency} </td>
+                                    <td> {basket.value - basket.in_use} {currency} </td>
                                 </tr>
                                 <tr className='header'>
                                     <td colSpan={2}> Selected Vouchers </td>
                                 </tr>
 
-                                <BasketGiftItem name = 'Amazon' value = {'20 ' + currency}/>
-                                <BasketGiftItem name = 'H&M' value = {'10 ' + currency}/>
-                                <BasketGiftItem name = 'Ebay' value = {'10 ' + currency}/>
+                                {basketGiftItems()}
 
                             </tbody>
                         </table>

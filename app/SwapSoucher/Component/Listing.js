@@ -4,8 +4,7 @@ import GiftCard from './GiftCard';
 export default class Listing extends Component {
 
      render() {
-
-         const {catalog, currency, dispatch} = this.props;
+         const {catalog, currency} = this.props;
 
          let swapItemList = () => {
              return catalog.gift_cards.map(function (gift_card) {

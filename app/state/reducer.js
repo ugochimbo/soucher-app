@@ -4,24 +4,15 @@ import {SwapReducer} from '../SwapSoucher/reducer';
 import * as Action from './action';
 import {Map} from 'immutable';
 
-const reducer = (state = Map(), action) => {
+const giftReducer = (state = Map(), action) => {
     switch(action.type) {
-        case Action.Buy_Soucher_Action:
-            console.log(action);
-            return state;
-        case Action.Swap_Soucher_Action:
-            console.log(action);
-            return state;
-        case Action.Start_Swap_Action:
-            console.log("na lie");
-            return state;
         default:
             return state;
     }
 };
 
 export default combineReducers({
-    reducer,
+    gift: giftReducer,
     swap: SwapReducer,
     form: formReducer
 });

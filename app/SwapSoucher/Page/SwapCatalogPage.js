@@ -2,37 +2,17 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { reduxForm } from 'redux-form';
 import SectionHeader, {SwapCatalogPageHeader as header} from '../../Common/SectionHeader';
-import {validator as validate, getState} from '../Validator';
+import {validator as validate} from '../Validator';
 import Filter from '../../Common/Filter';
 import Listing from '../Component/Listing';
 import Basket from '../Component/Basket';
 import * as Currency from '../../Util/Currency';
-import * as Action from '../../state/action';
 
 const  { DOM: { input } } = React;
 
 const SwapCatalogPage = (props) => {
-    const { handleSubmit, dispatch, history } = props;
-
-    const MAX_SWAP_AMOUNT = getState().soucher.amount;
-    const SWAP_CURRENCY = Currency.htmlEntityFor(getState().soucher.currency);
-
-    let state = {
-        filter : {
-            category: '',
-            search: '',
-        },
-        catalog : getState().catalog,
-        basket: {
-            summary: {
-                amount: {
-                    total: MAX_SWAP_AMOUNT,
-                    in_use: 0,
-                }
-            },
-            item_list: [],
-        }
-    };
+    const { swap, handleSubmit} = props;
+    const SWAP_CURRENCY = Currency.htmlEntityFor(swap.soucher.currency);
 
     return (
         <div id="main-full" className="full">
@@ -42,8 +22,8 @@ const SwapCatalogPage = (props) => {
                 <div className="catalog-light-content">
                     <form onSubmit = {handleSubmit}>
                         <div className="row uniform">
-                            <Listing catalog = {state.catalog} currency = {SWAP_CURRENCY} dispatch = {dispatch} />
-                            <Basket basket = {state.basket} dispatch = {dispatch} currency = {SWAP_CURRENCY} history = {history} />
+                            <Listing catalog = {swap.catalog} currency = {SWAP_CURRENCY} />
+                            <Basket basket = {swap.basket} currency = {SWAP_CURRENCY} />
                         </div>
                     </form>
                 </div>
@@ -61,21 +41,8 @@ const SwapCatalog = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
-        filter : {
-            category: '',
-            search: '',
-        },
-        catalog : state.catalog,
-        basket: {
-            summary: {
-                amount: {
-                    total: 10,
-                    in_use: 0,
-                }
-            },
-            item_list: [],
-        }
-    };
+        swap: state.swap,
+    }
 };
 
 const mapDispatchToProps = dispatch => ({});

@@ -35,12 +35,7 @@ const SoucherCodeVerification = reduxForm({
 const mapStateToProps = (state) => {
     const {swap} = state;
     return {
-        soucher: {
-            id: swap.soucher.id,
-            code: swap.soucher.code,
-            amount: swap.soucher.amount,
-            currency: swap.soucher.currency,
-        }
+        soucher: swap.soucher
     }
 };
 
@@ -50,7 +45,11 @@ const mapDispatchToProps = (dispatch, handleSubmit) => ({
             if (response.payload.data.status !== SUCCESS_RESPONSE_CODE) {
                 console.log(values)
             } else {
-                handleSubmit.onSubmit();
+                dispatch(Action.fetchCatalog()).then((response) => {
+                    if (response.payload.data.status === SUCCESS_RESPONSE_CODE) {
+                        handleSubmit.onSubmit();
+                    }
+                });
             }
         });
     }

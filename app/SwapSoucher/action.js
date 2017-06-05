@@ -24,21 +24,13 @@ export const fetchSoucher = (values) => {
     }
 };
 
-export const getCatalog = () => {
+export const fetchCatalog = () => {
     return {
         'type': [Action.Fetch_Catalog_Action],
         'payload': {
             request: {
                 url: '/voucher',
                 method: 'GET',
-            },
-            options: {
-                onSuccess: function (data) {
-                    return data.response.data;
-                },
-                onError: function () {
-                    return false;
-                }
             }
         }
     }

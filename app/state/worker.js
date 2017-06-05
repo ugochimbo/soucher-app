@@ -18,3 +18,28 @@ export function updateSoucher(soucher) {
         isValid: true
     };
 }
+
+export function updateCatalog(catalog) {
+    if (catalog.status !== Action.SUCCESS_RESPONSE_CODE) {
+        return {
+            code: catalog.code,
+            message: catalog.message
+        };
+    }
+
+    return catalog;
+}
+
+export function updateBasket(soucher) {
+    let currency = soucher.currency;
+    return {
+        value: soucher.amount,
+        in_use: 0,
+        items: [
+            {name : 'Amazon', value : '20 ' + currency},
+            {name : 'H&M', value : '10 ' + currency},
+            {name : 'Ebay', value : '10 ' + currency}
+        ],
+    }
+}
+

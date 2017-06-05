@@ -8,6 +8,16 @@ let initial_state = {
         amount: 0,
         currency: 'EUR',
     },
+    filter : {
+        category: '',
+        search: '',
+    },
+    catalog : [],
+    basket: {
+        value: 0,
+        in_use: 0,
+        items: [],
+    }
 };
 
 export const SwapReducer = (state = initial_state, action) => {
@@ -20,6 +30,10 @@ export const SwapReducer = (state = initial_state, action) => {
             return state;
         case Action.Fetch_Soucher_Success:
             state.soucher = Worker.updateSoucher(action.payload.data);
+            return state;
+        case Action.Fetch_Catalog_Success:
+            state.catalog = Worker.updateCatalog(action.payload.data);
+            state.basket = Worker.updateBasket(state.soucher);
             return state;
         default:
             return state;
