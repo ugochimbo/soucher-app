@@ -1,4 +1,27 @@
+import * as Action from '../state/constant';
+import * as Worker from '../state/worker';
 
-export const SwapReducer = () => {
-    return [];
+let initial_state = {
+    soucher: {
+        id: '',
+        code: '',
+        amount: 0,
+        currency: 'EUR',
+    },
+};
+
+export const SwapReducer = (state = initial_state, action) => {
+    switch (action.type) {
+        case Action.Swap_Soucher_Action:
+            console.log(action);
+            return state;
+        case Action.Start_Swap_Action:
+            console.log("na lie");
+            return state;
+        case Action.Fetch_Soucher_Success:
+            state.soucher = Worker.updateSoucher(action.payload.data);
+            return state;
+        default:
+            return state;
+    }
 };

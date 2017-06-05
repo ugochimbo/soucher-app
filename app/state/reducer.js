@@ -2,9 +2,9 @@ import {combineReducers} from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import {SwapReducer} from '../SwapSoucher/reducer';
 import * as Action from './action';
-import {List, Map} from 'immutable';
+import {Map} from 'immutable';
 
-const reducer = (state = List(), action) => {
+const reducer = (state = Map(), action) => {
     switch(action.type) {
         case Action.Buy_Soucher_Action:
             console.log(action);
@@ -15,13 +15,13 @@ const reducer = (state = List(), action) => {
         case Action.Start_Swap_Action:
             console.log("na lie");
             return state;
-
         default:
             return state;
     }
 };
 
 export default combineReducers({
+    reducer,
     swap: SwapReducer,
     form: formReducer
 });

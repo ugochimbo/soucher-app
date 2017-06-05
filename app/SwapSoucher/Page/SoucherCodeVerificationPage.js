@@ -1,49 +1,24 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import SectionHeader, {SoucherCodeVerificationPageHeader as header} from '../../Common/SectionHeader';
-import { Field, reduxForm } from 'redux-form';
-import {validator as validate, setState} from '../Validator';
-import * as FormField from '../../Common/FormField';
+import {reduxForm } from 'redux-form';
+import {validator as validate} from '../Validator';
+import CodeVerificationForm from '../Component/CodeVerificationForm';
 import * as Action from '../action';
+import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
 
 const  { DOM: { input } } = React;
 
 const SoucherCodeVerificationPage = (props) => {
+
+    const {handleSubmit} = props;
+
     return (
         <div id="main">
             <section id="content" className="default">
                 <SectionHeader title = {header.title} message = {header.message}/>
-
                 <div className="light-content">
-                    <form>
-                        <div className="row uniform">
-                            <div className="6u 12u$(small) align-center">
-                                <img src="/asset/image/soucher_12_1.jpg" width="550px" style={{'marginTop': '20px'}} />
-                            </div>
-                            <div className="6u 12u$(small)">
-                                <h3>Enter Soucher Code</h3>
-
-                                <div className="12u$" style={{'marginBottom': '10px'}}>
-                                    <Field name="soucherCode" component = {FormField.Input} label = 'Enter Soucher Code' />
-                                </div>
-
-                                <div className="12u$" style={{'marginBottom': '10px'}}>
-                                    <p>Your code can be found in the bottom center as seen in the sample image</p>
-                                </div>
-
-                                <div className="12u$">
-                                    <div className="row uniform" style={{'marginBottom': '10px'}}>
-                                        <div className="12u$ actions align-center">
-                                            <button type="submit" className="button big special">
-                                                <span> Start my swap </span>
-                                                <span  style={{'marginLeft' : '10px'}} className="icon fa-arrow-circle-o-right"/>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                    <CodeVerificationForm onSubmit = {handleSubmit.bind(this)} />
                 </div>
             </section>
         </div>
@@ -58,48 +33,26 @@ const SoucherCodeVerification = reduxForm({
 })(SoucherCodeVerificationPage);
 
 const mapStateToProps = (state) => {
+    const {swap} = state;
     return {
-        filter : {
-            category: '',
-            search: '',
-        },
-        catalog : state.catalog,
-        basket: {
-            summary: {
-                amount: {
-                    total: 10,
-                    in_use: 0,
-                }
-            },
-            item_list: [],
+        soucher: {
+            id: swap.soucher.id,
+            code: swap.soucher.code,
+            amount: swap.soucher.amount,
+            currency: swap.soucher.currency,
         }
     }
 };
 
-const mapDispatchToProps = () => ({
+const mapDispatchToProps = (dispatch, handleSubmit) => ({
     onSubmit: (values) => {
-        this.dispatch(Action.fetchSoucher(values))
-            .then((response) => {
-                if(response.status === 200) {
-                    values.soucher = response.soucher;
-                    this.dispatch(Action.getCatalog())
-                        .then((response) => {
-                            console.log(response);
-                            if(response.status === 200) {
-                                values.catalog = {
-                                    gift_cards: response.gift_cards,
-                                    pagination: response.pagination,
-                                };
-                                dispatch(Action.startSwap(values));
-                                this.handleSubmit();
-                            } else {
-                                console.log(response);
-                            }
-                        });
-                } else {
-                    console.log(response);
-                }
-            });
+        dispatch(Action.fetchSoucher(values)).then((response) => {
+            if (response.payload.data.status !== SUCCESS_RESPONSE_CODE) {
+                console.log(values)
+            } else {
+                handleSubmit.onSubmit();
+            }
+        });
     }
 });
 
