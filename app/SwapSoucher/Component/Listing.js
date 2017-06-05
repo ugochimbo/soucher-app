@@ -4,11 +4,11 @@ import GiftCard from './GiftCard';
 export default class Listing extends Component {
 
      render() {
-         const {catalog, currency} = this.props;
+         const {catalog, currency, addBasketItem} = this.props;
 
          let swapItemList = () => {
              return catalog.gift_cards.map(function (gift_card) {
-                 return <GiftCard key = {gift_card.id} gift_card = {gift_card} currency = {currency} />;
+                 return <GiftCard key = {gift_card.id} gift_card = {gift_card} currency = {currency} addToBasket = {addBasketItem} />;
              })
          };
 

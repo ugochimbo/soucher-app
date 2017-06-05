@@ -7,12 +7,13 @@ import Filter from '../../Common/Filter';
 import Listing from '../Component/Listing';
 import Basket from '../Component/Basket';
 import * as Currency from '../../Util/Currency';
+import * as Action from '../action';
 
 const  { DOM: { input } } = React;
 
 const SwapCatalogPage = (props) => {
-    const { swap, handleSubmit} = props;
-    const SWAP_CURRENCY = Currency.htmlEntityFor(swap.soucher.currency);
+    const { catalog, basket, currency, addBasketItem, handleSubmit} = props;
+    const SWAP_CURRENCY = Currency.htmlEntityFor(currency);
 
     return (
         <div id="main-full" className="full">
@@ -22,8 +23,8 @@ const SwapCatalogPage = (props) => {
                 <div className="catalog-light-content">
                     <form onSubmit = {handleSubmit}>
                         <div className="row uniform">
-                            <Listing catalog = {swap.catalog} currency = {SWAP_CURRENCY} />
-                            <Basket basket = {swap.basket} currency = {SWAP_CURRENCY} />
+                            <Listing catalog = {catalog} currency = {SWAP_CURRENCY} addBasketItem = {addBasketItem} />
+                            <Basket basket = {basket} currency = {SWAP_CURRENCY} />
                         </div>
                     </form>
                 </div>
@@ -41,11 +42,17 @@ const SwapCatalog = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
-        swap: state.swap,
+        currency: state.swap.soucher.currency,
+        catalog: state.swap.catalog,
+        basket: state.swap.basket,
     }
 };
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+    addBasketItem : (giftCard) => {
+        dispatch(Action.updateBasketItem(giftCard));
+    }
+});
 
 export default connect(
     mapStateToProps,

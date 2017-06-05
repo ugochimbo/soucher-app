@@ -12,8 +12,6 @@ export const Fetch_Catalog_Action = 'FETCH_CATALOG';
 export const Fetch_Catalog_Success = Fetch_Catalog_Action + Response_Success_Suffix;
 export const Fetch_Catalog__Error = Fetch_Catalog_Action + Response_Error_Suffix;
 
-export const Start_Swap_Action = 'START_SWAP';
-export const Start_Swap_Success = Start_Swap_Action + Response_Success_Suffix;
-export const Start_Swap_Error = Start_Swap_Action + Response_Error_Suffix;
+export const Update_Basket_Action = 'Update_Basket';
 
 export const SUCCESS_RESPONSE_CODE = 200;

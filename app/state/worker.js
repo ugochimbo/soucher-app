@@ -31,15 +31,25 @@ export function updateCatalog(catalog) {
 }
 
 export function updateBasket(soucher) {
-    let currency = soucher.currency;
     return {
         value: soucher.amount,
-        in_use: 0,
-        items: [
-            {name : 'Amazon', value : '20 ' + currency},
-            {name : 'H&M', value : '10 ' + currency},
-            {name : 'Ebay', value : '10 ' + currency}
-        ],
+        balance: soucher.amount,
+        items: [],
+    }
+}
+
+export function updateBasketGiftItems(basket, giftCard) {
+
+    let items = basket.items;
+    items.push({
+        name: giftCard.name,
+        value: giftCard.value,
+    });
+
+    return {
+        ...basket,
+        'items': items,
+        'balance': basket.balance - giftCard.amount
     }
 }
 

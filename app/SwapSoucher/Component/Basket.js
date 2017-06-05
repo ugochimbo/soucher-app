@@ -30,11 +30,11 @@ export default class Basket extends Component {
                                 </tr>
                                 <tr>
                                     <td>In Use: </td>
-                                    <td> {basket.in_use} {currency} </td>
+                                    <td> {basket.value - basket.balance} {currency} </td>
                                 </tr>
                                 <tr>
                                     <td>Balance: </td>
-                                    <td> {basket.value - basket.in_use} {currency} </td>
+                                    <td> {basket.balance} {currency} </td>
                                 </tr>
                                 <tr className='header'>
                                     <td colSpan={2}> Selected Vouchers </td>

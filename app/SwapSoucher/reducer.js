@@ -15,26 +15,29 @@ let initial_state = {
     catalog : [],
     basket: {
         value: 0,
-        in_use: 0,
+        balance: 0,
         items: [],
     }
 };
 
 export const SwapReducer = (state = initial_state, action) => {
     switch (action.type) {
-        case Action.Swap_Soucher_Action:
-            console.log(action);
-            return state;
-        case Action.Start_Swap_Action:
-            console.log("na lie");
-            return state;
         case Action.Fetch_Soucher_Success:
-            state.soucher = Worker.updateSoucher(action.payload.data);
-            return state;
+            return {
+                ...state,
+                'soucher': Worker.updateSoucher(action.payload.data)
+            };
         case Action.Fetch_Catalog_Success:
-            state.catalog = Worker.updateCatalog(action.payload.data);
-            state.basket = Worker.updateBasket(state.soucher);
-            return state;
+            return {
+                ...state,
+                'catalog': Worker.updateCatalog(action.payload.data),
+                'basket': Worker.updateBasket(state.soucher),
+            };
+        case Action.Update_Basket_Action:
+            return  {
+                ...state,
+                'basket': Worker.updateBasketGiftItems(state.basket, action.payload)
+            };
         default:
             return state;
     }

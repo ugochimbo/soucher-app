@@ -3,16 +3,19 @@ import React, {Component} from 'react';
 export default class GiftCard extends Component {
      render() {
 
-         const {gift_card, currency} = this.props;
-
-         let amountSelected = () => {
-             console.log(this);
-         };
+         const {gift_card, currency, addToBasket} = this.props;
 
          let denomination = () => {
              return gift_card.denomination.map((denomination) => {
-                 return <div key={gift_card.id + '_' + denomination} onClick={amountSelected.bind(this)}>
-                            {currency}{denomination}
+                 return <div key={gift_card.id + '_' + denomination} onClick={() => addToBasket(
+                        {
+                            id: gift_card.id,
+                            name: gift_card.name,
+                            amount: denomination,
+                            value: denomination + currency,
+                        }
+                     )}>
+                            {denomination}{currency}
                      </div>;
              })
          };

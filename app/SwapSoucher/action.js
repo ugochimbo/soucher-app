@@ -1,9 +1,4 @@
 import * as Action from '../state/constant';
-import * as LINK_TO from '../config/constant';
-
-export const endTransaction = (history) => {
-    history.push(LINK_TO.HOME);
-};
 
 export const swapSoucher = (soucherDetails) => {
     return {
@@ -36,9 +31,9 @@ export const fetchCatalog = () => {
     }
 };
 
-export const demoRedux = (data) => {
+export const updateBasketItem = (giftCard) => {
     return {
-        'type': Action.Start_Swap_Action,
-        'data': data
+        'type': Action.Update_Basket_Action,
+        'payload': giftCard
     }
 };
