@@ -37,7 +37,7 @@ export default class Basket extends Component {
                                     <td> {basket.balance} {currency} </td>
                                 </tr>
                                 <tr className='header'>
-                                    <td colSpan={2}> Selected Vouchers </td>
+                                    <td colSpan={2} className="align-center"> Gift Cards </td>
                                 </tr>
 
                                 {basketGiftItems()}

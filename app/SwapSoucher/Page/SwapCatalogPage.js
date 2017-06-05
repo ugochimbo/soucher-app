@@ -12,7 +12,7 @@ import * as Action from '../action';
 const  { DOM: { input } } = React;
 
 const SwapCatalogPage = (props) => {
-    const { catalog, basket, currency, addBasketItem, handleSubmit} = props;
+    const { catalog, basket, currency, addBasketItem, disabled, handleSubmit} = props;
     const SWAP_CURRENCY = Currency.htmlEntityFor(currency);
 
     return (

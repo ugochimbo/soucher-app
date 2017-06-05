@@ -2007,6 +2007,8 @@ table {
       float: left;
       padding: 10px 2px 0 2px;
       font-size: large; }
+    #swap-catalog .item .amount .fixed > div.disabled {
+      pointer-events: none; }
     #swap-catalog .item .amount .fixed > div:hover {
       background-color: #011A27;
       color: #ffffff; }

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 export default class GiftCard extends Component {
      render() {
 
-         const {gift_card, currency, addToBasket} = this.props;
+         const {gift_card, currency, addToBasket, disabled} = this.props;
 
          let denomination = () => {
              return gift_card.denomination.map((denomination) => {
@@ -12,9 +12,9 @@ export default class GiftCard extends Component {
                             id: gift_card.id,
                             name: gift_card.name,
                             amount: denomination,
-                            value: denomination + currency,
+                            value: denomination + ' ' + currency,
                         }
-                     )}>
+                     )} className ={disabled}>
                             {denomination}{currency}
                      </div>;
              })
@@ -34,7 +34,7 @@ export default class GiftCard extends Component {
                         {denomination()}
                     </div>
                     <div className="custom">
-                        <input type="text" placeholder="Enter Custom Amount" />
+                        <input type="text" placeholder='Enter Custom Amount' disabled={disabled} />
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import * as Action from '../state/constant';
 
-export function updateSoucher(soucher) {
+export function addSoucher(soucher) {
     if (soucher.status !== Action.SUCCESS_RESPONSE_CODE) {
         return {
             code: soucher.code,
@@ -19,18 +19,21 @@ export function updateSoucher(soucher) {
     };
 }
 
-export function updateCatalog(catalog) {
-    if (catalog.status !== Action.SUCCESS_RESPONSE_CODE) {
+export function addCatalog(catalog, response) {
+    if (response.status !== Action.SUCCESS_RESPONSE_CODE) {
         return {
-            code: catalog.code,
-            message: catalog.message
+            code: response.code,
+            message: response.message
         };
     }
 
-    return catalog;
+    return {
+        ...catalog,
+        'items': response
+    };
 }
 
-export function updateBasket(soucher) {
+export function makeBasket(soucher) {
     return {
         value: soucher.amount,
         balance: soucher.amount,
@@ -38,7 +41,19 @@ export function updateBasket(soucher) {
     }
 }
 
+export function updateCatalogDisability(catalog, basket, giftCard) {
+    return {
+        ...catalog,
+        'disabled': basket.balance - giftCard.amount > 0 ? '': 'disabled'
+    };
+}
+
 export function updateBasketGiftItems(basket, giftCard) {
+    let balance = basket.balance - giftCard.amount;
+
+    if (balance < 0) {
+        return basket;
+    }
 
     let items = basket.items;
     items.push({
@@ -49,7 +64,7 @@ export function updateBasketGiftItems(basket, giftCard) {
     return {
         ...basket,
         'items': items,
-        'balance': basket.balance - giftCard.amount
+        'balance': balance
     }
 }
 

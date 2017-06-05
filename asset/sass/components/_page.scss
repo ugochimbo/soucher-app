@@ -34,6 +34,10 @@
                 font-size: large;
             }
 
+            .fixed > div.disabled {
+              pointer-events: none;
+            }
+
             .fixed > div:hover {
                 background-color: _palette(bg);
                 color: _palette(fg-light);
@@ -43,7 +47,6 @@
                 height: 60px;
                 color: _palette(fg-light);
             }
-
         }
 
         img {
