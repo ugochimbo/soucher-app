@@ -46,6 +46,11 @@
             .custom > input {
                 height: 60px;
                 color: _palette(fg-light);
+                background-color: _palette(bg);
+            }
+
+            .custom > input:disabled {
+                background-color: _palette(error) !important;
             }
         }
 

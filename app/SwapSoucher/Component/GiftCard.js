@@ -26,6 +26,24 @@ export default class GiftCard extends Component {
                     </div>);
          };
 
+         let shouldDisable = () => {
+             return (disabled === 'disabled' || gift_card.custom_prize === "0");
+         };
+
+         let customPlaceholder = () => {
+             let text = 'Custom Amount';
+
+             if (gift_card.custom_prize === "0") {
+                 text = 'Custom Amount Unavailable';
+             }
+
+             if (disabled) {
+                 text = 'Insufficient Soucher Balance'
+             }
+
+             return text;
+         };
+
         return (
             <div className="item">
                 {voucherImage()}
@@ -34,7 +52,7 @@ export default class GiftCard extends Component {
                         {denomination()}
                     </div>
                     <div className="custom">
-                        <input type="text" placeholder='Enter Custom Amount' disabled={disabled} />
+                        <input type="text" placeholder={customPlaceholder()} disabled={shouldDisable() ? 'disabled' : ''} />
                     </div>
                 </div>
             </div>

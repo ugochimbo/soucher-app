@@ -2014,7 +2014,10 @@ table {
       color: #ffffff; }
     #swap-catalog .item .amount .custom > input {
       height: 60px;
-      color: #ffffff; }
+      color: #ffffff;
+      background-color: #011A27; }
+    #swap-catalog .item .amount .custom > input:disabled {
+      background-color: #700 !important; }
   #swap-catalog .item img {
     width: 250px;
     height: 205px; }
