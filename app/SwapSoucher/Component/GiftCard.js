@@ -3,20 +3,30 @@ import React, {Component} from 'react';
 export default class GiftCard extends Component {
      render() {
 
-         const {gift_card, currency, addToBasket, disabled} = this.props;
+         const {gift_card, currency, addToBasket, disabled, max_denomination} = this.props;
 
          let denomination = () => {
-             return gift_card.denomination.map((denomination) => {
-                 return <div key={gift_card.id + '_' + denomination + '_' + new Date().getTime()} onClick={() => addToBasket(
-                        {
-                            id: gift_card.id,
-                            name: gift_card.name,
-                            amount: denomination
-                        }
-                     )} className ={disabled}>
-                            {denomination}{currency}
+             let denominations = gift_card.denomination
+                 .filter((denomination) => {
+                     return denomination <= max_denomination
+                 })
+                 .map((denomination) => {
+                     return <div key={gift_card.id + '_' + denomination + '_' + new Date().getTime()} onClick={() => addToBasket(
+                         {
+                             id: gift_card.id,
+                             name: gift_card.name,
+                             amount: denomination
+                         }
+                     )} className = {disabled}>
+                         {denomination}{currency}
                      </div>;
-             })
+                 });
+
+             if (!denominations.length) {
+                 return <div className = {disabled} key={gift_card.id + '_' + denomination + '_' + new Date().getTime()} />;
+             }
+
+             return denominations;
          };
 
          let voucherImage = () => {

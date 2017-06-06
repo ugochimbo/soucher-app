@@ -15,6 +15,7 @@ let initial_state = {
     catalog : {
         items: [],
         disabled: '',
+        max_amount: 0
     },
     basket: {
         value: 0,
@@ -33,19 +34,19 @@ export const SwapReducer = (state = initial_state, action) => {
         case Action.Fetch_Catalog_Success:
             return {
                 ...state,
-                'catalog': Worker.addCatalog(state.catalog, action.payload.data),
+                'catalog': Worker.addCatalog(state.catalog, state.soucher, action.payload.data),
                 'basket': Worker.makeBasket(state.soucher),
             };
         case Action.Add_Basket_Item_Action:
             return  {
                 ...state,
-                'catalog': Worker.updateCatalogDisability(state.catalog, state.basket, action),
+                'catalog': Worker.updateCatalogDisability(state.catalog, state.basket, state.soucher, action),
                 'basket': Worker.addBasketGiftItems(state.basket, action.payload)
             };
         case Action.Remove_Basket_Item_Action:
             return  {
                 ...state,
-                'catalog': Worker.updateCatalogDisability(state.catalog, state.basket, action),
+                'catalog': Worker.updateCatalogDisability(state.catalog, state.basket, state.soucher, action),
                 'basket': Worker.removeBasketGiftItems(state.basket, action.payload)
             };
         default:

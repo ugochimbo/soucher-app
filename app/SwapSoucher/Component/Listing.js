@@ -12,6 +12,7 @@ export default class Listing extends Component {
                                   gift_card = {gift_card}
                                   currency = {currency}
                                   disabled = {catalog.disabled}
+                                  max_denomination = {catalog.max_amount}
                                   addToBasket = {addBasketItem} />;
              })
          };

@@ -19,7 +19,7 @@ export function addSoucher(soucher) {
     };
 }
 
-export function addCatalog(catalog, response) {
+export function addCatalog(catalog, soucher, response) {
     if (response.status !== Action.SUCCESS_RESPONSE_CODE) {
         return {
             code: response.code,
@@ -29,7 +29,8 @@ export function addCatalog(catalog, response) {
 
     return {
         ...catalog,
-        'items': response
+        'items': response,
+        'max_amount': soucher.amount
     };
 }
 
@@ -41,18 +42,34 @@ export function makeBasket(soucher) {
     }
 }
 
-export function updateCatalogDisability(catalog, basket, action) {
-
+export function updateCatalogDisability(catalog, basket, soucher, action) {
     if (action.type === Action.Add_Basket_Item_Action) {
+        if ((basket.balance - action.payload.amount) <= 0) {
+            return {
+                ...catalog,
+                'max_amount': soucher.amount,
+                'disabled': 'disabled'
+            };
+        }
         return {
             ...catalog,
-            'disabled': basket.balance - action.payload.amount > 0 ? '': 'disabled'
+            'disabled': basket.balance - action.payload.amount > 0 ? '': 'disabled',
+            'max_amount': basket.balance - action.payload.amount
+        };
+    }
+
+    if ((basket.balance + action.payload.amount) <= 0) {
+        return {
+            ...catalog,
+            'max_amount': soucher.amount,
+            'disabled': 'disabled'
         };
     }
 
     return {
         ...catalog,
-        'disabled': basket.balance + action.payload.amount > 0 ? '': 'disabled'
+        'disabled': basket.balance + action.payload.amount > 0 ? '': 'disabled',
+        'max_amount': basket.balance + action.payload.amount
     };
 
 }
