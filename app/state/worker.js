@@ -102,6 +102,7 @@ export function removeBasketGiftItems(basket, giftCard) {
     for (let i = 0; i < items.length; i++) {
         if (items[i].id === giftCard.id && items[i].amount === giftCard.amount) {
             items.splice(i, 1);
+            break;
         }
     }
 

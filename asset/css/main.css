@@ -2007,6 +2007,10 @@ table {
       float: left;
       padding: 10px 2px 0 2px;
       font-size: large; }
+    #swap-catalog .item .amount .fixed > div.no-price {
+      border: none !important; }
+    #swap-catalog .item .amount .fixed > div.no-price:hover {
+      background-color: #ffffff !important; }
     #swap-catalog .item .amount .fixed > div.disabled {
       pointer-events: none; }
     #swap-catalog .item .amount .fixed > div:hover {

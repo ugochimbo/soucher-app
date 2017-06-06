@@ -34,6 +34,14 @@
                 font-size: large;
             }
 
+            .fixed > div.no-price{
+              border: none !important;
+            }
+
+            .fixed > div.no-price:hover{
+              background-color: _palette(fg-light) !important;
+            }
+
             .fixed > div.disabled {
               pointer-events: none;
             }

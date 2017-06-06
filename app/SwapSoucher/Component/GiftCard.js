@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import * as Random from '../../Util/Random';
 
 export default class GiftCard extends Component {
      render() {
@@ -11,7 +12,7 @@ export default class GiftCard extends Component {
                      return denomination <= max_denomination
                  })
                  .map((denomination) => {
-                     return <div key={gift_card.id + '_' + denomination + '_' + new Date().getTime()} onClick={() => addToBasket(
+                     return <div key={Random.key()} onClick={() => addToBasket(
                          {
                              id: gift_card.id,
                              name: gift_card.name,
@@ -23,7 +24,7 @@ export default class GiftCard extends Component {
                  });
 
              if (!denominations.length) {
-                 return <div className = {disabled} key={gift_card.id + '_' + denomination + '_' + new Date().getTime()} />;
+                 return <div className = {disabled + ' no-price'} key={gift_card.id + '_' + denomination + '_' + new Date().getTime()} />;
              }
 
              return denominations;

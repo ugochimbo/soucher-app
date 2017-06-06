@@ -1,20 +1,14 @@
 import React, {Component} from 'react';
-import {reset} from 'redux-form';
-import * as Action from '../../state/action';
+import * as Random from '../../Util/Random';
 import BasketGiftItem from './BasketGiftItem';
 
 export default class Basket extends Component {
      render() {
-         const {basket, currency, removeBasketItem, history} = this.props;
+         const {basket, currency, removeBasketItem} = this.props;
 
-        /* let cancelSwap = () => {
-             reset('swap-soucher-wizard');
-             dispatch(Action.endTransaction(history));
-         };
-        */
          let basketGiftItems = () => {
              return basket.items.map(function (item) {
-                 return <BasketGiftItem key = {item + '_' + item.amount}
+                 return <BasketGiftItem key = {Random.key()}
                                         id = {item.id}
                                         name = {item.name}
                                         amount = {item.amount}
