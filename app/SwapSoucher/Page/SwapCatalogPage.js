@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { reduxForm } from 'redux-form';
+import { reduxForm, reset } from 'redux-form';
 import SectionHeader, {SwapCatalogPageHeader as header} from '../../Common/SectionHeader';
 import {validator as validate} from '../Validator';
 import Filter from '../../Common/Filter';
@@ -8,12 +8,19 @@ import Listing from '../Component/Listing';
 import Basket from '../Component/Basket';
 import * as Currency from '../../Util/Currency';
 import * as Action from '../action';
+import * as LINK_TO from '../../config/constant';
 
 const  { DOM: { input } } = React;
 
 const SwapCatalogPage = (props) => {
-    const { catalog, basket, currency, addBasketItem, removeBasketItem, handleSubmit} = props;
+    const { catalog, basket, currency, addBasketItem, removeBasketItem, dispatch, handleSubmit, history} = props;
     const SWAP_CURRENCY = Currency.htmlEntityFor(currency);
+
+    let cancelSwap = () => {
+        dispatch(Action.cancelSwap());
+        dispatch(reset('swap-soucher-wizard'));
+        history.push(LINK_TO.SWAP_SOUCHER_CANCEL_ROUTE);
+    };
 
     return (
         <div id="main-full" className="full">
@@ -24,7 +31,7 @@ const SwapCatalogPage = (props) => {
                     <form onSubmit = {handleSubmit}>
                         <div className="row uniform">
                             <Listing catalog = {catalog} currency = {SWAP_CURRENCY} addBasketItem = {addBasketItem} />
-                            <Basket basket = {basket} currency = {SWAP_CURRENCY} removeBasketItem = {removeBasketItem} />
+                            <Basket basket = {basket} currency = {SWAP_CURRENCY} removeBasketItem = {removeBasketItem} cancelSwap = {cancelSwap} />
                         </div>
                     </form>
                 </div>
@@ -54,7 +61,7 @@ const mapDispatchToProps = dispatch => ({
     },
     removeBasketItem : (basketItem) => {
         dispatch(Action.removeBasketItem(basketItem));
-    },
+    }
 });
 
 export default connect(

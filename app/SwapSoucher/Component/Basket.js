@@ -4,7 +4,7 @@ import BasketGiftItem from './BasketGiftItem';
 
 export default class Basket extends Component {
      render() {
-         const {basket, currency, removeBasketItem} = this.props;
+         const {basket, currency, removeBasketItem, cancelSwap} = this.props;
 
          let basketGiftItems = () => {
              return basket.items.map(function (item) {

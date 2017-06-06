@@ -14,5 +14,6 @@ export const Fetch_Catalog__Error = Fetch_Catalog_Action + Response_Error_Suffix
 
 export const Add_Basket_Item_Action = 'ADD_BASKET_ITEM';
 export const Remove_Basket_Item_Action = 'DELETE_BASKET_ITEM';
+export const Cancle_Swap_Action = 'CANCEL_SWAP';
 
 export const SUCCESS_RESPONSE_CODE = 200;

@@ -32,13 +32,18 @@ export const SoucherCodeVerificationPageHeader = {
 };
 
 export const SwapCatalogPageHeader = {
-    title: 'Select Voucher(s)',
-    message: 'Please select one or more vouchers.',
+    title: 'Select Gift Card(s)',
+    message: 'Please select one or more gift cards.',
 };
 
 export const PhoneAuthenticationPageHeader = {
     title: 'Authenticate Request',
     message: 'Enter authentication code.',
+};
+
+export const SwapCancelledPageHeader = {
+    title: 'Swap Cancelled',
+    message: 'We hope to hear back from you shortly.',
 };
 
 export default class SectionHeader extends Component{

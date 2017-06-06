@@ -49,6 +49,13 @@ export const SwapReducer = (state = initial_state, action) => {
                 'catalog': Worker.updateCatalogDisability(state.catalog, state.basket, state.soucher, action),
                 'basket': Worker.removeBasketGiftItems(state.basket, action.payload)
             };
+        case Action.Cancle_Swap_Action:
+            return  {
+                ...state,
+                'soucher': initial_state.soucher,
+                'catalog': initial_state.catalog,
+                'basket': initial_state.basket,
+            };
         default:
             return state;
     }

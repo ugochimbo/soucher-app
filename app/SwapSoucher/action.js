@@ -44,3 +44,9 @@ export const removeBasketItem = (giftCard) => {
         'payload': giftCard
     }
 };
+
+export const cancelSwap = () => {
+    return {
+        'type': Action.Cancle_Swap_Action
+    }
+};
