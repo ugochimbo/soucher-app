@@ -36,11 +36,17 @@ export const SwapReducer = (state = initial_state, action) => {
                 'catalog': Worker.addCatalog(state.catalog, action.payload.data),
                 'basket': Worker.makeBasket(state.soucher),
             };
-        case Action.Update_Basket_Action:
+        case Action.Add_Basket_Item_Action:
             return  {
                 ...state,
-                'catalog': Worker.updateCatalogDisability(state.catalog, state.basket, action.payload),
-                'basket': Worker.updateBasketGiftItems(state.basket, action.payload)
+                'catalog': Worker.updateCatalogDisability(state.catalog, state.basket, action),
+                'basket': Worker.addBasketGiftItems(state.basket, action.payload)
+            };
+        case Action.Remove_Basket_Item_Action:
+            return  {
+                ...state,
+                'catalog': Worker.updateCatalogDisability(state.catalog, state.basket, action),
+                'basket': Worker.removeBasketGiftItems(state.basket, action.payload)
             };
         default:
             return state;

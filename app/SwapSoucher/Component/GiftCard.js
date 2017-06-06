@@ -7,12 +7,11 @@ export default class GiftCard extends Component {
 
          let denomination = () => {
              return gift_card.denomination.map((denomination) => {
-                 return <div key={gift_card.id + '_' + denomination} onClick={() => addToBasket(
+                 return <div key={gift_card.id + '_' + denomination + '_' + new Date().getTime()} onClick={() => addToBasket(
                         {
                             id: gift_card.id,
                             name: gift_card.name,
-                            amount: denomination,
-                            value: denomination + ' ' + currency,
+                            amount: denomination
                         }
                      )} className ={disabled}>
                             {denomination}{currency}
@@ -27,18 +26,18 @@ export default class GiftCard extends Component {
          };
 
          let shouldDisable = () => {
-             return (disabled === 'disabled' || gift_card.custom_prize === "0");
+             return (disabled === 'disabled' || !gift_card.custom_prize);
          };
 
          let customPlaceholder = () => {
-             let text = 'Custom Amount';
+             let text = 'Enter Custom Amount';
 
-             if (gift_card.custom_prize === "0") {
-                 text = 'Custom Amount Unavailable';
+             if (!gift_card.custom_prize) {
+                 text = 'No Custom Amounts';
              }
 
              if (disabled) {
-                 text = 'Insufficient Soucher Balance'
+                 text = 'Insufficient Balance'
              }
 
              return text;

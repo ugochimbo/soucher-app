@@ -31,9 +31,16 @@ export const fetchCatalog = () => {
     }
 };
 
-export const updateBasketItem = (giftCard) => {
+export const addBasketItem = (giftCard) => {
     return {
-        'type': Action.Update_Basket_Action,
+        'type': Action.Add_Basket_Item_Action,
+        'payload': giftCard
+    }
+};
+
+export const removeBasketItem = (giftCard) => {
+    return {
+        'type': Action.Remove_Basket_Item_Action,
         'payload': giftCard
     }
 };

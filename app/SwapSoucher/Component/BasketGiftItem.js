@@ -4,11 +4,15 @@ import React, {Component} from 'react';
 export default class BasketGiftItem extends Component {
     render() {
 
-        const {name, value} = this.props;
+        const {id, name, amount, currency, removeBasketItem} = this.props;
+
         return (
             <tr>
                 <td> {name} </td>
-                <td> {value} </td>
+                <td> {amount + ' ' + currency} </td>
+                <td> <span style={{'marginLeft' : '2px'}} className="icon fa-trash-o"
+                           onClick={() => removeBasketItem({id, name, amount})}/>
+                </td>
             </tr>
         )
     }

@@ -12,7 +12,7 @@ import * as Action from '../action';
 const  { DOM: { input } } = React;
 
 const SwapCatalogPage = (props) => {
-    const { catalog, basket, currency, addBasketItem, disabled, handleSubmit} = props;
+    const { catalog, basket, currency, addBasketItem, removeBasketItem, handleSubmit} = props;
     const SWAP_CURRENCY = Currency.htmlEntityFor(currency);
 
     return (
@@ -24,7 +24,7 @@ const SwapCatalogPage = (props) => {
                     <form onSubmit = {handleSubmit}>
                         <div className="row uniform">
                             <Listing catalog = {catalog} currency = {SWAP_CURRENCY} addBasketItem = {addBasketItem} />
-                            <Basket basket = {basket} currency = {SWAP_CURRENCY} />
+                            <Basket basket = {basket} currency = {SWAP_CURRENCY} removeBasketItem = {removeBasketItem} />
                         </div>
                     </form>
                 </div>
@@ -50,8 +50,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => ({
     addBasketItem : (giftCard) => {
-        dispatch(Action.updateBasketItem(giftCard));
-    }
+        dispatch(Action.addBasketItem(giftCard));
+    },
+    removeBasketItem : (basketItem) => {
+        dispatch(Action.removeBasketItem(basketItem));
+    },
 });
 
 export default connect(

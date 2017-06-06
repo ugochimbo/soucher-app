@@ -41,14 +41,23 @@ export function makeBasket(soucher) {
     }
 }
 
-export function updateCatalogDisability(catalog, basket, giftCard) {
+export function updateCatalogDisability(catalog, basket, action) {
+
+    if (action.type === Action.Add_Basket_Item_Action) {
+        return {
+            ...catalog,
+            'disabled': basket.balance - action.payload.amount > 0 ? '': 'disabled'
+        };
+    }
+
     return {
         ...catalog,
-        'disabled': basket.balance - giftCard.amount > 0 ? '': 'disabled'
+        'disabled': basket.balance + action.payload.amount > 0 ? '': 'disabled'
     };
+
 }
 
-export function updateBasketGiftItems(basket, giftCard) {
+export function addBasketGiftItems(basket, giftCard) {
     let balance = basket.balance - giftCard.amount;
 
     if (balance < 0) {
@@ -57,8 +66,9 @@ export function updateBasketGiftItems(basket, giftCard) {
 
     let items = basket.items;
     items.push({
+        id: giftCard.id,
         name: giftCard.name,
-        value: giftCard.value,
+        amount: giftCard.amount,
     });
 
     return {
@@ -68,3 +78,19 @@ export function updateBasketGiftItems(basket, giftCard) {
     }
 }
 
+export function removeBasketGiftItems(basket, giftCard) {
+    let balance = basket.balance + giftCard.amount;
+    let items = basket.items;
+
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].id === giftCard.id && items[i].amount === giftCard.amount) {
+            items.splice(i, 1);
+        }
+    }
+
+    return {
+        ...basket,
+        'items': items,
+        'balance': balance
+    }
+}

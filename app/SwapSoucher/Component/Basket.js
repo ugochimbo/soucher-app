@@ -5,16 +5,21 @@ import BasketGiftItem from './BasketGiftItem';
 
 export default class Basket extends Component {
      render() {
-         const {basket, currency, dispatch, history} = this.props;
+         const {basket, currency, removeBasketItem, history} = this.props;
 
-         let cancelSwap = () => {
+        /* let cancelSwap = () => {
              reset('swap-soucher-wizard');
              dispatch(Action.endTransaction(history));
          };
-
+        */
          let basketGiftItems = () => {
              return basket.items.map(function (item) {
-                 return <BasketGiftItem key = {item.name + '_' + item.value} name = {item.name} value = {item.value}/>;
+                 return <BasketGiftItem key = {item + '_' + item.amount}
+                                        id = {item.id}
+                                        name = {item.name}
+                                        amount = {item.amount}
+                                        currency = {currency}
+                                        removeBasketItem = {removeBasketItem}/>;
              })
          };
 
