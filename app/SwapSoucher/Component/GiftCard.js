@@ -24,7 +24,7 @@ export default class GiftCard extends Component {
                  });
 
              if (!denominations.length) {
-                 return <div className = {disabled + ' no-price'} key={gift_card.id + '_' + denomination + '_' + new Date().getTime()} />;
+                 return <div className = {disabled + ' no-price'} key={Random.key()} />;
              }
 
              return denominations;
