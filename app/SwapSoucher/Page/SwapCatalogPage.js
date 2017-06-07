@@ -17,8 +17,7 @@ const SwapCatalogPage = (props) => {
     const SWAP_CURRENCY = Currency.htmlEntityFor(currency);
 
     let nextPage = () => {
-        console.log(basket);
-        if (!basket.items.length && basket.value !== basket.balance) {
+        if (!basket.items.length) {
             return;
         }
 
