@@ -9,7 +9,10 @@ let initial_state = {
         currency: 'EUR',
     },
     filter : {
-        category: '',
+        category: {
+            items: [],
+            selected: '',
+        },
         search: '',
     },
     catalog : {

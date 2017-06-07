@@ -4,7 +4,7 @@ import BasketGiftItem from './BasketGiftItem';
 
 export default class Basket extends Component {
      render() {
-         const {basket, currency, removeBasketItem, cancelSwap} = this.props;
+         const {basket, currency, removeBasketItem, cancelSwap, nextPage} = this.props;
 
          let basketGiftItems = () => {
              return basket.items.map(function (item) {
@@ -45,7 +45,7 @@ export default class Basket extends Component {
                         </table>
                     </section>
                     <section className="basket-buttons">
-                        <button type="submit" className="button big special">
+                        <button type="button" className="button big special" onClick={() => nextPage()}>
                             <span> Swap </span>
                             <span  style={{'marginLeft' : '1px'}} className="icon fa-arrow-circle-o-right"/>
                         </button>

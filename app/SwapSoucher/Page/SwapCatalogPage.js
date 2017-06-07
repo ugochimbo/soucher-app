@@ -16,6 +16,15 @@ const SwapCatalogPage = (props) => {
     const { catalog, basket, currency, addBasketItem, removeBasketItem, dispatch, handleSubmit, history} = props;
     const SWAP_CURRENCY = Currency.htmlEntityFor(currency);
 
+    let nextPage = () => {
+        console.log(basket);
+        if (!basket.items.length && basket.value !== basket.balance) {
+            return;
+        }
+
+        handleSubmit();
+    };
+
     let cancelSwap = () => {
         dispatch(Action.cancelSwap());
         dispatch(reset('swap-soucher-wizard'));
@@ -28,10 +37,10 @@ const SwapCatalogPage = (props) => {
                 <SectionHeader title = {header.title} message = {header.message}/>
                 <Filter />
                 <div className="catalog-light-content">
-                    <form onSubmit = {handleSubmit}>
+                    <form onSubmit = {nextPage}>
                         <div className="row uniform">
                             <Listing catalog = {catalog} currency = {SWAP_CURRENCY} addBasketItem = {addBasketItem} />
-                            <Basket basket = {basket} currency = {SWAP_CURRENCY} removeBasketItem = {removeBasketItem} cancelSwap = {cancelSwap} />
+                            <Basket basket = {basket} currency = {SWAP_CURRENCY} removeBasketItem = {removeBasketItem} cancelSwap = {cancelSwap} nextPage = {nextPage}/>
                         </div>
                     </form>
                 </div>
