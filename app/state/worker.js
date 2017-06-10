@@ -30,7 +30,8 @@ export function addCatalog(catalog, soucher, response) {
     return {
         ...catalog,
         'items': response,
-        'max_amount': soucher.amount
+        'max_amount': soucher.amount,
+        'disabled': soucher.amount > 0 ? '': 'disabled',
     };
 }
 

@@ -19,9 +19,9 @@ export default class SuccessPage extends Component {
                 }}>
                     <header>
                         <h2 className="highlight">
-                            Success! We will send you your gift cards shortly. <br />
+                            We will send your gift cards shortly.
                         </h2>
-                        <h1 className="highlight"> Thank you for using Soucher! </h1>
+                        <h3 className="highlight">Thank you for using Soucher.</h3>
                     </header>
                     <footer>
                         <ul className="actions fit">
