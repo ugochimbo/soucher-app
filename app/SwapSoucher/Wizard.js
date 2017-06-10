@@ -14,20 +14,6 @@ class Wizard extends Component {
         };
     };
 
-   /* handleNextWithValidate = values => new Promise((resolve, reject) => {
-        submit(values).then(() => {
-            this.nextPage();
-            resolve();
-        });
-    });
-
-    handleSubmitWithValidate = values => new Promise((resolve, reject) => {
-        submitValidate(values).then(() => {
-            this.props.onSubmit(values);
-            resolve();
-        });
-    });*/
-
     nextPage() {
         this.setState({ page: this.state.page + 1 });
     }
@@ -44,8 +30,7 @@ class Wizard extends Component {
         return (
             <div>
                 {page === 1 && <SoucherCodeVerificationPage onSubmit={this.nextPage}/>}
-                {page === 2 && <SwapCatalogPage previousPage={this.previousPage} onSubmit={this.nextPage} history = {history} />}
-                {page === 3 && <PhoneAuthenticationPage previousPage={this.previousPage} onSubmit={onSubmit} history = {history} />}
+                {page === 2 && <SwapCatalogPage onSubmit={onSubmit} history = {history} />}
             </div>
         )
     }

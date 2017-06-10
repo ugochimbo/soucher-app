@@ -41,6 +41,11 @@ export const PhoneAuthenticationPageHeader = {
     message: 'Enter authentication code.',
 };
 
+export const SwapSuccessPageHeader = {
+    title: 'Swap Successful',
+    message: 'Your swap request is successful.',
+};
+
 export const SwapCancelledPageHeader = {
     title: 'Swap Cancelled',
     message: 'We hope to hear back from you shortly.',

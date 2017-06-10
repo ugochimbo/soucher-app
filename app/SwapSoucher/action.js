@@ -47,6 +47,19 @@ export const removeBasketItem = (giftCard) => {
 
 export const cancelSwap = () => {
     return {
-        'type': Action.Cancle_Swap_Action
+        'type': Action.Cancel_Swap_Action
+    }
+};
+
+export const completeSwap = (swapDetails) => {
+    return {
+        'type': Action.Complete_Swap_Action,
+        'payload': {
+            request: {
+                url: '/swap',
+                method: 'POST',
+                data: swapDetails
+            }
+        }
     }
 };

@@ -9,19 +9,31 @@ import Basket from '../Component/Basket';
 import * as Currency from '../../Util/Currency';
 import * as Action from '../action';
 import * as LINK_TO from '../../config/constant';
+import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
 
 const  { DOM: { input } } = React;
 
 const SwapCatalogPage = (props) => {
-    const { catalog, basket, currency, addBasketItem, removeBasketItem, dispatch, handleSubmit, history} = props;
-    const SWAP_CURRENCY = Currency.htmlEntityFor(currency);
+    const { soucher, catalog, basket, addBasketItem, removeBasketItem, dispatch, history} = props;
+    const SWAP_CURRENCY = Currency.htmlEntityFor(soucher.currency);
 
-    let nextPage = () => {
+    let completeSwap = () => {
         if (!basket.items.length) {
             return;
         }
 
-        handleSubmit();
+        let data = {
+            soucher_id : soucher.id,
+            gift_cards : basket.items,
+        };
+
+        dispatch(Action.completeSwap(data)).then((response) => {
+            if (response.payload.data !== SUCCESS_RESPONSE_CODE) {
+                history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
+            }
+
+            history.push(LINK_TO.SWAP_SOUCHER_SUCCESS_ROUTE);
+        });
     };
 
     let cancelSwap = () => {
@@ -36,10 +48,10 @@ const SwapCatalogPage = (props) => {
                 <SectionHeader title = {header.title} message = {header.message}/>
                 <Filter />
                 <div className="catalog-light-content">
-                    <form onSubmit = {nextPage}>
+                    <form onSubmit = {completeSwap}>
                         <div className="row uniform">
                             <Listing catalog = {catalog} currency = {SWAP_CURRENCY} addBasketItem = {addBasketItem} />
-                            <Basket basket = {basket} currency = {SWAP_CURRENCY} removeBasketItem = {removeBasketItem} cancelSwap = {cancelSwap} nextPage = {nextPage}/>
+                            <Basket basket = {basket} currency = {SWAP_CURRENCY} removeBasketItem = {removeBasketItem} cancelSwap = {cancelSwap} completeSwap = {completeSwap}/>
                         </div>
                     </form>
                 </div>
@@ -57,7 +69,7 @@ const SwapCatalog = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
-        currency: state.swap.soucher.currency,
+        soucher: state.swap.soucher,
         catalog: state.swap.catalog,
         basket: state.swap.basket,
     }
