@@ -8,7 +8,7 @@ import ContactUs from '../Page/ContactUs';
 import BuySoucherWizard from '../BuySoucher/Wizard';
 import SwapSoucherWizard from '../SwapSoucher/Wizard';
 import BuySoucherSuccessPage from '../BuySoucher/Page/SuccessPage';
-import SwapSuccessPage from '../SwapSoucher/Page/SuccessPage';
+import SwapSuccessPage from '../SwapSoucher/Page/SwapSuccessPage';
 import SwapCancelledPage from '../SwapSoucher/Page/SwapCancelledPage';
 import TransactionError from '../Page/TransactionError';
 

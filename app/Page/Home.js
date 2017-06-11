@@ -9,7 +9,7 @@ export default class Home extends Component{
                 <section id="banner">
                     <header>
                         <h2>Soucher</h2>
-                        <p>The GIFT CARD for gift cards</p>
+                        <p><span>The GIFT CARD for gift cards</span></p>
                     </header>
                     <footer>
                         <ul className="actions fit">
