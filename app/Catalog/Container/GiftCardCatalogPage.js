@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import Voucher from '../Component/Voucher';
 import Filter from '../../Common/Filter';
 
-export default class VoucherCatalogContainer extends Component{
+export default class GiftCardCatalogPage extends Component{
     render() {
         return (
             <div id="main-full" className="full">

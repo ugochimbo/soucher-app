@@ -2,7 +2,7 @@ import React from 'react';
 import {Route} from 'react-router-dom';
 import Main from '../Common/Main.js';
 import Home from '../Page/Home.js';
-import VoucherCatalogContainer from '../Catalog/Container/VoucherCatalogContainer';
+import GiftCardCatalogPage from '../Catalog/Container/GiftCardCatalogPage';
 import AboutUs from '../Page/AboutUs';
 import ContactUs from '../Page/ContactUs';
 import BuySoucherWizard from '../BuySoucher/Wizard';
@@ -27,7 +27,7 @@ export const routes =
 
             <Route exact = {true} path = {PATH_TO.TRANSACTION_ERROR_ROUTE} header='Transaction Error' component={TransactionError} />
 
-            <Route exact = {true} path = {PATH_TO.VOUCHER_CATALOG_ROUTE} header='Catalog' component={VoucherCatalogContainer} />
+            <Route exact = {true} path = {PATH_TO.GIFT_CARD_CATALOG_ROUTE} header='Catalog' component={GiftCardCatalogPage} />
             <Route exact = {true} path = {PATH_TO.ABOUT_US_ROUTE} header='Catalog' component={AboutUs} />
             <Route exact = {true} path = {PATH_TO.CONTACT_US_ROUTE} header='Catalog' component={ContactUs} />
         </Main>;

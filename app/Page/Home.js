@@ -59,7 +59,7 @@ export default class Home extends Component{
                     </header>
                     <ul className="actions">
                         <li>
-                            <Link to = {LINK_TO.VOUCHER_CATALOG_ROUTE} className="button big special">
+                            <Link to = {LINK_TO.GIFT_CARD_CATALOG_ROUTE} className="button big special">
                                 <span style={{'marginRight' : '5px'}}>View Voucher Catalog</span>
                                 <span className="icon fa-book"/>
                             </Link>
@@ -109,7 +109,7 @@ export default class Home extends Component{
                         <h2>What are you waiting for ?</h2>
                     </header>
                     <ul className="actions">
-                        <li><Link to = {LINK_TO.VOUCHER_CATALOG_ROUTE} className="button big special">
+                        <li><Link to = {LINK_TO.GIFT_CARD_CATALOG_ROUTE} className="button big special">
                             <span className="icon fa-gift"/>
                             <span style={{'margin' : '0 10px 0 10px'}}>Gift a loved one a Soucher</span>
                             <span className="icon fa-gift"/>
