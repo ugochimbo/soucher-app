@@ -72,6 +72,7 @@ const mapStateToProps = (state) => {
         soucher: state.swap.soucher,
         catalog: state.swap.catalog,
         basket: state.swap.basket,
+        isComplete: state.swap.isComplete,
     }
 };
 

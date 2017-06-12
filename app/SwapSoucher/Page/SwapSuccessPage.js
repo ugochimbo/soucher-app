@@ -1,9 +1,18 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import SectionHeader, {SwapSuccessPageHeader as header} from '../../Common/SectionHeader';
 import {Link} from 'react-router-dom';
 import * as LINK_TO from '../../config/constant';
+import * as STATUS from '../../state/constant';
 
-export default class SuccessPage extends Component {
+class SwapSuccessPage extends Component {
+
+    componentWillMount() {
+        if (this.props.status !== STATUS.SWAP_COMPLETE) {
+            this.props.history.push(LINK_TO.HOME);
+        }
+    }
+
     render() {
         return (
             <div id="main">
@@ -34,4 +43,16 @@ export default class SuccessPage extends Component {
             </div>
         );
     }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        status: state.swap.status,
+    }
 };
+
+export default connect(
+    mapStateToProps,
+    null
+)(SwapSuccessPage);
+

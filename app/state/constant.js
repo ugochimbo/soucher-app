@@ -19,3 +19,6 @@ export const Complete_Swap_Action = 'COMPLETE_SWAP';
 export const Complete_Swap_Success = 'COMPLETE_SWAP_SUCCESS';
 
 export const SUCCESS_RESPONSE_CODE = 200;
+
+export const SWAP_CANCELLED = 'cancelled';
+export const SWAP_COMPLETE = 'complete';

@@ -24,7 +24,8 @@ let initial_state = {
         value: 0,
         balance: 0,
         items: [],
-    }
+    },
+    status: ''
 };
 
 export const SwapReducer = (state = initial_state, action) => {
@@ -32,7 +33,7 @@ export const SwapReducer = (state = initial_state, action) => {
         case Action.Fetch_Soucher_Success:
             return {
                 ...state,
-                'soucher': Worker.addSoucher(action.payload.data)
+                'soucher': Worker.addSoucher(action.payload.data),
             };
         case Action.Fetch_Catalog_Success:
             return {
@@ -44,20 +45,24 @@ export const SwapReducer = (state = initial_state, action) => {
             return  {
                 ...state,
                 'catalog': Worker.updateCatalogDisability(state.catalog, state.basket, state.soucher, action),
-                'basket': Worker.addBasketGiftItems(state.basket, action.payload)
+                'basket': Worker.addBasketGiftItems(state.basket, action.payload),
             };
         case Action.Remove_Basket_Item_Action:
             return  {
                 ...state,
                 'catalog': Worker.updateCatalogDisability(state.catalog, state.basket, state.soucher, action),
-                'basket': Worker.removeBasketGiftItems(state.basket, action.payload)
+                'basket': Worker.removeBasketGiftItems(state.basket, action.payload),
             };
         case Action.Cancel_Swap_Action:
             return  {
                 ...state,
                 'soucher': initial_state.soucher,
-                'catalog': initial_state.catalog,
-                'basket': initial_state.basket,
+                'status': Action.SWAP_CANCELLED,
+            };
+        case Action.Complete_Swap_Success:
+            return  {
+                ...state,
+                'status': Action.SWAP_COMPLETE,
             };
         default:
             return state;

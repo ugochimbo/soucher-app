@@ -1,7 +1,17 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import SectionHeader, {SwapCancelledPageHeader as header} from '../../Common/SectionHeader';
+import * as LINK_TO from '../../config/constant';
+import * as STATUS from '../../state/constant';
 
-export default class SwapCancelledPage extends Component {
+class SwapCancelledPage extends Component {
+
+    componentWillMount() {
+        if (this.props.status !== STATUS.SWAP_CANCELLED ) {
+            this.props.history.push(LINK_TO.HOME);
+        }
+    }
+
     render() {
         return (
             <div id="main">
@@ -19,16 +29,21 @@ export default class SwapCancelledPage extends Component {
                     <header>
                         <h2>Your Swap has been cancelled.</h2>
                         <p> Please feel free to contact us for assistance and/or enquiries.</p>
-                        <p> <span  style={{
-                            'backgroundImage' : 'url("/asset/image/overlay_2.png")',
-                            'textShadow' : '0 1px 0 rgba(0, 0, 0, 0.75)',
-                            'backgroundPosition' : 'initial',
-                            'backgroundColor' : 'rgba(0, 0, 0, 0.65)',
-                            'padding' : '10px'
-                        }}> Thank you for using Soucher. </span></p>
+                        <p> <span className="highlight"> Thank you for using Soucher. </span></p>
                     </header>
                 </section>
             </div>
         );
     }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        status: state.swap.status,
+    }
 };
+
+export default connect(
+    mapStateToProps,
+    null
+)(SwapCancelledPage);

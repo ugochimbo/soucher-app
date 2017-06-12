@@ -63,3 +63,9 @@ export const completeSwap = (swapDetails) => {
         }
     }
 };
+
+export const swapSuccess = () => {
+    return {
+        'type': Action.Complete_Swap_Success,
+    }
+};
