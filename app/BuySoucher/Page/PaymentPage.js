@@ -1,9 +1,9 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import SectionHeader, {PaymentsPageHeader as header} from '../../Common/SectionHeader';
-import { Field, reduxForm } from 'redux-form';
+import { reduxForm } from 'redux-form';
 import {validator as validate} from '../Validator';
-import {Input} from '../../Common/FormField';
-import * as Action from '../../state/action';
+import Checkout from '../../Payment/Stripe/Checkout';
 
 const  { DOM: { input } } = React;
 
@@ -12,7 +12,7 @@ const PaymentPage = (props) => {
     const { handleSubmit, pristine, previousPage, submitting, history } = props;
 
     let handleFormSubmit = (formProps, dispatch) => {
-        dispatch(Action.buySoucher(formProps, history));
+
     };
 
     return (
@@ -26,11 +26,7 @@ const PaymentPage = (props) => {
                                 <img src="/asset/image/soucher_12_1.jpg" width="550px" style={{'marginTop': '60px'}} />
                             </div>
                             <div className="6u 12u$(small)">
-                                <h3 className="align-center">Choose Payment Type</h3>
-                                <div>Payment bla bla</div>
-                                <div className="12u$" style={{'marginBottom': '10px'}}>
-                                    <Field name="paymentType" type = 'text' component = {Input} label="Payment Type" />
-                                </div>
+                               <Checkout />
                             </div>
                         </div>
                         <div className="row uniform" style={{'marginTop': '20px'}}>
@@ -54,9 +50,22 @@ const PaymentPage = (props) => {
     );
 };
 
-export default reduxForm({
+const mapStateToProps = (state) => {
+    return {
+
+    };
+};
+
+const mapDispatchToProps = dispatch => ({});
+
+const Payment = reduxForm({
     form: 'buy-soucher-wizard',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
     validate
 })(PaymentPage);
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Payment);
