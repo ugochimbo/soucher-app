@@ -20,7 +20,9 @@ export default class Checkout extends Component {
                 allowRememberMe = {false}
                 billingAddress={true}
             >
-                <input type="image" src="/asset/image/credit-card-option.png" width='250px' />
+                <div>
+                    <input type="image" src="/asset/image/credit-card-option.png" width='250px' />
+                </div>
             </StripeCheckout>
         )
     }

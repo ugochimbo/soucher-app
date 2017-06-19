@@ -85,7 +85,14 @@ class PayPalButton extends Component {
                     commit={true}
                     onAuthorize={onAuthorize}
                     onCancel={onCancel}
-                    style={{ size: 'responsive' }}
+                    style={
+                        {
+                            label: 'pay',
+                            size:  'responsive',
+                            shape: 'rect',
+                            color: 'blue'
+                        }
+                    }
                 />
             }
 
@@ -93,7 +100,7 @@ class PayPalButton extends Component {
         };
 
         return (
-            <div style={{'width' : '250px', 'marginTop' : '10px'}}>
+            <div style={{'width' : '250px' , 'marginTop' : '20px'}} >
                 {displayPayPalButton()}
             </div>
         );
