@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 import SectionHeader, {PaymentsPageHeader as header} from '../../Common/SectionHeader';
 import { reduxForm } from 'redux-form';
 import {validator as validate} from '../Validator';
-import CreditCard from '../../Payment/CreditCard';
-import PayPal from '../../Payment/PayPal';
+import CreditCard from '../Component/CreditCard';
+import PayPal from '../Component/PayPal';
 
 const  { DOM: { input } } = React;
 

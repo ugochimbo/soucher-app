@@ -20,7 +20,6 @@ class PayPalButton extends Component {
             if (isScriptLoaded && !this.props.isScriptLoaded) { // load finished
                 if (isScriptLoadSucceed) {
                     this.setState({ showButton: true });
-                    //console.log('alehop!!', window.paypal.Button.react)
                 }
                 else this.props.onError()
             }
@@ -30,7 +29,6 @@ class PayPalButton extends Component {
     componentDidMount () {
         const { isScriptLoaded, isScriptLoadSucceed } = this.props;
         if (isScriptLoaded && isScriptLoadSucceed) {
-            console.log('script mounted');
             this.setState({ showButton: true })
         }
     }
@@ -61,8 +59,7 @@ class PayPalButton extends Component {
 
         const onAuthorize = (data, actions) => {
             return actions.payment.execute().then(() => {
-                console.log('The payment was completed!', this);
-                this.setState({ showButton: false });
+                console.log(data);
                 const payment = Object.assign({}, this.props.payment);
                 payment.paid = true;
                 payment.cancelled =  false;
@@ -79,7 +76,7 @@ class PayPalButton extends Component {
            // this.props.dispatch(paymentCancelled())
         };
 
-        const blabla = () => {
+        const displayPayPalButton = () => {
             if (this.state.showButton) {
                 return <paypal.Button.react
                     env={'sandbox'}
@@ -91,12 +88,12 @@ class PayPalButton extends Component {
                 />
             }
 
-            return '<div></div>';
+            return <div />;
         };
 
         return (
             <div>
-                {blabla()}
+                {displayPayPalButton()}
             </div>
         );
     }
