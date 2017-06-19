@@ -10,7 +10,6 @@ export default class Checkout extends Component {
                 name='Soucher'
                 description="Gift Soucher to Loved one"
                 ComponentClass="div"
-                panelLabel="Gift Soucher"
                 amount={100}
                 currency="USD"
                 locale="auto"

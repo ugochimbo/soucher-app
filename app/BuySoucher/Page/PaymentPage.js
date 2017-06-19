@@ -3,7 +3,8 @@ import {connect} from 'react-redux';
 import SectionHeader, {PaymentsPageHeader as header} from '../../Common/SectionHeader';
 import { reduxForm } from 'redux-form';
 import {validator as validate} from '../Validator';
-import Checkout from '../../Payment/Stripe/Checkout';
+import CreditCard from '../../Payment/CreditCard';
+import PayPal from '../../Payment/PayPal';
 
 const  { DOM: { input } } = React;
 
@@ -26,7 +27,8 @@ const PaymentPage = (props) => {
                                 <img src="/asset/image/soucher_12_1.jpg" width="550px" style={{'marginTop': '60px'}} />
                             </div>
                             <div className="6u 12u$(small)">
-                               <Checkout />
+                               <CreditCard />
+                                <PayPal />
                             </div>
                         </div>
                         <div className="row uniform" style={{'marginTop': '20px'}}>
