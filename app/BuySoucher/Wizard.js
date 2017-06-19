@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ContactDetailsPage from './Page/ContactDetailsPage';
 import SoucherDetailsPage from './Page/SoucherDetailsPage';
-import PaymentPage from './Page/PaymentPage';
 
 class Wizard extends Component {
     constructor(props) {
@@ -29,8 +28,7 @@ class Wizard extends Component {
         return (
             <div>
                 {page === 1 && <ContactDetailsPage onSubmit={this.nextPage}/>}
-                {page === 2 && <SoucherDetailsPage previousPage={this.previousPage} onSubmit={this.nextPage}/>}
-                {page === 3 && <PaymentPage previousPage={this.previousPage} onSubmit={onSubmit} history = {history} />}
+                {page === 2 && <SoucherDetailsPage previousPage={this.previousPage} onSubmit={onSubmit} history={history} />}
             </div>
         )
     }

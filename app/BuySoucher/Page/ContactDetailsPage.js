@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import SectionHeader, {ContactDetailsHeader as header} from '../../Common/SectionHeader';
 import { Field, reduxForm } from 'redux-form';
 import {validator as validate} from '../Validator';
@@ -61,9 +62,23 @@ const ContactDetailsPage = (props) => {
     )
 };
 
-export default reduxForm({
+const ContactDetails = reduxForm({
     form: 'buy-soucher-wizard',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
     validate
 })(ContactDetailsPage);
+
+const mapStateToProps = (state) => {
+    return {
+    }
+};
+
+const mapDispatchToProps = dispatch => ({
+
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(ContactDetails);
