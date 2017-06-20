@@ -1,0 +1,71 @@
+import * as Action from '../state/constant';
+
+export const swapSoucher = (soucherDetails) => {
+    return {
+        'type': [Action.Swap_Soucher_Action],
+        'payload': soucherDetails
+    }
+};
+
+export const paymentSuccess = (values) => {
+    return {
+        'type': [Action.Fetch_Soucher_Action],
+        'payload': {
+            request: {
+                url: `/soucher/gift/${values.soucherCode}`,
+                method: 'GET',
+            },
+        }
+    }
+};
+
+export const paymentSuccess = () => {
+    return {
+        'type': [Action.Fetch_Catalog_Action],
+        'payload': {
+            request: {
+                url: '/voucher',
+                method: 'GET',
+            }
+        }
+    }
+};
+
+export const addBasketItem = (giftCard) => {
+    return {
+        'type': Action.Add_Basket_Item_Action,
+        'payload': giftCard
+    }
+};
+
+export const removeBasketItem = (giftCard) => {
+    return {
+        'type': Action.Remove_Basket_Item_Action,
+        'payload': giftCard
+    }
+};
+
+export const cancelSwap = () => {
+    return {
+        'type': Action.Cancel_Swap_Action
+    }
+};
+
+export const completeSwap = (swapDetails) => {
+    return {
+        'type': Action.Complete_Swap_Action,
+        'payload': {
+            request: {
+                url: '/swap',
+                method: 'POST',
+                data: swapDetails
+            }
+        }
+    }
+};
+
+export const swapSuccess = () => {
+    return {
+        'type': Action.Complete_Swap_Success,
+    }
+};

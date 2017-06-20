@@ -1,7 +1,7 @@
 import * as Action from '../state/constant';
 import * as Worker from '../state/worker';
 
-let initial_state = {
+let initialState = {
     soucher: {
         id: '',
         code: '',
@@ -28,7 +28,7 @@ let initial_state = {
     status: ''
 };
 
-export const SwapReducer = (state = initial_state, action) => {
+export const SwapReducer = (state = initialState, action) => {
     switch (action.type) {
         case Action.Fetch_Soucher_Success:
             return {
@@ -56,13 +56,13 @@ export const SwapReducer = (state = initial_state, action) => {
         case Action.Cancel_Swap_Action:
             return  {
                 ...state,
-                'soucher': initial_state.soucher,
-                'status': Action.SWAP_CANCELLED,
+                'soucher': initialState.soucher,
+                'status': Action.STATUS_CANCELLED,
             };
         case Action.Complete_Swap_Success:
             return  {
                 ...state,
-                'status': Action.SWAP_COMPLETE,
+                'status': Action.STATUS_COMPLETE,
             };
         default:
             return state;

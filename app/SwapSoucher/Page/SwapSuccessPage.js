@@ -8,7 +8,7 @@ import * as STATUS from '../../state/constant';
 class SwapSuccessPage extends Component {
 
     componentWillMount() {
-        if (this.props.status !== STATUS.SWAP_COMPLETE) {
+        if (this.props.status !== STATUS.STATUS_COMPLETE) {
             this.props.history.push(LINK_TO.HOME);
         }
     }

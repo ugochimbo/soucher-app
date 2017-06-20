@@ -7,7 +7,7 @@ import * as STATUS from '../../state/constant';
 class SwapCancelledPage extends Component {
 
     componentWillMount() {
-        if (this.props.status !== STATUS.SWAP_CANCELLED ) {
+        if (this.props.status !== STATUS.STATUS_CANCELLED ) {
             this.props.history.push(LINK_TO.HOME);
         }
     }
