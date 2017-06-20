@@ -6,6 +6,7 @@ import {validator as validate} from '../Validator';
 import * as FormField from '../../Common/FormField';
 import CreditCard from '../Component/CreditCard';
 import PayPal from '../Component/PayPal';
+import SoucherValue from '../Component/SoucherValue';
 
 const  { DOM: { input } } = React;
 
@@ -39,26 +40,24 @@ const SoucherDetailsPage = (props) => {
                             </div>
                             <div className="6u 12u$(small)">
                                 <h3 className="align-center">Soucher Details</h3>
+
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
                                     <Field name="nameOnCard" type = 'text' component = {FormField.Input} label = 'Name on card (optional)'/>
                                 </div>
-                                <div className="12u$" style={{'marginBottom': '10px', 'paddingBottom': '50px'}}>
-                                    <div className="3u 12u$(small)" style={{"float" : "left" }}>
-                                        <Field name="soucherAmount" type = 'number' component = {FormField.Input} label = 'Amount' min="0" step = "10" />
-                                    </div>
-                                    <div className="3u 12u$(small)" style={{"float" : "left", "marginLeft" : "-15px" }}>
-                                        <Field name="soucherCurrency" type = 'text' component = {FormField.Input} label = 'Currency' />
-                                    </div>
-                                </div>
+
+                                <SoucherValue currencies = {['EUR', 'GBP', 'USD']}/>
+
                                 <div className="12u$" style={{'marginBottom': '10px'}}>
                                     <div className="12u">
                                         <Field name="soucherMessage" component = {FormField.TextArea} label = 'Message (Optional)' rows = '3'/>
                                     </div>
                                 </div>
+
                                 <div className="row uniform" style={{'marginTop': '10px'}}>
                                     <CreditCard/>
                                     <PayPal/>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -66,6 +65,7 @@ const SoucherDetailsPage = (props) => {
             </section>
         </div>
     );
+
 };
 
 const SoucherDetails = reduxForm({
