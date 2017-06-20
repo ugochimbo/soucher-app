@@ -4,15 +4,14 @@ import SectionHeader, {SoucherDetailsHeader as header} from '../../Common/Sectio
 import { Field, reduxForm } from 'redux-form';
 import {validator as validate} from '../Validator';
 import * as FormField from '../../Common/FormField';
-import CreditCard from '../Component/CreditCard';
-import PayPal from '../Component/PayPal';
 import SoucherValue from '../Component/SoucherValue';
+import Payment from '../Component/Payment';
 
 const  { DOM: { input } } = React;
 
 const SoucherDetailsPage = (props) => {
 
-    const { handleSubmit, pristine, previousPage, submitting, history } = props;
+    const { handleSubmit, previousPage, history } = props;
 
     let handleFormSubmit = (formProps, dispatch) => {
 
@@ -53,10 +52,7 @@ const SoucherDetailsPage = (props) => {
                                     </div>
                                 </div>
 
-                                <div className="row uniform" style={{'marginTop': '10px'}}>
-                                    <CreditCard/>
-                                    <PayPal/>
-                                </div>
+                                <Payment />
 
                             </div>
                         </div>
@@ -65,7 +61,6 @@ const SoucherDetailsPage = (props) => {
             </section>
         </div>
     );
-
 };
 
 const SoucherDetails = reduxForm({

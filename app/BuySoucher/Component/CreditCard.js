@@ -20,8 +20,14 @@ export default class Checkout extends Component {
                 allowRememberMe = {false}
                 billingAddress={true}
             >
-                <div>
-                    <input type="image" src="/asset/image/credit-card-option.png" width='250px' />
+                <div className="row uniform">
+                    <div className="12u$ actions">
+                        <button type="button" className="button big special">
+                            <span  style={{'marginLeft' : '3px'}} className="icon fa-credit-card "/>
+                            <span> Pay with Credit Card </span>
+                            <span  style={{'marginLeft' : '3px'}} className="icon fa-credit-card-alt "/>
+                        </button>
+                    </div>
                 </div>
             </StripeCheckout>
         )

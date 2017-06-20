@@ -100,7 +100,7 @@ class PayPalButton extends Component {
         };
 
         return (
-            <div style={{'width' : '250px' , 'marginTop' : '20px'}} >
+            <div style={{'width' : '350px'}} >
                 {displayPayPalButton()}
             </div>
         );
