@@ -36,11 +36,6 @@ export const SwapCatalogPageHeader = {
     message: 'Please select one or more gift cards.',
 };
 
-export const PhoneAuthenticationPageHeader = {
-    title: 'Authenticate Request',
-    message: 'Enter authentication code.',
-};
-
 export const SwapSuccessPageHeader = {
     title: 'Swap Successful',
     message: 'Your swap request is successful.',

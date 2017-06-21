@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SoucherCodeVerificationPage from './Page/SoucherCodeVerificationPage';
 import SwapCatalogPage from './Page/SwapCatalogPage';
-import PhoneAuthenticationPage from './Page/PhoneAuthenticationPage';
 
 class Wizard extends Component {
     constructor(props) {

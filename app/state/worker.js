@@ -113,20 +113,3 @@ export function removeBasketGiftItems(basket, giftCard) {
         'balance': balance
     }
 }
-
-export function buyerDetails(buyer, payload) {
-    return {}
-}
-
-export function recipientDetails(recipient, payload) {
-    return {}
-}
-
-export function updateGiftDetails(gift, payload) {
-    return {}
-}
-
-export function addPaymentDetails(payment, payload) {
-    return {}
-}
-

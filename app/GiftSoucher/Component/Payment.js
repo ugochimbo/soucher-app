@@ -4,10 +4,12 @@ import PayPal from '../Component/PayPal';
 
 export default class SoucherValue extends Component {
     render() {
+        const { onStripeSuccess, onPalPaySuccess} = this.props;
+
         return (
             <div className="row uniform">
-                <CreditCard/>
-                <PayPal/>
+                <CreditCard onStripeSuccess = {onStripeSuccess} />
+                <PayPal onPalPaySuccess = {onPalPaySuccess}/>
             </div>
         )
     }

@@ -3,15 +3,11 @@ import StripeCheckout from 'react-stripe-checkout';
 
 export default class Checkout extends Component {
     render() {
-
-        const {dispatch} = this.props;
-        let onToken = (token) => {
-            console.log(token);
-        };
+        const { onStripeSuccess } = this.props;
 
         return (
             <StripeCheckout
-                token = {(token) => onToken(token)}
+                token = {(token) => onStripeSuccess(token)}
                 stripeKey = 'pk_test_W2SpTEwgUKnJLVBZcdnDbQ2e'
                 name='Soucher'
                 description="Gift Soucher to Loved one"

@@ -6,22 +6,21 @@ import {validator as validate} from '../Validator';
 import * as FormField from '../../Common/FormField';
 import SoucherValue from '../Component/SoucherValue';
 import Payment from '../Component/Payment';
+import * as Action from '../action';
+import * as LINK_TO from '../../config/constant';
+import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
 
 const  { DOM: { input } } = React;
 
 const SoucherDetailsPage = (props) => {
 
-    const { handleSubmit, previousPage, history } = props;
-
-    let handleFormSubmit = (formProps, dispatch) => {
-
-    };
+    const { previousPage, onSubmit, onPalPaySuccess , onStripeSuccess} = props;
 
     return (
         <div id="main">
             <section id="content" className="default">
                 <SectionHeader title={header.title} message={header.message} />
-                <form onSubmit={handleSubmit(handleFormSubmit.bind(this))}>
+                <form onSubmit={onSubmit}>
                     <div className="light-content">
                         <div className="row">
                             <div className="6u 12u$(small)">
@@ -52,7 +51,7 @@ const SoucherDetailsPage = (props) => {
                                     </div>
                                 </div>
 
-                                <Payment />
+                                <Payment onStripeSuccess = {onStripeSuccess} onPalPaySuccess = {onPalPaySuccess}  />
 
                             </div>
                         </div>
@@ -70,16 +69,37 @@ const SoucherDetails = reduxForm({
     validate
 })(SoucherDetailsPage);
 
-const mapStateToProps = (state) => {
-    return {
+const mapDispatchToProps = (dispatch, handleSubmit) => ({
+    onSubmit: (transaction) => {
+        dispatch(Action.createTransaction(transaction)).then((data) => {
+            if (data.response.status === SUCCESS_RESPONSE_CODE) {
+                this.props.history.push(LINK_TO.GIFT_SOUCHER_SUCCESS_ROUTE);
+            } else {
+                this.props.history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
+            }
+        }).catch(() => {
+            this.props.history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
+        });
+    },
+    onStripeSuccess: (payment) => {
+        dispatch(Action.addTransaction({
+            type : 'credit-card',
+            payment : payment,
+        }));
+
+        //handleSubmit();
+    },
+    onPalPaySuccess: (payment) => {
+        dispatch(Action.addTransaction({
+            type : 'paypal',
+            payment : payment,
+        }));
+
+        handleSubmit();
     }
-};
-
-const mapDispatchToProps = dispatch => ({
-
 });
 
 export default connect(
-    mapStateToProps,
+    null,
     mapDispatchToProps
 )(SoucherDetails);

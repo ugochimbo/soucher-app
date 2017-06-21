@@ -4,7 +4,7 @@ export const Swap_Soucher_Action = 'SWAP_SOUCHER';
 
 export const Update_Gift_Contact_Details = 'UPDATE_GIFT_CONTACT_DETAIL';
 export const Update_Gift_Soucher_Details = 'UPDATE_GIFT_SOUCHER_DETAIL';
-export const Add_Payment_Details = 'ADD_PAYMENT_DETAILS';
+
 export const Cancel_Gift_Action = 'CANCEL_GIFT';
 export const Complete_Gift_Success = 'COMPLETE_GIFT_SUCCESS';
 
@@ -24,3 +24,6 @@ export const SUCCESS_RESPONSE_CODE = 200;
 
 export const STATUS_CANCELLED = 'cancelled';
 export const STATUS_COMPLETE = 'complete';
+
+export const Buy_Soucher_Action = 'BUY_SOUCHER';
+export const Add_Transaction_Details = 'ADD_TRANSACTION_DETAILS';

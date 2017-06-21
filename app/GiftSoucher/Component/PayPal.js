@@ -2,8 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import scriptLoader from 'react-async-script-loader';
 
-//import { paymentAuthorized, paymentCancelled } from '../../actions';
-
 class PayPalButton extends Component {
     constructor(props) {
         super(props);
@@ -39,6 +37,8 @@ class PayPalButton extends Component {
     }
 
     render() {
+        const { onPalPaySuccess } = this.props;
+
         const client = {
             sandbox:    'AY-FHTiPMPYyspk1d3Ku61n4afmMMjj3ZaABqW4bNdRs3aKE8YPM0EkAUlEAWVKy43MhvmIN_7Ck_Q7S',
             production: 'AcugBnf0ZIY2mgMtH92WWLbCG-tfj8gayXTTBJeDX7B_Yoe4SZv-9yKANbMQIImRcpjxHsWY2Nf4Syg3',
@@ -59,21 +59,12 @@ class PayPalButton extends Component {
 
         const onAuthorize = (data, actions) => {
             return actions.payment.execute().then(() => {
-                console.log(data);
-                const payment = Object.assign({}, this.props.payment);
-                payment.paid = true;
-                payment.cancelled =  false;
-                payment.payerID =  data.payerID;
-                payment.paymentID =  data.paymentID;
-                payment.paymentToken =  data.paymentToken;
-                payment.returnUrl =  data.returnUrl;
-               // this.props.dispatch(paymentAuthorized(payment))
+                onPalPaySuccess(data);
             })
         };
 
         const onCancel = (data) => {
             console.log('The payment was cancelled!', data);
-           // this.props.dispatch(paymentCancelled())
         };
 
         const displayPayPalButton = () => {
