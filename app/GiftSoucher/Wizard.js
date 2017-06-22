@@ -25,6 +25,7 @@ class Wizard extends Component {
         const { onSubmit } = this.props;
         const { page } = this.state;
         const history = this.context.router.history;
+
         return (
             <div>
                 {page === 1 && <ContactDetailsPage onSubmit={this.nextPage}/>}

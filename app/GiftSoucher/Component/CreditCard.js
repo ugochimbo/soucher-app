@@ -19,8 +19,8 @@ export default class Checkout extends Component {
                 alipay
                 bitcoin
                 reconfigureOnUpdate={false}
-                allowRememberMe = {false}
-                billingAddress={true}
+                allowRememberMe = {true}
+                billingAddress={false}
             >
                 <div className="row uniform">
                     <div className="12u$ actions">

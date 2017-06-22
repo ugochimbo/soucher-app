@@ -13,3 +13,21 @@ export const TextArea = ({ input, id, label, rows, meta: { touched, error } }) =
         {touched && error && <span className="form-error">{error}</span>}
     </div>
 );
+
+export const DropDown = ({ input, id, label, rows, options, meta: { touched, error } }) => (
+    <div>
+        <select {...input}>
+            <option value=''>- {label} -</option>
+            {dropDownOptions(options)}
+        </select>
+        {touched && error && <span className="form-error">{error}</span>}
+    </div>
+);
+
+let dropDownOptions = (options) => {
+    return options.map((currency) => {
+        return <option value={currency} key = {currency}>
+            {currency}
+        </option>
+    })
+};

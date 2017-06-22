@@ -6,14 +6,6 @@ export default class SoucherValue extends Component {
     render() {
         const { currencies } = this.props;
 
-        let currencyOptions = () => {
-            return currencies.map((currency) => {
-                return <option value={currency} key = {currency}>
-                    {currency}
-                </option>
-            })
-        };
-
         return (
             <div className="12u$" style={{'marginBottom': '10px', 'paddingBottom': '50px'}}>
                 <div className="3u 12u$(small)" style={{"float" : "left" }}>
@@ -21,10 +13,7 @@ export default class SoucherValue extends Component {
                 </div>
                 <div className="3u 12u$(small)" style={{"float" : "left", "marginLeft" : "-8px" }}>
                     <div className="select-wrapper">
-                        <select name="soucherCurrency" id="soucherCurrency">
-                            <option value="">- Currency -</option>
-                            {currencyOptions()}
-                        </select>
+                        <Field name="soucherCurrency" id = "soucherCurrency" component = {FormField.DropDown} label = 'Currency' options = {currencies} />
                     </div>
                 </div>
             </div>
