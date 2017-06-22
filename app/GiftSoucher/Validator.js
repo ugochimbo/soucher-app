@@ -1,3 +1,4 @@
+import {isSupportedCurrencies} from '../Util/Currency';
 
 const errors = {};
 
@@ -6,12 +7,13 @@ const FIELD_BUYER_EMAIL = 'buyerEmail';
 const FIELD_RECIPIENT_NAME = 'recipientName';
 const FIELD_RECIPIENT_EMAIL = 'recipientEmail';
 const FIELD_RECIPIENT_PHONE = 'recipientPhone';
-const FIELD_SOUCHER_VALUE = 'soucherAmount';
+const FIELD_SOUCHER_AMOUNT = 'soucherAmount';
+const FIELD_SOUCHER_CURRENCY = 'soucherCurrency';
 
 const ERROR_FIELD_REQUIRED = 'Required';
 const ERROR_INVALID_EMAIL = 'Invalid Email Address';
 const ERROR_INVALID_PHONE_NUMBER = 'Invalid Phone Number';
-const ERROR_MINIMUM_SOUCHER_VALUE = 'Amount must be greater than 0';
+const ERROR_MINIMUM_SOUCHER_VALUE = 'Minimum of 1';
 
 function unsetFieldError(field) {
     if(errors.hasOwnProperty(field)) {
@@ -78,17 +80,31 @@ function validateContactDetails(values) {
 }
 
 function validateSoucherDetails(values) {
-
-    let soucherAmount = parseFloat(values[FIELD_SOUCHER_VALUE]);
-    if (!soucherAmount > 0) {
-        errors[FIELD_SOUCHER_VALUE] = ERROR_MINIMUM_SOUCHER_VALUE;
-    } else {
-        unsetFieldError(FIELD_SOUCHER_VALUE);
-    }
+    validateAmount(values);
+    validateCurrency(values);
 }
+
+let validateAmount = values => {
+    let soucherAmount = parseFloat(values[FIELD_SOUCHER_AMOUNT]);
+    if (!soucherAmount > 0) {
+        errors[FIELD_SOUCHER_AMOUNT] = ERROR_MINIMUM_SOUCHER_VALUE;
+    } else {
+        unsetFieldError(FIELD_SOUCHER_AMOUNT);
+    }
+};
+
+let validateCurrency = values => {
+    let soucherCurrency = parseFloat(values[FIELD_SOUCHER_CURRENCY]);
+    if (!isSupportedCurrencies(soucherCurrency)) {
+        errors[FIELD_SOUCHER_CURRENCY] = ERROR_FIELD_REQUIRED;
+    } else {
+        unsetFieldError(FIELD_SOUCHER_CURRENCY);
+    }
+};
+
 
 export const validator = values => {
     validateContactDetails(values);
-    validateSoucherDetails(values);
+    //validateSoucherDetails(values);
     return errors;
 };

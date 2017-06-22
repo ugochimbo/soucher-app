@@ -21,7 +21,7 @@ const ContactDetailsPage = (props) => {
 };
 
 const ContactDetails = reduxForm({
-    form: 'buy-soucher-wizard',
+    form: 'buy_soucher_wizard',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
     validate

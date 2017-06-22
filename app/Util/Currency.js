@@ -162,6 +162,16 @@ const currencyIsoHtmlEntityMap = {
     'ZWL': '&#90;&#36;',
 };
 
+export const supportedCurrencies = {
+    EUR : 'EUR',
+    GBP : 'GBP',
+    USD : 'USD'
+};
+
+export const isSupportedCurrencies = (isoCode) => {
+    return supportedCurrencies.hasOwnProperty(isoCode);
+};
+
 export const htmlEntityFor = (currencyIso) => {
     return AllHtmlEntities.decode(currencyIsoHtmlEntityMap[currencyIso]);
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import SectionHeader, {SoucherDetailsHeader as header} from '../../Common/SectionHeader';
-import { Field, reduxForm } from 'redux-form';
+import { reduxForm } from 'redux-form';
 import {validator as validate} from '../Validator';
 import SoucherDetailsForm from '../Component/SoucherDetailsForm';
 import * as Action from '../action';
@@ -12,7 +12,7 @@ const  { DOM: { input } } = React;
 
 const SoucherDetailsPage = (props) => {
 
-    const {previousPage, dispatch, handleSubmit, history, transaction} = props;
+    const {previousPage, dispatch, handleSubmit, history, formState} = props;
 
     let onStripeSuccess = (payment) => {
         dispatch(Action.addTransaction({
@@ -20,7 +20,7 @@ const SoucherDetailsPage = (props) => {
             payment : payment,
         }));
 
-        handleSubmit(completeTransaction(transaction));
+        completeTransaction();
     };
 
     let onPalPaySuccess = (payment) => {
@@ -29,21 +29,23 @@ const SoucherDetailsPage = (props) => {
             payment : payment,
         }));
 
-        handleSubmit(completeTransaction(transaction));
+        completeTransaction();
     };
 
-    let completeTransaction = (transaction) => {
-        dispatch(Action.createTransaction(transaction)).then((data) => {
-            console.log(data);
-            if (data.response.status === SUCCESS_RESPONSE_CODE) {
+    let completeTransaction = () => {
+        dispatch(Action.createTransaction(formState.values)).then((data) => {
+            if (data.payload.status === SUCCESS_RESPONSE_CODE) {
                 history.push(LINK_TO.GIFT_SOUCHER_SUCCESS_ROUTE);
             } else {
                 history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
             }
-        }).catch((error) => {
-            console.log(error);
+        }).catch(() => {
             history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
         });
+    };
+
+    let dummySubmit = () => {
+       return false;
     };
 
     return (
@@ -53,17 +55,17 @@ const SoucherDetailsPage = (props) => {
                 <SoucherDetailsForm
                     onStripeSuccess = {onStripeSuccess}
                     onPalPaySuccess = {onPalPaySuccess}
-                    onSubmit = {handleSubmit.bind(this)}
+                    onSubmit = {dummySubmit}
                     previousPage = {previousPage}
-                    />
-
+                    formState = {formState}
+                />
             </section>
         </div>
     );
 };
 
 const SoucherDetails = reduxForm({
-    form: 'buy-soucher-wizard',
+    form: 'buy_soucher_wizard',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
     validate
@@ -72,10 +74,7 @@ const SoucherDetails = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
-        soucher: state.swap.soucher,
-        catalog: state.swap.catalog,
-        basket: state.swap.basket,
-        isComplete: state.swap.isComplete,
+        formState: state.form.buy_soucher_wizard,
     }
 };
 

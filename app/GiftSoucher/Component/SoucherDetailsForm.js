@@ -3,13 +3,30 @@ import { Field } from 'redux-form';
 import * as FormField from '../../Common/FormField';
 import SoucherValue from '../Component/SoucherValue';
 import Payment from '../Component/Payment';
+import {isSupportedCurrencies} from '../../Util/Currency';
 
 export default class SoucherDetailsForm extends Component{
      render() {
-        const {previousPage, onStripeSuccess, onPalPaySuccess, onSubmit} = this.props;
+        const {previousPage, onStripeSuccess, onPalPaySuccess, onSubmit, formState} = this.props;
+        const amount =  formState.values.soucherAmount;
+        const currency =  formState.values.soucherCurrency;
+
+        const MINIMUM_AMOUNT = 1;
+
+        let isValidSoucherAmount = () => {
+            return (amount !== undefined && amount > MINIMUM_AMOUNT);
+        };
+
+        let disablePaymentButtons = () => {
+            if (!isValidSoucherAmount() || !isSupportedCurrencies(currency)) {
+                return 'disabled';
+            }
+
+            return '';
+        };
 
         return (
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit()}>
                 <div className="light-content">
                     <div className="row">
                         <div className="6u 12u$(small)">
@@ -40,8 +57,7 @@ export default class SoucherDetailsForm extends Component{
                                 </div>
                             </div>
 
-                            <Payment onStripeSuccess = {onStripeSuccess} onPalPaySuccess = {onPalPaySuccess}  />
-
+                            <Payment onStripeSuccess = {onStripeSuccess} onPalPaySuccess = {onPalPaySuccess} disabled = {disablePaymentButtons()} />
                         </div>
                     </div>
                 </div>

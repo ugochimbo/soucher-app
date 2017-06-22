@@ -2071,6 +2071,9 @@ table {
       width: 100%;
       margin-bottom: 10px; }
 
+.disabled {
+  pointer-events: none; }
+
 /* Header */
 body {
   padding-top: 3.25em; }

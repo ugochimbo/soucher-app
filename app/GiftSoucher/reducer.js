@@ -1,8 +1,14 @@
 import * as Action from '../state/constant';
 
 let initial_state = {
-    payment: {},
-    status: 'in-progress'
+    buyer : {},
+    recipient : {},
+    soucher : {
+        amount: 1,
+        currency: 'EUR'
+    },
+    payment : {},
+    status: 'stated',
 };
 
 export const GiftReducer = (state = initial_state, action) => {
@@ -17,6 +23,11 @@ export const GiftReducer = (state = initial_state, action) => {
             return {
                 ...state,
                 'gift': action.payload.gift,
+            };
+        case Action.Add_Transaction_Details:
+            return {
+                ...state,
+                'transaction': action.payload.transaction,
             };
         case Action.Cancel_Gift_Action:
             return  {
