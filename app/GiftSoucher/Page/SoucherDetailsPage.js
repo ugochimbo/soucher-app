@@ -12,28 +12,29 @@ const  { DOM: { input } } = React;
 
 const SoucherDetailsPage = (props) => {
 
-    const {previousPage, dispatch, handleSubmit, history, formState} = props;
+    const {previousPage, dispatch, history, formState} = props;
 
     let onStripeSuccess = (payment) => {
-        dispatch(Action.addTransaction({
+        completeTransaction({
             type : 'credit-card',
-            payment : payment,
-        }));
-
-        completeTransaction();
+            payment : payment
+        });
     };
 
     let onPalPaySuccess = (payment) => {
-        dispatch(Action.addTransaction({
+        completeTransaction({
             type : 'paypal',
-            payment : payment,
-        }));
-
-        completeTransaction();
+            payment : payment
+        });
     };
 
-    let completeTransaction = () => {
-        dispatch(Action.createTransaction(formState.values)).then((data) => {
+    let completeTransaction = (payment) => {
+        const transaction = {
+            gift: formState.values,
+            payment: payment
+        };
+
+        dispatch(Action.createTransaction(transaction)).then((data) => {
             if (data.payload.status === SUCCESS_RESPONSE_CODE) {
                 history.push(LINK_TO.GIFT_SOUCHER_SUCCESS_ROUTE);
             } else {
@@ -44,7 +45,7 @@ const SoucherDetailsPage = (props) => {
         });
     };
 
-    let dummySubmit = () => {
+    let preventDefault = () => {
        return false;
     };
 
@@ -55,7 +56,7 @@ const SoucherDetailsPage = (props) => {
                 <SoucherDetailsForm
                     onStripeSuccess = {onStripeSuccess}
                     onPalPaySuccess = {onPalPaySuccess}
-                    onSubmit = {dummySubmit}
+                    onSubmit = {preventDefault}
                     previousPage = {previousPage}
                     formState = {formState}
                 />
@@ -74,7 +75,7 @@ const SoucherDetails = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
-        formState: state.form.buy_soucher_wizard,
+        formState: state.form.buy_soucher_wizard
     }
 };
 

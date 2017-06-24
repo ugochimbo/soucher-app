@@ -5,8 +5,7 @@ import reducers from './reducer';
 
 const client = axios.create({
     baseURL:'http://soucher.dev/',
-    responseType: 'json',
-    headers: {'Access-Control-Allow-Origin' : '*'}
+    responseType: 'json'
 });
 
 export default createStore(

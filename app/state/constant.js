@@ -2,12 +2,6 @@ export const Response_Success_Suffix = '_SUCCESS';
 
 export const Swap_Soucher_Action = 'SWAP_SOUCHER';
 
-export const Update_Gift_Contact_Details = 'UPDATE_GIFT_CONTACT_DETAIL';
-export const Update_Gift_Soucher_Details = 'UPDATE_GIFT_SOUCHER_DETAIL';
-
-export const Cancel_Gift_Action = 'CANCEL_GIFT';
-export const Complete_Gift_Success = 'COMPLETE_GIFT_SUCCESS';
-
 export const Fetch_Soucher_Action = 'VALIDATE_SOUCHER_CODE';
 export const Fetch_Soucher_Success = Fetch_Soucher_Action + Response_Success_Suffix;
 
@@ -26,4 +20,3 @@ export const STATUS_CANCELLED = 'cancelled';
 export const STATUS_COMPLETE = 'complete';
 
 export const Buy_Soucher_Action = 'BUY_SOUCHER';
-export const Add_Transaction_Details = 'ADD_TRANSACTION_DETAILS';

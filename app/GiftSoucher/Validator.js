@@ -94,7 +94,7 @@ let validateAmount = values => {
 };
 
 let validateCurrency = values => {
-    let soucherCurrency = parseFloat(values[FIELD_SOUCHER_CURRENCY]);
+    let soucherCurrency = values[FIELD_SOUCHER_CURRENCY];
     if (!isSupportedCurrencies(soucherCurrency)) {
         errors[FIELD_SOUCHER_CURRENCY] = ERROR_FIELD_REQUIRED;
     } else {
@@ -105,6 +105,6 @@ let validateCurrency = values => {
 
 export const validator = values => {
     validateContactDetails(values);
-    //validateSoucherDetails(values);
+    validateSoucherDetails(values);
     return errors;
 };
