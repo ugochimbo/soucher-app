@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import * as LINK_TO from '../../config/constant';
 import * as STATUS from '../../state/constant';
 
-class SwapSuccessPage extends Component {
+class SuccessPage extends Component {
 
     componentWillMount() {
         if (this.props.status !== STATUS.STATUS_COMPLETE) {
@@ -54,5 +54,5 @@ const mapStateToProps = (state) => {
 export default connect(
     mapStateToProps,
     null
-)(SwapSuccessPage);
+)(SuccessPage);
 

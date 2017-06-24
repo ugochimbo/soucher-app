@@ -7,8 +7,8 @@ import AboutUs from '../Page/AboutUs';
 import ContactUs from '../Page/ContactUs';
 import BuySoucherWizard from '../GiftSoucher/Wizard';
 import SwapSoucherWizard from '../SwapSoucher/Wizard';
-import BuySoucherSuccessPage from '../GiftSoucher/Page/SuccessPage';
-import SwapSuccessPage from '../SwapSoucher/Page/SwapSuccessPage';
+import GiftSuccessPage from '../GiftSoucher/Page/SuccessPage';
+import SwapSuccessPage from '../SwapSoucher/Page/SuccessPage';
 import SwapCancelledPage from '../SwapSoucher/Page/SwapCancelledPage';
 import TransactionError from '../Page/TransactionError';
 
@@ -19,7 +19,7 @@ export const routes =
             <Route exact = {true} path = {PATH_TO.HOME} header = 'Soucher - Home' component = {Home} />
 
             <Route exact = {true} path = {PATH_TO.GIFT_SOUCHER_ROUTE} header='Gift Soucher' component={BuySoucherWizard} />
-            <Route exact = {true} path = {PATH_TO.GIFT_SOUCHER_SUCCESS_ROUTE} header='Gift Soucher - Success' component={BuySoucherSuccessPage} />
+            <Route exact = {true} path = {PATH_TO.GIFT_SOUCHER_SUCCESS_ROUTE} header='Gift Soucher - Success' component={GiftSuccessPage} />
 
             <Route exact = {true} path = {PATH_TO.SWAP_SOUCHER_ROUTE} header='Swap Soucher' component={SwapSoucherWizard} />
             <Route exact = {true} path = {PATH_TO.SWAP_SOUCHER_SUCCESS_ROUTE} header='Swap Soucher Success' component={SwapSuccessPage} />

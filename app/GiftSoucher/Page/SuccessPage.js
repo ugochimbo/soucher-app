@@ -1,9 +1,17 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import SectionHeader, {GiftSoucherSuccessPageHeader as header} from '../../Common/SectionHeader';
 import {Link} from 'react-router-dom';
 import * as LINK_TO from '../../config/constant';
 
-export default class SuccessPage extends Component {
+class SuccessPage extends Component {
+
+    componentWillMount() {
+        if (this.props.form.buy_soucher_wizard === undefined) {
+            this.props.history.push(LINK_TO.HOME);
+        }
+    }
+
     render() {
         return (
             <div id="main">
@@ -40,4 +48,15 @@ export default class SuccessPage extends Component {
             </div>
         );
     }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        form: state.form,
+    }
 };
+
+export default connect(
+    mapStateToProps,
+    null
+)(SuccessPage);
