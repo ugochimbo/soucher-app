@@ -17,16 +17,17 @@ export default class Footer extends Component{
                         <ul className="contact">
                             <li className="fa-phone">(000) 000-0000</li>
                             <li className="fa-envelope"><a href="#">contact@soucher.com</a></li>
-                            <li className="fa-twitter"><a href="#">@soucher</a></li>
-                            <li className="fa-facebook"><a href="#">facebook.com/soucher</a></li>
+                            <li className="fa-twitter"><a href="#">@SoucherGmbH</a></li>
+                            <li className="fa-facebook"><a href="#">facebook.com/SoucherGmbH</a></li>
                         </ul>
                     </section>
                     <section>
-                        <h3>Mailing Address</h3>
-                        <p>Soucher Inc<br/>
-                            Barfusstr. 16, 13349<br/>
-                            Berlin<br/>
-                            Germany</p>
+                        <h3>Payment Methods</h3>
+                        <p>
+                            <img src="../../asset/image/icon_visa.png" width='50px' />
+                            <img src="../../asset/image/icon_mastercard.png" width='50px' />
+                            <img src="../../asset/image/icon_paypal.png" width='50px' />
+                        </p>
                     </section>
                 </div>
                 <div className="copyright">
