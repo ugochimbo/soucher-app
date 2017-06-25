@@ -76,7 +76,7 @@ const SwapCatalogPage = (props) => {
 
 const SwapCatalog = reduxForm({
     form: 'swap-soucher-wizard',
-    destroyOnUnmount: false,
+    destroyOnUnmount: true,
     forceUnregisterOnUnmount: true,
     validate
 })(SwapCatalogPage);
