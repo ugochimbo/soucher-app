@@ -24,9 +24,9 @@ export default class Footer extends Component{
                     <section>
                         <h3>Payment Methods</h3>
                         <p>
-                            <img src="../../asset/image/icon_visa.png" width='50px' />
-                            <img src="../../asset/image/icon_mastercard.png" width='50px' />
-                            <img src="../../asset/image/icon_paypal.png" width='50px' />
+                            <img src="../../asset/image/icon_visa.png" width='60px' />
+                            <img src="../../asset/image/icon_mastercard.png" width='60px' />
+                            <img src="../../asset/image/icon_paypal.png" width='60px' />
                         </p>
                     </section>
                 </div>
