@@ -6,14 +6,14 @@ export default class Footer extends Component{
             <section id="footer">
                 <div className="inner">
                     <section className="about">
-                        <h3>Soucher Inc</h3>
+                        <h3>About Us</h3>
                         <p>Something something something something.</p>
                         <ul className="actions">
                             <li><a href="#" className="button">Learn More</a></li>
                         </ul>
                     </section>
                     <section>
-                        <h3>Get in Touch</h3>
+                        <h3>Contact Us</h3>
                         <ul className="contact">
                             <li className="fa-phone">(000) 000-0000</li>
                             <li className="fa-envelope"><a href="#">contact@soucher.com</a></li>
@@ -24,9 +24,9 @@ export default class Footer extends Component{
                     <section>
                         <h3>Payment Methods</h3>
                         <p>
-                            <img src="../../asset/image/icon_visa.png" width='60px' />
-                            <img src="../../asset/image/icon_mastercard.png" width='60px' />
-                            <img src="../../asset/image/icon_paypal.png" width='60px' />
+                            <img src="../../asset/image/icon_visa.png" width='55px' />
+                            <img src="../../asset/image/icon_mastercard.png" width='55px' />
+                            <img src="../../asset/image/icon_paypal.png" width='55px' />
                         </p>
                     </section>
                 </div>
