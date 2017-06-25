@@ -12,3 +12,12 @@ export const createTransaction = (transaction) => {
         }
     }
 };
+
+export const transacting = (state) => {
+    return {
+        'type': Action.Transacting,
+        'payload': {
+            data: state
+        }
+    }
+};

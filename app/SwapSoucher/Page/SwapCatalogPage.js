@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import { reduxForm, reset } from 'redux-form';
 import SectionHeader, {SwapCatalogPageHeader as header} from '../../Common/SectionHeader';
 import {validator as validate} from '../Validator';
+import Transacting from '../../Common/Transacting';
 import Filter from '../../Common/Filter';
 import Listing from '../Component/Listing';
 import Basket from '../Component/Basket';
@@ -14,13 +15,15 @@ import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
 const  { DOM: { input } } = React;
 
 const SwapCatalogPage = (props) => {
-    const { soucher, catalog, basket, addBasketItem, removeBasketItem, dispatch, history} = props;
+    const { soucher, catalog, basket, transacting, addBasketItem, removeBasketItem, dispatch, history} = props;
     const SWAP_CURRENCY = Currency.htmlEntityFor(soucher.currency);
 
     let completeSwap = () => {
         if (!basket.items.length) {
             return;
         }
+
+        dispatch(Action.transacting(true));
 
         let data = {
             soucher_id : soucher.id,
@@ -42,6 +45,14 @@ const SwapCatalogPage = (props) => {
         history.push(LINK_TO.SWAP_SOUCHER_CANCEL_ROUTE);
     };
 
+    let isTransacting = () => {
+        if (transacting) {
+            return <Transacting />
+        }
+
+        return '';
+    };
+
     return (
         <div id="main-full" className="full">
             <section id="content" className="default">
@@ -53,6 +64,7 @@ const SwapCatalogPage = (props) => {
                             <Listing catalog = {catalog} currency = {SWAP_CURRENCY} addBasketItem = {addBasketItem} />
                             <Basket basket = {basket} currency = {SWAP_CURRENCY} removeBasketItem = {removeBasketItem} cancelSwap = {cancelSwap} completeSwap = {completeSwap}/>
                         </div>
+                        {isTransacting()}
                     </form>
                 </div>
             </section>
@@ -73,6 +85,7 @@ const mapStateToProps = (state) => {
         catalog: state.swap.catalog,
         basket: state.swap.basket,
         isComplete: state.swap.isComplete,
+        transacting: state.global.transacting,
     }
 };
 

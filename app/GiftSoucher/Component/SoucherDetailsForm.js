@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import { Field } from 'redux-form';
 import * as FormField from '../../Common/FormField';
+import Transacting from '../../Common/Transacting';
 import SoucherValue from '../Component/SoucherValue';
 import Payment from '../Component/Payment';
 import {isSupportedCurrencies} from '../../Util/Currency';
 
 export default class SoucherDetailsForm extends Component{
      render() {
-        const {previousPage, onStripeSuccess, onPalPaySuccess, onSubmit, formState} = this.props;
+        const {previousPage, onStripeSuccess, onPalPaySuccess, onSubmit, formState, transacting} = this.props;
         const amount =  formState.values.soucherAmount;
         const currency =  formState.values.soucherCurrency;
 
@@ -20,6 +21,14 @@ export default class SoucherDetailsForm extends Component{
         let disablePaymentButtons = () => {
             if (!isValidSoucherAmount() || !isSupportedCurrencies(currency)) {
                 return 'disabled';
+            }
+
+            return '';
+        };
+
+        let isTransacting = () => {
+            if (transacting) {
+                return <Transacting />
             }
 
             return '';
@@ -61,6 +70,7 @@ export default class SoucherDetailsForm extends Component{
                         </div>
                     </div>
                 </div>
+                {isTransacting()}
             </form>
         )
     }

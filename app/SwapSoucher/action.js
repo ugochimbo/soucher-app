@@ -1,12 +1,5 @@
 import * as Action from '../state/constant';
 
-export const swapSoucher = (soucherDetails) => {
-    return {
-        'type': [Action.Swap_Soucher_Action],
-        'payload': soucherDetails
-    }
-};
-
 export const fetchSoucher = (values) => {
     return {
         'type': [Action.Fetch_Soucher_Action],
@@ -64,8 +57,11 @@ export const completeSwap = (swapDetails) => {
     }
 };
 
-export const swapSuccess = () => {
+export const transacting = (state) => {
     return {
-        'type': Action.Complete_Swap_Success,
+        'type': Action.Transacting,
+        'payload': {
+            data: state
+        }
     }
 };

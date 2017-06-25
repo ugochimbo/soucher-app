@@ -2074,6 +2074,26 @@ table {
 .disabled {
   pointer-events: none; }
 
+.transacting {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: none; }
+
+#transactionMessage {
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+
 /* Header */
 body {
   padding-top: 3.25em; }

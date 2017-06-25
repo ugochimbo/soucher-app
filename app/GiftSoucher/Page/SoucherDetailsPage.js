@@ -12,7 +12,7 @@ const  { DOM: { input } } = React;
 
 const SoucherDetailsPage = (props) => {
 
-    const {previousPage, dispatch, history, formState} = props;
+    const {previousPage, dispatch, history, formState, transacting} = props;
 
     let onStripeSuccess = (payment) => {
         completeTransaction({
@@ -29,6 +29,8 @@ const SoucherDetailsPage = (props) => {
     };
 
     let completeTransaction = (payment) => {
+        dispatch(Action.transacting(true));
+
         const transaction = {
             gift: formState.values,
             payment: payment
@@ -59,6 +61,7 @@ const SoucherDetailsPage = (props) => {
                     onSubmit = {preventDefault}
                     previousPage = {previousPage}
                     formState = {formState}
+                    transacting = {transacting}
                 />
             </section>
         </div>
@@ -75,11 +78,9 @@ const SoucherDetails = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
-        formState: state.form.buy_soucher_wizard
+        formState: state.form.buy_soucher_wizard,
+        transacting: state.global.transacting
     }
 };
 
-export default connect(
-    mapStateToProps,
-    null
-)(SoucherDetails);
+export default connect(mapStateToProps)(SoucherDetails);
