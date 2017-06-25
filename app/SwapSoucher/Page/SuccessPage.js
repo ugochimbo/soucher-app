@@ -8,7 +8,7 @@ import * as STATUS from '../../state/constant';
 class SuccessPage extends Component {
 
     componentWillMount() {
-        if (this.props.status !== STATUS.STATUS_COMPLETE) {
+        if (!this.props.transacting) {
             this.props.history.push(LINK_TO.HOME);
         }
     }
@@ -47,7 +47,7 @@ class SuccessPage extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        status: state.swap.status,
+        transacting: state.global.transacting,
     }
 };
 

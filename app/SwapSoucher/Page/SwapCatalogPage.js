@@ -31,11 +31,13 @@ const SwapCatalogPage = (props) => {
         };
 
         dispatch(Action.completeSwap(data)).then((response) => {
-            if (response.payload.data !== SUCCESS_RESPONSE_CODE) {
+            if (response.payload.status !== SUCCESS_RESPONSE_CODE) {
                 history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
             }
 
             history.push(LINK_TO.SWAP_SOUCHER_SUCCESS_ROUTE);
+        }).catch(() => {
+            history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
         });
     };
 

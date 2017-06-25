@@ -1,7 +1,16 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import SectionHeader, {TransactionErrorPageHeader as header} from '../Common/SectionHeader';
+import * as LINK_TO from '../config/constant';
 
-export default class TransactionError extends Component {
+class TransactionError extends Component {
+
+    componentWillMount() {
+        if (!this.props.transacting) {
+            this.props.history.push(LINK_TO.HOME);
+        }
+    }
+
     render() {
         return (
             <div id="main">
@@ -31,3 +40,11 @@ export default class TransactionError extends Component {
         );
     }
 };
+
+const mapStateToProps = (state) => {
+    return {
+        transacting: state.global.transacting,
+    }
+};
+
+export default connect(mapStateToProps)(TransactionError);

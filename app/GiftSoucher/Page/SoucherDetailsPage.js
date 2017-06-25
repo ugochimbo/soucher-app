@@ -37,11 +37,12 @@ const SoucherDetailsPage = (props) => {
         };
 
         dispatch(Action.createTransaction(transaction)).then((data) => {
-            if (data.payload.status === SUCCESS_RESPONSE_CODE) {
-                history.push(LINK_TO.GIFT_SOUCHER_SUCCESS_ROUTE);
-            } else {
+            if (data.payload.status !== SUCCESS_RESPONSE_CODE) {
                 history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
             }
+
+            history.push(LINK_TO.GIFT_SOUCHER_SUCCESS_ROUTE);
+
         }).catch(() => {
             history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
         });
@@ -69,7 +70,7 @@ const SoucherDetailsPage = (props) => {
 };
 
 const SoucherDetails = reduxForm({
-    form: 'buy_soucher_wizard',
+    form: 'gift_soucher_wizard',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
     validate
@@ -78,7 +79,7 @@ const SoucherDetails = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
-        formState: state.form.buy_soucher_wizard,
+        formState: state.form.gift_soucher_wizard,
         transacting: state.global.transacting
     }
 };

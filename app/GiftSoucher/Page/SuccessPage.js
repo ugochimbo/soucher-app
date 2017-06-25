@@ -7,7 +7,7 @@ import * as LINK_TO from '../../config/constant';
 class SuccessPage extends Component {
 
     componentWillMount() {
-        if (this.props.form.buy_soucher_wizard === undefined) {
+        if (!this.props.transacting) {
             this.props.history.push(LINK_TO.HOME);
         }
     }
@@ -52,7 +52,7 @@ class SuccessPage extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        form: state.form,
+        transacting: state.global.transacting,
     }
 };
 
