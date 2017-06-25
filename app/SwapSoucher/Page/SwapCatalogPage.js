@@ -15,7 +15,7 @@ import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
 const  { DOM: { input } } = React;
 
 const SwapCatalogPage = (props) => {
-    const { soucher, catalog, basket, transacting, addBasketItem, removeBasketItem, dispatch, history} = props;
+    const {soucher, catalog, basket, transacting, addBasketItem, removeBasketItem, dispatch, history} = props;
     const SWAP_CURRENCY = Currency.htmlEntityFor(soucher.currency);
 
     let completeSwap = () => {

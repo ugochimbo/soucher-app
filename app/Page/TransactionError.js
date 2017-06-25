@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import {reset} from 'redux-form';
 import {connect} from 'react-redux';
 import SectionHeader, {TransactionErrorPageHeader as header} from '../Common/SectionHeader';
 import * as LINK_TO from '../config/constant';
+import * as Action from '../GiftSoucher/action';
 
 class TransactionError extends Component {
 
@@ -9,6 +11,12 @@ class TransactionError extends Component {
         if (!this.props.transacting) {
             this.props.history.push(LINK_TO.HOME);
         }
+    }
+
+    componentWillUnmount() {
+        this.props.dispatch(Action.transacting(false));
+        this.props.dispatch(reset('gift-soucher-wizard'));
+        this.props.dispatch(reset('swap-soucher-wizard'));
     }
 
     render() {

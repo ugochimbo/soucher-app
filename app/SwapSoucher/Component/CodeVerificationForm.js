@@ -13,8 +13,8 @@ export default class CodeVerificationForm extends Component {
                     <div className="6u 12u$(small)">
                         <h3>Enter Soucher Code</h3>
 
-                        <div className="12u$" style={{'marginBottom': '10px'}}>
-                            <Field name="soucherCode" component={FormField.Input} label='Enter Soucher Code'/>
+                        <div className="6u$" style={{'marginBottom': '10px'}}>
+                            <Field name="soucherCode" type="text" component={FormField.Input} label='Enter Soucher Code' />
                         </div>
 
                         <div className="12u$" style={{'marginBottom': '10px'}}>
@@ -23,7 +23,7 @@ export default class CodeVerificationForm extends Component {
 
                         <div className="12u$">
                             <div className="row uniform" style={{'marginBottom': '10px'}}>
-                                <div className="12u$ actions align-center">
+                                <div className="12u$ actions">
                                     <button type="submit" className="button big special">
                                         <span> Start my swap </span>
                                         <span style={{'marginLeft': '10px'}} className="icon fa-arrow-circle-o-right"/>

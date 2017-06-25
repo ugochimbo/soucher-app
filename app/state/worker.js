@@ -113,13 +113,3 @@ export function removeBasketGiftItems(basket, giftCard) {
         'balance': balance
     }
 }
-
-export function updateTransactionState(transacting, state) {
-
-    console.log('All good here');
-
-    return {
-        ...transacting,
-        'transacting': state
-    }
-}

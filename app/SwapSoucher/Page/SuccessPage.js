@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {reset} from 'redux-form';
 import SectionHeader, {SwapSuccessPageHeader as header} from '../../Common/SectionHeader';
 import {Link} from 'react-router-dom';
 import * as LINK_TO from '../../config/constant';
-import * as STATUS from '../../state/constant';
+import * as Action from '../action';
 
 class SuccessPage extends Component {
 
@@ -11,6 +12,11 @@ class SuccessPage extends Component {
         if (!this.props.transacting) {
             this.props.history.push(LINK_TO.HOME);
         }
+    }
+
+    componentWillUnmount() {
+        this.props.dispatch(Action.transacting(false));
+        this.props.dispatch(reset('swap-soucher-wizard'));
     }
 
     render() {

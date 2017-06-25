@@ -34,12 +34,12 @@ export default class Transacting extends Component {
             <Modal isOpen={true} contentLabel = {'Finalizing Transactions'} style = {style}>
                 <div style={{
                     'color': '#BCC3C9',
-                    'border-radius': '1em',
+                    'borderRadius': '1em',
                     'padding': '1em',
                     'position': 'absolute',
                     'top': '50%',
                     'left': '50%',
-                    'margin-right': '-50%',
+                    'marginRight': '-50%',
                     'transform': 'translate(-50%, -50%)'
                 }}>
                     <FoldingCube size={120} timingFunction={'ease-in-out'} color='#BCC3C9' />
