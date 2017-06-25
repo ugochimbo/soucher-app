@@ -37,7 +37,7 @@ class PayPalButton extends Component {
     }
 
     render() {
-        const { onPalPaySuccess } = this.props;
+        const { onPalPaySuccess, soucher, contact } = this.props;
 
         const client = {
             sandbox:    'AY-FHTiPMPYyspk1d3Ku61n4afmMMjj3ZaABqW4bNdRs3aKE8YPM0EkAUlEAWVKy43MhvmIN_7Ck_Q7S',
@@ -49,8 +49,8 @@ class PayPalButton extends Component {
                 transactions: [
                     {
                         amount: {
-                            total:    '1.00',
-                            currency: 'USD'
+                            total: soucher.amount,
+                            currency: soucher.currency
                         }
                     }
                 ]

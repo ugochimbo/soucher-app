@@ -9,17 +9,25 @@ import {isSupportedCurrencies} from '../../Util/Currency';
 export default class SoucherDetailsForm extends Component{
      render() {
         const {previousPage, onStripeSuccess, onPalPaySuccess, onSubmit, formState, transacting} = this.props;
-        const amount =  formState.values.soucherAmount;
-        const currency =  formState.values.soucherCurrency;
+        const soucher = {
+            amount:  formState.values.soucherAmount,
+            currency:  formState.values.soucherCurrency
+        };
+
+        const contact = {
+            buyerName: formState.values.buyerName,
+            buyerEmail: formState.values.buyerEmail,
+            recipientName: formState.values.recipientName,
+        };
 
         const MINIMUM_AMOUNT = 1;
 
         let isValidSoucherAmount = () => {
-            return (amount !== undefined && amount > MINIMUM_AMOUNT);
+            return (soucher.amount !== undefined && soucher.amount > MINIMUM_AMOUNT);
         };
 
         let disablePaymentButtons = () => {
-            if (!isValidSoucherAmount() || !isSupportedCurrencies(currency)) {
+            if (!isValidSoucherAmount() || !isSupportedCurrencies(soucher.currency)) {
                 return 'disabled';
             }
 
@@ -66,7 +74,13 @@ export default class SoucherDetailsForm extends Component{
                                 </div>
                             </div>
 
-                            <Payment onStripeSuccess = {onStripeSuccess} onPalPaySuccess = {onPalPaySuccess} disabled = {disablePaymentButtons()} />
+                            <Payment
+                                onStripeSuccess = {onStripeSuccess}
+                                onPalPaySuccess = {onPalPaySuccess}
+                                disabled = {disablePaymentButtons()}
+                                soucher = {soucher}
+                                contact = {contact}
+                            />
                         </div>
                     </div>
                 </div>

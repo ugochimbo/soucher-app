@@ -3,10 +3,14 @@ import StripeCheckout from 'react-stripe-checkout';
 
 export default class Checkout extends Component {
     render() {
-        const { onStripeSuccess, disabled } = this.props;
+        const { onStripeSuccess, disabled, soucher, contact } = this.props;
 
         let toggleButton = () => {
             return `row uniform ${disabled}`;
+        };
+
+        let toCents = (amount) => {
+            return amount * 100;
         };
 
         return (
@@ -14,13 +18,13 @@ export default class Checkout extends Component {
                 <StripeCheckout
                     token = {(token) => onStripeSuccess(token)}
                     stripeKey = 'pk_test_W2SpTEwgUKnJLVBZcdnDbQ2e'
-                    name='Soucher'
-                    description="Gift Soucher to Loved one"
+                    name='Soucher GmbH'
+                    description={`Soucher payment for ${contact.recipientName}`}
                     ComponentClass="div"
-                    amount={100}
-                    currency="USD"
+                    amount={toCents(soucher.amount)}
+                    currency={soucher.currency}
                     locale="auto"
-                    email="test@soucher.com"
+                    email={contact.buyerEmail}
                     alipay
                     bitcoin
                     reconfigureOnUpdate={false}
