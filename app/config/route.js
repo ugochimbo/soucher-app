@@ -28,5 +28,6 @@ export const routes =
             <Route exact = {true} path = {PATH_TO.TRANSACTION_ERROR_ROUTE} header='Transaction Error' component={TransactionError} />
 
             <Route exact = {true} path = {PATH_TO.GIFT_CARD_CATALOG_ROUTE} header='Catalog' component={GiftCardCatalogPage} />
-            <Route exact = {true} path = {PATH_TO.TRANSFER_SOUCHER_ROUTE} header='Transfer Soucher' component={AboutUs} />
+            <Route exact = {true} path = {PATH_TO.ABOUT_US_ROUTE} header='Catalog' component={AboutUs} />
+            <Route exact = {true} path = {PATH_TO.CONTACT_US_ROUTE} header='Catalog' component={ContactUs} />
         </Main>;
