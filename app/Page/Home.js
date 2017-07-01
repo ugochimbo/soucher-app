@@ -20,16 +20,37 @@ export default class Home extends Component{
                         </ul>
                     </footer>
                 </section>
+
+                <section className="spotlight">
+                    <header className="major" style={{'marginBottom' : '20px'}}>
+                        <h2>Philosophy</h2>
+                    </header>
+                    <div className="content" style={{'fontSize' : 'medium'}}>
+                        <p>Gift cards has proven to be one of the top gift options. We often opt for a generic,
+                            big retail store gift card since we do not know what our loved one really wants.
+                            Whilst this is a great option, we seek to reverse the decision by letting our loved ones decide,
+                            making you worry less. </p>
+                    </div>
+                    <div>
+                        <header className="major" style={{'textAlign' : 'left'}}>
+                            <h2 style={{'textAlign' : 'center'}}><span className="icon fa-certificate"/></h2>
+                            Let your loved one decide <br />
+                            Worry less <br />
+                            Promote small / medium companies <br />
+                        </header>
+                    </div>
+                </section>
+
                 <section className="features">
                     <header className="major" style={{'marginBottom' : '20px'}}>
-                        <h2>What we do?</h2>
-                        <p>We let your loved one decide</p>
+                        <h2>How to let your loved one decide</h2>
+                        <p>... and you worry less</p>
                     </header>
                     <div className="content">
                         <section className="feature">
                             <div style={{'textAlign' : 'center'}}>
                                 <img src="/asset/image/giftcard_2.png" height="160px" />
-                                <h3> 1. Gift a loved one a Soucher </h3>
+                                <h3> 1. Gift your loved one a Soucher </h3>
                             </div>
                             <p> Survey showed a high percentage of people would trade in a more generic gift card
                                 for a specific one based on their current needs. </p>
@@ -53,18 +74,18 @@ export default class Home extends Component{
                         </section>
                     </div>
                 </section>
-                <section className="cta">
-                    <header>
-                        <h2>Voucher Collection Updated Daily</h2>
+                <section className="cta" style={{'backgroundColor': '#011A27'}}>
+                    <header className="major">
+                        <h2>Promoting small/medium size companies</h2>
+                        <ul className="actions">
+                            <li>
+                                <Link to = {LINK_TO.GIFT_CARD_CATALOG_ROUTE} className="button big special">
+                                    <span style={{'marginRight' : '5px'}}>View Voucher Catalog</span>
+                                    <span className="icon fa-book"/>
+                                </Link>
+                            </li>
+                        </ul>
                     </header>
-                    <ul className="actions">
-                        <li>
-                            <Link to = {LINK_TO.GIFT_CARD_CATALOG_ROUTE} className="button big special">
-                                <span style={{'marginRight' : '5px'}}>View Voucher Catalog</span>
-                                <span className="icon fa-book"/>
-                            </Link>
-                        </li>
-                    </ul>
                 </section>
                 <section className="features">
                     <header className="major">
@@ -97,7 +118,7 @@ export default class Home extends Component{
                                 <span className="icon major"><img src="/asset/image/customer_2.jpg" width="200px" height="180px" /></span>
                                 <h5>London, United Kingdom</h5>
                                 <img src="/asset/image/5-stars.png" />
-                            </div>=
+                            </div>
                                 <blockquote>
                                     This saved me a lot of stress. Gifted a friend a Soucher and she still hasn't stopped thanking me for it.
                                 </blockquote>
@@ -109,7 +130,7 @@ export default class Home extends Component{
                         <h2>What are you waiting for ?</h2>
                     </header>
                     <ul className="actions">
-                        <li><Link to = {LINK_TO.GIFT_CARD_CATALOG_ROUTE} className="button big special">
+                        <li><Link to = {LINK_TO.GIFT_SOUCHER_ROUTE} className="button big special">
                             <span className="icon fa-gift"/>
                             <span style={{'margin' : '0 10px 0 10px'}}>Gift a loved one a Soucher</span>
                             <span className="icon fa-gift"/>

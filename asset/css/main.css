@@ -2057,7 +2057,7 @@ table {
   padding: 2em 2em 0.1em 2em ;
   right: 0.3em;
   position: fixed;
-  z-index: 10000;
+  z-index: 1000;
   background-color: #ffffff;
   color: #011A27;
   width: 220px; }
@@ -2093,6 +2093,21 @@ table {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%); }
+
+.example-enter {
+  opacity: 0.01;
+  background-color: #011A27; }
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
+.example-leave {
+  opacity: 1; }
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in; }
 
 /* Header */
 body {

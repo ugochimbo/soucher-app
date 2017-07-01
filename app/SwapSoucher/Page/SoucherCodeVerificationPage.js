@@ -43,7 +43,7 @@ const mapDispatchToProps = (dispatch, handleSubmit) => ({
     onSubmit: (values) => {
         dispatch(Action.fetchSoucher(values)).then((response) => {
             if (response.payload.data.status !== SUCCESS_RESPONSE_CODE) {
-                console.log(values)
+                console.log(response)
             } else {
                 dispatch(Action.fetchCatalog()).then((response) => {
                     if (response.payload.data.status === SUCCESS_RESPONSE_CODE) {

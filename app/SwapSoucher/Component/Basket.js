@@ -25,18 +25,18 @@ export default class Basket extends Component {
                             <tbody>
                                 <tr>
                                     <td>Soucher: </td>
-                                    <td> {basket.value} {currency} </td>
+                                    <td colSpan={2} > {basket.value} {currency} </td>
                                 </tr>
                                 <tr>
                                     <td>In Use: </td>
-                                    <td> {basket.value - basket.balance} {currency} </td>
+                                    <td colSpan={2}> {basket.value - basket.balance} {currency} </td>
                                 </tr>
                                 <tr>
                                     <td>Balance: </td>
-                                    <td> {basket.balance} {currency} </td>
+                                    <td colSpan={2}> {basket.balance} {currency} </td>
                                 </tr>
                                 <tr className='header'>
-                                    <td colSpan={2} className="align-center"> Gift Cards </td>
+                                    <td colSpan={3} className="align-center"> Gift Cards </td>
                                 </tr>
 
                                 {basketGiftItems()}

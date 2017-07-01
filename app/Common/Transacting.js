@@ -48,10 +48,6 @@ export default class Transacting extends Component {
                         Transaction...
                     </h3>
                 </div>
-                <h3 className="highlight" style={{'marginTop' : '20px'}}>
-                    ...Finalizing <br/>
-                    Transaction...
-                </h3>
             </Modal>
         );
     }
