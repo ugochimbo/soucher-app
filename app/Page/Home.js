@@ -74,19 +74,33 @@ export default class Home extends Component{
                         </section>
                     </div>
                 </section>
-                <section className="cta" style={{'backgroundColor': '#011A27'}}>
-                    <header className="major">
-                        <h2>Promoting small/medium size companies</h2>
-                        <ul className="actions">
-                            <li>
-                                <Link to = {LINK_TO.GIFT_CARD_CATALOG_ROUTE} className="button big special">
-                                    <span style={{'marginRight' : '5px'}}>View Voucher Catalog</span>
-                                    <span className="icon fa-book"/>
-                                </Link>
-                            </li>
-                        </ul>
-                    </header>
+
+
+                <section className="spotlight">
+                    <div className="content cta">
+                        <header>
+                            <h2>Promote small/medium size companies</h2>
+                            <ul className="actions">
+                                <li>
+                                    <Link to = {LINK_TO.GIFT_CARD_CATALOG_ROUTE} className="button big special">
+                                        <span style={{'marginRight' : '5px'}}>View Voucher Catalog</span>
+                                        <span className="icon fa-book"/>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </header>
+                    </div>
+                    <div>
+                        <header className="major" style={{'textAlign' : 'left'}}>
+                            <h2 style={{'textAlign' : 'center'}}>
+                                <span className="icon fa-thumb-tack"/>
+                            </h2>
+                            We seek to continuously update our voucher catalog
+                            with more focus on less popular retail stores.
+                        </header>
+                    </div>
                 </section>
+
                 <section className="features">
                     <header className="major">
                         <h2>Customer Testimony</h2>
