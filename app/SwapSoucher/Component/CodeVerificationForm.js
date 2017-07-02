@@ -8,17 +8,13 @@ export default class CodeVerificationForm extends Component {
             <form onSubmit={this.props.onSubmit}>
                 <div className="row uniform">
                     <div className="6u 12u$(small) align-center">
-                        <img src="/asset/image/soucher_12_1.jpg" width="550px" style={{'marginTop': '20px'}}/>
+                        <img src="/asset/image/card-sample.png" width="500px"/>
                     </div>
                     <div className="6u 12u$(small)">
                         <h3>Enter Soucher Code</h3>
 
                         <div className="6u$" style={{'marginBottom': '10px'}}>
-                            <Field name="soucherCode" type="text" component={FormField.Input} label='Enter Soucher Code' />
-                        </div>
-
-                        <div className="12u$" style={{'marginBottom': '10px'}}>
-                            <p>Your code can be found in the bottom center as seen in the sample image</p>
+                            <Field name="soucherCode" type="text" component={FormField.Input} label='' />
                         </div>
 
                         <div className="12u$">

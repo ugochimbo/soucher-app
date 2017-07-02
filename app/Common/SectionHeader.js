@@ -6,13 +6,8 @@ export const ContactDetailsHeader = {
 };
 
 export const SoucherDetailsHeader = {
-    title: 'Soucher Details',
-    message: 'Customize the soucher with a message and theme.',
-};
-
-export const PaymentsPageHeader = {
-    title: 'Payments Details',
-    message: 'Complete Transaction',
+    title: 'Complete Transaction',
+    message: 'Customize the soucher and pay.',
 };
 
 export const GiftSoucherSuccessPageHeader = {
@@ -28,7 +23,7 @@ export const TransactionErrorPageHeader = {
 
 export const SoucherCodeVerificationPageHeader = {
     title: 'Please enter your soucher code',
-    message: 'You will need your phone for final verification of the swap.',
+    message: 'See sample image for where to find the soucher code on your card.',
 };
 
 export const SwapCatalogPageHeader = {

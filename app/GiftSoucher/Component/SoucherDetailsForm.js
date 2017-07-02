@@ -47,7 +47,7 @@ export default class SoucherDetailsForm extends Component{
                 <div className="light-content">
                     <div className="row">
                         <div className="6u 12u$(small)">
-                            <img src="/asset/image/soucher_12_1.jpg" width="550px" style={{'marginTop': '20px'}} />
+                            <img src="/asset/image/card-template.png" width="500px"/>
 
                             <div className="row uniform" style={{'marginTop': '10px'}}>
                                 <div className="12u$ actions">
