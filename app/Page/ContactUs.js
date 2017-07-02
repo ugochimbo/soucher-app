@@ -8,8 +8,14 @@ export default class ContactUs extends Component{
         return (
             <div id="main">
 
-                <section id="banner">
-                    <section id="content" className="default">
+                <section id="banner" style={{
+                    'backgroundImage' : 'url("/asset/image/contact_us.jpg"), url("/asset/image/overlay_2.png")',
+                    'textShadow' : '0 1px 0 rgba(0, 0, 0, 0.75)',
+                    'backgroundPosition' : 'initial',
+                    'backgroundColor' : 'rgba(0, 0, 0, 0.65)',
+                    'height' : '449px',
+                }}>
+                    <section id="content">
                         <SectionHeader title={header.title} message={header.message} />
                     </section>
                 </section>
