@@ -46,6 +46,16 @@ export const SwapCancelledPageHeader = {
     message: 'We hope to hear back from you shortly.',
 };
 
+export const AboutUsPageHeader = {
+    title: 'About Us',
+    message: 'Vision | Mission | Philosophy',
+};
+
+export const ContactUsPageHeader = {
+    title: 'Contact Us',
+    message: 'Feel free to contact Us for any reason.',
+};
+
 export default class SectionHeader extends Component{
     render() {
         return (

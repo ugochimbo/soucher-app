@@ -77,6 +77,15 @@ export default class Home extends Component{
 
 
                 <section className="spotlight">
+                    <div>
+                        <header className="major" style={{'textAlign' : 'left'}}>
+                            <h2 style={{'textAlign' : 'center'}}>
+                                <span className="icon fa-thumb-tack"/>
+                            </h2>
+                            We seek to continuously update our voucher catalog
+                            with more focus on less popular retail stores.
+                        </header>
+                    </div>
                     <div className="content cta">
                         <header>
                             <h2>Promote small/medium size companies</h2>
@@ -88,15 +97,6 @@ export default class Home extends Component{
                                     </Link>
                                 </li>
                             </ul>
-                        </header>
-                    </div>
-                    <div>
-                        <header className="major" style={{'textAlign' : 'left'}}>
-                            <h2 style={{'textAlign' : 'center'}}>
-                                <span className="icon fa-thumb-tack"/>
-                            </h2>
-                            We seek to continuously update our voucher catalog
-                            with more focus on less popular retail stores.
                         </header>
                     </div>
                 </section>
