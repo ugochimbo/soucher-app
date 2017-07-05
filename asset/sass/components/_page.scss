@@ -70,6 +70,10 @@
       }
   }
 
+  #listing {
+      @extend #swap-catalog;
+  }
+
   #filter {
       background-color: _palette(fg-light);
       @include padding(1em, 1em);
@@ -158,4 +162,12 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
+  }
+
+  input#catalog-item.custom-available {
+      background-color: _palette(bg) !important;
+  }
+
+  input#catalog-item.custom-unavailable {
+      background-color: _palette(error) !important;
   }

@@ -28,7 +28,15 @@ export default class GiftCard extends Component {
                  return 'No Custom Amounts';
              }
 
-             return 'Enter Custom Amount';
+             return 'Custom Amount Available';
+         };
+
+         let className = () => {
+             if (!gift_card.custom_prize) {
+                 return 'custom-unavailable';
+             }
+
+             return 'custom-available';
          };
 
         return (
@@ -38,8 +46,8 @@ export default class GiftCard extends Component {
                     <div className="fixed">
                         {denomination()}
                     </div>
-                    <div className="custom">
-                        <input type="text" placeholder={customPlaceholder()} />
+                    <div className="custom disabled">
+                        <input id="catalog-item" type="text" placeholder={customPlaceholder()} className={className()} />
                     </div>
                 </div>
             </div>

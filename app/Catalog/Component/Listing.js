@@ -9,8 +9,6 @@ export default class Listing extends Component {
 
          let listing = () => {
 
-             console.log(catalog);
-
              if (!catalog.length) {
                  return <Transacting message = {'Building Catalog...'} />
              }
@@ -24,8 +22,8 @@ export default class Listing extends Component {
          };
 
         return (
-            <div className="12u align-center">
-                <div id="swap-catalog">
+            <div className="12u">
+                <div id="listing" >
                     {listing()}
                 </div>
             </div>
