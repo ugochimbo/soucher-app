@@ -1,7 +1,5 @@
 export const Response_Success_Suffix = '_SUCCESS';
 
-export const Swap_Soucher_Action = 'SWAP_SOUCHER';
-
 export const Fetch_Soucher_Action = 'VALIDATE_SOUCHER_CODE';
 export const Fetch_Soucher_Success = Fetch_Soucher_Action + Response_Success_Suffix;
 

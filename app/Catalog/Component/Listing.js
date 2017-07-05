@@ -10,7 +10,7 @@ export default class Listing extends Component {
          let listing = () => {
 
              if (!catalog.length) {
-                 return <Transacting message = {'Building Catalog...'} />
+                 return <Transacting message = "Building Catalog" />
              }
 
              return catalog.map(function (gift_card) {

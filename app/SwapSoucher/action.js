@@ -12,12 +12,12 @@ export const fetchSoucher = (values) => {
     }
 };
 
-export const fetchCatalog = () => {
+export const fetchCatalog = (page = 1) => {
     return {
         'type': [Action.Fetch_Catalog_Action],
         'payload': {
             request: {
-                url: '/voucher',
+                url: `/voucher?page=${page}`,
                 method: 'GET',
             }
         }
