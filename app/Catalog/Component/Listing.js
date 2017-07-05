@@ -12,7 +12,7 @@ export default class Listing extends Component {
              console.log(catalog);
 
              if (!catalog.length) {
-                 return <Transacting />
+                 return <Transacting message = {'Building Catalog...'} />
              }
 
              return catalog.map(function (gift_card) {
@@ -24,7 +24,7 @@ export default class Listing extends Component {
          };
 
         return (
-            <div className="11u 12u$(small)">
+            <div className="12u align-center">
                 <div id="swap-catalog">
                     {listing()}
                 </div>

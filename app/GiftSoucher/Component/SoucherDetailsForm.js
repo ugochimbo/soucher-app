@@ -36,7 +36,7 @@ export default class SoucherDetailsForm extends Component{
 
         let isTransacting = () => {
             if (transacting) {
-                return <Transacting />
+                return <Transacting message = {'Finalizing Transaction'} />
             }
 
             return '';

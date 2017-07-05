@@ -4,6 +4,9 @@ import Modal from 'react-modal';
 
 export default class Transacting extends Component {
     render() {
+
+        const {message} = this.props;
+
         let style = {
             overlay: {
                 backgroundImage: 'url("/asset/image/overlay_2.png")}',
@@ -30,8 +33,17 @@ export default class Transacting extends Component {
             }
         };
 
+        let loader = () => {
+            return <div>
+                <FoldingCube size={120} timingFunction={'ease-in-out'} color='#BCC3C9' />
+                    <h3 className="highlight" style={{'marginTop' : '20px'}}>
+                    {message}
+                </h3>
+            </div>
+        };
+
         return (
-            <Modal isOpen={true} contentLabel = {'Finalizing Transactions'} style = {style}>
+            <Modal isOpen={true} contentLabel = {message} style = {style}>
                 <div style={{
                     'color': '#BCC3C9',
                     'borderRadius': '1em',
@@ -42,11 +54,7 @@ export default class Transacting extends Component {
                     'marginRight': '-50%',
                     'transform': 'translate(-50%, -50%)'
                 }}>
-                    <FoldingCube size={120} timingFunction={'ease-in-out'} color='#BCC3C9' />
-                    <h3 className="highlight" style={{'marginTop' : '20px'}}>
-                        ...Finalizing <br/>
-                        Transaction...
-                    </h3>
+                    {loader()}
                 </div>
             </Modal>
         );

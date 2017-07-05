@@ -49,7 +49,7 @@ const SwapCatalogPage = (props) => {
 
     let isTransacting = () => {
         if (transacting) {
-            return <Transacting />
+            return <Transacting message = {'Finalizing Swap...'} />
         }
 
         return '';
