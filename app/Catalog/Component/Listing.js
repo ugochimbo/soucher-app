@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import GiftCard from './GiftCard';
 import Transacting from './../../Common/Transacting';
+import * as Random from './../../Util/Random';
 
 export default class Listing extends Component {
 
@@ -14,7 +15,7 @@ export default class Listing extends Component {
              }
 
              return catalog.map(function (gift_card) {
-                 return <GiftCard key = {gift_card.id}
+                 return <GiftCard key = {Random.key()}
                                   gift_card = {gift_card}
                                   currency = {currency}
                     />;

@@ -41,6 +41,12 @@ export const SwapCancelledPageHeader = {
     message: 'We hope to hear back from you shortly.',
 };
 
+export const CatalogPageHeader = {
+    title: 'Catalog',
+    message: 'Our catalog collection is constantly updated.',
+};
+
+
 export const AboutUsPageHeader = {
     title: 'About Us',
     message: 'Vision | Mission | Philosophy',

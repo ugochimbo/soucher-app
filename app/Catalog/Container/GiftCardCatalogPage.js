@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Waypoint from 'react-waypoint';
-import SectionHeader, {ContactUsPageHeader as header} from '../../Common/SectionHeader';
+import SectionHeader, {CatalogPageHeader as header} from '../../Common/SectionHeader';
 import Filter from '../../Common/Filter';
 import Listing from '../Component/Listing';
 import * as Currency from '../../Util/Currency';
@@ -15,7 +15,8 @@ class GiftCardCatalogPage extends Component {
 
         this.state = {
             catalog: [],
-            pagination: {}
+            pagination: {},
+            loading: true
         };
     }
 
@@ -30,15 +31,20 @@ class GiftCardCatalogPage extends Component {
     }
 
     fetchCatalog(page = 1) {
+
+        this.setState({
+            loading: true
+        });
+
         this.props.dispatch(Action.fetchCatalog(page))
             .then((response) => {
-
                 const {gift_cards, pagination, status} = response.payload.data;
 
                 if (status === SUCCESS_RESPONSE_CODE) {
                     this.setState({
-                        catalog: gift_cards,
-                        pagination,
+                        catalog: [...this.state.catalog, ...gift_cards],
+                        pagination: pagination,
+                        loading: false
                     })
                 }
             })
@@ -47,8 +53,15 @@ class GiftCardCatalogPage extends Component {
             });
     }
 
-    render () {
+    paginate() {
+        if (!this.state.loading) {
+            return <Waypoint onEnter={::this.nextPage} threshold={2.0} bottomOffset = {'250px'} />
+        }
 
+        return <div>... Loading</div>
+    }
+
+    render () {
         return (
             <div id="main-full" className="full">
                 <section id="content" className="default">
@@ -56,9 +69,13 @@ class GiftCardCatalogPage extends Component {
                     <Filter />
                     <div className="catalog-light-content">
                         <div className="row uniform">
-                            <Listing catalog = {this.state.catalog} currency = {Currency.htmlEntityFor('EUR')} />
-                            <Waypoint onEnter={::this.nextPage} threshold={2.0} />
+                            <Listing catalog = {this.state.catalog}
+                                     currency = {Currency.htmlEntityFor('EUR')}
+                            />
                         </div>
+                    </div>
+                    <div className="row uniform align-center">
+                        {::this.paginate()}
                     </div>
                 </section>
             </div>
