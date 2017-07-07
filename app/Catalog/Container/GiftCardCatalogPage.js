@@ -7,6 +7,7 @@ import Listing from '../Component/Listing';
 import * as Currency from '../../Util/Currency';
 import * as Action from '../../SwapSoucher/action';
 import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
+import { ChasingDots } from 'better-react-spinkit';
 
 class GiftCardCatalogPage extends Component {
 
@@ -55,10 +56,12 @@ class GiftCardCatalogPage extends Component {
 
     paginate() {
         if (!this.state.loading) {
-            return <Waypoint onEnter={::this.nextPage} threshold={2.0} bottomOffset = {'250px'} />
+            return <Waypoint onEnter={::this.nextPage} topOffset = {'70%'} />
         }
 
-        return <div>... Loading</div>
+        return <div style={{'width' : '40px', 'margin' : '0 auto 10px auto', 'padding' : '20px'}}>
+            <ChasingDots size={30} color='#011A27' />
+        </div>
     }
 
     render () {
@@ -73,9 +76,9 @@ class GiftCardCatalogPage extends Component {
                                      currency = {Currency.htmlEntityFor('EUR')}
                             />
                         </div>
-                    </div>
-                    <div className="row uniform align-center">
+
                         {::this.paginate()}
+
                     </div>
                 </section>
             </div>
