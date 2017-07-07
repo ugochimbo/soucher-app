@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Waypoint from 'react-waypoint';
 import SectionHeader, {CatalogPageHeader as header} from '../../Common/SectionHeader';
 import Filter from '../../Common/Filter';
 import Listing from '../Component/Listing';
+import Paginator from '../../Common/Paginator';
 import * as Currency from '../../Util/Currency';
 import * as Action from '../../SwapSoucher/action';
 import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
-import { ChasingDots } from 'better-react-spinkit';
 
 class GiftCardCatalogPage extends Component {
 
@@ -17,19 +16,13 @@ class GiftCardCatalogPage extends Component {
         this.state = {
             catalog: [],
             pagination: {},
-            loading: true
+            loading: false
         };
     }
 
     componentWillMount() {
         this.fetchCatalog();
     };
-
-    nextPage() {
-        if (this.state.pagination.next_page_url !== null) {
-            this.fetchCatalog(this.state.pagination.current_page + 1);
-        }
-    }
 
     fetchCatalog(page = 1) {
 
@@ -54,16 +47,6 @@ class GiftCardCatalogPage extends Component {
             });
     }
 
-    paginate() {
-        if (!this.state.loading) {
-            return <Waypoint onEnter={::this.nextPage} topOffset = {'70%'} />
-        }
-
-        return <div style={{'width' : '40px', 'margin' : '0 auto 10px auto', 'padding' : '20px'}}>
-            <ChasingDots size={30} color='#011A27' />
-        </div>
-    }
-
     render () {
         return (
             <div id="main-full" className="full">
@@ -71,14 +54,10 @@ class GiftCardCatalogPage extends Component {
                     <SectionHeader title = {header.title} message = {header.message}/>
                     <Filter />
                     <div className="catalog-light-content">
-                        <div className="row uniform">
-                            <Listing catalog = {this.state.catalog}
-                                     currency = {Currency.htmlEntityFor('EUR')}
-                            />
-                        </div>
-
-                        {::this.paginate()}
-
+                        <Listing catalog = {this.state.catalog} currency = {Currency.htmlEntityFor('EUR')}/>
+                        <Paginator pagination = {this.state.pagination}
+                                   loading = {this.state.loading}
+                                   callback = {::this.fetchCatalog} />
                     </div>
                 </section>
             </div>

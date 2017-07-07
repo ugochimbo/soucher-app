@@ -23,7 +23,7 @@ export default class Listing extends Component {
          };
 
         return (
-            <div className="12u">
+            <div className="row uniform">
                 <div id="listing" >
                     {listing()}
                 </div>
