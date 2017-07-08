@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import { reduxForm, reset } from 'redux-form';
 import SectionHeader, {SwapCatalogPageHeader as header} from '../../Common/SectionHeader';
 import {validator as validate} from '../Validator';
 import Transacting from '../../Common/Transacting';
 import Filter from '../../Common/Filter';
+import Paginator from '../../Common/Paginator';
 import Listing from '../Component/Listing';
 import Basket from '../Component/Basket';
 import * as Currency from '../../Util/Currency';
@@ -14,65 +15,114 @@ import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
 
 const  { DOM: { input } } = React;
 
-const SwapCatalogPage = (props) => {
-    const {soucher, catalog, basket, transacting, addBasketItem, removeBasketItem, dispatch, history} = props;
-    const SWAP_CURRENCY = Currency.htmlEntityFor(soucher.currency);
+class SwapCatalogPage extends Component {
+    constructor(props) {
+        super(props);
 
-    let completeSwap = () => {
+        this.state = {
+            fetching: false,
+            currency: Currency.htmlEntityFor(props.soucher.currency)
+        };
+    }
+
+    componentWillMount() {
+        this.fetchCatalog()
+    };
+
+    fetchCatalog(page = 1) {
+        this.setState({
+            fetching: true
+        });
+
+        this.props.dispatch(Action.fetchCatalog(page))
+            .then((response) => {
+                if (response.payload.status === SUCCESS_RESPONSE_CODE) {
+                    this.setState({
+                        fetching: false
+                    });
+                }
+            })
+    };
+
+    completeSwap() {
+        const {basket, soucher} = this.props;
+
         if (!basket.items.length) {
             return;
         }
 
-        dispatch(Action.transacting(true));
+        this.props.dispatch(Action.transacting(true));
 
         let data = {
             soucher_id : soucher.id,
             gift_cards : basket.items,
         };
 
-        dispatch(Action.completeSwap(data)).then((response) => {
+        this.props.dispatch(Action.completeSwap(data)).then((response) => {
             if (response.payload.status !== SUCCESS_RESPONSE_CODE) {
-                history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
+                this.props.history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
             }
 
-            history.push(LINK_TO.SWAP_SOUCHER_SUCCESS_ROUTE);
+            this.props.history.push(LINK_TO.SWAP_SOUCHER_SUCCESS_ROUTE);
         }).catch(() => {
-            history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
+            this.props.history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
         });
     };
 
-    let cancelSwap = () => {
-        dispatch(Action.cancelSwap());
-        dispatch(reset('swap-soucher-wizard'));
-        history.push(LINK_TO.SWAP_SOUCHER_CANCEL_ROUTE);
+    cancelSwap() {
+        this.props.dispatch(Action.cancelSwap());
+        this.props.dispatch(reset('swap-soucher-wizard'));
+        this.props.history.push(LINK_TO.SWAP_SOUCHER_CANCEL_ROUTE);
     };
 
-    let isTransacting = () => {
-        if (transacting) {
+    isTransacting() {
+        if (this.props.transacting) {
             return <Transacting message = 'Finalizing Swap' />
         }
 
         return '';
     };
 
-    return (
-        <div id="main-full" className="full">
-            <section id="content" className="default">
-                <SectionHeader title = {header.title} message = {header.message}/>
-                <Filter />
-                <div className="catalog-light-content">
-                    <form onSubmit = {completeSwap}>
-                        <div className="row uniform">
-                            <Listing catalog = {catalog} currency = {SWAP_CURRENCY} addBasketItem = {addBasketItem} />
-                            <Basket basket = {basket} currency = {SWAP_CURRENCY} removeBasketItem = {removeBasketItem} cancelSwap = {cancelSwap} completeSwap = {completeSwap}/>
-                        </div>
-                        {isTransacting()}
-                    </form>
-                </div>
-            </section>
-        </div>
-    )
-};
+    showPage() {
+        if (!this.props.catalog.gift_cards.length) {
+            return <Transacting message = "Building Catalog" />
+        }
+
+        return (
+            <div id="main-full" className="full">
+                <section id="content" className="default">
+                    <SectionHeader title = {header.title} message = {header.message}/>
+                    <Filter />
+                    <div className="catalog-light-content">
+                        <form onSubmit = {::this.completeSwap}>
+                            <div className="row uniform">
+                                <Listing catalog = {this.props.catalog}
+                                         currency = {this.state.currency}
+                                         addBasketItem = {this.props.addBasketItem}
+                                />
+                                <Basket basket = {this.props.basket}
+                                        currency = {this.state.currency}
+                                        removeBasketItem = {this.props.removeBasketItem}
+                                        cancelSwap = {::this.cancelSwap}
+                                        completeSwap = {::this.completeSwap}
+                                />
+                            </div>
+                                <Paginator pagination = {this.props.catalog.pagination}
+                                           loading = {this.state.fetching}
+                                           callback = {::this.fetchCatalog} />
+
+                            {::this.isTransacting()}
+                        </form>
+                    </div>
+                </section>
+            </div>
+        )
+    }
+
+    render() {
+        return this.showPage()
+    }
+}
 
 const SwapCatalog = reduxForm({
     form: 'swap-soucher-wizard',

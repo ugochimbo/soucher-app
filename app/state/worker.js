@@ -29,9 +29,10 @@ export function addCatalog(catalog, soucher, response) {
 
     return {
         ...catalog,
-        'items': response,
+        'gift_cards': [...catalog.gift_cards, ...response.gift_cards],
+        'pagination': response.pagination,
         'max_amount': soucher.amount,
-        'disabled': soucher.amount > 0 ? '': 'disabled',
+        'disabled': soucher.amount > 0 ? '': 'disabled'
     };
 }
 

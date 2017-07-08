@@ -12,7 +12,7 @@ export default class Paginator extends Component {
 
     paginate(pagination, loading, callback) {
         if (loading) {
-            return <div style={{'width' : '40px', 'margin' : '0 auto 10px auto', 'padding' : '20px'}}>
+            return <div style={{'width' : '40px', 'margin' : '-20px auto 0 auto', 'padding' : '20px'}}>
                 <ChasingDots size={30} color='#011A27' />
             </div>
         }

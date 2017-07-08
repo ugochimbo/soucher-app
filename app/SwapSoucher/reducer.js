@@ -16,7 +16,8 @@ let initialState = {
         search: '',
     },
     catalog : {
-        items: [],
+        gift_cards: [],
+        pagination: {},
         disabled: '',
         max_amount: 0
     },
