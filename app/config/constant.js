@@ -9,6 +9,8 @@ export const SWAP_SOUCHER_SUCCESS_ROUTE = '/swap/success';
 export const SWAP_SOUCHER_CANCEL_ROUTE = '/swap/cancel';
 
 export const GIFT_CARD_CATALOG_ROUTE = '/catalog';
+export const GIFT_CARD_CATALOG_FILTER_ROUTE = '/catalog/filter';
+
 export const ABOUT_US_ROUTE = '/about-us';
 export const CONTACT_US_ROUTE = '/contact-us';
 

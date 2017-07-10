@@ -44,6 +44,10 @@ class SwapCatalogPage extends Component {
             })
     };
 
+    filterCatalog(category){
+        console.log(category);
+    }
+
     completeSwap() {
         const {basket, soucher} = this.props;
 
@@ -92,7 +96,7 @@ class SwapCatalogPage extends Component {
             <div id="main-full" className="full">
                 <section id="content" className="default">
                     <SectionHeader title = {header.title} message = {header.message}/>
-                    <Filter />
+                    <Filter filter = {::this.filterCatalog}/>
                     <div className="catalog-light-content">
                         <form onSubmit = {::this.completeSwap}>
                             <div className="row uniform">

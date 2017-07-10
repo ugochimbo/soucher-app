@@ -47,12 +47,16 @@ class GiftCardCatalogPage extends Component {
             });
     }
 
+    filter(category) {
+        console.log(category);
+    }
+
     render () {
         return (
             <div id="main-full" className="full">
                 <section id="content" className="default">
                     <SectionHeader title = {header.title} message = {header.message}/>
-                    <Filter />
+                    <Filter filter = {::this.filter} />
                     <div className="catalog-light-content">
                         <Listing catalog = {this.state.catalog} currency = {Currency.htmlEntityFor('EUR')}/>
                         <Paginator pagination = {this.state.pagination}
