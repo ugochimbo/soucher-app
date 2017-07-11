@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import * as Random from '../Util/Random';
 
 const categories = [
+    'All',
     'Popular',
     'Charity',
     'Food',
@@ -33,7 +34,7 @@ export default class Filter extends Component {
 
     isSelected(category) {
         if (this.state.active === category) {
-            return 'selected';
+            return 'selected disabled';
         }
 
         return '';

@@ -16,7 +16,9 @@ class GiftCardCatalogPage extends Component {
         this.state = {
             catalog: [],
             pagination: {},
-            loading: false
+            loading: false,
+            category: '',
+            action: ''
         };
     }
 
@@ -24,22 +26,24 @@ class GiftCardCatalogPage extends Component {
         this.fetchCatalog();
     };
 
-    fetchCatalog(page = 1) {
+    fetchCatalog(page = 1, category = '') {
 
         this.setState({
             loading: true
         });
 
-        this.props.dispatch(Action.fetchCatalog(page))
+        this.props.dispatch(Action.fetchCatalog(page, category))
             .then((response) => {
                 const {gift_cards, pagination, status} = response.payload.data;
 
                 if (status === SUCCESS_RESPONSE_CODE) {
                     this.setState({
-                        catalog: [...this.state.catalog, ...gift_cards],
+                        catalog: ::this.updateCatalog(gift_cards, category),
                         pagination: pagination,
-                        loading: false
-                    })
+                        loading: false,
+                        category: category,
+                        action: 'filter'
+                    });
                 }
             })
             .catch((error) => {
@@ -47,8 +51,22 @@ class GiftCardCatalogPage extends Component {
             });
     }
 
+    updateCatalog(gift_cards, category) {
+        if (category === this.state.category) {
+            return [...this.state.catalog, ...gift_cards];
+        }
+
+        return gift_cards;
+    }
+
     filter(category) {
-        console.log(category);
+        this.fetchCatalog(this.state.pagination.current_page, category);
+    }
+
+    paginate(page) {
+        if (this.state.action === 'filter') {
+            this.fetchCatalog(page, this.state.category);
+        }
     }
 
     render () {
@@ -61,7 +79,7 @@ class GiftCardCatalogPage extends Component {
                         <Listing catalog = {this.state.catalog} currency = {Currency.htmlEntityFor('EUR')}/>
                         <Paginator pagination = {this.state.pagination}
                                    loading = {this.state.loading}
-                                   callback = {::this.fetchCatalog} />
+                                   callback = {::this.paginate} />
                     </div>
                 </section>
             </div>

@@ -12,12 +12,14 @@ export const fetchSoucher = (values) => {
     }
 };
 
-export const fetchCatalog = (page = 1) => {
+export const fetchCatalog = (page = 1, category = '') => {
+    category = category === 'All' ? '' : category;
+
     return {
         'type': [Action.Fetch_Catalog_Action],
         'payload': {
             request: {
-                url: `/voucher?page=${page}`,
+                url: `/voucher?page=${page}&category=${category}`,
                 method: 'GET',
             }
         }
