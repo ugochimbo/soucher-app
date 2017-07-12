@@ -25,7 +25,8 @@ export default class Filter extends Component {
     filter(category){
         this.props.filter(category);
         this.setState({
-            active: category
+            active: category,
+            searchKey: ''
         });
     }
 
@@ -56,14 +57,14 @@ export default class Filter extends Component {
     }
 
     searchPlaceHolder() {
-         if(!this.state.searchKey.length) {
+         if(this.state.searchKey === '') {
              return 'Search';
          }
 
          return this.state.searchKey;
     }
 
-    updateSearchKey(searchField) {
+    handleSearchKeyChange(searchField) {
         this.setState({
             searchKey: searchField.target.value
         });
@@ -77,7 +78,7 @@ export default class Filter extends Component {
                         {this.filterCategories()}
                     </div>
                     <div id="search" className="4u 12u$(small)">
-                        <input type="text" placeholder={::this.searchPlaceHolder()} onChange={this.updateSearchKey.bind(this)} />
+                        <input type="text" placeholder={::this.searchPlaceHolder()} value={this.state.searchKey} onChange={this.handleSearchKeyChange.bind(this)} />
                         <button onClick={::this.search}>Submit</button>
                     </div>
                 </div>
