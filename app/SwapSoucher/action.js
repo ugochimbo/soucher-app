@@ -26,6 +26,18 @@ export const fetchCatalog = (page = 1, category = '') => {
     }
 };
 
+export const searchCatalog = (page = 1, searchKey = '') => {
+    return {
+        'type': [Action.Search_Catalog_Action],
+        'payload': {
+            request: {
+                url: `/voucher/search?page=${page}&search=${searchKey}`,
+                method: 'GET',
+            }
+        }
+    }
+};
+
 export const addBasketItem = (giftCard) => {
     return {
         'type': Action.Add_Basket_Item_Action,

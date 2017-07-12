@@ -18,6 +18,7 @@ class GiftCardCatalogPage extends Component {
             pagination: {},
             loading: false,
             category: '',
+            searchKey: '',
             action: ''
         };
     }
@@ -38,7 +39,7 @@ class GiftCardCatalogPage extends Component {
 
                 if (status === SUCCESS_RESPONSE_CODE) {
                     this.setState({
-                        catalog: ::this.updateCatalog(gift_cards, category),
+                        catalog: ::this.updateFilteredCatalog(gift_cards, category),
                         pagination: pagination,
                         loading: false,
                         category: category,
@@ -51,7 +52,7 @@ class GiftCardCatalogPage extends Component {
             });
     }
 
-    updateCatalog(gift_cards, category) {
+    updateFilteredCatalog(gift_cards, category) {
         if (category === this.state.category) {
             return [...this.state.catalog, ...gift_cards];
         }
@@ -59,13 +60,48 @@ class GiftCardCatalogPage extends Component {
         return gift_cards;
     }
 
+    searchCatalog(page = 1, searchKey = '') {
+
+        this.setState({
+            loading: true
+        });
+
+        this.props.dispatch(Action.searchCatalog(page, searchKey))
+            .then((response) => {
+                const {gift_cards, pagination, status} = response.payload.data;
+
+                if (status === SUCCESS_RESPONSE_CODE) {
+                    this.setState({
+                        catalog: gift_cards,
+                        pagination: pagination,
+                        loading: false,
+                        category: 'All',
+                        searchKey: searchKey,
+                        action: 'search'
+                    });
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
     filter(category) {
         this.fetchCatalog(this.state.pagination.current_page, category);
+    }
+
+    search(searchKey) {
+        console.log('..... ' + searchKey);
+        this.searchCatalog(this.state.pagination.current_page, searchKey);
     }
 
     paginate(page) {
         if (this.state.action === 'filter') {
             this.fetchCatalog(page, this.state.category);
+        }
+
+        if (this.state.action === 'searchCatalog') {
+            this.searchCatalog(page, this.state.searchKey);
         }
     }
 
@@ -74,7 +110,7 @@ class GiftCardCatalogPage extends Component {
             <div id="main-full" className="full">
                 <section id="content" className="default">
                     <SectionHeader title = {header.title} message = {header.message}/>
-                    <Filter filter = {::this.filter} />
+                    <Filter filter = {::this.filter} search = {::this.search}/>
                     <div className="catalog-light-content">
                         <Listing catalog = {this.state.catalog} currency = {Currency.htmlEntityFor('EUR')}/>
                         <Paginator pagination = {this.state.pagination}

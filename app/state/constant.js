@@ -4,6 +4,7 @@ export const Fetch_Soucher_Action = 'VALIDATE_SOUCHER_CODE';
 export const Fetch_Soucher_Success = Fetch_Soucher_Action + Response_Success_Suffix;
 
 export const Fetch_Catalog_Action = 'FETCH_CATALOG';
+export const Search_Catalog_Action = 'FETCH_CATALOG';
 export const Fetch_Catalog_Success = Fetch_Catalog_Action + Response_Success_Suffix;
 
 export const Add_Basket_Item_Action = 'ADD_BASKET_ITEM';
