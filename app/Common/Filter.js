@@ -17,28 +17,33 @@ export default class Filter extends Component {
         super(props);
 
         this.state = {
-            active: categories[0],
-            searchKey: ''
+            category: categories[0],
+            searchKey: '',
+            action: ''
         };
     }
 
     filter(category){
-        this.props.filter(category);
+        this.props.filterHandler(category);
         this.setState({
-            active: category,
+            category: category,
             searchKey: ''
         });
     }
 
     search() {
-        this.props.search(this.state.searchKey);
+        if (!this.state.searchKey.trim().length) {
+            return;
+        }
+
+        this.props.searchHandler(this.state.searchKey);
         this.setState({
-            active: categories[0]
+            category: categories[0]
         });
     }
 
     isSelected(category) {
-        if (this.state.active === category) {
+        if (this.state.category === category) {
             return 'selected disabled';
         }
 

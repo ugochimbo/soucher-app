@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import SectionHeader, {CatalogPageHeader as header} from '../../Common/SectionHeader';
-import Filter from '../../Common/Filter';
+import FilterBar from '../../Common/Filter';
 import Listing from '../Component/Listing';
 import Paginator from '../../Common/Paginator';
 import * as Currency from '../../Util/Currency';
@@ -19,7 +19,7 @@ class GiftCardCatalogPage extends Component {
             loading: false,
             category: '',
             searchKey: '',
-            action: ''
+            action: 'filter'
         };
     }
 
@@ -63,7 +63,7 @@ class GiftCardCatalogPage extends Component {
     searchCatalog(page = 1, searchKey = '') {
 
         this.setState({
-            loading: true
+            loading: true,
         });
 
         this.props.dispatch(Action.searchCatalog(page, searchKey))
@@ -72,7 +72,7 @@ class GiftCardCatalogPage extends Component {
 
                 if (status === SUCCESS_RESPONSE_CODE) {
                     this.setState({
-                        catalog: gift_cards,
+                        catalog: ::this.updateSearchedCatalog(gift_cards, searchKey),
                         pagination: pagination,
                         loading: false,
                         category: 'All',
@@ -86,21 +86,30 @@ class GiftCardCatalogPage extends Component {
             });
     }
 
-    filter(category) {
-        this.fetchCatalog(this.state.pagination.current_page, category);
+    updateSearchedCatalog(gift_cards, searchKey) {
+        if (searchKey === this.state.searchKey) {
+            return [...this.state.catalog, ...gift_cards];
+        }
+
+        return gift_cards;
     }
 
-    search(searchKey) {
-        console.log('..... ' + searchKey);
-        this.searchCatalog(this.state.pagination.current_page, searchKey);
+    filterHandler(category) {
+        const page = this.state.category !== category ? 1 : this.state.pagination.current_page + 1;
+        this.fetchCatalog(page, category);
     }
 
-    paginate(page) {
+    searchHandler(searchKey) {
+        const page = this.state.searchKey !== searchKey ? 1 : this.state.pagination.current_page + 1;
+        this.searchCatalog(page, searchKey);
+    }
+
+    paginationHandler(page) {
         if (this.state.action === 'filter') {
             this.fetchCatalog(page, this.state.category);
         }
 
-        if (this.state.action === 'searchCatalog') {
+        if (this.state.action === 'search') {
             this.searchCatalog(page, this.state.searchKey);
         }
     }
@@ -110,12 +119,14 @@ class GiftCardCatalogPage extends Component {
             <div id="main-full" className="full">
                 <section id="content" className="default">
                     <SectionHeader title = {header.title} message = {header.message}/>
-                    <Filter filter = {::this.filter} search = {::this.search}/>
+                    <FilterBar filterHandler = {::this.filterHandler} searchHandler = {::this.searchHandler}/>
                     <div className="catalog-light-content">
                         <Listing catalog = {this.state.catalog} currency = {Currency.htmlEntityFor('EUR')}/>
                         <Paginator pagination = {this.state.pagination}
                                    loading = {this.state.loading}
-                                   callback = {::this.paginate} />
+                                   callback = {::this.paginationHandler}
+                                   action = {this.state.action}
+                        />
                     </div>
                 </section>
             </div>

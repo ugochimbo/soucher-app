@@ -4,29 +4,40 @@ import { ChasingDots } from 'better-react-spinkit';
 
 export default class Paginator extends Component {
 
-    nextPage(pagination, callback) {
-        if (pagination.next_page_url !== null) {
-            callback(pagination.current_page + 1);
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            previousAction: ''
         }
     }
 
-    paginate(pagination, loading, callback) {
-        if (loading) {
+    componentWillReceiveProps(props) {
+        this.setState({
+            previousAction: props.action
+        });
+    }
+
+    nextPage() {
+        const {action, pagination, callback} = this.props;
+        const page = (this.state.previousAction !== action) ? 1 : pagination.current_page + 1;
+
+        if (pagination.next_page_url !== null) {
+            callback(page);
+        }
+    }
+
+    paginate() {
+        if (this.props.loading) {
             return <div style={{'width' : '40px', 'margin' : '-20px auto 0 auto', 'padding' : '20px'}}>
                 <ChasingDots size={30} color='#011A27' />
             </div>
         }
 
-        return <Waypoint onEnter={() => {
-            this.nextPage(pagination, callback)
-        }} topOffset = {'70%'} />
+        return <Waypoint onEnter={::this.nextPage} topOffset = {'70%'} />
     }
 
     render () {
-        return this.paginate(
-            this.props.pagination,
-            this.props.loading,
-            this.props.callback
-        )
+        return this.paginate()
     }
 }

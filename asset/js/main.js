@@ -65,7 +65,7 @@
 
 			skel.on('change', function() {
 
-				if (skel.breakpoint('medium').active)
+				if (skel.breakpoint('medium').category)
 					(off)();
 				else
 					(on)();
@@ -105,7 +105,7 @@
 			skel.on('+medium -medium', function() {
 				$.prioritize(
 					'.important\\28 medium\\29',
-					skel.breakpoint('medium').active
+					skel.breakpoint('medium').category
 				);
 			});
 
