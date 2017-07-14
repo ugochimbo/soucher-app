@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import SectionHeader, {CatalogPageHeader as header} from '../../Common/SectionHeader';
-import FilterBar from '../../Common/Filter';
+import FilterBar from '../../Filter/FilterBar';
 import Listing from '../Component/Listing';
-import Paginator from '../../Common/Paginator';
+import Paginator from '../../Paginator/Paginator';
 import * as Currency from '../../Util/Currency';
 import * as Action from '../../SwapSoucher/action';
 import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
