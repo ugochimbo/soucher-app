@@ -8,13 +8,6 @@ let initialState = {
         amount: 0,
         currency: 'EUR',
     },
-    filter : {
-        category: {
-            items: [],
-            selected: '',
-        },
-        search: '',
-    },
     catalog : {
         gift_cards: [],
         pagination: {},

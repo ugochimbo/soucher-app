@@ -76,6 +76,14 @@ export function updateCatalogDisability(catalog, basket, soucher, action) {
 
 }
 
+export function updateSearchedCatalog(catalog, gift_cards, filter, searchKey) {
+    if (searchKey === filter.searchKey) {
+        return [...catalog, ...gift_cards];
+    }
+
+    return gift_cards;
+}
+
 export function addBasketGiftItems(basket, giftCard) {
     let balance = basket.balance - giftCard.amount;
 

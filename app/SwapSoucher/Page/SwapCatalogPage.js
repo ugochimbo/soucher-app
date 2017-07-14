@@ -4,7 +4,7 @@ import { reduxForm, reset } from 'redux-form';
 import SectionHeader, {SwapCatalogPageHeader as header} from '../../Common/SectionHeader';
 import {validator as validate} from '../Validator';
 import Transacting from '../../Common/Transacting';
-import Filter from '../../Filter/FilterBar';
+import FilterBar from '../../Filter/FilterBar';
 import Paginator from '../../Paginator/Paginator';
 import Listing from '../Component/Listing';
 import Basket from '../Component/Basket';
@@ -12,6 +12,7 @@ import * as Currency from '../../Util/Currency';
 import * as Action from '../action';
 import * as LINK_TO from '../../config/constant';
 import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
+import * as FilterConstant from '../../Filter/constant';
 
 const  { DOM: { input } } = React;
 
@@ -29,12 +30,12 @@ class SwapCatalogPage extends Component {
         this.fetchCatalog()
     };
 
-    fetchCatalog(page = 1) {
+    fetchCatalog(page = 1, category = '') {
         this.setState({
             fetching: true
         });
 
-        this.props.dispatch(Action.fetchCatalog(page))
+        this.props.dispatch(Action.fetchCatalog(page, category))
             .then((response) => {
                 if (response.payload.status === SUCCESS_RESPONSE_CODE) {
                     this.setState({
@@ -44,8 +45,50 @@ class SwapCatalogPage extends Component {
             })
     };
 
-    filterCatalog(category){
-        console.log(category);
+    searchCatalog(page = 1, searchKey = '') {
+        this.setState({
+            fetching: true,
+        });
+
+        this.props.dispatch(Action.searchCatalog(page, searchKey))
+            .then((response) => {
+                const {status} = response.payload.data;
+
+                if (status === SUCCESS_RESPONSE_CODE) {
+                    this.setState({
+                        fetching: false
+                    });
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
+    filterHandler(category) {
+        const {filter, catalog} = this.props;
+        const page = filter.category !== category ? 1 : catalog.pagination.current_page + 1;
+
+        this.fetchCatalog(page, category);
+    }
+
+    searchHandler(searchKey) {
+        const {filter, catalog} = this.props;
+        const page = filter.searchKey !== searchKey ? 1 : catalog.pagination.current_page + 1;
+
+        this.searchCatalog(page, searchKey);
+    }
+
+    paginationHandler(page) {
+        const {filter} = this.props;
+
+        if (this.state.action === FilterConstant.actions.filter) {
+            this.fetchCatalog(page, filter.category);
+        }
+
+        if (this.state.action === FilterConstant.actions.search) {
+            this.searchCatalog(page, filter.searchKey);
+        }
     }
 
     completeSwap() {
@@ -96,7 +139,7 @@ class SwapCatalogPage extends Component {
             <div id="main-full" className="full">
                 <section id="content" className="default">
                     <SectionHeader title = {header.title} message = {header.message}/>
-                    <Filter filter = {::this.filterCatalog}/>
+                    <FilterBar filter = {::this.filterHandler} search = {::this.searchCatalog} />
                     <div className="catalog-light-content">
                         <form onSubmit = {::this.completeSwap}>
                             <div className="row uniform">
@@ -113,7 +156,7 @@ class SwapCatalogPage extends Component {
                             </div>
                                 <Paginator pagination = {this.props.catalog.pagination}
                                            loading = {this.state.fetching}
-                                           callback = {::this.fetchCatalog} />
+                                           callback = {::this.paginationHandler} />
 
                             {::this.isTransacting()}
                         </form>

@@ -8,26 +8,26 @@ export default class Filter extends Component {
         super(props);
 
         this.state = {
-            category: Constant.category[0],
+            selected: '',
         };
     }
 
     componentWillReceiveProps() {
+        if (this.state.selected === this.props.selected) {
+            return;
+        }
+
         this.setState({
-            category: Constant.category[0]
+            selected: this.props.selected,
         });
     }
 
     isSelected(category) {
-        if (this.state.category === category) {
-            return 'selected disabled';
-        }
-
-        return '';
+        return this.props.selected === category;
     }
 
     filterHandler(category) {
-        if (category === this.state.category) {
+        if (category === this.state.selected) {
             return;
         }
 
@@ -37,7 +37,7 @@ export default class Filter extends Component {
     filter() {
         return Constant.category.map((category) => {
             return <div key={Random.key()}>
-                <a href="#" className={::this.isSelected(category)} onClick={(e) => {
+                <a href="#" className={::this.isSelected(category) ? 'selected disabled' : ''} onClick={(e) => {
                     e.preventDefault();
                     ::this.filterHandler(category);
                 }}>{category}</a>

@@ -7,6 +7,7 @@ import Paginator from '../../Paginator/Paginator';
 import * as Currency from '../../Util/Currency';
 import * as Action from '../../SwapSoucher/action';
 import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
+import * as FilterConstant from '../../Filter/constant';
 
 class GiftCardCatalogPage extends Component {
 
@@ -17,9 +18,6 @@ class GiftCardCatalogPage extends Component {
             catalog: [],
             pagination: {},
             loading: false,
-            category: '',
-            searchKey: '',
-            action: 'filter'
         };
     }
 
@@ -43,7 +41,7 @@ class GiftCardCatalogPage extends Component {
                         pagination: pagination,
                         loading: false,
                         category: category,
-                        action: 'filter'
+                        action: FilterConstant.actions.filter
                     });
                 }
             })
@@ -77,7 +75,7 @@ class GiftCardCatalogPage extends Component {
                         loading: false,
                         category: 'All',
                         searchKey: searchKey,
-                        action: 'search'
+                        action: FilterConstant.actions.search
                     });
                 }
             })
@@ -134,4 +132,10 @@ class GiftCardCatalogPage extends Component {
     }
 }
 
-export default connect()(GiftCardCatalogPage);
+const mapStateToProps = (state) => {
+    return {
+        filter: state.filter
+    }
+};
+
+export default connect(mapStateToProps)(GiftCardCatalogPage);

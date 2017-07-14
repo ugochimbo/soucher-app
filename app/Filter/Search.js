@@ -10,6 +10,16 @@ export default class Search extends Component {
         };
     }
 
+    componentWillReceiveProps() {
+        if (this.state.searchKey === this.props.searchKey) {
+            return;
+        }
+
+        this.setState({
+            searchKey: this.props.searchKey,
+        });
+    }
+
     search() {
         if (!this.state.searchKey.trim().length) {
             return;
@@ -31,7 +41,6 @@ export default class Search extends Component {
 
         return this.state.searchKey;
     }
-
 
     render() {
         return (
