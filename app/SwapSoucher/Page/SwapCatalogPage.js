@@ -5,7 +5,7 @@ import SectionHeader, {SwapCatalogPageHeader as header} from '../../Common/Secti
 import {validator as validate} from '../Validator';
 import Transacting from '../../Common/Transacting';
 import FilterBar from '../../Filter/FilterBar';
-import Paginator from '../../Paginator/Paginator';
+import Paginator from '../../Filter/Paginator';
 import Listing from '../Component/Listing';
 import Basket from '../Component/Basket';
 import * as Currency from '../../Util/Currency';

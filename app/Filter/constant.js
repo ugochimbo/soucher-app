@@ -13,15 +13,22 @@ export const actions = {
     filter: 'filter'
 };
 
-export const updateFilterAction = 'UpdateFilter';
+export const UpdateFilterAction = 'UpdateFilterAction';
+export const PaginationAction = 'PaginationAction';
 
 export const updateFilter = (category = '', searchKey = '', action = actions.filter) => {
     return {
-        type: updateFilterAction,
+        type: UpdateFilterAction,
         payload: {
             category: category,
             searchKey: searchKey,
             action: action
         }
     }
+};
+
+export const paginate = () => {
+    return {
+        type: 'PaginationAction'
+    };
 };

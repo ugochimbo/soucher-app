@@ -12,13 +12,13 @@ export default class Filter extends Component {
         };
     }
 
-    componentWillReceiveProps() {
-        if (this.state.selected === this.props.selected) {
+    componentWillReceiveProps(props) {
+        if (this.state.selected === props.selected) {
             return;
         }
 
         this.setState({
-            selected: this.props.selected,
+            selected: props.selected,
         });
     }
 
