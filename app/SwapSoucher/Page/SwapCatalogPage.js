@@ -12,7 +12,6 @@ import * as Currency from '../../Util/Currency';
 import * as Action from '../action';
 import * as LINK_TO from '../../config/constant';
 import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
-import * as FilterConstant from '../../Filter/constant';
 
 const  { DOM: { input } } = React;
 
