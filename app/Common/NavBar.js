@@ -21,7 +21,7 @@ export default class NavBar extends Component{
                         <span className="icon fa-group" /> About
                     </Link>
                     <Link to={LINK_TO.CONTACT_US_ROUTE} className="button">
-                        <span className="icon fa-phone-square" /> Contact
+                        <span className="icon fa-phone-square" /> Contact Us
                     </Link>
                 </nav>
             </header>

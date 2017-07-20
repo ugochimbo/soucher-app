@@ -12,26 +12,26 @@ export const fetchSoucher = (values) => {
     }
 };
 
-export const fetchCatalog = (page = 1, category = '') => {
+export const fetchCatalog = (category = '', page = 1) => {
     category = category === 'All' ? '' : category;
 
     return {
         'type': [Action.Fetch_Catalog_Action],
         'payload': {
             request: {
-                url: `/voucher?page=${page}&category=${category}`,
+                url: `/voucher?category=${category}&page=${page}`,
                 method: 'GET',
             }
         }
     }
 };
 
-export const searchCatalog = (page = 1, searchKey = '') => {
+export const searchCatalog = (searchKey = '', page = 1) => {
     return {
         'type': [Action.Search_Catalog_Action],
         'payload': {
             request: {
-                url: `/voucher/search?page=${page}&search=${searchKey}`,
+                url: `/voucher/search?search=${searchKey}&page=${page}`,
                 method: 'GET',
             }
         }

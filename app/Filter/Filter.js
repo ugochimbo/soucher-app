@@ -23,7 +23,7 @@ export default class Filter extends Component {
     }
 
     isSelected(category) {
-        return this.props.selected === category;
+        return this.state.selected === category;
     }
 
     filterHandler(category) {

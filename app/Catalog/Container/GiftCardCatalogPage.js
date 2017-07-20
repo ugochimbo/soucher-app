@@ -24,9 +24,9 @@ class GiftCardCatalogPage extends Component {
         this.fetchCatalog();
     };
 
-    handleApiResponse(response) {
+    handleApiResponse(response, page) {
         const {gift_cards, pagination, status} = response.payload.data;
-        const catalog = this.props.filter.shouldReset ? gift_cards : [...this.state.catalog, ...gift_cards];
+        const catalog = page > 1 ? [...this.state.catalog, ...gift_cards] : gift_cards;
 
         if (status === SUCCESS_RESPONSE_CODE) {
             this.setState({
@@ -37,23 +37,19 @@ class GiftCardCatalogPage extends Component {
         }
     }
 
-    nextPage() {
-        return this.props.filter.shouldReset ? 1 : this.state.pagination.current_page + 1;
-    }
-
-    fetchCatalog(category = '') {
+    fetchCatalog(category = '', page = 1) {
         this.setState({loading: true});
 
-        this.props.dispatch(Action.fetchCatalog(::this.nextPage(), category))
-            .then((response) => {::this.handleApiResponse(response)})
+        this.props.dispatch(Action.fetchCatalog(category, page))
+            .then((response) => {::this.handleApiResponse(response, page)})
             .catch((error) => {console.log(error)});
     }
 
-    searchCatalog(searchKey = '') {
+    searchCatalog(searchKey = '', page = 1) {
         this.setState({loading: true});
 
-        this.props.dispatch(Action.searchCatalog(::this.nextPage(), searchKey))
-            .then((response) => {::this.handleApiResponse(response)})
+        this.props.dispatch(Action.searchCatalog(searchKey, page))
+            .then((response) => {::this.handleApiResponse(response, page)})
             .catch((error) => {console.log(error)});
     }
 
@@ -62,7 +58,7 @@ class GiftCardCatalogPage extends Component {
             <div id="main-full" className="full">
                 <section id="content" className="default">
                     <SectionHeader title = {header.title} message = {header.message}/>
-                    <FilterBar filterHandler = {::this.fetchCatalog} searchHandler = {::this.searchCatalog}/>
+                    <FilterBar filterHandler = {::this.fetchCatalog} searchHandler = {::this.searchCatalog} />
                     <div className="catalog-light-content">
                         <Listing catalog = {this.state.catalog} currency = {Currency.htmlEntityFor('EUR')}/>
                         <Paginator pagination = {this.state.pagination}

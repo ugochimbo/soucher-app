@@ -5,22 +5,26 @@ import Waypoint from 'react-waypoint';
 import { ChasingDots } from 'better-react-spinkit';
 
 export class Paginator extends Component {
+    constructor(props) {
+        super(props);
+    }
 
     nextPage() {
-        const {filter, pagination, filterHandler, searchHandler, dispatch} = this.props;
-
-        dispatch(Constant.paginate());
+        const {filter, pagination, filterHandler, searchHandler} = this.props;
 
         if (pagination.next_page_url === null) {
             return;
         }
 
+        const nextPage = pagination.current_page + 1;
+
+
         if (filter.action === Constant.actions.filter) {
-            filterHandler(filter.category);
+            filterHandler(filter.category, nextPage);
         }
 
-        if (filter.action === Constant.actions.search) {
-            searchHandler(filter.searchKey);
+        if (this.props.filter.action === Constant.actions.search) {
+            searchHandler(filter.searchKey, nextPage);
         }
     }
 
@@ -31,7 +35,7 @@ export class Paginator extends Component {
             </div>
         }
 
-        return <Waypoint onEnter={::this.nextPage} topOffset = {'70%'} />
+        return <Waypoint onEnter={::this.nextPage} topOffset = {'60%'} />
     }
 
     render () {

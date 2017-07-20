@@ -14,7 +14,6 @@ export const actions = {
 };
 
 export const UpdateFilterAction = 'UpdateFilterAction';
-export const PaginationAction = 'PaginationAction';
 
 export const updateFilter = (category = '', searchKey = '', action = actions.filter) => {
     return {
@@ -25,10 +24,4 @@ export const updateFilter = (category = '', searchKey = '', action = actions.fil
             action: action
         }
     }
-};
-
-export const paginate = () => {
-    return {
-        type: 'PaginationAction'
-    };
 };
