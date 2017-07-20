@@ -27,68 +27,33 @@ class SwapCatalogPage extends Component {
     }
 
     componentWillMount() {
-        this.fetchCatalog()
+        this.fetchCatalog();
     };
 
-    fetchCatalog(page = 1, category = '') {
-        this.setState({
-            fetching: true
-        });
+    handleApiResponse(response) {
+        const {status} = response.payload.data;
 
-        this.props.dispatch(Action.fetchCatalog(page, category))
-            .then((response) => {
-                if (response.payload.status === SUCCESS_RESPONSE_CODE) {
-                    this.setState({
-                        fetching: false
-                    });
-                }
-            })
-    };
-
-    searchCatalog(page = 1, searchKey = '') {
-        this.setState({
-            fetching: true,
-        });
-
-        this.props.dispatch(Action.searchCatalog(page, searchKey))
-            .then((response) => {
-                const {status} = response.payload.data;
-
-                if (status === SUCCESS_RESPONSE_CODE) {
-                    this.setState({
-                        fetching: false
-                    });
-                }
-            })
-            .catch((error) => {
-                console.log(error);
+        if (status === SUCCESS_RESPONSE_CODE) {
+            this.setState({
+                fetching: false,
             });
-    }
-
-    filterHandler(category) {
-        const {filter, catalog} = this.props;
-        const page = filter.category !== category ? 1 : catalog.pagination.current_page + 1;
-
-        this.fetchCatalog(page, category);
-    }
-
-    searchHandler(searchKey) {
-        const {filter, catalog} = this.props;
-        const page = filter.searchKey !== searchKey ? 1 : catalog.pagination.current_page + 1;
-
-        this.searchCatalog(page, searchKey);
-    }
-
-    paginationHandler(page) {
-        const {filter} = this.props;
-
-        if (this.state.action === FilterConstant.actions.filter) {
-            this.fetchCatalog(page, filter.category);
         }
+    }
 
-        if (this.state.action === FilterConstant.actions.search) {
-            this.searchCatalog(page, filter.searchKey);
-        }
+    fetchCatalog(category = '', page = 1) {
+        this.setState({fetching: true});
+
+        this.props.dispatch(Action.fetchCatalog(category, page))
+            .then((response) => {::this.handleApiResponse(response)})
+            .catch((error) => {console.log(error)});
+    }
+
+    searchCatalog(searchKey = '', page = 1) {
+        this.setState({fetching: true});
+
+        this.props.dispatch(Action.searchCatalog(searchKey, page))
+            .then((response) => {::this.handleApiResponse(response, page)})
+            .catch((error) => {console.log(error)});
     }
 
     completeSwap() {
@@ -139,7 +104,7 @@ class SwapCatalogPage extends Component {
             <div id="main-full" className="full">
                 <section id="content" className="default">
                     <SectionHeader title = {header.title} message = {header.message}/>
-                    <FilterBar filter = {::this.filterHandler} search = {::this.searchCatalog} />
+                    <FilterBar filterHandler = {::this.fetchCatalog} searchHandler = {::this.searchCatalog} />
                     <div className="catalog-light-content">
                         <form onSubmit = {::this.completeSwap}>
                             <div className="row uniform">
@@ -156,7 +121,8 @@ class SwapCatalogPage extends Component {
                             </div>
                                 <Paginator pagination = {this.props.catalog.pagination}
                                            loading = {this.state.fetching}
-                                           callback = {::this.paginationHandler} />
+                                           filterHandler = {::this.fetchCatalog}
+                                           searchHandler = {::this.searchCatalog} />
 
                             {::this.isTransacting()}
                         </form>

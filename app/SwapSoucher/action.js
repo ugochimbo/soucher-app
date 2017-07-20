@@ -28,7 +28,7 @@ export const fetchCatalog = (category = '', page = 1) => {
 
 export const searchCatalog = (searchKey = '', page = 1) => {
     return {
-        'type': [Action.Search_Catalog_Action],
+        'type': [Action.Fetch_Catalog_Action],
         'payload': {
             request: {
                 url: `/voucher/search?search=${searchKey}&page=${page}`,

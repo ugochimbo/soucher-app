@@ -19,6 +19,14 @@ export function addSoucher(soucher) {
     };
 }
 
+const updateCatalog = (catalog, response) => {
+    if (catalog.pagination.current_page > 1) {
+        return [...catalog.gift_cards, ...response.gift_cards];
+    }
+
+    return response.gift_cards;
+};
+
 export function addCatalog(catalog, soucher, response) {
     if (response.status !== Action.SUCCESS_RESPONSE_CODE) {
         return {
@@ -29,7 +37,7 @@ export function addCatalog(catalog, soucher, response) {
 
     return {
         ...catalog,
-        'gift_cards': [...catalog.gift_cards, ...response.gift_cards],
+        'gift_cards': updateCatalog(catalog, response),
         'pagination': response.pagination,
         'max_amount': soucher.amount,
         'disabled': soucher.amount > 0 ? '': 'disabled'
