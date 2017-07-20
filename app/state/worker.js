@@ -19,8 +19,8 @@ export function addSoucher(soucher) {
     };
 }
 
-const updateCatalog = (catalog, response) => {
-    if (catalog.pagination.current_page > 1) {
+let updateCatalog = (catalog, response) => {
+    if (response.pagination.current_page > 1) {
         return [...catalog.gift_cards, ...response.gift_cards];
     }
 
@@ -82,14 +82,6 @@ export function updateCatalogDisability(catalog, basket, soucher, action) {
         'max_amount': basket.balance + action.payload.amount
     };
 
-}
-
-export function updateSearchedCatalog(catalog, gift_cards, filter, searchKey) {
-    if (searchKey === filter.searchKey) {
-        return [...catalog, ...gift_cards];
-    }
-
-    return gift_cards;
 }
 
 export function addBasketGiftItems(basket, giftCard) {
