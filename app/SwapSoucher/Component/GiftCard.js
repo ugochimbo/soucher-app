@@ -1,70 +1,24 @@
 import React, {Component} from 'react';
-import * as Random from '../../Util/Random';
+import GiftCardImage from "./GiftCardImage";
+import GiftCardPrice from "./GiftCardPrice";
 
 export default class GiftCard extends Component {
      render() {
 
-         const {gift_card, currency, addToBasket, disabled, max_denomination} = this.props;
+        const {gift_card, currency, addToBasket, disabled, max_denomination} = this.props;
 
-         let denomination = () => {
-             let denominations = gift_card.denomination
-                 .filter((denomination) => {
-                     return denomination <= max_denomination
-                 })
-                 .map((denomination) => {
-                     return <div key={Random.key()} onClick={() => addToBasket(
-                         {
-                             id: gift_card.id,
-                             name: gift_card.name,
-                             amount: denomination
-                         }
-                     )} className = {disabled}>
-                         {denomination}{currency}
-                     </div>;
-                 });
 
-             if (!denominations.length) {
-                 return <div className = {disabled + ' no-price'} key={Random.key()} />;
-             }
-
-             return denominations;
-         };
-
-         let voucherImage = () => {
-             return  (<div className="img">
-                        <img src = {`/asset/image/voucher/${gift_card.img_name}`}  />
-                    </div>);
-         };
-
-         let shouldDisable = () => {
-             return (disabled === 'disabled' || !gift_card.custom_prize);
-         };
-
-         let customPlaceholder = () => {
-             let text = 'Enter Custom Amount';
-
-             if (!gift_card.custom_prize) {
-                 text = 'No Custom Amounts';
-             }
-
-             if (disabled) {
-                 text = 'Insufficient Balance'
-             }
-
-             return text;
-         };
 
         return (
             <div className="item">
-                {voucherImage()}
-                <div className="amount">
-                    <div className="fixed">
-                        {denomination()}
-                    </div>
-                    <div className="custom">
-                        <input type="text" placeholder={customPlaceholder()} disabled={shouldDisable() ? 'disabled' : ''} />
-                    </div>
-                </div>
+                <GiftCardImage name = {gift_card.img_name}/>
+                <GiftCardPrice
+                    giftCard = {gift_card}
+                    currency = {currency}
+                    addToBasket = {addToBasket}
+                    disabled = {disabled}
+                    max_denomination = {max_denomination}
+                />
             </div>
         )
     }

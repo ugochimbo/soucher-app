@@ -1,0 +1,39 @@
+import React, {Component} from 'react';
+import * as Random from '../../Util/Random';
+
+export default class FixedPrice extends Component {
+     render() {
+
+         const {giftCard, currency, addToBasket, disabled, max_denomination} = this.props;
+
+         let denomination = () => {
+             let denominations = giftCard.denomination
+                 .filter((denomination) => {
+                     return denomination <= max_denomination
+                 })
+                 .map((denomination) => {
+                     return <div key={Random.key()} onClick={() => addToBasket(
+                         {
+                             id: giftCard.id,
+                             name: giftCard.name,
+                             amount: denomination
+                         }
+                     )} className = {disabled}>
+                         {denomination}{currency}
+                     </div>;
+                 });
+
+             if (!denominations.length) {
+                 return <div className = {disabled + ' no-price'} key={Random.key()} />;
+             }
+
+             return denominations;
+         };
+
+        return (
+            <div className="fixed">
+                {denomination()}
+            </div>
+        )
+    }
+}
