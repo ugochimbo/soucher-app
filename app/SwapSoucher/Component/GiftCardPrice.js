@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import FixedPrice from "./FixedPrice";
+import FixedAmount from "./FixedAmount";
 import CustomAmount from "./CustomAmount";
 
 export default class GiftCardPrice extends Component {
@@ -9,18 +9,18 @@ export default class GiftCardPrice extends Component {
 
         return (
             <div className="amount">
-                <FixedPrice
+                <FixedAmount
                     giftCard = {giftCard}
                     currency = {currency}
                     addToBasket = {addToBasket}
                     disabled = {disabled}
-                    max_denomination = {max_denomination}
+                    maximumAmount = {max_denomination}
                 />
-
                 <CustomAmount
                     giftCard = {giftCard}
                     currency = {currency}
-                    max_denomination = {max_denomination}
+                    addToBasket = {addToBasket}
+                    maximumAmount = {max_denomination}
                 />
             </div>
         )

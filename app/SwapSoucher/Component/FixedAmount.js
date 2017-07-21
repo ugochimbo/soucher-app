@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import * as Random from '../../Util/Random';
 
-export default class FixedPrice extends Component {
+export default class FixedAmount extends Component {
      render() {
 
-         const {giftCard, currency, addToBasket, disabled, max_denomination} = this.props;
+         const {giftCard, currency, addToBasket, disabled, maximumAmount} = this.props;
 
          let denomination = () => {
              let denominations = giftCard.denomination
                  .filter((denomination) => {
-                     return denomination <= max_denomination
+                     return denomination <= maximumAmount
                  })
                  .map((denomination) => {
                      return <div key={Random.key()} onClick={() => addToBasket(

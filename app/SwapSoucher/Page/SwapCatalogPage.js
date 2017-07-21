@@ -158,6 +158,8 @@ const mapDispatchToProps = dispatch => ({
         dispatch(Action.addBasketItem(giftCard));
     },
     removeBasketItem : (basketItem) => {
+        console.log(basketItem);
+
         dispatch(Action.removeBasketItem(basketItem));
     }
 });
