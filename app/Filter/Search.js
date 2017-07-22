@@ -28,27 +28,35 @@ export default class Search extends Component {
         this.props.callback(this.state.searchKey);
     }
 
-    handleKeyChange(searchField) {
+    handleKeyChange(event) {
         this.setState({
-            searchKey: searchField.target.value
+            searchKey: event.target.value
         });
     }
 
     searchPlaceHolder() {
-        if(this.state.searchKey === '') {
+        if (this.state.searchKey === '') {
             return 'Search';
         }
 
         return this.state.searchKey;
     }
 
+    handleSubmit(event) {
+        if (event.key.toLowerCase() !== 'enter') {
+            return;
+        }
+
+        this.search();
+    };
+
     render() {
         return (
             <div className="4u 12u$(small)">
                 <div className="9u 12u$(small)" style={{'float': 'left'}}>
                     <input type="text" placeholder={::this.searchPlaceHolder()}
-                           value={this.state.searchKey}
                            onChange={this.handleKeyChange.bind(this)}
+                           onKeyPress={this.handleSubmit.bind(this)}
                     />
                 </div>
                 <div className="3u 12u$(small)" style={{'float': 'left'}}>
