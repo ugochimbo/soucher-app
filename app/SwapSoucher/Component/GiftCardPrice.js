@@ -21,6 +21,7 @@ export default class GiftCardPrice extends Component {
                     currency = {currency}
                     addToBasket = {addToBasket}
                     maximumAmount = {max_denomination}
+                    disabled = {disabled}
                 />
             </div>
         )

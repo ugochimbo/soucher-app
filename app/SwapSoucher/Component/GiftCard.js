@@ -7,8 +7,6 @@ export default class GiftCard extends Component {
 
         const {gift_card, currency, addToBasket, disabled, max_denomination} = this.props;
 
-
-
         return (
             <div className="item">
                 <GiftCardImage name = {gift_card.img_name}/>

@@ -35,7 +35,7 @@ export default class CustomAmount extends Component {
         const {maximumAmount} = this.props;
         const amount = event.target.value;
 
-        if (amount > maximumAmount) {
+        if (amount > maximumAmount || amount <= 0) {
             return;
         }
 
