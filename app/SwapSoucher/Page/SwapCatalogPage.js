@@ -39,7 +39,10 @@ class SwapCatalogPage extends Component {
         }
     }
 
-    fetchCatalog(category = '', page = 1) {
+    fetchCatalog(
+        category = this.props.filter.category,
+        page = this.props.filter.page
+    ) {
         this.setState({fetching: true});
 
         this.props.dispatch(Action.fetchCatalog(category, page))
@@ -148,6 +151,7 @@ const mapStateToProps = (state) => {
         soucher: state.swap.soucher,
         catalog: state.swap.catalog,
         basket: state.swap.basket,
+        filter: state.filter,
         isComplete: state.swap.isComplete,
         transacting: state.global.transacting,
     }

@@ -15,7 +15,7 @@ export default class NavBar extends Component{
                         <span className="icon fa-book" /> Catalog
                     </Link>
                     <Link to={LINK_TO.SWAP_SOUCHER_ROUTE} className="button">
-                        <span className="icon fa-keyboard-o" /> Swap
+                        <span className="icon fa-money" /> Redeem
                     </Link>
                     <Link to={LINK_TO.ABOUT_US_ROUTE} className="button">
                         <span className="icon fa-group" /> About

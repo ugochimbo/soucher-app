@@ -37,7 +37,10 @@ class GiftCardCatalogPage extends Component {
         }
     }
 
-    fetchCatalog(category = '', page = 1) {
+    fetchCatalog(
+        category = this.props.filter.category,
+        page = this.props.filter.page
+    ) {
         this.setState({loading: true});
 
         this.props.dispatch(Action.fetchCatalog(category, page))
