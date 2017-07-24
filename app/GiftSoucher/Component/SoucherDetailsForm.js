@@ -5,6 +5,7 @@ import Transacting from '../../Common/Transacting';
 import SoucherValue from '../Component/SoucherValue';
 import Payment from '../Component/Payment';
 import {isSupportedCurrencies} from '../../Util/Currency';
+import Soucher from './Soucher';
 
 export default class SoucherDetailsForm extends Component{
      render() {
@@ -46,8 +47,8 @@ export default class SoucherDetailsForm extends Component{
             <form onSubmit={onSubmit()}>
                 <div className="light-content">
                     <div className="row">
-                        <div className="6u 12u$(small)">
-                            <img src="/asset/image/card-template.png" width="500px"/>
+                        <div className="6u 12u$(small)" style={{'width' : '500px'}}>
+                            <Soucher />
 
                             <div className="row uniform" style={{'marginTop': '10px'}}>
                                 <div className="12u$ actions">
