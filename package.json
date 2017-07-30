@@ -9,8 +9,9 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js --hot --inline --progress --display-error-details --devtool eval",
-    "production": "webpack -p"
+    "start": "webpack-dev-server --config webpack.config.js --colors --hot --inline --progress --display-error-details --devtool eval",
+    "production": "webpack -p",
+    "build": "webpack --colors"
   },
   "author": "Ugochukwu Ejikeme",
   "license": "MIT",
@@ -51,6 +52,7 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.22.0",
     "html-webpack-plugin": "^2.7.1",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^1.12.11",
     "webpack-dev-server": "^1.14.1"
   }

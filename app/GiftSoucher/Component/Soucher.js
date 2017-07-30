@@ -20,6 +20,9 @@ class Back extends Component {
             <div className='card-side side-back'>
                 <div className='container-fluid'>
                     <h1>A note for you:</h1>
+                    <p>
+                        Happy Birthday
+                    </p>
                 </div>
             </div>
         )

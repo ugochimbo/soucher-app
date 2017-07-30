@@ -4,7 +4,15 @@ import axiosMiddleware from 'redux-axios-middleware';
 import reducers from './reducer';
 
 const client = axios.create({
-    baseURL:'http://soucher.dev/',
+    baseURL:'http://api.soucher.com/',
+    auth: {
+        username: 'staging',
+        password: 'paco'
+    },
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+    },
     responseType: 'json'
 });
 
