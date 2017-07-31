@@ -44,11 +44,11 @@ export function addCatalog(catalog, soucher, response) {
     };
 }
 
-export function makeBasket(soucher) {
+export function makeBasket(basket, soucher) {
     return {
         value: soucher.amount,
-        balance: soucher.amount,
-        items: [],
+        balance: basket.balance || soucher.amount,
+        items: basket.items || [],
     }
 }
 
