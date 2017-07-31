@@ -18,7 +18,7 @@ module.exports = {
     ],
     output: {
         path: __dirname + '/dist',
-        filename: "/" + Date.now() + ".js"
+        filename: 'index_bundle.js?v=' + Date.now()
     },
     module: {
         loaders: [
