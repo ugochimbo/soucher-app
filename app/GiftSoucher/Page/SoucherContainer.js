@@ -4,11 +4,11 @@ import BackButton from "../Component/BackButton";
 
 export default class SoucherContainer extends Component {
     render() {
-        const {backButtonOnClick} = this.props;
+        const {formState, backButtonOnClick, cardShouldFlip} = this.props;
 
         return(
             <div className="6u 12u$(small)" style={{'width' : '500px'}}>
-                <Soucher />
+                <Soucher cardShouldFlip = {cardShouldFlip} formState = {formState} />
                 <BackButton onClick = {backButtonOnClick}/>
             </div>
         )

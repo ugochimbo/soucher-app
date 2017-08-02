@@ -8,7 +8,7 @@ import {isSupportedCurrencies} from '../../Util/Currency';
 
 export default class PaymentContainer extends Component {
     render() {
-        const {onStripeSuccess, onPalPaySuccess, soucher, contact} = this.props;
+        const {onStripeSuccess, onPalPaySuccess, soucher, contact, flipCard} = this.props;
         const MINIMUM_AMOUNT = 1;
 
         let isValidSoucherAmount = () => {
@@ -35,7 +35,13 @@ export default class PaymentContainer extends Component {
 
                 <div className="12u$" style={{'marginBottom': '10px'}}>
                     <div className="12u">
-                        <Field name="soucherMessage" component = {FormField.TextArea} label = 'Message (Optional)' rows = '3'/>
+                        <Field name="soucherMessage"
+                               component = {FormField.TextArea}
+                               label = 'Message (Optional)'
+                               rows = '3'
+                               onFocus = {() => flipCard(true)}
+                               onBlur = {() => flipCard(false)}
+                        />
                     </div>
                 </div>
 

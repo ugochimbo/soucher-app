@@ -26,7 +26,7 @@ export default class Home extends Component{
                         <h2>Philosophy</h2>
                     </header>
                     <div className="content" style={{'fontSize' : 'medium'}}>
-                        <p>Gift cards has proven to be one of the top gift options. We often opt for a generic,
+                        <p>Gift cards have proven to be one of the top gift options. We often opt for a generic,
                             big retail store gift card since we do not know what our loved one really wants.
                             Whilst this is a great option, we seek to reverse the decision by letting our loved ones decide,
                             making you worry less. </p>

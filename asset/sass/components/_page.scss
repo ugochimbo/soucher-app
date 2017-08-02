@@ -196,7 +196,17 @@
     transform: rotateY(180deg);
   }
 
-  .card-container:hover > .card-body > .side-front {
+  .card-container:hover > .card-body > .side-front{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in, visibility .75s linear;
+  }
+  
+  .flip .card-body{
+    transform: rotateY(180deg);
+  }
+
+  .flip > .card-body > .side-front {
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s ease-in, visibility .75s linear;
