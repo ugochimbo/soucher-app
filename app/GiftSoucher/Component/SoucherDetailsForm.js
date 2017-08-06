@@ -13,9 +13,6 @@ export default class SoucherDetailsForm extends Component{
     }
 
     flipCard (shouldFlip) {
-
-        console.log('In flip card  ===> ' + shouldFlip);
-
         if (this.state.flipCard === shouldFlip) {
             return;
         }

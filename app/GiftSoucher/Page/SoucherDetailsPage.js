@@ -37,12 +37,11 @@ const SoucherDetailsPage = (props) => {
         };
 
         dispatch(Action.createTransaction(transaction)).then((data) => {
-            if (data.payload.status !== SUCCESS_RESPONSE_CODE) {
+            if (data.payload.data.status !== SUCCESS_RESPONSE_CODE) {
                 history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
             }
 
             history.push(LINK_TO.GIFT_SOUCHER_SUCCESS_ROUTE);
-
         }).catch(() => {
             history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
         });
@@ -75,7 +74,6 @@ const SoucherDetails = reduxForm({
     forceUnregisterOnUnmount: true,
     validate
 })(SoucherDetailsPage);
-
 
 const mapStateToProps = (state) => {
     return {
