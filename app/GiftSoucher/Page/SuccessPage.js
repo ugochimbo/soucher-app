@@ -9,7 +9,9 @@ import * as Action from '../action';
 class SuccessPage extends Component {
 
     componentWillMount() {
+        console.log(this.props.transacting);
         if (!this.props.transacting) {
+            console.log(this.props.transacting);
             this.props.history.push(LINK_TO.HOME);
         }
     }

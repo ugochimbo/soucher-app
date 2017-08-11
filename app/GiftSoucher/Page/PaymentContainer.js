@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import SoucherValue from "../Component/SoucherValue";
-import { Field } from 'redux-form';
 import Payment from "../Component/Payment";
-import * as FormField from "../../Common/FormField";
 import {isSupportedCurrencies} from '../../Util/Currency';
-
+import SoucherMessage from "../Component/SoucherMessage";
+import NameOnCard from "../Component/NameOnCard";
 
 export default class PaymentContainer extends Component {
     render() {
@@ -27,24 +26,9 @@ export default class PaymentContainer extends Component {
             <div className="6u 12u$(small)">
                 <h3 className="align-center">Soucher Details</h3>
 
-                <div className="12u$" style={{'marginBottom': '10px'}}>
-                    <Field name="nameOnCard" type = 'text' component = {FormField.Input} label = 'Name on card (optional)'/>
-                </div>
-
-                <SoucherValue currencies = {['EUR', 'GBP', 'USD']}/>
-
-                <div className="12u$" style={{'marginBottom': '10px'}}>
-                    <div className="12u">
-                        <Field name="soucherMessage"
-                               component = {FormField.TextArea}
-                               label = 'Message (Optional)'
-                               rows = '3'
-                               onFocus = {() => flipCard(true)}
-                               onBlur = {() => flipCard(false)}
-                        />
-                    </div>
-                </div>
-
+                <NameOnCard />
+                <SoucherValue currencies = {['EUR', 'GBP', 'USD']} />
+                <SoucherMessage flipCard = {flipCard} />
                 <Payment
                     onStripeSuccess = {onStripeSuccess}
                     onPalPaySuccess = {onPalPaySuccess}

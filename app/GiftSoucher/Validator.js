@@ -7,10 +7,14 @@ const FIELD_BUYER_EMAIL = 'buyerEmail';
 const FIELD_RECIPIENT_NAME = 'recipientName';
 const FIELD_RECIPIENT_EMAIL = 'recipientEmail';
 const FIELD_RECIPIENT_PHONE = 'recipientPhone';
+const FIELD_NAME_ON_CARD = 'nameOnCard';
 const FIELD_SOUCHER_AMOUNT = 'soucherAmount';
 const FIELD_SOUCHER_CURRENCY = 'soucherCurrency';
+const FIELD_SOUCHER_MESSAGE = 'soucherMessage';
 
 const ERROR_FIELD_REQUIRED = 'Required';
+const ERROR_NAME_ON_CARD = 'Maximum of 12 Characters';
+const ERROR_SOUCHER_MESSAGE = 'Maximum of 40 Characters';
 const ERROR_INVALID_EMAIL = 'Invalid Email Address';
 const ERROR_INVALID_PHONE_NUMBER = 'Invalid Phone Number';
 const ERROR_MINIMUM_SOUCHER_VALUE = 'Minimum of 1';
@@ -79,11 +83,6 @@ function validateContactDetails(values) {
     validateRecipientDetails(values);
 }
 
-function validateSoucherDetails(values) {
-    validateAmount(values);
-    validateCurrency(values);
-}
-
 let validateAmount = values => {
     let soucherAmount = parseFloat(values[FIELD_SOUCHER_AMOUNT]);
     if (!soucherAmount > 0) {
@@ -102,9 +101,14 @@ let validateCurrency = values => {
     }
 };
 
+function validateSoucherDetails(values) {
+    validateAmount(values);
+    validateCurrency(values);
+}
 
 export const validator = values => {
     validateContactDetails(values);
     validateSoucherDetails(values);
+    
     return errors;
 };

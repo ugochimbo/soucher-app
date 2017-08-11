@@ -1,15 +1,15 @@
 import React from 'react';
 
-export const Input = ({ input, id, label, type, min, step, meta: { touched, error } }) => (
+export const Input = ({ input, id, label, type, min, maxLength, step, meta: { touched, error } }) => (
     <div>
-        <input {...input} id={id} placeholder={label} type={type} min={min} step={step} />
+        <input {...input} id={id} placeholder={label} type={type} min={min} step={step} maxLength={maxLength} />
         {touched && error && <span style={{'marginLeft' : '5px'}} className="form-error">{error}</span>}
     </div>
 );
 
-export const TextArea = ({ input, id, label, rows, meta: { touched, error } }) => (
+export const TextArea = ({ input, id, label, rows, maxLength, meta: { touched, error } }) => (
     <div>
-        <textarea {...input} id={id} placeholder={label} rows={rows} />
+        <textarea {...input} id={id} placeholder={label} rows={rows} maxLength = {maxLength}/>
         {touched && error && <span className="form-error">{error}</span>}
     </div>
 );
