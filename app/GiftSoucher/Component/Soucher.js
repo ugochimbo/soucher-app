@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import PreforatedImage from "./PreforatedImage";
+import MessageImage from "./MessageImage";
 
 class Front extends Component {
     render() {
@@ -6,7 +8,7 @@ class Front extends Component {
             <div className='card-side side-front'>
                 <div className='container-fluid'>
                     <div className='row'>
-                        <img src="/asset/image/card-template.png" width="100%"/>
+                        <PreforatedImage formState = {this.props.formState.values} />
                     </div>
                 </div>
             </div>
@@ -16,15 +18,12 @@ class Front extends Component {
 
 class Back extends Component {
     render() {
-        const {message} = this.props;
+        const {formState} = this.props;
 
         return(
             <div className='card-side side-back'>
                 <div className='container-fluid'>
-                    <h1>A note for you:</h1>
-                    <p>
-                        {message}
-                    </p>
+                        <MessageImage formState = {formState.values} />
                 </div>
             </div>
         )
@@ -40,8 +39,8 @@ export default class Soucher extends Component {
         return(
             <div className={'card-container ' + flip}>
                 <div className='card-body'>
-                    <Front />
-                    <Back message = {formState.values.soucherMessage}/>
+                    <Front formState = {formState} />
+                    <Back formState = {formState} />
                 </div>
             </div>
         )

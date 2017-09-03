@@ -45,7 +45,6 @@ export default class SoucherDetailsForm extends Component{
 
         return (
             <form onSubmit={onSubmit()}>
-                {console.log('In render  ===> ' + this.state.flipCard)}
                 <div className="light-content">
                     <div className="row">
                         <SoucherContainer formState = {formState} cardShouldFlip = {this.state.flipCard} backButtonOnClick = {previousPage}/>
