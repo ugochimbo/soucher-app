@@ -10,7 +10,7 @@ export const format = amount => {
 
     if (decIndex > 0) {
         whole = amount.substr(0, decIndex);
-        fraction = amount.substr(decIndex);
+        fraction = amount.substr(decIndex, 3);
     } else {
         whole = amount + '.00';
     }

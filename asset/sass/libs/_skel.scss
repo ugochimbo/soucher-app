@@ -330,7 +330,7 @@
 	}
 
 	/// Wraps @content in vendorized keyframe blocks.
-	/// @param {string} $name Name.
+	/// @param {string} $name Card.
 	@mixin keyframes($name) {
 
 		@-moz-keyframes #{$name} { @content; }

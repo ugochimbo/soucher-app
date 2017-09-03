@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import * as Name from "../../Util/Name";
+import * as Card from "../../Util/Card";
 
 export default class MessageImage extends Component {
     render() {
         const {formState} = this.props;
 
-        const buyer = formState.nameOnCard || Name.buyer(formState.buyerName);
-        const message = formState.soucherMessage || '';
+        const buyer = Card.name(formState.nameOnCard || formState.buyerName);
+        const message = Card.message(formState.soucherMessage || '');
 
         return (
             <svg width="460" height="263" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +37,7 @@ export default class MessageImage extends Component {
                     <rect stroke="#000" id="svg_283" height="107.999673" width="319.999036" y="112.500057" x="73.500472"
                           fillOpacity="null" strokeOpacity="null" strokeWidth="0" fill="#bcc3c9"/>
                     <text fontWeight="bold" stroke="#000" xmlSpace="preserve" textAnchor="start" fontFamily="Helvetica, Arial, sans-serif" fontSize="14" id="svg_284" y="95.500109" x="170.500181" strokeOpacity="null" strokeWidth="0" fill="#071521">A NOTE FOR YOU</text>
-                    <text style={{'cursor' : 'move'}} stroke="#000" transform="matrix(0.9705883264541626,0,0,0.937256396456533,2.5146985369556205,9.063039656941726) " xmlSpace="preserve" textAnchor="start" fontFamily="Helvetica, Arial, sans-serif" fontSize="14" id="svg_285" y="135.60991" x="220.379205" fillOpacity="null" strokeOpacity="null" strokeWidth="0" fill="#071521">
+                    <text stroke="#000" transform="matrix(0.9705883264541626,0,0,0.937256396456533,2.5146985369556205,9.063039656941726) " xmlSpace="preserve" textAnchor="start" fontFamily="Helvetica, Arial, sans-serif" fontSize="14" id="svg_285" y="155.60991" x="105.379205" fillOpacity="null" strokeOpacity="null" strokeWidth="0" fill="#071521">
                         {message}
                     </text>
                 </g>
