@@ -27,7 +27,7 @@ export default class PreforatedImage extends Component {
                     <rect x="-1" y="-1" width="100%" height="275" id="canvas_background" fill="#011a27"/>
                 </g>
                 <g>
-                    <title>Layer 1</title>
+                    <title>Soucher</title>
                     <text fill="#bcc3c9" strokeWidth="0" strokeOpacity="null" x="374.546875" y="38.5" id="svg_6" fontSize="24" fontFamily="Helvetica, Arial, sans-serif" textAnchor="start" xmlSpace="preserve" stroke="#000" opacity="0.89">CHER</text>
                     <text stroke="#000" fill="#bcc3c9" strokeWidth="0" strokeOpacity="null" x="371.929787" y="246.753754" id="svg_8" fontSize="11" fontFamily="Helvetica, Arial, sans-serif" textAnchor="start" xmlSpace="preserve">{expirationDate.toLocaleDateString('en-us', {
                             year: 'numeric',

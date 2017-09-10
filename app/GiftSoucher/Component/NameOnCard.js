@@ -10,7 +10,7 @@ export default class NameOnCard extends Component {
                        id = "nameOnCard"
                        type = 'text'
                        component = {FormField.Input}
-                       label = 'Name on card (optional)'
+                       label = 'Name on card (Optional - Max. 14 Characters)'
                        maxlength = "12"
                 />
             </div>

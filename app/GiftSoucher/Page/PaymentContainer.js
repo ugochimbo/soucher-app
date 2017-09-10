@@ -26,8 +26,8 @@ export default class PaymentContainer extends Component {
             <div className="6u 12u$(small)">
                 <h3 className="align-center">Soucher Details</h3>
 
-                <NameOnCard />
                 <SoucherValue currencies = {['EUR', 'GBP', 'USD']} />
+                <NameOnCard />
                 <SoucherMessage flipCard = {flipCard} />
                 <Payment
                     onStripeSuccess = {onStripeSuccess}

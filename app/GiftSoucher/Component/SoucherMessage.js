@@ -13,7 +13,7 @@ export default class SoucherMessage extends Component {
                            id = "soucherMessage"
                            maxlength="40"
                            component = {FormField.TextArea}
-                           label = 'Message (Optional)'
+                           label = 'Message (Optional - Max. 30 Characters)'
                            rows = '3'
                            onFocus = {() => flipCard(true)}
                            onBlur = {() => flipCard(false)}
