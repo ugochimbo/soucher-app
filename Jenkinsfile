@@ -12,7 +12,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'sudo -u www-data cp -R ./dist/* /srv/www/soucher/app/'
+                sh 'sudo -u www-data rm -rf /srv/www/soucher/app/*'
+                sh 'sudo -u www-data cp ./dist/* /srv/www/soucher/app'
                 echo 'Done'
             }
         }
