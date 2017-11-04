@@ -14,6 +14,9 @@ pipeline {
                 echo 'Deploying....'
                 sh 'sudo -u www-data rm -rf /srv/www/soucher/app/*'
                 sh 'sudo -u www-data cp ./dist/* /srv/www/soucher/app'
+                sh 'sudo -u www-data cp -R ./asset /srv/www/soucher/app'
+                sh 'sudo -u www-data cp -R ./vendor /srv/www/soucher/app'
+                sh 'sudo -u www-data cp favicon.ico /srv/www/soucher/app'
                 echo 'Done'
             }
         }
