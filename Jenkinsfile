@@ -5,16 +5,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
+                sh 'npm install'
+                sh 'npm run production'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'sudo -u www-data cp -R ./dist/* /srv/www/soucher/app/'
+                echo 'Done'
             }
         }
     }
