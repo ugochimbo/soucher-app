@@ -5,7 +5,7 @@ export default class MessageImage extends Component {
     render() {
         const {formState} = this.props;
 
-        const buyer = Card.name(formState.nameOnCard || formState.buyerName);
+        const buyer = formState.nameOnCard || Card.name(formState.buyerName);
         const message = formState.soucherMessage || '';
 
         return (

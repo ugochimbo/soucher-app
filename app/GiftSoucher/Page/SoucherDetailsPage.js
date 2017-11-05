@@ -7,6 +7,7 @@ import SoucherDetailsForm from '../Component/SoucherDetailsForm';
 import * as Action from '../action';
 import * as LINK_TO from '../../config/constant';
 import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
+import * as Card from "../../Util/Card";
 
 const  { DOM: { input } } = React;
 
@@ -30,6 +31,9 @@ const SoucherDetailsPage = (props) => {
 
     let completeTransaction = (payment) => {
         dispatch(Action.transacting(true));
+
+        formState.values.nameOnCard = formState.values.nameOnCard || Card.name(formState.values.buyerName);
+        formState.values.soucherMessage = formState.values.soucherMessage || '';
 
         const transaction = {
             gift: formState.values,
