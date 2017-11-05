@@ -7,7 +7,7 @@ export const name = (name) => {
     return parts.length > 1 ? abbreviatedName(parts) : parts[0];
 };
 
-function abbreviatedName(names = []) {
+const abbreviatedName = (names = []) => {
     let initials = '';
     let numberOfNames = names.length;
 
@@ -16,4 +16,8 @@ function abbreviatedName(names = []) {
     }
 
     return initials + names[numberOfNames-1];
-}
+};
+
+export const newExpiratoryDate = () => {
+    return (new Date(new Date().setFullYear(new Date().getFullYear() + 1)));
+};

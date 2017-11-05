@@ -2,12 +2,13 @@ import React, {Component} from 'react';
 import * as Currency from "../../Util/Currency";
 import * as Money from "../../Util/Money";
 import * as Card from "../../Util/Card";
+import * as Formatter from "../Formatter";
 
-export default class PreforatedImage extends Component {
+export default class PerforatedImage extends Component {
     render() {
         const {formState} = this.props;
-        const expirationDate = (new Date(new Date().setFullYear(new Date().getFullYear() + 1)));
-        const buyer = Card.name(formState.nameOnCard || formState.buyerName);
+        const expirationDate = Card.newExpiratoryDate();
+        const buyer = Formatter.formatNameOnCard(formState);
         const recipient = Card.name(formState.recipientName).toUpperCase();
         const amount =  Money.format(formState.soucherAmount);
         const currency = Currency.htmlEntityFor(formState.soucherCurrency) || '--';

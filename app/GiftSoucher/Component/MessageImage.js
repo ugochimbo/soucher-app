@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import * as Card from "../../Util/Card";
+import * as Formatter from "../Formatter";
 
 export default class MessageImage extends Component {
     render() {
         const {formState} = this.props;
 
-        const buyer = formState.nameOnCard || Card.name(formState.buyerName);
+        const buyer = Formatter.formatNameOnCard(formState);
         const message = formState.soucherMessage || '';
 
         return (

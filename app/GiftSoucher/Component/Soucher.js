@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import PreforatedImage from "./PreforatedImage";
+import PerforatedImage from "./PerforatedImage";
 import MessageImage from "./MessageImage";
 
 class Front extends Component {
@@ -8,7 +8,7 @@ class Front extends Component {
             <div className='card-side side-front'>
                 <div className='container-fluid'>
                     <div className='row'>
-                        <PreforatedImage formState = {this.props.formState.values} />
+                        <PerforatedImage formState = {this.props.formState.values} />
                     </div>
                 </div>
             </div>
