@@ -1,28 +1,7 @@
 import * as Action from '../state/constant';
 import * as Worker from '../state/worker';
 
-let initialState = {
-    soucher: {
-        id: '',
-        code: '',
-        amount: 0,
-        currency: 'EUR',
-    },
-    catalog : {
-        gift_cards: [],
-        pagination: {},
-        disabled: '',
-        max_amount: 0
-    },
-    basket: {
-        value: 0,
-        balance: 0,
-        items: [],
-    },
-    status: ''
-};
-
-export const SwapReducer = (state = initialState, action) => {
+export const SwapReducer = (state = Worker.initialState(), action) => {
     switch (action.type) {
         case Action.Fetch_Soucher_Success:
             return {
@@ -48,16 +27,9 @@ export const SwapReducer = (state = initialState, action) => {
                 'basket': Worker.removeBasketGiftItems(state.basket, action.payload),
             };
         case Action.Cancel_Swap_Action:
-            return  {
-                ...state,
-                'soucher': initialState.soucher,
-                'status': Action.STATUS_CANCELLED,
-            };
+            return Worker.resetSoucher(Action.STATUS_CANCELLED);
         case Action.Complete_Swap_Success:
-            return  {
-                ...state,
-                'status': Action.STATUS_COMPLETE,
-            };
+            return Worker.resetSoucher(Action.STATUS_COMPLETE);
         default:
             return state;
     }

@@ -1,5 +1,28 @@
 import * as Action from '../state/constant';
 
+export const initialState = () => {
+    return {
+        soucher: {
+            id: '',
+            code: '',
+            amount: 0,
+            currency: 'EUR',
+        },
+        catalog : {
+            gift_cards: [],
+            pagination: {},
+            disabled: '',
+            max_amount: 0
+        },
+        basket: {
+            value: 0,
+            balance: 0,
+            items: [],
+        },
+        status: ''
+    }
+};
+
 export function addSoucher(soucher) {
     if (soucher.status !== Action.SUCCESS_RESPONSE_CODE) {
         return {
@@ -121,4 +144,12 @@ export function removeBasketGiftItems(basket, giftCard) {
         'items': items,
         'balance': balance
     }
+}
+
+export function resetSoucher(newStatus) {
+    let state = initialState();
+
+    state.status = newStatus;
+
+    return state;
 }
