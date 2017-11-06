@@ -73,7 +73,7 @@ class SwapCatalogPage extends Component {
         };
 
         this.props.dispatch(Action.completeSwap(data)).then((response) => {
-            if (response.payload.status !== SUCCESS_RESPONSE_CODE) {
+            if (response.payload.data.status !== SUCCESS_RESPONSE_CODE) {
                 this.props.history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
             }
 
