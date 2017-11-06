@@ -28,7 +28,7 @@ export const SwapReducer = (state = Worker.initialState(), action) => {
             };
         case Action.Cancel_Swap_Action:
             return Worker.resetSoucher(Action.STATUS_CANCELLED);
-        case Action.Complete_Swap_Success:
+        case Action.Complete_Swap_Action:
             return Worker.resetSoucher(Action.STATUS_COMPLETE);
         default:
             return state;
