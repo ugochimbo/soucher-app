@@ -50,19 +50,16 @@ let updateCatalog = (catalog, response) => {
     return response.gift_cards;
 };
 
-export function addCatalog(catalog, soucher, response) {
+export function addCatalog(catalog, soucher, basket, response) {
     if (response.status !== Action.SUCCESS_RESPONSE_CODE) {
-        return {
-            code: response.code,
-            message: response.message
-        };
+        return catalog;
     }
 
     return {
         ...catalog,
         'gift_cards': updateCatalog(catalog, response),
         'pagination': response.pagination,
-        'max_amount': soucher.amount,
+        'max_amount': basket.balance || soucher.amount,
         'disabled': soucher.amount > 0 ? '': 'disabled'
     };
 }

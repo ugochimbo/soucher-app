@@ -11,7 +11,7 @@ export const SwapReducer = (state = Worker.initialState(), action) => {
         case Action.Fetch_Catalog_Success:
             return {
                 ...state,
-                'catalog': Worker.addCatalog(state.catalog, state.soucher, action.payload.data),
+                'catalog': Worker.addCatalog(state.catalog, state.soucher, state.basket, action.payload.data),
                 'basket': Worker.makeBasket(state.basket, state.soucher),
             };
         case Action.Add_Basket_Item_Action:
