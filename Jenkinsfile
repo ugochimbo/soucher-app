@@ -4,6 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                echo '******** < DEBUGING > ********'
+                sh 'cat asset/sass/components/_page.scss'
+                echo '******** </ DEBUGING > ********'
                 echo 'Installing dependencies...'
                 sh 'npm install'
                 sh 'npm run build'
