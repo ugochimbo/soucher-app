@@ -2053,7 +2053,7 @@ table {
   box-shadow: 0 0 10em 0 rgba(0, 0, 0, 0.2);
   padding: 2em 2em 0.1em 2em ;
   right: 0.3em;
-  position: fixed;
+  position: absolute;
   z-index: 1000;
   background-color: #ffffff;
   color: #011A27;
