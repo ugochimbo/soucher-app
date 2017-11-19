@@ -31,10 +31,6 @@ export default class ContactDetailsForm extends Component{
                             <div className="12u$" style={{'marginBottom': '10px'}}>
                                 <Field name="recipientEmail" id="recipientEmail" type="text" component = {Input} label = 'Email'/>
                             </div>
-
-                            <div className="12u$">
-                                <Field name="recipientPhone" id="recipientPhone" type="tel" component = {Input} label = 'Phone' />
-                            </div>
                         </div>
                     </div>
                     <div className="row uniform" style={{'marginBottom': '10px'}}>

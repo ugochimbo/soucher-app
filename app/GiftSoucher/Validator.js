@@ -6,17 +6,13 @@ const FIELD_BUYER_NAME = 'buyerName';
 const FIELD_BUYER_EMAIL = 'buyerEmail';
 const FIELD_RECIPIENT_NAME = 'recipientName';
 const FIELD_RECIPIENT_EMAIL = 'recipientEmail';
-const FIELD_RECIPIENT_PHONE = 'recipientPhone';
 const FIELD_NAME_ON_CARD = 'nameOnCard';
 const FIELD_SOUCHER_AMOUNT = 'soucherAmount';
 const FIELD_SOUCHER_CURRENCY = 'soucherCurrency';
 const FIELD_SOUCHER_MESSAGE = 'soucherMessage';
 
 const ERROR_FIELD_REQUIRED = 'Required';
-const ERROR_NAME_ON_CARD = 'Maximum of 14 Characters';
-const ERROR_SOUCHER_MESSAGE = 'Maximum of 30 Characters';
 const ERROR_INVALID_EMAIL = 'Invalid Email Address';
-const ERROR_INVALID_PHONE_NUMBER = 'Invalid Phone Number';
 const ERROR_MINIMUM_SOUCHER_VALUE = 'Minimum of 1';
 
 function unsetFieldError(field) {
@@ -30,14 +26,6 @@ function emailValidator(email) {
     return {
         'isValid' : emailRegex.test(email),
         'message' : ERROR_INVALID_EMAIL
-    };
-}
-
-function phoneNumberValidator(phoneNumber) {
-    let phoneNumberRegex = /^[+][0-9]{10,15}$/i;
-    return {
-        'isValid' : phoneNumberRegex.test(phoneNumber),
-        'message' : ERROR_INVALID_PHONE_NUMBER
     };
 }
 
@@ -68,13 +56,6 @@ function validateRecipientDetails(values) {
         errors[FIELD_RECIPIENT_EMAIL] = recipientEmailValidation.message;
     } else {
         unsetFieldError(FIELD_RECIPIENT_EMAIL);
-    }
-
-    let recipientPhoneValidation = phoneNumberValidator(values[FIELD_RECIPIENT_PHONE]);
-    if (!recipientPhoneValidation.isValid) {
-        errors[FIELD_RECIPIENT_PHONE] = recipientPhoneValidation.message;
-    } else {
-        unsetFieldError(FIELD_RECIPIENT_PHONE);
     }
 }
 
