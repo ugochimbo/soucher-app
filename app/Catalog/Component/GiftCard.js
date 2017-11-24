@@ -43,7 +43,7 @@ export default class GiftCard extends Component {
             <div className="item">
                 {voucherImage()}
                 <div className="amount">
-                    <div className="fixed">
+                    <div className="fixed disabled">
                         {denomination()}
                     </div>
                     <div className="custom disabled">
