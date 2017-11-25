@@ -46,7 +46,7 @@ export default class Basket extends Component {
                     </section>
                     <section className="basket-buttons">
                         <button type="button" className="button big special" onClick={() => completeSwap()}>
-                            <span> Swap </span>
+                            <span> Redeem </span>
                             <span  style={{'marginLeft' : '1px'}} className="icon fa-arrow-circle-o-right"/>
                         </button>
                         <button id="sign-out" type="button" className="button big special" onClick={() => cancelSwap()}>

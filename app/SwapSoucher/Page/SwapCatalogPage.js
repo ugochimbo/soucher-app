@@ -91,14 +91,14 @@ class SwapCatalogPage extends Component {
 
     isTransacting() {
         if (this.props.transacting) {
-            return <Transacting message = 'Finalizing Swap' />
+            return <Transacting message = 'Finalizing Request' />
         }
 
         return '';
     };
 
     showPage() {
-        if (!this.props.catalog.gift_cards.length) {
+        if (!this.props.transacting && !this.props.catalog.gift_cards.length) {
             return <Transacting message = "Building Catalog" />
         }
 
