@@ -27,7 +27,7 @@ class SwapCancelledPage extends Component {
                     'height' : '449px',
                 }}>
                     <header>
-                        <h2>Your Swap has been cancelled.</h2>
+                        <h2>The redeem process has been cancelled.</h2>
                         <p> Please feel free to contact us for assistance and/or enquiries.</p>
                         <p> <span className="highlight"> Thank you for using Soucher. </span></p>
                     </header>

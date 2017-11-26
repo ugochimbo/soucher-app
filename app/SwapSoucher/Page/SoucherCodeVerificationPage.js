@@ -44,6 +44,8 @@ const mapDispatchToProps = (dispatch, handleSubmit) => ({
         dispatch(Action.fetchSoucher(values)).then((response) => {
             if (response.payload.data.status === SUCCESS_RESPONSE_CODE) {
                 handleSubmit.onSubmit();
+            } else {
+
             }
         });
     }

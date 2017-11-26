@@ -32,12 +32,12 @@ export const SwapCatalogPageHeader = {
 };
 
 export const SwapSuccessPageHeader = {
-    title: 'Swap Successful',
-    message: 'Your swap request is successful.',
+    title: 'Redeem Request Successful',
+    message: 'The redeem request is successful.',
 };
 
 export const SwapCancelledPageHeader = {
-    title: 'Swap Cancelled',
+    title: 'Redeem Request Cancelled',
     message: 'We hope to hear back from you shortly.',
 };
 

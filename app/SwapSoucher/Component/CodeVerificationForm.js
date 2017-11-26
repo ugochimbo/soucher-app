@@ -21,7 +21,7 @@ export default class CodeVerificationForm extends Component {
                             <div className="row uniform" style={{'marginBottom': '10px'}}>
                                 <div className="12u$ actions">
                                     <button type="submit" className="button big special">
-                                        <span> Start my swap </span>
+                                        <span> Start </span>
                                         <span style={{'marginLeft': '10px'}} className="icon fa-arrow-circle-o-right"/>
                                     </button>
                                 </div>
