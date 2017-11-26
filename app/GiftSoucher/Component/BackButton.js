@@ -5,7 +5,7 @@ export default class BackButton extends Component {
         return(
             <div className="row uniform" style={{'marginTop': '10px'}}>
                 <div className="12u$ actions">
-                    <button type="button" className="button special" onClick={this.props.previousPage}>
+                    <button type="button" className="button special" onClick={this.props.onClick}>
                         <span  style={{'marginLeft' : '10px'}} className="icon fa-arrow-circle-o-left"/>
                         <span> Back </span>
                         <span  style={{'marginLeft' : '5px'}} className="icon fa-user "/>

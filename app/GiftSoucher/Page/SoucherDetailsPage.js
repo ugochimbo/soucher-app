@@ -74,7 +74,7 @@ const SoucherDetailsPage = (props) => {
 
 const SoucherDetails = reduxForm({
     form: 'gift_soucher_wizard',
-    destroyOnUnmount: true,
+    destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
     validate
 })(SoucherDetailsPage);

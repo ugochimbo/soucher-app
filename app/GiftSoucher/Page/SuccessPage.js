@@ -16,7 +16,7 @@ class SuccessPage extends Component {
 
     componentWillUnmount() {
         this.props.dispatch(Action.transacting(false));
-        this.props.dispatch(reset('gift-soucher-wizard'));
+        this.props.dispatch(reset('gift_soucher_wizard'));
     }
 
     render() {
