@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import SectionHeader, {SoucherCodeVerificationPageHeader as header} from '../../Common/SectionHeader';
-import {reduxForm } from 'redux-form';
+import {reduxForm, SubmissionError} from 'redux-form';
 import {validator as validate} from '../Validator';
 import CodeVerificationForm from '../Component/CodeVerificationForm';
 import * as Action from '../action';
@@ -41,11 +41,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, handleSubmit) => ({
     onSubmit: (values) => {
-        dispatch(Action.fetchSoucher(values)).then((response) => {
+        return dispatch(Action.fetchSoucher(values)).then((response) => {
             if (response.payload.data.status === SUCCESS_RESPONSE_CODE) {
                 handleSubmit.onSubmit();
             } else {
-
+                throw new SubmissionError({soucherCode : 'Invalid Code'})
             }
         });
     }
