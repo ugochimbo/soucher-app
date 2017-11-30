@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+import  * as LINK_TO from '../config/constant';
 
 export default class Footer extends Component{
      render() {
@@ -9,7 +11,9 @@ export default class Footer extends Component{
                         <h3>About Us</h3>
                         <p>Something something something something.</p>
                         <ul className="actions">
-                            <li><a href="#" className="button">Learn More</a></li>
+                            <li>
+                                <Link to={LINK_TO.GIFT_SOUCHER_ROUTE} className="button">Learn More</Link>
+                            </li>
                         </ul>
                     </section>
                     <section>
@@ -31,7 +35,7 @@ export default class Footer extends Component{
                     </section>
                 </div>
                 <div className="copyright">
-                    <p>Copyright &copy; Soucher Inc. All rights reserved.</p>
+                    <p>Copyright &copy; Soucher GmbH. All rights reserved.</p>
                 </div>
             </section>
         )

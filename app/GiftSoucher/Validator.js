@@ -13,7 +13,7 @@ const FIELD_SOUCHER_MESSAGE = 'soucherMessage';
 
 const ERROR_FIELD_REQUIRED = 'Required';
 const ERROR_INVALID_EMAIL = 'Invalid Email Address';
-const ERROR_MINIMUM_SOUCHER_VALUE = 'Minimum of 1';
+const ERROR_MINIMUM_SOUCHER_VALUE = 'Minimum of 1, Maximum of 200';
 
 function unsetFieldError(field) {
     if(errors.hasOwnProperty(field)) {
@@ -66,7 +66,7 @@ function validateContactDetails(values) {
 
 let validateAmount = values => {
     let soucherAmount = parseFloat(values[FIELD_SOUCHER_AMOUNT]);
-    if (!soucherAmount > 0) {
+    if (soucherAmount < 0 || soucherAmount > 200) {
         errors[FIELD_SOUCHER_AMOUNT] = ERROR_MINIMUM_SOUCHER_VALUE;
     } else {
         unsetFieldError(FIELD_SOUCHER_AMOUNT);
