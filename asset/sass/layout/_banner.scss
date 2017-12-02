@@ -6,7 +6,7 @@
 
 	#banner {
 		position: relative;
-		background: url('../image/header.jpg'), url("/asset/image/overlay_2.png") no-repeat center;
+		background: url('https://soucher.ams3.digitaloceanspaces.com/static/header.jpg'), url("https://soucher.ams3.digitaloceanspaces.com/static/overlay_2.png") no-repeat center;
 		text-shadow : 0 1px 0 rgba(0, 0, 0, 0.75);
 		background-color : rgba(0, 0, 0, 0.65);
 		background-size: cover;

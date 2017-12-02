@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import  * as LINK_TO from '../config/constant';
+import {STATIC_ASSET} from "../config/constant";
 
 export default class Footer extends Component{
      render() {
@@ -28,14 +29,15 @@ export default class Footer extends Component{
                     <section>
                         <h3>Payment Methods</h3>
                         <p>
-                            <img src="../../asset/image/icon_visa.png" width='55px' />
-                            <img src="../../asset/image/icon_mastercard.png" width='55px' />
-                            <img src="../../asset/image/icon_paypal.png" width='55px' />
+                            {/*resize ?*/}
+                            <img src={`${STATIC_ASSET}/icon_visa.png`} width='55px' />
+                            <img src={`${STATIC_ASSET}/icon_mastercard.png`} width='55px' />
+                            <img src={`${STATIC_ASSET}/icon_paypal.png`} width='55px' />
                         </p>
                     </section>
                 </div>
                 <div className="copyright">
-                    <p>Copyright &copy; Soucher GmbH. All rights reserved.</p>
+                    <p>Copyright &copy; Soucher <span>GmbH.</span> All rights reserved.</p>
                 </div>
             </section>
         )

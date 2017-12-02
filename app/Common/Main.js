@@ -10,7 +10,7 @@ export default class Main extends Component{
         return (
             <div id="page-wrapper">
                 <NavBar />
-                <div ref={'something'}>
+                <div>
                     {routes}
                 </div>
                 <Footer />

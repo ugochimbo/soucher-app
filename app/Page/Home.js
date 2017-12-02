@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import  * as LINK_TO from '../config/constant';
+import {STATIC_ASSET} from "../config/constant";
 
 export default class Home extends Component{
       render() {
@@ -49,7 +50,7 @@ export default class Home extends Component{
                     <div className="content">
                         <section className="feature">
                             <div style={{'textAlign' : 'center'}}>
-                                <img src="/asset/image/giftcard_2.png" height="160px" />
+                                <img src={`${STATIC_ASSET}/giftcard_2.png`} height="160px" />
                                 <h3> 1. Gift your loved one a Soucher </h3>
                             </div>
                             <p> Survey showed a high percentage of people would trade in a more generic gift card
@@ -57,7 +58,7 @@ export default class Home extends Component{
                         </section>
                         <section className="feature">
                             <div style={{'textAlign' : 'center'}}>
-                                <img src="/asset/image/catalog.png" height="160px" />
+                                <img src={`${STATIC_ASSET}/catalog.png`} height="160px" />
                                 <h3> 2. Loved one views catalogue </h3>
                             </div>
                             <p> Your loved one gifted a Soucher chooses from a high variety of vouchers in our catalogue,
@@ -65,7 +66,7 @@ export default class Home extends Component{
                         </section>
                         <section className="feature">
                             <div style={{'textAlign' : 'center'}}>
-                                <img src="/asset/image/swap.png" height="160px" />
+                                <img src={`${STATIC_ASSET}/swap.png`} height="160px" />
                                 <h3> 3. Swap Soucher for Voucher(s) </h3>
                             </div>
                             <p> Your loved one swaps the Soucher for one or more vouchers totalling the Soucher value.
@@ -88,7 +89,7 @@ export default class Home extends Component{
                     </div>
                     <div className="content cta">
                         <header>
-                            <h2>Promote small/medium size companies</h2>
+                            <h2>Promote small & medium size companies</h2>
                             <ul className="actions">
                                 <li>
                                     <Link to = {LINK_TO.GIFT_CARD_CATALOG_ROUTE} className="button big special">
@@ -109,9 +110,11 @@ export default class Home extends Component{
                     <div className="content">
                         <section className="feature">
                             <div style = {{'textAlign' : 'center'}}>
-                                <span className="icon major"><img src="/asset/image/customer_3.png" width="200px" height="180px" /></span>
+                                <span className="icon major">
+                                    <img src={`${STATIC_ASSET}/customer_3.png`} width="200px" height="180px" />
+                                </span>
                                 <h5>From Kiev, Ukraine</h5>
-                                <img src="/asset/image/5-stars.png" />
+                                <img src={`${STATIC_ASSET}/5-stars.png`} />
                             </div>
                                 <blockquote>
                                     Love the wide choices of vouchers I had to choose from. Didn't even know they exist! Love Soucher.
@@ -119,9 +122,9 @@ export default class Home extends Component{
                         </section>
                         <section className="feature">
                             <div style = {{'textAlign' : 'center'}}>
-                                <span className="icon major"><img src="/asset/image/customer_4.jpg" width="200px" height="180px" /></span>
+                                <span className="icon major"><img src={`${STATIC_ASSET}/customer_4.jpg`} width="200px" height="180px" /></span>
                                 <h5>From Tehran, Iran</h5>
-                                <img src="/asset/image/4.5-stars.png" />
+                                <img src={`${STATIC_ASSET}/4.5-stars.png`} />
                             </div>
                                 <blockquote>
                                     Got a Soucher from my boss. Its simply awesome, love it.
@@ -129,9 +132,9 @@ export default class Home extends Component{
                         </section>
                         <section className="feature">
                             <div style = {{'textAlign' : 'center'}}>
-                                <span className="icon major"><img src="/asset/image/customer_2.jpg" width="200px" height="180px" /></span>
+                                <span className="icon major"><img src={`${STATIC_ASSET}/customer_2.jpg`} width="200px" height="180px" /></span>
                                 <h5>London, United Kingdom</h5>
-                                <img src="/asset/image/5-stars.png" />
+                                <img src={`${STATIC_ASSET}/5-stars.png`} />
                             </div>
                                 <blockquote>
                                     This saved me a lot of stress. Gifted a friend a Soucher and she still hasn't stopped thanking me for it.

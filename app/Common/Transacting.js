@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { FoldingCube } from 'better-react-spinkit';
 import Modal from 'react-modal';
+import {STATIC_ASSET} from "../config/constant";
 
 export default class Transacting extends Component {
     render() {
@@ -9,7 +10,7 @@ export default class Transacting extends Component {
 
         let style = {
             overlay: {
-                backgroundImage: 'url("/asset/image/overlay_2.png")}',
+                backgroundImage: 'url(' + STATIC_ASSET + '/overlay_2.png)}',
                 textShadow: '0 1px 0 rgba(0, 0, 0, 0.75)',
                 backgroundPosition: 'initial',
                 backgroundColor: 'rgba(0, 0, 0, 0.65)',

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import * as Random from '../../Util/Random';
+import {STATIC_ASSET} from '../../config/constant.js';
 
 export default class GiftCard extends Component {
      render() {
@@ -17,7 +18,7 @@ export default class GiftCard extends Component {
 
          let voucherImage = () => {
              return  (<div className="img">
-                        <img src = {`/asset/image/voucher/${gift_card.img_name}`}  />
+                        <img src = {`${STATIC_ASSET}/voucher/${gift_card.img_name}`} />
                     </div>);
          };
 

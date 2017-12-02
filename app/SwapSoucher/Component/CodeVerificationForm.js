@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Field } from 'redux-form';
 import * as FormField from '../../Common/FormField';
+import {STATIC_ASSET} from "../../config/constant";
 
 export default class CodeVerificationForm extends Component {
     render() {
@@ -8,7 +9,7 @@ export default class CodeVerificationForm extends Component {
             <form onSubmit={this.props.onSubmit}>
                 <div className="row uniform">
                     <div className="6u 12u$(small) align-center">
-                        <img src="/asset/image/card-sample.png" width="500px"/>
+                        <img src={`${STATIC_ASSET}/card-sample.png`} width="500px"/>
                     </div>
                     <div className="6u 12u$(small)">
                         <h3>Enter Soucher Code</h3>

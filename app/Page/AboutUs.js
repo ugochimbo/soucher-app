@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import SectionHeader, {AboutUsPageHeader as header} from '../Common/SectionHeader';
 import {Link} from 'react-router-dom';
 import  * as LINK_TO from '../config/constant';
+import {STATIC_ASSET} from "../config/constant";
 
 export default class AboutUs extends Component{
     render() {
@@ -9,7 +10,7 @@ export default class AboutUs extends Component{
             <div id="main">
 
                 <section id="banner" style={{
-                    'backgroundImage' : 'url("/asset/image/about_us.jpg"), url("/asset/image/overlay_2.png")',
+                    'backgroundImage' : 'url(' + STATIC_ASSET + '/about_us.jpg), url('+ STATIC_ASSET + '/overlay_2.png)',
                     'textShadow' : '0 1px 0 rgba(0, 0, 0, 0.75)',
                     'backgroundPosition' : 'initial',
                     'backgroundColor' : 'rgba(0, 0, 0, 0.65)',
@@ -46,7 +47,7 @@ export default class AboutUs extends Component{
                             <h2 style={{'textAlign' : 'center'}}><span className="icon fa-certificate"/></h2>
                             Let your loved one decide <br />
                             Worry less <br />
-                            Promote small / medium companies <br />
+                            Promote small & medium companies <br />
                         </header>
                     </div>
                 </section>

@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import SectionHeader, {SwapCancelledPageHeader as header} from '../../Common/SectionHeader';
 import * as LINK_TO from '../../config/constant';
 import * as STATUS from '../../state/constant';
+import {STATIC_ASSET} from "../../config/constant";
 
 class SwapCancelledPage extends Component {
 
@@ -20,7 +21,7 @@ class SwapCancelledPage extends Component {
                 </section>
 
                 <section id="banner" style={{
-                    'backgroundImage' : 'url("/asset/image/transaction_error.jpg"), url("/asset/image/overlay_2.png")',
+                    'backgroundImage' : 'url(' + STATIC_ASSET + '/transaction_error.jpg), url('+ STATIC_ASSET + '/overlay_2.png)',
                     'textShadow' : '0 1px 0 rgba(0, 0, 0, 0.75)',
                     'backgroundPosition' : 'initial',
                     'backgroundColor' : 'rgba(0, 0, 0, 0.65)',
