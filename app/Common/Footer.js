@@ -12,7 +12,7 @@ export default class Footer extends Component{
                         <p>Something something something something.</p>
                         <ul className="actions">
                             <li>
-                                <Link to={LINK_TO.GIFT_SOUCHER_ROUTE} className="button">Learn More</Link>
+                                <Link to={LINK_TO.ABOUT_US_ROUTE} className="button">Learn More</Link>
                             </li>
                         </ul>
                     </section>
