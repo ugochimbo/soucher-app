@@ -1255,7 +1255,7 @@ body {
     min-width: 320px; } }
 body {
   background-color: #011A27;
-  background-image: url("../image/overlay.png"), url("../image/bg.jpg");
+  background-image: url("https://soucher.ams3.digitaloceanspaces.com/static/overlay.png"), url("https://soucher.ams3.digitaloceanspaces.com/static/bg.jpg");
   background-size: 100px 100px,				100% auto;
   background-repeat: repeat,						repeat;
   background-attachment: scroll,						scroll;
