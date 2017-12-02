@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Installing dependencies...'
                 sh 'npm install'
-                sh 'npm run production'
+                sh 'npm run build'
                 echo 'Compiling sass...'
                 sh 'sass asset/sass/main.scss asset/css/main.css'
                 echo 'Done'
