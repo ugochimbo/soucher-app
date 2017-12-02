@@ -25,8 +25,6 @@ export default class Checkout extends Component {
                     currency={soucher.currency}
                     locale="auto"
                     email={contact.buyerEmail}
-                    alipay
-                    bitcoin
                     reconfigureOnUpdate={false}
                     allowRememberMe = {true}
                     billingAddress={false}
