@@ -9,9 +9,10 @@ export default class PaymentContainer extends Component {
     render() {
         const {onStripeSuccess, onPalPaySuccess, soucher, contact, flipCard} = this.props;
         const MINIMUM_AMOUNT = 1;
+        const MAXIMUM_AMOUNT = 200;
 
         let isValidSoucherAmount = () => {
-            return (soucher.amount !== undefined && soucher.amount > MINIMUM_AMOUNT);
+            return (soucher.amount !== undefined && soucher.amount > MINIMUM_AMOUNT && soucher.amount <= MAXIMUM_AMOUNT);
         };
 
         let disablePaymentButtons = () => {
