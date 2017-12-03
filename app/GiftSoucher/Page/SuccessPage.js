@@ -28,7 +28,7 @@ class SuccessPage extends Component {
                 </section>
 
                 <section id="banner" style={{
-                    'backgroundImage' : 'url(' + STATIC_ASSET + '/thank-you.jpg), url('+ STATIC_ASSET + 'overlay_2.png)',
+                    'backgroundImage' : 'url(' + STATIC_ASSET + '/thank-you.jpg), url('+ STATIC_ASSET + '/overlay_2.png)',
                     'textShadow' : '0 1px 0 rgba(0, 0, 0, 0.75)',
                     'backgroundPosition' : 'initial',
                     'backgroundColor' : 'rgba(0, 0, 0, 0.65)'

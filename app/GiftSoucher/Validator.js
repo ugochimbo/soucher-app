@@ -13,7 +13,7 @@ const FIELD_SOUCHER_MESSAGE = 'soucherMessage';
 
 const ERROR_FIELD_REQUIRED = 'Required';
 const ERROR_INVALID_EMAIL = 'Invalid Email Address';
-const ERROR_MINIMUM_SOUCHER_VALUE = 'Minimum of 1, Maximum of 200';
+const ERROR_MINIMUM_SOUCHER_VALUE = 'Minimum of 1; Maximum of 200';
 
 function unsetFieldError(field) {
     if(errors.hasOwnProperty(field)) {

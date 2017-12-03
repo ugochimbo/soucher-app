@@ -67,11 +67,11 @@ export default class Home extends Component{
                         <section className="feature">
                             <div style={{'textAlign' : 'center'}}>
                                 <img src={`${STATIC_ASSET}/swap.png`} height="160px" />
-                                <h3> 3. Swap Soucher for Voucher(s) </h3>
+                                <h3> 3. Redeem gift cards </h3>
                             </div>
-                            <p> Your loved one swaps the Soucher for one or more vouchers totalling the Soucher value.
-                                Don't feel like using up your Soucher value, no problem, your balance will be retained in the
-                                Soucher for future swaps. </p>
+                            <p> Your loved one redeems gift cards from our catalog using their Soucher. He/She can redeem multiple gift cards totalling their Soucher value.
+                                Don't feel like using up your Soucher value? no problem, your balance will be retained in the
+                                Soucher for future use. </p>
                         </section>
                     </div>
                 </section>

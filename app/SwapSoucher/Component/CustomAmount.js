@@ -25,7 +25,7 @@ export default class CustomAmount extends Component {
         }
 
         if (disabled) {
-            text = 'Insufficient Balance'
+            text = 'Out of Balance'
         }
 
         return text;
