@@ -1749,6 +1749,59 @@ input[type="radio"] + label:before {
       font-size: 2rem;
       line-height: 2rem; }
 
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer; }
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  /*filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);*/
+  opacity: 0;
+  pointer-events: none; }
+
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 250px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2; }
+
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid rgba(51, 51, 51, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0; }
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  /*filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);*/
+  opacity: 1; }
+
 /* Image */
 .image {
   border: 0;
@@ -1900,88 +1953,6 @@ dl {
     margin: 0 0 1em 0; }
   dl dd {
     margin-left: 2em; }
-
-/* Section/Article */
-section.special, article.special {
-  text-align: center; }
-
-header p {
-  color: #ffffff;
-  font-size: 0.9em;
-  letter-spacing: 0.25em;
-  line-height: 2.25;
-  margin-top: -0.75em;
-  position: relative;
-  text-transform: uppercase; }
-header h3 + p {
-  font-size: 0.8em; }
-header h4 + p {
-  font-size: 0.75em; }
-header h5 + p {
-  font-size: 0.75em; }
-header h6 + p {
-  font-size: 0.75em; }
-header.major {
-  padding: 6.5em 3em 4.5em 3em ;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.05);
-  background-size: 100px 100px, cover, cover;
-  background-position: center, center, center; }
-  header.major h2:after {
-    margin-left: auto;
-    margin-right: auto; }
-  header.major p {
-    margin-top: 0;
-    margin-bottom: 2em; }
-@media screen and (max-width: 1280px) {
-  header p {
-    line-height: 2; }
-  header.major {
-    padding: 5em 3em 3em 3em ; } }
-@media screen and (max-width: 980px) {
-  header p br {
-    display: none; } }
-@media screen and (max-width: 736px) {
-  header p {
-    font-size: 0.8em;
-    line-height: 1.75; }
-  header.major {
-    padding: 4em 1.5em 2em 1.5em ;
-    background-size: 100px 100px, 250%, cover; } }
-
-/* Table */
-.table-wrapper {
-  -webkit-overflow-scrolling: touch;
-  overflow-x: auto; }
-
-table {
-  margin: 0 0 2em 0;
-  width: 100%; }
-  table tbody tr {
-    border: none;
-    border-left: 0;
-    border-right: 0; }
-  table tbody tr.header {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: solid 1px #434b55;
-    border-left: 0;
-    border-right: 0; }
-  table td {
-    padding: 0.25em 0.25em; }
-  table th {
-    color: #ffffff;
-    font-size: 0.8em;
-    font-weight: 700;
-    letter-spacing: 0.25em;
-    line-height: 1.5;
-    padding: 0 0.75em 0.75em 0.75em;
-    text-align: left;
-    text-transform: uppercase; }
-  table thead {
-    border-bottom: solid 1px #434b55; }
-  table tfoot {
-    border-top: solid 1px #434b55; }
 
 /* Custom page style */
 #swap-catalog .item, #listing .item {
@@ -2152,6 +2123,88 @@ img {
 /*- Back side -*/
 .side-back {
   transform: rotateY(180deg); }
+
+/* Section/Article */
+section.special, article.special {
+  text-align: center; }
+
+header p {
+  color: #ffffff;
+  font-size: 0.9em;
+  letter-spacing: 0.25em;
+  line-height: 2.25;
+  margin-top: -0.75em;
+  position: relative;
+  text-transform: uppercase; }
+header h3 + p {
+  font-size: 0.8em; }
+header h4 + p {
+  font-size: 0.75em; }
+header h5 + p {
+  font-size: 0.75em; }
+header h6 + p {
+  font-size: 0.75em; }
+header.major {
+  padding: 6.5em 3em 4.5em 3em ;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  background-size: 100px 100px, cover, cover;
+  background-position: center, center, center; }
+  header.major h2:after {
+    margin-left: auto;
+    margin-right: auto; }
+  header.major p {
+    margin-top: 0;
+    margin-bottom: 2em; }
+@media screen and (max-width: 1280px) {
+  header p {
+    line-height: 2; }
+  header.major {
+    padding: 5em 3em 3em 3em ; } }
+@media screen and (max-width: 980px) {
+  header p br {
+    display: none; } }
+@media screen and (max-width: 736px) {
+  header p {
+    font-size: 0.8em;
+    line-height: 1.75; }
+  header.major {
+    padding: 4em 1.5em 2em 1.5em ;
+    background-size: 100px 100px, 250%, cover; } }
+
+/* Table */
+.table-wrapper {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto; }
+
+table {
+  margin: 0 0 2em 0;
+  width: 100%; }
+  table tbody tr {
+    border: none;
+    border-left: 0;
+    border-right: 0; }
+  table tbody tr.header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #434b55;
+    border-left: 0;
+    border-right: 0; }
+  table td {
+    padding: 0.25em 0.25em; }
+  table th {
+    color: #ffffff;
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    line-height: 1.5;
+    padding: 0 0.75em 0.75em 0.75em;
+    text-align: left;
+    text-transform: uppercase; }
+  table thead {
+    border-bottom: solid 1px #434b55; }
+  table tfoot {
+    border-top: solid 1px #434b55; }
 
 /* Header */
 body {
@@ -2397,7 +2450,7 @@ body.is-menu-visible #menu {
 /* Banner */
 #banner {
   position: relative;
-  background: url("../image/header.jpg"), url("/asset/image/overlay_2.png") no-repeat center;
+  background: url("https://soucher.ams3.digitaloceanspaces.com/static/header.jpg"), url("https://soucher.ams3.digitaloceanspaces.com/static/overlay_2.png") no-repeat center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.75);
   background-color: rgba(0, 0, 0, 0.65);
   background-size: cover;
@@ -2608,7 +2661,7 @@ body.is-menu-visible #menu {
       -ms-flex-direction: row-reverse;
       flex-direction: row-reverse; }
   #main .highlight, #main-full .highlight {
-    background-image: url("/asset/image/overlay_2.png");
+    background-image: url("https://soucher.ams3.digitaloceanspaces.com/static/overlay_2.png");
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.75);
     background-position: initial;
     background-color: rgba(0, 0, 0, 0.65);
