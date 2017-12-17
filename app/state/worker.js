@@ -60,7 +60,7 @@ export function addCatalog(catalog, soucher, basket, response) {
         'gift_cards': updateCatalog(catalog, response),
         'pagination': response.pagination,
         'max_amount': basket.balance || soucher.amount,
-        'disabled': soucher.amount > 0 ? '': 'disabled'
+        'disabled': (basket.balance > 0 || soucher.amount > 0) ? '': 'disabled'
     };
 }
 
