@@ -60,17 +60,29 @@ export function addCatalog(catalog, soucher, basket, response) {
         'gift_cards': updateCatalog(catalog, response),
         'pagination': response.pagination,
         'max_amount': basket.balance || soucher.amount,
-        'disabled': (basket.balance > 0 || soucher.amount > 0) ? '': 'disabled'
+        'disabled': (soucher.amount - sumOfItemsInBasket(basket)) > 0 ? '' : 'disabled'
     };
 }
 
 export function makeBasket(basket, soucher) {
     return {
+        ...basket,
         value: soucher.amount,
-        balance: basket.balance || soucher.amount,
+        balance: soucher.amount - sumOfItemsInBasket(basket),
         items: basket.items || [],
     }
 }
+
+let sumOfItemsInBasket = (basket) => {
+    let items = basket.items || [];
+    let sum = 0;
+
+    for(let i = 0; i < items.length; i++) {
+        sum += items[i].amount;
+    }
+
+    return sum;
+};
 
 export function updateCatalogDisability(catalog, basket, soucher, action) {
     if (action.type === Action.Add_Basket_Item_Action) {
