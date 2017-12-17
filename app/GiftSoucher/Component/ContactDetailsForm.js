@@ -36,8 +36,8 @@ export default class ContactDetailsForm extends Component{
                     <div className="row uniform" style={{'marginBottom': '10px'}}>
                         <div className="12u$ actions align-center">
                             <button type="submit" className="button big special">
-                                <span className="icon fa-gift"/>
-                                <span> Soucher Details </span>
+                                <span className="icon fa-credit-card"/>
+                                <span> Payment </span>
                                 <span  style={{'marginLeft' : '10px'}} className="icon fa-arrow-circle-o-right"/>
                             </button>
                         </div>
