@@ -63,7 +63,10 @@ class GiftCardCatalogPage extends Component {
                     <SectionHeader title = {header.title} message = {header.message}/>
                     <FilterBar filterHandler = {::this.fetchCatalog} searchHandler = {::this.searchCatalog} />
                     <div className="catalog-light-content">
-                        <Listing catalog = {this.state.catalog} currency = {Currency.htmlEntityFor('EUR')}/>
+                        <Listing catalog = {this.state.catalog}
+                                 currency = {Currency.htmlEntityFor('EUR')}
+                                 loading = {this.state.loading}/>
+
                         <Paginator pagination = {this.state.pagination}
                                    loading = {this.state.loading}
                                    filterHandler = {::this.fetchCatalog}
