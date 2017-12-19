@@ -28,8 +28,8 @@ export default class Listing extends Component {
          };
 
         return (
-            <div className="row uniform">
-                <div id="listing" >
+            <div className="11u 12u$(small)">
+                <div id="listing">
                     {listing()}
                 </div>
             </div>

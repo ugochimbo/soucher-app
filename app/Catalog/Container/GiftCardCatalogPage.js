@@ -7,6 +7,7 @@ import Listing from '../Component/Listing';
 import * as Currency from '../../Util/Currency';
 import * as Action from '../../SwapSoucher/action';
 import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
+import SideBox from "../Component/SideBox";
 
 class GiftCardCatalogPage extends Component {
 
@@ -63,15 +64,19 @@ class GiftCardCatalogPage extends Component {
                     <SectionHeader title = {header.title} message = {header.message}/>
                     <FilterBar filterHandler = {::this.fetchCatalog} searchHandler = {::this.searchCatalog} />
                     <div className="catalog-light-content">
-                        <Listing catalog = {this.state.catalog}
-                                 currency = {Currency.htmlEntityFor('EUR')}
-                                 loading = {this.state.loading}/>
+                        <div className="row uniform">
+                            <Listing catalog = {this.state.catalog}
+                                     currency = {Currency.htmlEntityFor('EUR')}
+                                     loading = {this.state.loading}/>
 
-                        <Paginator pagination = {this.state.pagination}
-                                   loading = {this.state.loading}
-                                   filterHandler = {::this.fetchCatalog}
-                                   searchHandler = {::this.searchCatalog}/>
+                            <SideBox />
+                        </div>
                     </div>
+
+                    <Paginator pagination = {this.state.pagination}
+                               loading = {this.state.loading}
+                               filterHandler = {::this.fetchCatalog}
+                               searchHandler = {::this.searchCatalog}/>
                 </section>
             </div>
         )
