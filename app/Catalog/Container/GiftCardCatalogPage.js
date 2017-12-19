@@ -71,12 +71,12 @@ class GiftCardCatalogPage extends Component {
 
                             <SideBox />
                         </div>
-                    </div>
 
-                    <Paginator pagination = {this.state.pagination}
-                               loading = {this.state.loading}
-                               filterHandler = {::this.fetchCatalog}
-                               searchHandler = {::this.searchCatalog}/>
+                        <Paginator pagination = {this.state.pagination}
+                                   loading = {this.state.loading}
+                                   filterHandler = {::this.fetchCatalog}
+                                   searchHandler = {::this.searchCatalog}/>
+                    </div>
                 </section>
             </div>
         )
