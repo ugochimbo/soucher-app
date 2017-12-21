@@ -4,6 +4,7 @@ import Payment from "../Component/Payment";
 import {isSupportedCurrencies} from '../../Util/Currency';
 import SoucherMessage from "../Component/SoucherMessage";
 import NameOnCard from "../Component/NameOnCard";
+import Surcharge from "../Component/Surcharge";
 
 export default class PaymentContainer extends Component {
     render() {
@@ -28,6 +29,7 @@ export default class PaymentContainer extends Component {
                 <h3 className="align-center">Soucher Details</h3>
 
                 <SoucherValue currencies = {['EUR', 'GBP', 'USD']} />
+                <Surcharge />
                 <NameOnCard />
                 <SoucherMessage flipCard = {flipCard} />
                 <Payment
