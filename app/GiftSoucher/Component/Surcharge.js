@@ -24,7 +24,6 @@ class Surcharge extends Component {
                     <span style={{"marginTop" : "10px", "marginBottom" : "10px"}} className="icon fa-plus-circle" />
                     <span style={{"marginLeft" : "5px"}} /> Surcharge (operational cost) : {charge()}
                 </div>
-
             </div>
         )
     }

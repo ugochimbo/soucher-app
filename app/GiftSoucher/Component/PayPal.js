@@ -37,7 +37,7 @@ class PayPalButton extends Component {
     }
 
     render() {
-        const { onPalPaySuccess, soucher, contact } = this.props;
+        const { onPalPaySuccess, soucher } = this.props;
 
         const client = {
             sandbox:    'AY-FHTiPMPYyspk1d3Ku61n4afmMMjj3ZaABqW4bNdRs3aKE8YPM0EkAUlEAWVKy43MhvmIN_7Ck_Q7S',
@@ -49,7 +49,7 @@ class PayPalButton extends Component {
                 transactions: [
                     {
                         amount: {
-                            total: soucher.amount,
+                            total: soucher.total,
                             currency: soucher.currency
                         }
                     }
@@ -64,7 +64,7 @@ class PayPalButton extends Component {
         };
 
         const onCancel = (data) => {
-            console.log('The payment was cancelled!', data);
+            //console.log('The payment was cancelled!', data);
         };
 
         const displayPayPalButton = () => {

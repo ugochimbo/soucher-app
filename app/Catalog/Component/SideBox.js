@@ -22,7 +22,7 @@ class SideBox extends Component {
                     <div>Have a Soucher to redeem ?</div>
                     <div>Let's get started.</div>
 
-                    <button type="button" className="button big special" onClick={() => redirectToRedeem()} style={{"marginTop" : "20px", "marginBottom" : "20px"}}>
+                    <button type="button" className="button special" onClick={() => redirectToRedeem()} style={{"marginTop" : "20px", "marginBottom" : "20px"}}>
                         <span> Redeem </span>
                         <span  style={{'marginLeft' : '1px'}} className="icon fa-arrow-circle-o-right"/>
                     </button>

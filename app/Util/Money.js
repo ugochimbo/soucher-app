@@ -33,13 +33,3 @@ export const surchargeFor = soucherAmount => {
     else return 0;
 };
 
-export const surchargeRangeFor = (surcharge) => {
-    switch (surcharge) {
-        case 1.99: return '1 - 50.00';
-        case 2.99: return '50.01 - 100.00';
-        case 3.99: return '100.01 - 150.00';
-        case 4.99: return '150.01 - 200.00';
-
-        default: return '0';
-    }
-};

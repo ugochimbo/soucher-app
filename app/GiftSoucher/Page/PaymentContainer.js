@@ -5,15 +5,22 @@ import {isSupportedCurrencies} from '../../Util/Currency';
 import SoucherMessage from "../Component/SoucherMessage";
 import NameOnCard from "../Component/NameOnCard";
 import Surcharge from "../Component/Surcharge";
+import {minimumSurcharge} from "../../Util/Money";
 
 export default class PaymentContainer extends Component {
     render() {
         const {onStripeSuccess, onPalPaySuccess, soucher, contact, flipCard} = this.props;
         const MINIMUM_AMOUNT = 1;
         const MAXIMUM_AMOUNT = 200;
+        const MAXIMUM_SURCHARGE = 1.99;
 
         let isValidSoucherAmount = () => {
-            return (soucher.amount !== undefined && soucher.amount > MINIMUM_AMOUNT && soucher.amount <= MAXIMUM_AMOUNT);
+            return (
+                soucher.amount !== undefined &&
+                soucher.amount > MINIMUM_AMOUNT &&
+                soucher.amount <= MAXIMUM_AMOUNT &&
+                soucher.surcharge >= MAXIMUM_SURCHARGE
+            );
         };
 
         let disablePaymentButtons = () => {

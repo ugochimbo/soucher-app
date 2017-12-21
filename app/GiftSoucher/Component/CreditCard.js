@@ -21,7 +21,7 @@ export default class Checkout extends Component {
                     name='Soucher GmbH'
                     description={`Soucher payment for ${contact.recipientName}`}
                     ComponentClass="div"
-                    amount={toCents(soucher.amount)}
+                    amount={toCents(soucher.total)}
                     currency={soucher.currency}
                     locale="auto"
                     email={contact.buyerEmail}

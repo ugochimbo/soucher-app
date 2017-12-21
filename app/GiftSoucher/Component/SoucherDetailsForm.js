@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Transacting from '../../Common/Transacting';
 import SoucherContainer from "../Page/SoucherContainer";
 import PaymentContainer from "../Page/PaymentContainer";
+import * as Util from "../../Util/Money";
 
 export default class SoucherDetailsForm extends Component{
     constructor(props) {
@@ -24,10 +25,20 @@ export default class SoucherDetailsForm extends Component{
 
     render() {
         const {previousPage, onStripeSuccess, onPalPaySuccess, onSubmit, formState, transacting} = this.props;
+
+        const amount = parseFloat(formState.values.soucherAmount);
+        const surcharge = Util.surchargeFor(formState.values.soucherAmount);
+
         const soucher = {
-            amount:  formState.values.soucherAmount,
-            currency:  formState.values.soucherCurrency
+            currency:  formState.values.soucherCurrency,
+            amount: amount,
+            surcharge: surcharge,
+            total: amount + surcharge
         };
+
+        console.log(soucher.total);
+        console.log(soucher.amount);
+        console.log(soucher.surcharge);
 
         const contact = {
             buyerName: formState.values.buyerName,
