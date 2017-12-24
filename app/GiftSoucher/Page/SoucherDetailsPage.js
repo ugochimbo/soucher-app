@@ -15,20 +15,6 @@ const SoucherDetailsPage = (props) => {
 
     const {previousPage, dispatch, history, formState, transacting} = props;
 
-    let onStripeSuccess = (payment) => {
-        completeTransaction({
-            type : 'credit-card',
-            payment : payment
-        });
-    };
-
-    let onPalPaySuccess = (payment) => {
-        completeTransaction({
-            type : 'paypal',
-            payment : payment
-        });
-    };
-
     let completeTransaction = (payment) => {
         dispatch(Action.transacting(true));
 
@@ -60,8 +46,7 @@ const SoucherDetailsPage = (props) => {
             <section id="content" className="default">
                 <SectionHeader title={header.title} message={header.message} />
                 <SoucherDetailsForm
-                    onStripeSuccess = {onStripeSuccess}
-                    onPalPaySuccess = {onPalPaySuccess}
+                    onPaymentSuccess = {completeTransaction}
                     onSubmit = {preventDefault}
                     previousPage = {previousPage}
                     formState = {formState}

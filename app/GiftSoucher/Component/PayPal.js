@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import scriptLoader from 'react-async-script-loader';
+import {PAYMENT_PAYPAL} from "./Payment";
 
 class PayPalButton extends Component {
     constructor(props) {
@@ -37,7 +38,7 @@ class PayPalButton extends Component {
     }
 
     render() {
-        const { onPalPaySuccess, soucher } = this.props;
+        const { onSuccess, soucher } = this.props;
 
         const client = {
             sandbox:    'AY-FHTiPMPYyspk1d3Ku61n4afmMMjj3ZaABqW4bNdRs3aKE8YPM0EkAUlEAWVKy43MhvmIN_7Ck_Q7S',
@@ -59,7 +60,7 @@ class PayPalButton extends Component {
 
         const onAuthorize = (data, actions) => {
             return actions.payment.execute().then(() => {
-                onPalPaySuccess(data);
+                onSuccess(PAYMENT_PAYPAL, data);
             })
         };
 
