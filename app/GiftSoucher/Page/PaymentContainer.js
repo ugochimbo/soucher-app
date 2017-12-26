@@ -9,7 +9,8 @@ import {minimumSurcharge} from "../../Util/Money";
 
 export default class PaymentContainer extends Component {
     render() {
-        const {onStripeSuccess, onPalPaySuccess, soucher, contact, flipCard} = this.props;
+        const {onSuccess, soucher, contact, flipCard} = this.props;
+
         const MINIMUM_AMOUNT = 1;
         const MAXIMUM_AMOUNT = 200;
         const MAXIMUM_SURCHARGE = 1.99;
@@ -40,8 +41,7 @@ export default class PaymentContainer extends Component {
                 <NameOnCard />
                 <SoucherMessage flipCard = {flipCard} />
                 <Payment
-                    onStripeSuccess = {onStripeSuccess}
-                    onPalPaySuccess = {onPalPaySuccess}
+                    onSuccess = {onSuccess}
                     disabled = {disablePaymentButtons()}
                     soucher = {soucher}
                     contact = {contact}

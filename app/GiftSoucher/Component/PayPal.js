@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import scriptLoader from 'react-async-script-loader';
+import {TYPE_PAYPAL} from "./Payment";
 
 class PayPalButton extends Component {
     constructor(props) {
@@ -59,7 +60,7 @@ class PayPalButton extends Component {
 
         const onAuthorize = (data, actions) => {
             return actions.payment.execute().then(() => {
-                onPalPaySuccess(data);
+                onPalPaySuccess(TYPE_PAYPAL, data);
             })
         };
 
