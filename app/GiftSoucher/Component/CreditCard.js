@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import StripeCheckout from 'react-stripe-checkout';
-import {PAYMENT_CREDIT_CARD} from "./Payment";
+import {TYPE_CREDIT_CARD} from "./Payment";
 
 export default class Checkout extends Component {
     render() {
@@ -17,7 +17,7 @@ export default class Checkout extends Component {
         return (
             <div className={toggleButton()}>
                 <StripeCheckout
-                    token = {(token) => onSuccess(PAYMENT_CREDIT_CARD, token)}
+                    token = {(token) => onSuccess(TYPE_CREDIT_CARD, token)}
                     stripeKey = 'pk_test_W2SpTEwgUKnJLVBZcdnDbQ2e'
                     name='Soucher GmbH'
                     description={`Soucher payment for ${contact.recipientName}`}

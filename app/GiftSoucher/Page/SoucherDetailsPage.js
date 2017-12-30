@@ -26,6 +26,8 @@ const SoucherDetailsPage = (props) => {
             payment: payment
         };
 
+        console.log(transaction);
+
         dispatch(Action.createTransaction(transaction)).then((data) => {
             if (data.payload.data.status !== SUCCESS_RESPONSE_CODE) {
                 history.push(LINK_TO.TRANSACTION_ERROR_ROUTE);
@@ -46,7 +48,7 @@ const SoucherDetailsPage = (props) => {
             <section id="content" className="default">
                 <SectionHeader title={header.title} message={header.message} />
                 <SoucherDetailsForm
-                    onPaymentSuccess = {completeTransaction}
+                    onTransactionComplete = {completeTransaction}
                     onSubmit = {preventDefault}
                     previousPage = {previousPage}
                     formState = {formState}

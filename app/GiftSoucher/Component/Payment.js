@@ -4,23 +4,24 @@ import PayPal from '../Component/PayPal';
 
 export default class Payment extends Component {
     render() {
-        const { onPaymentSuccess, disabled, soucher, contact} = this.props;
+        const {onSuccess, disabled, soucher, contact} = this.props;
 
-        const onSuccess = (paymentType, token) => {
-
-            const payment = {soucher, paymentType, token};
-
-            onPaymentSuccess(payment);
+        const paymentComplete = (paymentType, paymentResponse) => {
+            onSuccess({
+                type: paymentType,
+                token: paymentResponse,
+                details: soucher
+            });
         };
 
         return (
             <div className="row uniform">
-                <CreditCard onSuccess = {onSuccess} disabled = {disabled} soucher = {soucher} contact = {contact} />
-                <PayPal onSuccess = {onSuccess} disabled = {disabled} soucher = {soucher} contact = {contact} />
+                <CreditCard onSuccess = {paymentComplete} disabled = {disabled} soucher = {soucher} contact = {contact} />
+                <PayPal onSuccess = {paymentComplete} disabled = {disabled} soucher = {soucher} contact = {contact} />
             </div>
         )
     }
 };
 
-export const PAYMENT_CREDIT_CARD = 'credit_card';
-export const PAYMENT_PAYPAL = 'paypal';
+export const TYPE_CREDIT_CARD = 'credit_card';
+export const TYPE_PAYPAL = 'paypal';

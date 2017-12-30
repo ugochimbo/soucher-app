@@ -24,7 +24,7 @@ export default class SoucherDetailsForm extends Component{
     };
 
     render() {
-        const {previousPage, onPaymentSuccess, onSubmit, formState, transacting} = this.props;
+        const {previousPage, onTransactionComplete, onSubmit, formState, transacting} = this.props;
 
         const amount = parseFloat(formState.values.soucherAmount);
         const surcharge = Util.surchargeFor(formState.values.soucherAmount);
@@ -56,7 +56,7 @@ export default class SoucherDetailsForm extends Component{
                     <div className="row">
                         <SoucherContainer formState = {formState} cardShouldFlip = {this.state.flipCard} backButtonOnClick = {previousPage}/>
                         <PaymentContainer
-                            onPaymentSuccess = {onPaymentSuccess}
+                            onSuccess = {onTransactionComplete}
                             soucher = {soucher}
                             contact = {contact}
                             flipCard = {::this.flipCard}
