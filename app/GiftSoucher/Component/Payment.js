@@ -6,9 +6,9 @@ export default class Payment extends Component {
     render() {
         const {onSuccess, disabled, soucher, contact} = this.props;
 
-        const paymentComplete = (paymentType, paymentResponse) => {
+        const paymentComplete = (provider, paymentResponse) => {
             onSuccess({
-                type: paymentType,
+                provider: provider,
                 token: paymentResponse,
                 details: soucher
             });
@@ -23,5 +23,5 @@ export default class Payment extends Component {
     }
 };
 
-export const TYPE_CREDIT_CARD = 'credit_card';
-export const TYPE_PAYPAL = 'paypal';
+export const PROVIDER_STRIPE = 'stripe';
+export const PROVIDER_PAYPAL = 'paypal';
