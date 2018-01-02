@@ -26,10 +26,10 @@ export const format = amount => {
 
 export const surchargeFor = soucherAmount => {
 
-    if (soucherAmount > 0 && soucherAmount < 50.01) return 1.99;
-    else if (soucherAmount < 100.01) return 2.99;
-    else if (soucherAmount < 150.01) return 3.99;
-    else if (soucherAmount < 200.01) return 4.99;
-    else return 0;
+    if (soucherAmount === undefined) {
+        return 0.00
+    }
+
+    return 0.99 + Math.ceil(soucherAmount / 50);
 };
 
