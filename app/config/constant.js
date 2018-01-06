@@ -4,9 +4,9 @@ export const HOME = '/';
 export const GIFT_SOUCHER_ROUTE = '/gift';
 export const GIFT_SOUCHER_SUCCESS_ROUTE = '/gift-success';
 
-export const SWAP_SOUCHER_ROUTE = '/swap';
-export const SWAP_SOUCHER_SUCCESS_ROUTE = '/swap-success';
-export const SWAP_SOUCHER_CANCEL_ROUTE = '/swap-cancelled';
+export const SWAP_SOUCHER_ROUTE = '/redeem';
+export const SWAP_SOUCHER_SUCCESS_ROUTE = '/redeem-success';
+export const SWAP_SOUCHER_CANCEL_ROUTE = '/redeem-cancelled';
 
 export const GIFT_CARD_CATALOG_ROUTE = '/catalog';
 

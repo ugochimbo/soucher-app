@@ -93,7 +93,8 @@ export default class Home extends Component{
                             <ul className="actions">
                                 <li>
                                     <Link to = {LINK_TO.GIFT_CARD_CATALOG_ROUTE} className="button big special">
-                                        <span style={{'marginRight' : '5px'}}>View Voucher Catalog</span>
+                                        <span className="icon fa-book"/>
+                                        <span style={{'margin' : '0 5px 0 5px'}}>View Catalog</span>
                                         <span className="icon fa-book"/>
                                     </Link>
                                 </li>
@@ -149,7 +150,7 @@ export default class Home extends Component{
                     <ul className="actions">
                         <li><Link to = {LINK_TO.GIFT_SOUCHER_ROUTE} className="button big special">
                             <span className="icon fa-gift"/>
-                            <span style={{'margin' : '0 10px 0 10px'}}>Gift a loved one a Soucher</span>
+                            <span style={{'margin' : '0 5px 0 5px'}}>Gift a Soucher</span>
                             <span className="icon fa-gift"/>
                         </Link></li>
                     </ul>
