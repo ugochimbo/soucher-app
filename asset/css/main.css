@@ -2566,6 +2566,7 @@ body.is-menu-visible #menu {
       height: 34em; } }
   @media screen and (max-width: 736px) {
     #banner {
+      background: url("https://soucher.ams3.digitaloceanspaces.com/static/bg-mobile.jpg"), url("https://soucher.ams3.digitaloceanspaces.com/static/overlay_2.png") no-repeat center;
       padding: 4.5em 3em 4em 3em; }
       #banner header {
         height: auto;

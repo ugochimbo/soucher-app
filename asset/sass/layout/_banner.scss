@@ -117,6 +117,7 @@
 		}
 
 		@include breakpoint(small) {
+			background: url('https://soucher.ams3.digitaloceanspaces.com/static/bg-mobile.jpg'), url("https://soucher.ams3.digitaloceanspaces.com/static/overlay_2.png") no-repeat center;
 			padding: 4.5em 3em 4em 3em;
 
 			header {
