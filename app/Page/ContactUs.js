@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import SectionHeader, {ContactUsPageHeader as header} from '../Common/SectionHeader';
-import {Link} from 'react-router-dom';
-import  * as LINK_TO from '../config/constant';
 import {STATIC_ASSET} from "../config/constant";
 
 export default class ContactUs extends Component{

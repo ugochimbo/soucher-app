@@ -2278,7 +2278,7 @@ body {
       line-height: 3.25em; }
       body #header h1 {
         left: 1em;
-        font-size: 0.8em; }
+        font-size: 0.9em; }
       body #header .mobile {
         position: absolute;
         right: 0; }
@@ -2712,6 +2712,8 @@ body.is-menu-visible #menu {
       width: 100%;
       padding-top: 0; }
       #main > *, #main-full > * {
+        margin-bottom: 1em; }
+      #main #banner, #main-full #banner {
         margin-bottom: 0; }
       #main .default .content, #main-full .default .content {
         padding: 2em 1em 0.1em 1em ; }

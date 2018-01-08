@@ -29,15 +29,16 @@ export default class Home extends Component{
                     <div className="content" style={{'fontSize' : 'medium'}}>
                         <p>Gift cards have proven to be one of the top gift options. We often opt for a generic,
                             big retail store gift card since we do not know what our loved one really wants.
-                            Whilst this is a great option, we seek to reverse the decision by letting our loved ones decide,
-                            making you worry less. </p>
+                            Whilst this is a great option, we seek to reverse the decision by letting our loved ones decide;
+                            and you, worry less. We also seem to use this opportunity to promote small and medium size companies whose
+                            gift cards are least used.</p>
                     </div>
                     <div>
                         <header className="major" style={{'textAlign' : 'left'}}>
                             <h2 style={{'textAlign' : 'center'}}><span className="icon fa-certificate"/></h2>
-                            Let your loved one decide <br />
-                            Worry less <br />
-                            Promote small / medium companies <br />
+                            <span className="icon fa-arrow-circle-right"/> Let your loved one decide. <br />
+                            <span className="icon fa-arrow-circle-right"/> Help you worry less. <br />
+                            <span className="icon fa-heart"/> Promote small / medium sized companies. <br />
                         </header>
                     </div>
                 </section>
