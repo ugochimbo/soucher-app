@@ -36,9 +36,9 @@ export default class Home extends Component{
                     <div>
                         <header className="major" style={{'textAlign' : 'left'}}>
                             <h2 style={{'textAlign' : 'center'}}><span className="icon fa-certificate"/></h2>
-                            <span className="icon fa-arrow-circle-right"/> Let your loved one decide. <br />
-                            <span className="icon fa-arrow-circle-right"/> Help you worry less. <br />
-                            <span className="icon fa-heart"/> Promote small / medium sized companies. <br />
+                            <span className="icon fa-arrow-circle-right"/> We let your loved one decide. <br />
+                            <span className="icon fa-arrow-circle-right"/> We help you worry less. <br />
+                            <span className="icon fa-heart"/> We promote small / medium sized companies. <br />
                         </header>
                     </div>
                 </section>
