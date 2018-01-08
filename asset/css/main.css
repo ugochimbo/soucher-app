@@ -2279,8 +2279,6 @@ body {
       body #header h1 {
         left: 1em;
         font-size: 0.8em; }
-        body #header h1 span {
-          display: none; }
       body #header .mobile {
         position: absolute;
         right: 0; }
