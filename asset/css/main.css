@@ -2220,6 +2220,8 @@ body {
   color: #011A27;
   line-height: 3.25em;
   z-index: 10000; }
+  #header #cher {
+    color: #6a707c; }
   #header h1 {
     position: absolute;
     top: 0;
@@ -2261,42 +2263,39 @@ body {
       #header nav a:before {
         margin-right: 0.5em;
         opacity: 0.25; }
-      #header nav a[href="#menu"] {
-        -webkit-tap-highlight-color: transparent; }
-        #header nav a[href="#menu"]:before {
-          content: '\f0c9'; }
       #header nav a:hover {
         color: inherit !important; }
+  #header .desktop {
+    display: inline; }
+  #header .mobile {
+    display: none; }
 
 @media screen and (max-width: 736px) {
   body {
     padding-top: 2.5em; }
     body #header {
-      height: 2.5em;
-      line-height: 2.65em; }
+      height: 3.0em;
+      line-height: 3.25em; }
       body #header h1 {
         left: 1em;
         font-size: 0.8em; }
         body #header h1 span {
           display: none; }
-      body #header nav {
+      body #header .mobile {
+        position: absolute;
         right: 0; }
-        body #header nav a[href="#menu"] {
-          width: 6em;
-          height: 4em;
-          text-indent: 6em;
+        body #header .mobile a[href="#menu"] {
           overflow: hidden;
           white-space: nowrap; }
-          body #header nav a[href="#menu"]:before {
+          body #header .mobile a[href="#menu"]:before {
+            content: '';
             display: block;
             position: absolute;
-            top: 0;
-            right: 0;
-            width: 3em;
-            height: 2.5em;
-            margin: 0;
-            text-indent: 0;
-            text-align: center; } }
+            top: 0; }
+      body #header .desktop {
+        display: none; }
+      body #header .mobile {
+        display: inline; } }
 /* Menu */
 #page-wrapper {
   -moz-transition: -moz-filter 0s ease;
@@ -2728,7 +2727,7 @@ body.is-menu-visible #menu {
       #main .cta, #main-full .cta {
         padding: 3em 1.2em 1em 1.2em ;
         background-color: #011A27;
-        background-image: url("images/overlay.png"), url("images/bg.jpg");
+        background-image: url("https://soucher.ams3.digitaloceanspaces.com/static/overlay.png"), url("https://soucher.ams3.digitaloceanspaces.com/static/bg.jpg");
         background-size: 100px 100px,				cover;
         background-repeat: repeat,						no-repeat;
         background-attachment: scroll,						scroll;

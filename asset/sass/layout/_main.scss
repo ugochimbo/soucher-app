@@ -224,7 +224,7 @@
 			.cta {
 				@include padding(3em, 1.2em);
 				background-color:		_palette(bg-alt);
-				background-image:		url('images/overlay.png'),	url('images/bg.jpg');
+				background-image:		url('https://soucher.ams3.digitaloceanspaces.com/static/overlay.png'),	url('https://soucher.ams3.digitaloceanspaces.com/static/bg.jpg');
 				background-size:		100px 100px,				cover;
 				background-repeat:		repeat,						no-repeat;
 				background-attachment:	scroll,						scroll;

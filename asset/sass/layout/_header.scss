@@ -19,6 +19,10 @@
 		line-height: 3.25em;
 		z-index: _misc(z-index-base);
 
+		#cher {
+			color: #6a707c
+		}
+
 		h1 {
 			position: absolute;
 			top: 0;
@@ -63,18 +67,18 @@
 					opacity: 0.25;
 				}
 
-				&[href="#menu"] {
-					-webkit-tap-highlight-color: rgba(0,0,0,0);
-
-					&:before {
-						content: '\f0c9';
-					}
-				}
-
 				&:hover {
 					color: inherit !important;
 				}
 			}
+		}
+
+		.desktop {
+			display: inline;
+		}
+
+		.mobile {
+			display: none;
 		}
 	}
 
@@ -83,8 +87,8 @@
 			padding-top: 2.5em;
 
 			#header {
-				height: 2.5em;
-				line-height: 2.65em;
+				height: 3.0em;
+				line-height: 3.25em;
 
 				h1 {
 					left: 1em;
@@ -95,31 +99,33 @@
 					}
 				}
 
-				nav {
+				.mobile {
+					position: absolute;
 					right: 0;
 
 					a {
 						&[href="#menu"] {
-							width: 6em;
-							height: 4em;
-							text-indent: 6em;
 							overflow: hidden;
 							white-space: nowrap;
 
 							&:before {
+								content: '';
 								display: block;
 								position: absolute;
 								top: 0;
-								right: 0;
-								width: 3em;
-								height: 2.5em;
-								margin: 0;
-								text-indent: 0;
-								text-align: center;
 							}
 						}
 					}
 				}
+
+				.desktop {
+					display: none;
+				}
+
+				.mobile {
+					display: inline;
+				}
 			}
+
 		}
 	}
