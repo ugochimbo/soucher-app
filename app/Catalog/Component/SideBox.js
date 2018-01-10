@@ -15,17 +15,25 @@ class SideBox extends Component {
 
         return (
             <div className="row uniform" style={{"marginTop" : "5px"}}>
-                <div id="basket"
-                     style={{"position" : "fixed", "backgroundColor" : "#011A27", "color" : "#fff", "marginTop" : "20px", "marginBottom" : "20px"}}
-                     className="1u 12u$(small)">
+                <div id="basket" className="1u 12u$(small) catalog">
 
-                    <div>Have a Soucher to redeem ?</div>
-                    <div>Let's get started.</div>
+                    <span className="desktop-side-box">
+                        <div>Have a Soucher to redeem ?</div>
+                        <div>Let's get started.</div>
 
-                    <button type="button" className="button special" onClick={() => redirectToRedeem()} style={{"marginTop" : "20px", "marginBottom" : "20px"}}>
-                        <span> Redeem </span>
-                        <span  style={{'marginLeft' : '1px'}} className="icon fa-arrow-circle-o-right"/>
-                    </button>
+                        <button type="button" className="button special" onClick={() => redirectToRedeem()}>
+                            <span> To Redeem </span>
+                            <span  style={{'marginLeft' : '1px'}} className="icon fa-arrow-circle-o-right"/>
+                        </button>
+                    </span>
+
+                    <span className="mobile-side-box">
+                        <button type="button" className="button big special" onClick={() => redirectToRedeem()}>
+                            <span> To Redeem </span>
+                            <span  style={{'marginLeft' : '1px'}} className="icon fa-arrow-circle-o-right"/>
+                        </button>
+                    </span>
+
                 </div>
             </div>
         )

@@ -5,112 +5,121 @@
 /* Custom page style */
 
   #swap-catalog {
-      .item {
-        margin: 1px 0 20px 10px;
-        float: left;
-        width: 250px;
-        height: 330px;
-        box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.1);
-        text-align: center;
+    .item {
+      margin: 1px 0 20px 10px;
+      float: left;
+      width: 250px;
+      height: 330px;
+      box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.1);
+      text-align: center;
+      background-color: _palette(fg);
+
+      .img {
         background-color: _palette(fg);
-
-        .img {
-          background-color: _palette(fg);
-          height: 205px;
-        }
-
-        .amount {
-          height: 105px;
-          background-color: _palette(fg-light);
-
-            .fixed > div{
-                margin: 10px 3px 8px 8px;
-                border-radius: 100%;
-                border: solid 1px;
-                width: 50px;
-                height: 50px;
-                float: left;
-                padding: 10px 2px 0 2px;
-                font-size: large;
-            }
-
-            .fixed > div.no-price{
-              border: none !important;
-            }
-
-            .fixed > div.no-price:hover{
-              background-color: _palette(fg-light) !important;
-            }
-
-            .fixed > div.disabled {
-              pointer-events: none;
-            }
-
-            .fixed > div:hover {
-                background-color: _palette(bg);
-                color: _palette(fg-light);
-            }
-
-            .custom > input {
-                height: 60px;
-                color: _palette(fg-light);
-                background-color: _palette(bg);
-            }
-
-            .custom > input:disabled {
-                background-color: _palette(error) !important;
-            }
-        }
-
-        img {
-          width: 250px;
-          height: 205px;
-        }
-
+        height: 205px;
       }
+
+      .amount {
+        height: 105px;
+        background-color: _palette(fg-light);
+
+          .fixed > div{
+              margin: 10px 3px 8px 8px;
+              border-radius: 100%;
+              border: solid 1px;
+              width: 50px;
+              height: 50px;
+              float: left;
+              padding: 10px 2px 0 2px;
+              font-size: large;
+          }
+
+          .fixed > div.no-price{
+            border: none !important;
+          }
+
+          .fixed > div.no-price:hover{
+            background-color: _palette(fg-light) !important;
+          }
+
+          .fixed > div.disabled {
+            pointer-events: none;
+          }
+
+          .fixed > div:hover {
+              background-color: _palette(bg);
+              color: _palette(fg-light);
+          }
+
+          .custom > input {
+              height: 60px;
+              color: _palette(fg-light);
+              background-color: _palette(bg);
+          }
+
+          .custom > input:disabled {
+              background-color: _palette(error) !important;
+          }
+      }
+
+      img {
+        width: 250px;
+        height: 205px;
+      }
+
+    }
   }
 
   #listing {
-      @extend #swap-catalog;
+    @extend #swap-catalog;
+
+    @include breakpoint(small) {
+      .item {
+        margin: 0 auto 20px auto;
+        float: none;
+      }
+      margin: 1px auto 20px auto;
+      float: none;
+    }
   }
 
   #filter {
-      background-color: _palette(fg-light);
-      padding: 0.5em 0.5em 0.1em 0.5em;
-      text-align: center;
-      margin-bottom: 10px;
+    background-color: _palette(fg-light);
+    padding: 0.5em 0.5em 0.1em 0.5em;
+    text-align: center;
+    margin-bottom: 10px;
 
-      #category {
-        div {
-          float: left;
-          margin-left: 5px;
+    #category {
+      div {
+        float: left;
+        margin-left: 5px;
 
-          a {
-            color: _palette(bg) !important;
-            text-decoration: none;
-            margin-left: 10px;
-            padding: 1px;
-          }
-          a.selected {
-            text-decoration: underline;
-          }
+        a {
+          color: _palette(bg) !important;
+          text-decoration: none;
+          margin-left: 10px;
+          padding: 1px;
+        }
+        a.selected {
+          text-decoration: underline;
         }
       }
+    }
 
-      #search {
-        float: right;
-        margin-right: 1px;
+    #search {
+      float: right;
+      margin-right: 1px;
 
-        input {
-          height: 38px;
-          margin-top: -35px;
-          color: _palette(fg-light);
-        }
+      input {
+        height: 38px;
+        margin-top: -35px;
+        color: _palette(fg-light);
       }
+    }
 
   }
 
-  #basket{
+  #basket {
     box-shadow: 0 0 10em 0 rgba(0, 0, 0, 0.2);
     @include padding(2em, 2em);
     right: 0.3em;
@@ -119,6 +128,21 @@
     background-color: _palette(fg-light);
     color: _palette(bg);
     width: 220px;
+
+      .desktop-side-box {
+        color : #fff;
+        margin-top : 20px;
+        margin-bottom : 20px;
+
+        button {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .mobile-side-box {
+        display: none;
+      }
 
       .basket-buttons {
         margin-left: -2em;
@@ -132,6 +156,10 @@
             margin-bottom: 10px;
           }
       }
+
+    &.catalog {
+      background-color: _palette(bg);
+    }
   }
 
   .disabled {
@@ -234,3 +262,40 @@
     transform: rotateY(180deg);
   }
 
+  @include breakpoint(small) {
+    #basket {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      color: #011A27;
+      width: 100%;
+      z-index: 1000;
+      text-align: center;
+      margin-bottom: 0;
+      padding: 1em;
+
+      .desktop-side-box {
+        display: none;
+      }
+
+      .mobile-side-box {
+        display: inline;
+        color : #fff;
+        margin-top : 20px;
+        margin-bottom : 20px;
+
+        button {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .inner {
+      @include padding(3em, 1.5em);
+      width: 100%;
+    }
+
+    .copyright {
+      @include padding(3em, 1.5em);
+    }
+  }

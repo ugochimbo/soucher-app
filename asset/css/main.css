@@ -1997,6 +1997,14 @@ dl {
     width: 250px;
     height: 205px; }
 
+@media screen and (max-width: 736px) {
+  #listing {
+    margin: 1px auto 20px auto;
+    float: none; }
+    #listing .item {
+      margin: 0 auto 20px auto;
+      float: none; } }
+
 #filter {
   background-color: #ffffff;
   padding: 0.5em 0.5em 0.1em 0.5em;
@@ -2029,6 +2037,15 @@ dl {
   background-color: #ffffff;
   color: #011A27;
   width: 220px; }
+  #basket .desktop-side-box {
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    #basket .desktop-side-box button {
+      margin-top: 20px;
+      margin-bottom: 20px; }
+  #basket .mobile-side-box {
+    display: none; }
   #basket .basket-buttons {
     margin-left: -2em;
     margin-right: -2em;
@@ -2038,6 +2055,8 @@ dl {
     #basket .basket-buttons button {
       width: 100%;
       margin-bottom: 10px; }
+  #basket.catalog {
+    background-color: #011A27; }
 
 .disabled {
   pointer-events: none; }
@@ -2124,6 +2143,33 @@ img {
 .side-back {
   transform: rotateY(180deg); }
 
+@media screen and (max-width: 736px) {
+  #basket {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: #011A27;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 1em; }
+    #basket .desktop-side-box {
+      display: none; }
+    #basket .mobile-side-box {
+      display: inline;
+      color: #fff;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+      #basket .mobile-side-box button {
+        margin-bottom: 0; }
+
+  .inner {
+    padding: 3em 1.5em 1em 1.5em ;
+    width: 100%; }
+
+  .copyright {
+    padding: 3em 1.5em 1em 1.5em ; } }
 /* Section/Article */
 section.special, article.special {
   text-align: center; }
@@ -2792,7 +2838,8 @@ body.is-menu-visible #menu {
         margin: 0 0 1em 0; } }
   @media screen and (max-width: 736px) {
     #footer {
-      background-color: #01131d; }
+      background-color: #01131d;
+      margin-bottom: 50px; }
       #footer .inner {
         padding: 3em 1.5em 1em 1.5em ;
         width: 100%; }
