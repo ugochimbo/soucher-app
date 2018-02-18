@@ -81,7 +81,7 @@
 
 		@include breakpoint(small) {
 			background-color: darken(_palette(bg), 2);
-			margin-bottom: 50px;
+			text-align: center;
 
 			.inner {
 				@include padding(3em, 1.5em);

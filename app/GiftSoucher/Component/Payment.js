@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import CreditCard from '../Component/CreditCard';
 import PayPal from '../Component/PayPal';
+import DemoPayment from '../Component/DemoPayment';
 
 export default class Payment extends Component {
     render() {
@@ -16,6 +17,7 @@ export default class Payment extends Component {
 
         return (
             <div className="row uniform">
+                <DemoPayment onSuccess = {paymentComplete} disabled = {disabled} soucher = {soucher} contact = {contact} />
                 <CreditCard onSuccess = {paymentComplete} disabled = {disabled} soucher = {soucher} contact = {contact} />
                 <PayPal onSuccess = {paymentComplete} disabled = {disabled} soucher = {soucher} contact = {contact} />
             </div>
@@ -23,5 +25,6 @@ export default class Payment extends Component {
     }
 };
 
+export const PROVIDER_DEMO = 'demo';
 export const PROVIDER_STRIPE = 'stripe';
 export const PROVIDER_PAYPAL = 'paypal';
