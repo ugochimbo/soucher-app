@@ -15,7 +15,7 @@ class SideBox extends Component {
 
         return (
             <div className="row uniform" style={{"marginTop" : "5px"}}>
-                <div id="basket" className="1u 12u$(small) catalog">
+                <div id="basket" className="1u 12u$(small) catalog" style={{'position' : 'fixed'}}>
 
                     <span className="desktop-side-box">
                         <div>Have a Soucher to redeem ?</div>
