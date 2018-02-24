@@ -250,9 +250,7 @@
 	}
 
 	.hide-desktop {
-
 		display:none;
-
 		@include breakpoint(small) {
 			display: inherit;
 		}

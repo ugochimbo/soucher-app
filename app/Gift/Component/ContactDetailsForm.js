@@ -36,6 +36,9 @@ export default class ContactDetailsForm extends Component{
                             </div>
                         </div>
                     </div>
+
+                    <hr className="hide-desktop" />
+
                     <div className="row uniform" style={{'marginBottom': '10px'}}>
                         <div className="12u$ actions align-center">
                             <button type="submit" className="button big special">
