@@ -60,7 +60,9 @@ export default class Search extends Component {
                     />
                 </div>
                 <div className="3u 12u$(small)" style={{'float': 'left'}}>
-                    <button onClick={::this.search} className="button medium">Submit</button>
+                    <button onClick={::this.search} className="button medium">
+                          <i className="icon fa-search fa-2x" />
+                    </button>
                 </div>
             </div>
         );

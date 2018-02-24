@@ -5,11 +5,11 @@ import Home from '../Page/Home.js';
 import GiftCardCatalogPage from '../Catalog/Container/GiftCardCatalogPage';
 import AboutUs from '../Page/AboutUs';
 import ContactUs from '../Page/ContactUs';
-import BuySoucherWizard from '../GiftSoucher/Wizard';
-import SwapSoucherWizard from '../SwapSoucher/Wizard';
-import GiftSuccessPage from '../GiftSoucher/Page/SuccessPage';
-import SwapSuccessPage from '../SwapSoucher/Page/SuccessPage';
-import SwapCancelledPage from '../SwapSoucher/Page/SwapCancelledPage';
+import BuySoucherWizard from '../Gift/Wizard';
+import SwapSoucherWizard from '../Redeem/Wizard';
+import GiftSuccessPage from '../Gift/Page/SuccessPage';
+import SwapSuccessPage from '../Redeem/Page/SuccessPage';
+import SwapCancelledPage from '../Redeem/Page/SwapCancelledPage';
 import TransactionError from '../Page/TransactionError';
 
 import  * as PATH_TO from './constant';

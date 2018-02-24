@@ -3,7 +3,7 @@ import {reset} from 'redux-form';
 import {connect} from 'react-redux';
 import SectionHeader, {TransactionErrorPageHeader as header} from '../Common/SectionHeader';
 import * as LINK_TO from '../config/constant';
-import * as Action from '../GiftSoucher/action';
+import * as Action from '../Gift/action';
 import {STATIC_ASSET} from "../config/constant";
 
 class TransactionError extends Component {

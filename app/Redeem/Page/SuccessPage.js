@@ -34,7 +34,7 @@ class SuccessPage extends Component {
                     'backgroundColor' : 'rgba(0, 0, 0, 0.65)'
                 }}>
                     <header>
-                        <h2 className="highlight">We have received your swap request.</h2>
+                        <h2 className="highlight">We have received your redeem request.</h2>
                         <p> <span className="highlight"> We will send your gift card(s) shortly. </span></p>
                         <p> <span className="highlight"> Thank you for using Soucher. </span></p>
                     </header>

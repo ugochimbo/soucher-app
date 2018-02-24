@@ -2020,6 +2020,9 @@ dl {
       padding: 1px; }
     #filter #category div a.selected {
       text-decoration: underline; }
+  @media screen and (max-width: 736px) {
+    #filter #category {
+      display: none; } }
   #filter #search {
     float: right;
     margin-right: 1px; }
@@ -2839,7 +2842,7 @@ body.is-menu-visible #menu {
   @media screen and (max-width: 736px) {
     #footer {
       background-color: #01131d;
-      margin-bottom: 50px; }
+      text-align: center; }
       #footer .inner {
         padding: 3em 1.5em 1em 1.5em ;
         width: 100%; }

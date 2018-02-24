@@ -5,7 +5,7 @@ import FilterBar from '../../Filter/FilterBar';
 import Paginator from '../../Filter/Paginator';
 import Listing from '../Component/Listing';
 import * as Currency from '../../Util/Currency';
-import * as Action from '../../SwapSoucher/action';
+import * as Action from '../../Redeem/action';
 import {SUCCESS_RESPONSE_CODE} from '../../state/constant';
 import SideBox from "../Component/SideBox";
 

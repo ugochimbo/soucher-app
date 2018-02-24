@@ -14,11 +14,11 @@ export default class CodeVerificationForm extends Component {
                     <div className="6u 12u$(small)">
                         <h3>Enter Soucher Code</h3>
 
-                        <div className="6u$" style={{'marginBottom': '10px'}}>
+                        <div className="6u 12u$(small)" style={{'marginBottom': '10px'}}>
                             <Field name="soucherCode" type="text" component={FormField.Input} label='' />
                         </div>
 
-                        <div className="12u$">
+                        <div className="6u 12u$(small)">
                             <div className="row uniform" style={{'marginBottom': '10px'}}>
                                 <div className="12u$ actions">
                                     <button type="submit" className="button big special">

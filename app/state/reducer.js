@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
 import { reducer as formReducer } from 'redux-form';
-import {SwapReducer} from '../SwapSoucher/reducer';
+import {SwapReducer} from '../Redeem/reducer';
 import {FilterReducer} from '../Filter/reducer';
 import * as Action from '../state/constant';
 
