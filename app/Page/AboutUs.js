@@ -1,21 +1,12 @@
 import React, {Component} from 'react';
 import SectionHeader, {AboutUsPageHeader as header} from '../Common/SectionHeader';
-import {Link} from 'react-router-dom';
-import  * as LINK_TO from '../config/constant';
-import {STATIC_ASSET} from "../config/constant";
 
 export default class AboutUs extends Component{
     render() {
         return (
             <div id="main">
 
-                <section id="banner" style={{
-                    'backgroundImage' : 'url(' + STATIC_ASSET + '/about_us.jpg), url('+ STATIC_ASSET + '/overlay_2.png)',
-                    'textShadow' : '0 1px 0 rgba(0, 0, 0, 0.75)',
-                    'backgroundPosition' : 'initial',
-                    'backgroundColor' : 'rgba(0, 0, 0, 0.65)',
-                    'height' : '449px',
-                }}>
+                <section id="banner" className="about-banner">
                     <section id="content">
                         <SectionHeader title={header.title} message={header.message} />
                     </section>

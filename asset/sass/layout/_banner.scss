@@ -152,3 +152,31 @@
 			padding: 6.5em 3em 6em 3em;
 		}
 	}
+
+	#banner.about-banner {
+		background: url('https://soucher.ams3.digitaloceanspaces.com/static/about_us.jpg');
+		textShadow: '0 1px 0 rgba(0, 0, 0, 0.75)';
+		backgroundPosition: 'initial';
+		backgroundColor: 'rgba(0, 0, 0, 0.65)';
+		height: 449px;
+
+		@include breakpoint(small) {
+			background: url('https://soucher.ams3.digitaloceanspaces.com/static/about_mobile.jpg');
+			height: 300px !important;
+			background-size: cover;
+		}
+	}
+
+	#banner.contact-banner {
+		background: url('https://soucher.ams3.digitaloceanspaces.com/static/contact_us.jpg');
+		textShadow: '0 1px 0 rgba(0, 0, 0, 0.75)';
+		backgroundPosition: 'initial';
+		backgroundColor: 'rgba(0, 0, 0, 0.65)';
+		height: 449px;
+
+		@include breakpoint(small) {
+			background: url('https://soucher.ams3.digitaloceanspaces.com/static/contact_mobile.jpg');
+			height: 300px !important;
+			background-size: cover;
+		}
+	}

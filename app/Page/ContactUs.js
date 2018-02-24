@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
 import SectionHeader, {ContactUsPageHeader as header} from '../Common/SectionHeader';
-import {STATIC_ASSET} from "../config/constant";
 
 export default class ContactUs extends Component{
     render() {
         return (
             <div id="main">
 
-                <section id="banner" style={{
-                    'backgroundImage' : 'url(' + STATIC_ASSET + '/contact_us.jpg), url('+ STATIC_ASSET + '/overlay_2.png)',
+                <section id="banner" className="contact-banner" style={{
                     'textShadow' : '0 1px 0 rgba(0, 0, 0, 0.75)',
                     'backgroundPosition' : 'initial',
                     'backgroundColor' : 'rgba(0, 0, 0, 0.65)',
