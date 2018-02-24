@@ -2811,6 +2811,16 @@ body.is-menu-visible #menu {
   width: 100% !important;
   padding: 0 0 0.1em 0 ; }
 
+@media screen and (max-width: 736px) {
+  .hide-mobile {
+    display: none; } }
+
+.hide-desktop {
+  display: none; }
+  @media screen and (max-width: 736px) {
+    .hide-desktop {
+      display: inherit; } }
+
 /* Footer */
 #footer {
   background-color: #011A27; }

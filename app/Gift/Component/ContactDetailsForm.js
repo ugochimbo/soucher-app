@@ -22,6 +22,9 @@ export default class ContactDetailsForm extends Component{
                             </div>
                         </div>
                         <div className="6u 12u$(small)">
+
+                            <hr className="hide-desktop" />
+
                             <h3 className="major">Recipient's Details</h3>
 
                             <div className="12u$" style={{'marginBottom': '10px'}}>

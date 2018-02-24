@@ -243,3 +243,18 @@
 		@include padding(0, 0);
 	}
 
+	.hide-mobile {
+		@include breakpoint(small) {
+			display: none;
+		}
+	}
+
+	.hide-desktop {
+
+		display:none;
+
+		@include breakpoint(small) {
+			display: inherit;
+		}
+	}
+
