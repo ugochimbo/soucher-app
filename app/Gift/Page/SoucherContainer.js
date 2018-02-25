@@ -7,9 +7,9 @@ export default class SoucherContainer extends Component {
         const {formState, backButtonOnClick, cardShouldFlip} = this.props;
 
         return(
-            <div className="6u 12u$(small)" style={{'width' : '500px'}}>
+            <div className="6u 12u$(small) hide-mobile" style={{'width' : '500px'}}>
                 <Soucher cardShouldFlip = {cardShouldFlip} formState = {formState} />
-                <BackButton onClick = {backButtonOnClick}/>
+                <BackButton buttonText="Edit Contact" onClick = {backButtonOnClick} />
             </div>
         )
     }

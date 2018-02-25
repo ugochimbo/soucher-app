@@ -92,8 +92,10 @@ class PayPalButton extends Component {
         };
 
         return (
-            <div style={{'width' : '350px' }} className={this.props.disabled}>
-                {displayPayPalButton()}
+            <div className={this.props.disabled}>
+                <div className="paypal-checkout">
+                    {displayPayPalButton()}
+                </div>
             </div>
         );
     }

@@ -256,3 +256,11 @@
 		}
 	}
 
+	.paypal-checkout {
+		width: 350px;
+		@include breakpoint(small) {
+			width: 250px;
+		}
+	}
+
+

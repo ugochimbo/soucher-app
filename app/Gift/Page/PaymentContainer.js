@@ -9,7 +9,7 @@ import {minimumSurcharge} from "../../Util/Money";
 
 export default class PaymentContainer extends Component {
     render() {
-        const {onSuccess, soucher, contact, flipCard} = this.props;
+        const {onSuccess, soucher, contact, flipCard, backButtonOnClick} = this.props;
 
         const MINIMUM_AMOUNT = 1;
         const MAXIMUM_AMOUNT = 200;
@@ -45,6 +45,7 @@ export default class PaymentContainer extends Component {
                     disabled = {disablePaymentButtons()}
                     soucher = {soucher}
                     contact = {contact}
+                    backButtonOnClick = {backButtonOnClick}
                 />
             </div>
         )

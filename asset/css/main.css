@@ -2823,6 +2823,12 @@ body.is-menu-visible #menu {
     .hide-desktop {
       display: inherit; } }
 
+.paypal-checkout {
+  width: 350px; }
+  @media screen and (max-width: 736px) {
+    .paypal-checkout {
+      width: 250px; } }
+
 /* Footer */
 #footer {
   background-color: #011A27; }

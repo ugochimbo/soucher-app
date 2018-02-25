@@ -60,6 +60,7 @@ export default class SoucherDetailsForm extends Component{
                             soucher = {soucher}
                             contact = {contact}
                             flipCard = {::this.flipCard}
+                            backButtonOnClick = {previousPage}
                         />
                     </div>
                 </div>

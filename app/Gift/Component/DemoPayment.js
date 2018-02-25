@@ -17,10 +17,10 @@ export default class DemoPayment  extends Component {
             <div className={toggleButton()}>
                 <div className="row uniform">
                     <div className="12u$ actions">
-                        <button type="button" className="button big special" disabled={disabled} onClick={testSuccess}>
-                            <span  style={{'marginLeft' : '3px'}} className="icon fa-credit-card "/>
+                        <button type="button" className="button big special" disabled={disabled} onClick={testSuccess} style={{'width': '300px'}}>
+                            <span  style={{'marginLeft' : '2px'}} className="icon fa-money "/>
                             <span> Demo Payment </span>
-                            <span  style={{'marginLeft' : '3px'}} className="icon fa-credit-card-alt "/>
+                            <span  style={{'marginLeft' : '2px'}} className="icon fa-check-circle-o"/>
                         </button>
                     </div>
                 </div>
