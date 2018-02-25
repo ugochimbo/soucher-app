@@ -8,7 +8,7 @@ export default class Footer extends Component{
         return (
             <section id="footer">
                 <div className="inner">
-                    <section className="about">
+                    <section className="about hide-mobile">
                         <h3>About Us</h3>
                         <p>Something something something something.</p>
                         <ul className="actions">
@@ -17,7 +17,7 @@ export default class Footer extends Component{
                             </li>
                         </ul>
                     </section>
-                    <section>
+                    <section className="hide-mobile">
                         <h3>Contact Us</h3>
                         <ul className="contact">
                             <li className="fa-phone">(000) 000-0000</li>

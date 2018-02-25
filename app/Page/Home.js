@@ -88,7 +88,7 @@ export default class Home extends Component{
                             with more focus on less popular retail stores.
                         </header>
                     </div>
-                    <div className="content cta">
+                    <div className="content cta hide-mobile">
                         <header>
                             <h2>Promote small & medium size companies</h2>
                             <ul className="actions">
@@ -104,7 +104,7 @@ export default class Home extends Component{
                     </div>
                 </section>
 
-                <section className="features">
+                <section className="features hide-mobile">
                     <header className="major">
                         <h2>Customer Testimony</h2>
                         <p> What our customers have to say</p>
