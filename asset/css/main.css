@@ -1620,6 +1620,9 @@ textarea {
 
 input[type="number"] {
   width: 8em; }
+  @media screen and (max-width: 736px) {
+    input[type="number"] {
+      width: 100%; } }
 
 input[type="text"],
 input[type="password"],

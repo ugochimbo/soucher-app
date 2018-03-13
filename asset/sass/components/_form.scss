@@ -69,6 +69,10 @@
 
 	input[type="number"] {
 		width: 8em;
+
+		@include breakpoint(small) {
+			width: 100%;
+		}
 	}
 
 	input[type="text"],

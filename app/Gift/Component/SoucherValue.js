@@ -7,13 +7,14 @@ export default class SoucherValue extends Component {
         const { currencies } = this.props;
 
         return (
-            <div className="12u$" style={{'marginBottom': '10px', 'paddingBottom': '50px'}}>
-                <div className="3u 12u$(small)" style={{"float" : "left"}}>
+            <div className="12u$" style={{'marginBottom': '10px'}}>
+                <div className="3u 12u$(small)" style={{"float" : "left", "marginBottom" : "5px"}}>
                     <div className="select-wrapper">
                         <Field name="soucherCurrency" id = "soucherCurrency" component = {FormField.DropDown} label = 'Currency' options = {currencies} />
                     </div>
                 </div>
-                <div className="3u 12u$(small)" style={{"float" : "left", "marginLeft" : "3px" }}>
+
+                <div className="3u 12u$(small)" style={{"float" : "left"}}>
                     <Field name="soucherAmount" type = 'number' component = {FormField.Input} label = 'Amount' min="0" step = "10" />
                 </div>
             </div>
