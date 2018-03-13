@@ -35,7 +35,7 @@ export default class Transacting extends Component {
         };
 
         let loader = () => {
-            return <div>
+            return <div style={{'position': 'fixed', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)'}}>
                 <FoldingCube size={120} timingFunction={'ease-in-out'} color='#BCC3C9' />
                     <h3 className="highlight" style={{'marginTop' : '20px'}}>
                     {message}
