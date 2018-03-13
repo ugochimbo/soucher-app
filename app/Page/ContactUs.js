@@ -6,12 +6,7 @@ export default class ContactUs extends Component{
         return (
             <div id="main">
 
-                <section id="banner" className="contact-banner" style={{
-                    'textShadow' : '0 1px 0 rgba(0, 0, 0, 0.75)',
-                    'backgroundPosition' : 'initial',
-                    'backgroundColor' : 'rgba(0, 0, 0, 0.65)',
-                    'height' : '449px',
-                }}>
+                <section id="banner" className="contact-banner">
                     <section id="content">
                         <SectionHeader title={header.title} message={header.message} />
                     </section>
@@ -19,32 +14,25 @@ export default class ContactUs extends Component{
 
                 <section className="spotlight">
                     <header className="major" style={{'marginBottom' : '20px'}}>
-                        <h2>Mission</h2>
+                        <h2>Office Address</h2>
                     </header>
                     <div className="content" style={{'fontSize' : 'medium'}}>
-                        <p>We are a company which looks to expand and evolve the gift card industry.
-                            Gift cards are important to us because of what gifts stand for - joy, love, appreciation and
-                            alliance amongst others.. </p>
+                        <p>
+                            Somethingstr. 67,
+                            65454,
+                            Somewhere,
+                            Somewhere.
+                        </p>
                     </div>
                 </section>
 
                 <section className="spotlight">
                     <header className="major" style={{'marginBottom' : '20px'}}>
-                        <h2>Philosophy</h2>
+                        <h2>Phone/Email</h2>
                     </header>
                     <div className="content" style={{'fontSize' : 'medium'}}>
-                        <p>Gift cards has proven to be one of the top gift options. We often opt for a generic,
-                            big retail store gift card since we do not know what our loved one really wants.
-                            Whilst this is a great option, we seek to reverse the decision by letting our loved ones decide,
-                            making you worry less. </p>
-                    </div>
-                    <div>
-                        <header className="major" style={{'textAlign' : 'left'}}>
-                            <h2 style={{'textAlign' : 'center'}}><span className="icon fa-certificate"/></h2>
-                            Let your loved one decide <br />
-                            Worry less <br />
-                            Promote small / medium companies <br />
-                        </header>
+                        <p>Phone : +11111111111</p>
+                        <p>Email : cc@soucher.com</p>
                     </div>
                 </section>
 
