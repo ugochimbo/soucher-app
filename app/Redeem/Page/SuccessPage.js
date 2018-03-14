@@ -27,18 +27,13 @@ class SuccessPage extends Component {
                     <SectionHeader title={header.title} message={header.message} />
                 </section>
 
-                <section id="banner" style={{
-                    'backgroundImage' : 'url(' + STATIC_ASSET + '/thank-you.jpg), url('+ STATIC_ASSET + '/overlay_2.png)',
-                    'textShadow' : '0 1px 0 rgba(0, 0, 0, 0.75)',
-                    'backgroundPosition' : 'initial',
-                    'backgroundColor' : 'rgba(0, 0, 0, 0.65)'
-                }}>
+                <section id="banner" className="success-banner">
                     <header>
                         <h2 className="highlight">We have received your redeem request.</h2>
                         <p> <span className="highlight"> We will send your gift card(s) shortly. </span></p>
                         <p> <span className="highlight"> Thank you for using Soucher. </span></p>
                     </header>
-                    <footer>
+                    <footer className="hide-mobile">
                         <ul className="actions fit">
                             <li><Link to = {LINK_TO.GIFT_SOUCHER_ROUTE}  className="button big">
                                 <span className="icon fa-gift"/>
