@@ -12,7 +12,7 @@ export default class Listing extends Component {
          let listing = () => {
 
              if (loading && !catalog.length) {
-                 return <Transacting message = "Building Catalog" />
+                 return <Transacting message = "Building Catalog..." />
              }
 
              if (!catalog.length) {

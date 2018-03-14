@@ -8,7 +8,7 @@
 		@include vendor('transition', 'filter 0s ease');
 	}
 
-	#menu {
+	#menu, #mobile-filter, #mobile-cart {
 		@include vendor('display', 'flex');
 		@include vendor('flex-direction', 'column');
 		@include vendor('justify-content', 'center');
@@ -175,3 +175,22 @@
 			}
 		}
 	}
+
+	body.mobile-filter-visible {
+		#page-wrapper {
+			@include vendor('filter', 'blur(8px)');
+			@include vendor('transition', 'filter 0.25s ease');
+		}
+
+		#mobile-filter {
+			@include vendor('pointer-events', 'auto');
+			opacity: 1;
+			visibility: visible;
+
+			.inner {
+			@include vendor('transform', 'rotateX(0)');
+			@include vendor('transition-delay', '0.125s');
+			opacity: 1;
+		}
+	}
+}

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { withRouter } from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 import * as LINK_TO from '../../config/constant';
 
 class SideBox extends Component {
@@ -28,12 +28,22 @@ class SideBox extends Component {
                     </span>
 
                     <span className="mobile-side-box">
-                        <button type="button" className="button big special" onClick={() => redirectToRedeem()}>
-                            <span> To Redeem </span>
-                            <span  style={{'marginLeft' : '1px'}} className="icon fa-arrow-circle-o-right"/>
-                        </button>
-                    </span>
+                        <nav className='mobile'>
+                            <a href="#mobile-filter"><i className="fa fa-sliders">
+                                <span style={{'marginLeft': '2px'}}>Filter</span> </i></a>
+                        </nav>
 
+                        <nav id="mobile-filter">
+                            <div className="inner">
+                                <h2>
+                                    <i className="fa fa-bars" aria-hidden="true" />
+                                    Filter Menu
+                                    <i className="fa fa-bars" aria-hidden="true" />
+                                </h2>
+                                <p>Fucking filter</p>
+                            </div>
+                        </nav>
+                    </span>
                 </div>
             </div>
         )

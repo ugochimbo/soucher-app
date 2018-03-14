@@ -112,7 +112,7 @@
 		// Body.
 			$body._parallax(-0.7);
 
-		// Menu.
+		// Menu
 			var $menu = $('#menu');
 
 			$menu._locked = false;
@@ -201,6 +201,57 @@
 							$menu._hide();
 
 				});
+
+		//Mobile Catalog Filter
+
+        var $mobileCatalogFilter = $('#mobile-filter');
+
+        $mobileCatalogFilter
+            .appendTo($body)
+            .on('click', function(event) {
+
+                event.stopPropagation();
+
+                // Hide.
+                $body.removeClass('mobile-filter-visible');
+
+            })
+            .find('.inner')
+            .on('click', function(event) {
+                event.stopPropagation();
+            })
+            .on('click', 'a', function(event) {
+
+                var href = $(this).attr('href');
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                // Hide.
+                $body.removeClass('mobile-filter-visible');
+
+                // Redirect.
+                window.setTimeout(function() {
+                    window.location.href = href;
+                }, 350);
+
+            });
+
+        	$body.on('click', 'a[href="#mobile-filter"]', function(event) {
+                event.stopPropagation();
+                event.preventDefault();
+
+                $menu._hide();
+
+                $body.addClass('mobile-filter-visible');
+            })
+			.on('keydown', function(event) {
+
+				// Hide on escape.
+				if (event.keyCode == 27)
+                    $body.removeClass('mobile-filter-visible');
+
+			});
 
 	});
 
