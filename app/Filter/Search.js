@@ -53,7 +53,7 @@ export default class Search extends Component {
     render() {
         return (
             <div className="4u 12u$(small)">
-                <div className="9u 12u$(small)" style={{'float': 'left'}}>
+                <div className="9u 12u$(small) search-key" style={{'float': 'left'}}>
                     <input type="text" placeholder={::this.searchPlaceHolder()}
                            onChange={this.handleKeyChange.bind(this)}
                            onKeyPress={this.handleSubmit.bind(this)}

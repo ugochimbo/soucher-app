@@ -104,9 +104,6 @@
           text-decoration: underline;
         }
       }
-      @include breakpoint(small) {
-        //display: none;
-      }
     }
 
     #search {

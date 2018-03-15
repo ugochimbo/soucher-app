@@ -208,51 +208,40 @@
 
         $mobileCatalogFilter
             .appendTo($body)
+            .on('click', '.search-key', function(event) {
+                event.preventDefault();
+            })
             .on('click', function(event) {
-
-                event.stopPropagation();
-
-                // Hide.
-                $body.removeClass('mobile-filter-visible');
-
+                if (!event.target.matches('a')) {
+                    $body.removeClass('mobile-filter-visible');
+                }
             })
             .find('.inner')
             .on('click', function(event) {
-                event.stopPropagation();
-            })
-            .on('click', 'a', function(event) {
-
-                var href = $(this).attr('href');
-
-                event.preventDefault();
-                event.stopPropagation();
-
-                // Hide.
-                $body.removeClass('mobile-filter-visible');
-
-                // Redirect.
-                window.setTimeout(function() {
-                    window.location.href = href;
-                }, 350);
-
+                if (!event.target.matches('a')) {
+                    event.stopPropagation();
+				} else {
+                    $body.removeClass('mobile-filter-visible');
+				}
             });
-
         	$body.on('click', 'a[href="#mobile-filter"]', function(event) {
                 event.stopPropagation();
                 event.preventDefault();
 
                 $menu._hide();
-
                 $body.addClass('mobile-filter-visible');
             })
 			.on('keydown', function(event) {
 
 				// Hide on escape.
-				if (event.keyCode == 27)
+				if (event.keyCode === 27)
                     $body.removeClass('mobile-filter-visible');
 
+			})
+			.on('keydown', function(event) {
+				if (event.keyCode === 13)
+					$body.removeClass('mobile-filter-visible');
 			});
-
 	});
 
 })(jQuery);

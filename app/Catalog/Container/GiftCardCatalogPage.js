@@ -62,14 +62,16 @@ class GiftCardCatalogPage extends Component {
             <div id="main-full" className="full">
                 <section id="content" className="default">
                     <SectionHeader title = {header.title} message = {header.message}/>
-                    <FilterBar filterHandler = {::this.fetchCatalog} searchHandler = {::this.searchCatalog} />
+                    <span className="hide-mobile">
+                        <FilterBar filterHandler = {::this.fetchCatalog} searchHandler = {::this.searchCatalog} />
+                    </span>
                     <div className="catalog-light-content">
                         <div className="row uniform">
                             <Listing catalog = {this.state.catalog}
                                      currency = {Currency.htmlEntityFor('EUR')}
                                      loading = {this.state.loading}/>
 
-                            <SideBox />
+                            <SideBox filterHandler = {::this.fetchCatalog} searchHandler = {::this.searchCatalog}  />
                         </div>
 
                         <Paginator pagination = {this.state.pagination}

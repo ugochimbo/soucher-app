@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import * as LINK_TO from '../../config/constant';
+import FilterBar from "../../Filter/FilterBar";
 
 class SideBox extends Component {
 
@@ -35,12 +36,7 @@ class SideBox extends Component {
 
                         <nav id="mobile-filter">
                             <div className="inner">
-                                <h2>
-                                    <i className="fa fa-bars" aria-hidden="true" />
-                                    Filter Menu
-                                    <i className="fa fa-bars" aria-hidden="true" />
-                                </h2>
-                                <p>Fucking filter</p>
+                                <FilterBar filterHandler = {this.props.filterHandler} searchHandler = {this.props.searchHandler} />
                             </div>
                         </nav>
                     </span>
