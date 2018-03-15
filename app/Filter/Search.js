@@ -59,9 +59,9 @@ export default class Search extends Component {
                            onKeyPress={this.handleSubmit.bind(this)}
                     />
                 </div>
-                <div className="3u 12u$(small)" style={{'float': 'left'}}>
-                    <button onClick={::this.search} className="button medium">
-                          <i className="icon fa-search fa-2x" />
+                <div className="3u 12u$(small) catalog-search" style={{'float': 'left'}}>
+                    <button onClick={::this.search}>
+                          Search
                     </button>
                 </div>
             </div>

@@ -218,10 +218,10 @@
             })
             .find('.inner')
             .on('click', function(event) {
-                if (!event.target.matches('a')) {
-                    event.stopPropagation();
-				} else {
+                if (event.target.matches('a') || event.target.matches('button')) {
                     $body.removeClass('mobile-filter-visible');
+				} else {
+                    event.stopPropagation();
 				}
             });
         	$body.on('click', 'a[href="#mobile-filter"]', function(event) {
