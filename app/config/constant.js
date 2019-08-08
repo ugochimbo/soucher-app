@@ -15,4 +15,4 @@ export const CONTACT_US_ROUTE = '/contact-us';
 
 export const TRANSACTION_ERROR_ROUTE = '/transaction-error';
 
-export const STATIC_ASSET = 'https://soucher.ams3.digitaloceanspaces.com/static';
+export const STATIC_ASSET = 'https://cdn.soucher.com';
