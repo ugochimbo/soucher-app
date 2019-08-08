@@ -88,7 +88,7 @@
 		}
 
 		.highlight {
-			background-image: url("https://soucher.ams3.digitaloceanspaces.com/static/overlay_2.png");
+			background-image: url("https://cdn.soucher.com/overlay_2.png");
 			text-shadow: 0 1px 0 rgba(0, 0, 0, 0.75);
 			background-position: initial;
 			background-color: rgba(0, 0, 0, 0.65);
@@ -228,7 +228,7 @@
 			.cta {
 				@include padding(3em, 1.2em);
 				background-color:		_palette(bg-alt);
-				background-image:		url('https://soucher.ams3.digitaloceanspaces.com/static/overlay.png'),	url('https://soucher.ams3.digitaloceanspaces.com/static/bg.jpg');
+				background-image:		url('https://cdn.soucher.com/overlay.png'),	url('https://cdn.soucher.com/bg.jpg');
 				background-size:		100px 100px,				cover;
 				background-repeat:		repeat,						no-repeat;
 				background-attachment:	scroll,						scroll;

@@ -6,7 +6,7 @@
 
 	#banner {
 		position: relative;
-		background: url('https://soucher.ams3.digitaloceanspaces.com/static/header.jpg'), url("https://soucher.ams3.digitaloceanspaces.com/static/overlay_2.png") no-repeat center;
+		background: url('https://cdn.soucher.com/header.jpg'), url("https://cdn.soucher.com/overlay_2.png") no-repeat center;
 		text-shadow : 0 1px 0 rgba(0, 0, 0, 0.75);
 		background-color : rgba(0, 0, 0, 0.65);
 		background-size: cover;
@@ -117,7 +117,7 @@
 		}
 
 		@include breakpoint(small) {
-			background: url('https://soucher.ams3.digitaloceanspaces.com/static/bg-mobile.jpg'), url("https://soucher.ams3.digitaloceanspaces.com/static/overlay_2.png") no-repeat center;
+			background: url('https://cdn.soucher.com/bg-mobile.jpg'), url("https://cdn.soucher.com/overlay_2.png") no-repeat center;
 			padding: 4.5em 3em 4em 3em;
 
 			header {
@@ -154,7 +154,7 @@
 	}
 
 	#banner.about-banner {
-		background: url('https://soucher.ams3.digitaloceanspaces.com/static/about_us.jpg');
+		background: url('https://cdn.soucher.com/about_us.jpg');
 		textShadow: '0 1px 0 rgba(0, 0, 0, 0.75)';
 		backgroundPosition: 'initial';
 		backgroundColor: 'rgba(0, 0, 0, 0.65)';
@@ -162,14 +162,14 @@
 		background-size: cover;
 
 		@include breakpoint(small) {
-			background: url('https://soucher.ams3.digitaloceanspaces.com/static/about_mobile.jpg');
+			background: url('https://cdn.soucher.com/about_mobile.jpg');
 			height: 300px;
 			background-size: cover;
 		}
 	}
 
 	#banner.contact-banner {
-		background: url('https://soucher.ams3.digitaloceanspaces.com/static/contact_us.jpg');
+		background: url('https://cdn.soucher.com/contact_us.jpg');
 		textShadow: '0 1px 0 rgba(0, 0, 0, 0.75)';
 		backgroundPosition: 'initial';
 		backgroundColor: 'rgba(0, 0, 0, 0.65)';
@@ -177,14 +177,14 @@
 		background-size: cover;
 
 		@include breakpoint(small) {
-			background: url('https://soucher.ams3.digitaloceanspaces.com/static/contact_mobile.jpg');
+			background: url('https://cdn.soucher.com/contact_mobile.jpg');
 			height: 300px;
 			background-size: cover;
 		}
 	}
 
 	#banner.success-banner {
-		background: url('https://soucher.ams3.digitaloceanspaces.com/static/thank-you.jpg'), url('https://soucher.ams3.digitaloceanspaces.com/static/overlay_2.png');
+		background: url('https://cdn.soucher.com/thank-you.jpg'), url('https://cdn.soucher.com/overlay_2.png');
 		textShadow: '0 1px 0 rgba(0, 0, 0, 0.75)';
 		backgroundPosition: 'initial';
 		backgroundColor: 'rgba(0, 0, 0, 0.65)';
@@ -192,14 +192,14 @@
 		background-size: cover;
 
 		@include breakpoint(small) {
-			background: url('https://soucher.ams3.digitaloceanspaces.com/static/thank-you-mobile.jpg');
+			background: url('https://cdn.soucher.com/thank-you-mobile.jpg');
 			height: 300px;
 			background-size: cover;
 		}
 	}
 
 	#banner.transaction-error-banner {
-		background: url('https://soucher.ams3.digitaloceanspaces.com/static/transaction_error.jpg'), url('https://soucher.ams3.digitaloceanspaces.com/static/overlay_2.png');
+		background: url('https://cdn.soucher.com/transaction_error.jpg'), url('https://cdn.soucher.com/overlay_2.png');
 		textShadow: '0 1px 0 rgba(0, 0, 0, 0.75)';
 		backgroundPosition: 'initial';
 		backgroundColor: 'rgba(0, 0, 0, 0.65)';
